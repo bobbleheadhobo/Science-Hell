@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://0obq10scw7ip"]
+
+[ext_resource type="Script" path="res://Joeys level/mobs/null_nightmares/null_nightmare.gd" id="1_hktd3"]
+[ext_resource type="Texture2D" uid="uid://cfmwvcekfjhl1" path="res://Joeys level/mobs/null_nightmares/ghost-idle.png" id="2_kqusx"]
+[ext_resource type="Script" path="res://Joeys level/mobs/null_nightmares/null_animation.gd" id="3_rpdj2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1eej"]
+radius = 9.0
+height = 28.0
+
+[sub_resource type="Animation" id="Animation_ocb7t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h67x2"]
+resource_name = "walking"
+length = 1.22
+loop_mode = 2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2djgo"]
+_data = {
+"RESET": SubResource("Animation_ocb7t"),
+"walking": SubResource("Animation_h67x2")
+}
+
+[node name="null_nightmare" type="CharacterBody2D"]
+script = ExtResource("1_hktd3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kqusx")
+hframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 5)
+shape = SubResource("CapsuleShape2D_m1eej")
+
+[node name="null_animation" type="Node2D" parent="."]
+script = ExtResource("3_rpdj2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="null_animation"]
+libraries = {
+"": SubResource("AnimationLibrary_2djgo")
+}

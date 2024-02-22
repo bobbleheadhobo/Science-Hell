@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsbij3axtbtoo"]
+
+[ext_resource type="Script" path="res://Joeys level/player/hero.gd" id="1_33uym"]
+[ext_resource type="Texture2D" uid="uid://0nta43fjw58f" path="res://Joeys level/player/rey.png" id="1_a70ad"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1eej"]
+radius = 9.0
+height = 28.0
+
+[node name="hero" type="CharacterBody2D"]
+script = ExtResource("1_33uym")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a70ad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CapsuleShape2D_m1eej")
+
+[node name="player" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
