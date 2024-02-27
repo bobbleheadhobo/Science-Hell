@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://Joeys level/mobs/null_nightmares/null_animation.gd" id="3_rpdj2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1eej"]
-radius = 9.0
-height = 28.0
+radius = 30.0
+height = 60.0
 
 [sub_resource type="Animation" id="Animation_ocb7t"]
 length = 0.001
@@ -48,14 +48,18 @@ _data = {
 }
 
 [node name="null_nightmare" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_hktd3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(2.82813, 2.5625)
 texture = ExtResource("2_kqusx")
 hframes = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 5)
+position = Vector2(-1, 18)
 shape = SubResource("CapsuleShape2D_m1eej")
 
 [node name="null_animation" type="Node2D" parent="."]

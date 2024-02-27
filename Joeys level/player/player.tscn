@@ -1,22 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsbij3axtbtoo"]
+[gd_scene load_steps=6 format=3 uid="uid://dsbij3axtbtoo"]
 
 [ext_resource type="Script" path="res://Joeys level/player/hero.gd" id="1_33uym"]
 [ext_resource type="Texture2D" uid="uid://0nta43fjw58f" path="res://Joeys level/player/rey.png" id="1_a70ad"]
+[ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="3_2ducu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1eej"]
-radius = 9.0
-height = 28.0
+radius = 30.0
+height = 80.4299
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6pr1j"]
+radius = 31.0
+height = 112.0
 
 [node name="hero" type="CharacterBody2D"]
 script = ExtResource("1_33uym")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -15)
+scale = Vector2(4.625, 4.4375)
 texture = ExtResource("1_a70ad")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(1, 27)
+rotation = -1.59958
 shape = SubResource("CapsuleShape2D_m1eej")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AR_15" parent="." instance=ExtResource("3_2ducu")]
+position = Vector2(11, 28)
 
 [node name="player" type="Node2D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+shape = SubResource("CapsuleShape2D_6pr1j")

@@ -1,4 +1,4 @@
 extends Node2D
 
-func play_idle_animation():
+func play_walking_animation():
 	$AnimationPlayer.play("walking")

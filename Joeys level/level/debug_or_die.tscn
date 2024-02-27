@@ -1,26 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cirre5y42lq71"]
+[gd_scene load_steps=4 format=3 uid="uid://cirre5y42lq71"]
 
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://Joeys level/player/player.tscn" id="1_7ncg3"]
-[ext_resource type="PackedScene" uid="uid://0obq10scw7ip" path="res://Joeys level/mobs/null_nightmares/null_nightmare.tscn" id="2_s1q3j"]
+[ext_resource type="PackedScene" uid="uid://bytlwpssdwr6p" path="res://Joeys level/map/map.tscn" id="1_7whnv"]
+[ext_resource type="PackedScene" uid="uid://0obq10scw7ip" path="res://Joeys level/mobs/null_nightmares/null_nightmare.tscn" id="2_5etc1"]
 
 [node name="Debug_or_die" type="Node2D"]
 y_sort_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -128
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 1167.0
-offset_bottom = 657.0
-
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
-offset_top = -326.0
-offset_right = 1167.0
-offset_bottom = 331.0
-color = Color(0.0705882, 1, 1, 1)
+[node name="map" parent="." instance=ExtResource("1_7whnv")]
 
 [node name="player" parent="." instance=ExtResource("1_7ncg3")]
-position = Vector2(27.885, 7.81594)
+position = Vector2(580, 332)
 
-[node name="null_nightmare" parent="." instance=ExtResource("2_s1q3j")]
-position = Vector2(355, 133)
+[node name="null_nightmare" parent="." instance=ExtResource("2_5etc1")]
+position = Vector2(181, 182)
