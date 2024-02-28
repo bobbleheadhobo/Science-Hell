@@ -1,16 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://cirre5y42lq71"]
+[gd_scene load_steps=7 format=3 uid="uid://cirre5y42lq71"]
 
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://Joeys level/player/player.tscn" id="1_7ncg3"]
 [ext_resource type="PackedScene" uid="uid://bytlwpssdwr6p" path="res://Joeys level/map/map.tscn" id="1_7whnv"]
-[ext_resource type="PackedScene" uid="uid://0obq10scw7ip" path="res://Joeys level/mobs/null_nightmares/null_nightmare.tscn" id="2_5etc1"]
+[ext_resource type="Script" path="res://Joeys level/level/debug_or_die.gd" id="1_fcrlp"]
+[ext_resource type="PackedScene" uid="uid://cfgdkd5t2y6oa" path="res://Joeys level/ui/game_over.tscn" id="4_pljea"]
+[ext_resource type="Script" path="res://Joeys level/ui/game_over.gd" id="5_iq0yq"]
+
+[sub_resource type="Curve2D" id="Curve2D_b5eqj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -441, -370, 0, 0, 0, 0, -444, 1089, 0, 0, 0, 0, 1612, 1078, 0, 0, 0, 0, 1621, -368, 0, 0, 0, 0, -438, -373)
+}
+point_count = 5
 
 [node name="Debug_or_die" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_fcrlp")
 
 [node name="map" parent="." instance=ExtResource("1_7whnv")]
+metadata/_edit_lock_ = true
 
 [node name="player" parent="." instance=ExtResource("1_7ncg3")]
 position = Vector2(580, 332)
 
-[node name="null_nightmare" parent="." instance=ExtResource("2_5etc1")]
-position = Vector2(181, 182)
+[node name="Path2D" type="Path2D" parent="player"]
+position = Vector2(-580, -332)
+curve = SubResource("Curve2D_b5eqj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-441, -370)
+rotation = 1.57285
+
+[node name="SpawnMobTimer" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
+[node name="GameOver" parent="." instance=ExtResource("4_pljea")]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("5_iq0yq")
+
+[connection signal="health_empty" from="player" to="." method="_on_player_health_empty"]
+[connection signal="timeout" from="SpawnMobTimer" to="." method="_on_timer_timeout"]
