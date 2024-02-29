@@ -4,9 +4,7 @@ signal health_empty
 
 var health = 100.0
 const DAMAGE_RATE = 10.0
-const ACCELERATION = 800
-const FRICTION = 2000
-const MAX_SPEED = 200
+const SPEED = 200
 
 enum {IDLE, WALK}
 var state = IDLE
@@ -26,17 +24,12 @@ var animTree_state_keys = [
 ]
 
 func _physics_process(delta):
-	#var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	#velocity = direction * 600 # move in the direction at 600 px per second
-	#move_and_slide()
-	animate()
 	move(delta)
 	
 	# press space to shoot
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 		
-	
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
 	
 	if overlapping_mobs.size() > 0:
@@ -45,11 +38,6 @@ func _physics_process(delta):
 		if health <= 0.0:
 			print("DEAD!")
 			health_empty.emit()
-	
-	#if velocity.length() > 0.0:
-		#$HappyBoo.play_walk_animation() #is the same as get_node()
-	#else:
-		#$HappyBoo.play_idle_animation()
 
 
 func shoot():
@@ -61,30 +49,20 @@ func shoot():
 		
 
 func move(delta):
+	# get input from keyboard (WASD)
 	var direction = Input.get_vector("move_left", "move_right", "move_up" , "move_down")
+	
 	if direction == Vector2.ZERO:
 		state = IDLE
-		#apply_friction(FRICTION * delta)
 	else:
 		state = WALK
-		#apply_movement(direction * ACCELERATION * delta)
 		blend_position = direction
-		
 	
-	velocity = direction * MAX_SPEED
-	print("velocity", velocity, "direction", direction)
+	# calculate the velocity to move the player at
+	velocity = direction * SPEED
+	
+	animate()
 	move_and_slide()
-		
-func apply_movement(amount) -> void:
-	velocity += amount
-	velocity = velocity.limit_length(MAX_SPEED)
-	
-		
-func apply_friction(amount):
-	if velocity.length() > amount:
-		velocity -= velocity.normalized() * amount
-	else:
-		velocity = Vector2.ZERO
 		
 
 func animate() -> void:
