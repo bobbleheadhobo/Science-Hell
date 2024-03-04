@@ -4,7 +4,7 @@ signal health_empty
 
 var health = 100.0
 const DAMAGE_RATE = 10.0
-const SPEED = 200
+const SPEED = 600
 
 enum {IDLE, WALK}
 var state = IDLE

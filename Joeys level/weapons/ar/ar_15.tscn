@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jqynr0sjeqpy" path="res://Joeys level/weapons/ar/AR-15.png" id="2_k46aj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htgvb"]
-radius = 653.276
+radius = 1089.22
 
 [node name="AR-15" type="Area2D"]
 collision_layer = 0

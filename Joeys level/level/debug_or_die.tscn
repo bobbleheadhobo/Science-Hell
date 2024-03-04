@@ -32,7 +32,7 @@ position = Vector2(-441, -370)
 rotation = 1.57285
 
 [node name="SpawnMobTimer" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 4.0
 autostart = true
 
 [node name="GameOver" parent="." instance=ExtResource("4_pljea")]
