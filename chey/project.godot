@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="chey"
+config/name="retro-text-adventure"
 run/main_scene="res://chey/Game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://chey/icon.svg"
