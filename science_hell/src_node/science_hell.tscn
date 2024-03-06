@@ -1,11 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=17 format=3 uid="uid://balwvcgrw67pc"]
 
+[ext_resource type="Script" path="res://science_hell/src_node/science_hell.gd" id="1_4n0go"]
 [ext_resource type="Texture2D" uid="uid://br5s0p8bwuknj" path="res://science_hell/assets/tiles/Room_Builder_16x16.png" id="1_id6ta"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
 [ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles/19_Hospital_16x16.png" id="2_k412v"]
 [ext_resource type="Texture2D" uid="uid://bjlmqcpjy6sn0" path="res://science_hell/assets/tiles/22_Museum.png" id="4_1tb43"]
 [ext_resource type="Texture2D" uid="uid://bc0s3pbiyyjro" path="res://science_hell/assets/tiles/tiles.png" id="5_5mcke"]
 [ext_resource type="Texture2D" uid="uid://cf52kowwh8t2h" path="res://science_hell/assets/tiles/courtyard2.png" id="6_kbkin"]
+[ext_resource type="PackedScene" uid="uid://cxbj8rwkf0hed" path="res://science_hell/gui/hearts/hearts_container.tscn" id="7_6a32r"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vwptk"]
 tile_data = PackedInt32Array(0, 2621440, 41, 65536, 2621440, 1342177321, 1, 2621440, 805306409, 65537, 2621440, 1610612777)
@@ -21207,6 +21209,7 @@ pattern_0 = SubResource("TileMapPattern_vwptk")
 pattern_1 = SubResource("TileMapPattern_f2mfo")
 
 [node name="ScienceHell" type="Node2D"]
+script = ExtResource("1_4n0go")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_w2wbk")
@@ -21225,3 +21228,11 @@ offset_left = -7.0
 offset_top = -7.0
 offset_right = 8.0
 offset_bottom = 7.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hearts" parent="CanvasLayer" instance=ExtResource("7_6a32r")]
+offset_left = 3.0
+offset_top = 11.0
+offset_right = 69.0
+offset_bottom = 24.0
