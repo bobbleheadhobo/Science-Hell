@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dod3v4nxmanim"]
+
+[ext_resource type="Script" path="res://chey/input_response.gd" id="1_2mslg"]
+[ext_resource type="FontFile" uid="uid://4qak0sy5hr0h" path="res://chey/fonts/plex_mono_24.tres" id="1_firi7"]
+[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="2_t4vag"]
+
+[node name="InputResponse" type="VBoxContainer"]
+theme_override_constants/separation = 0
+script = ExtResource("1_2mslg")
+
+[node name="InputHistory" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631373, 0.631373, 0.631373, 1)
+theme_override_fonts/font = ExtResource("1_firi7")
+theme_override_font_sizes/font_size = 24
+text = " > This is what the user typed"
+
+[node name="Response" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_t4vag")
+theme_override_font_sizes/font_size = 28
+text = "This is what the game will give back"
