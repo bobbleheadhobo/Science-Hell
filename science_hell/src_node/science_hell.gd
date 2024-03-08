@@ -4,7 +4,9 @@ extends Node
 var max_health = 10
 
 func _ready():
+	
 	Hearts.set_max_hearts(max_health)
+	await get_tree().create_timer(10).timeout
 	test_health_system()
 
 
