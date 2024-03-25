@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1709326834
+icon.svg::CompressedTexture2D::4045829556977790957::1709323190::1709325359::1::::<><>::
+README.md::TextFile::-1::1709323190::0::1::::<><>::
+::res://science_hell/::1709325881
+::res://science_hell/players/::1709325881
+::res://science_hell/players/hamilton/::1709325912
+ham.png::CompressedTexture2D::3458775024103955564::1709325881::1709325912::1::::<><>::
+hero.gd::GDScript::-1::1709325881::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::8425228894129492558::1709325881::0::1::::<><>::res://science_hell/players/hamilton/hero.gd<>uid://bpjprwldrjsi3::::res://science_hell/players/hamilton/ham.png
+::res://science_hell/src_node/::1709325916
+science_hell.tscn::PackedScene::2410502229619207928::1709325916::0::1::::<><>::uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn
