@@ -15,6 +15,10 @@ run/main_scene="res://science_hell/src_node/science_hell.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Health="*res://science_hell/gui/hearts/hearts_container.gd"
+
 [display]
 
 window/size/viewport_width=3000
