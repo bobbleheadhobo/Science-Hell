@@ -42,7 +42,7 @@ offset_left = 57.0
 offset_top = -666.0
 offset_right = -706.0
 offset_bottom = -1114.0
-room_description = "You are in a Terminal. Terminal puzzle. dsafdaf "
+room_description = "You are in a Terminal. Terminal puzzle. "
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 531.0
