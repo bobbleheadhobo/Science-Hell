@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Test Level"
+config/name="Science Hell - Level 4"
 run/main_scene="res://Scenes/VirusWorld.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"

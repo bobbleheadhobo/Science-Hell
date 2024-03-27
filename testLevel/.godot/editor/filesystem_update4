@@ -2,3 +2,4 @@ res://default_env.tres
 res://Scenes/VirusWorld.tscn
 res://Scenes/RockyPlatform.tscn
 res://Scenes/Player.tscn
+res://Scripts/PlayerScript.gd

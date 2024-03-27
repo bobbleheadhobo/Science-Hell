@@ -1,2 +1,0 @@
-# Science-Hell
-Senior Project 
