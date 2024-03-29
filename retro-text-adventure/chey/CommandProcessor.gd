@@ -11,6 +11,7 @@ var player = null
 
 
 # function gets called when room node needs to run
+@warning_ignore("shadowed_variable")
 func intialize(starting_room, player) -> String:
 	self.player = player
 	return change_room(starting_room)
@@ -50,6 +51,9 @@ func go(second_word: String) -> String:
 	# check if room can be exitable
 	if current_room.exits.keys().has(second_word):
 		var exit = current_room.exits[second_word]
+		if exit.is_other_room_locked(current_room):
+			return "That exit is currently locked! "
+			
 		var change_response = change_room(exit.get_other_room(current_room))
 		return "\n".join(PackedStringArray(["You go %s." % second_word, change_response]))
 	else:

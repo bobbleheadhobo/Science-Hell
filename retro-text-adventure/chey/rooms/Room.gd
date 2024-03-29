@@ -64,13 +64,28 @@ func get_item_description() -> String:
 func get_exit_description() -> String:
 	return "Exits: " + " ".join(PackedStringArray(exits.keys()))
 
+# handles telling player exit is unlocked
+func connect_exit_unlocked(direction: String, room: GameRoom):
+	_connect_exit(direction, room, false) # false not locking exit
 
+# handles locking exits
+func connect_exit_locked(direction: String, room: GameRoom):
+	_connect_exit(direction, room, true) # true locking exit
+
+
+# create function to lock both sides of room
+func connect_both_exit_locked(direction: String, room: GameRoom):
+	pass
+
+
+# using as private function _
 # connect exit only runs when function is called
-func connect_exit(direction: String, room: GameRoom):
+func _connect_exit(direction: String, room: GameRoom, is_locked: bool = false):
 	# instance a new exit (Resource Object)
 	var exit = Exit.new()
 	exit.room_1 = self #connects to itself
 	exit.room_2 = room # room connecting to
+	exit.room_2_is_locked = is_locked # dependent on param if its true or false
 	exits[direction] = exit # exit resource (connect both ways)
 	# connect both cardinal directions of connection
 	match direction:
