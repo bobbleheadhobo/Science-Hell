@@ -36,11 +36,13 @@ func process_command(input: String) -> String:
 			return inventory()
 		"drop":
 			return drop(second_word)
+		"use":
+			return use(second_word)
 		"help":
 			return help()
 		# defualt case for invalid input
 		_:
-			return "Unrecognized command - please try again."	
+			return "Unrecognized command - please try again."
 			
 			
 # PRE function call
@@ -48,7 +50,7 @@ func process_command(input: String) -> String:
 func go(second_word: String) -> String:
 	if second_word == "":
 		return "Go where?"
-	# check if room can be exitable
+	# getting all keys and check if room can be exitable
 	if current_room.exits.keys().has(second_word):
 		var exit = current_room.exits[second_word]
 		if exit.is_other_room_locked(current_room):
@@ -76,12 +78,12 @@ func take(second_word: String) -> String:
 func drop(second_word: String) -> String:
 	if second_word == "":
 		return "Drop what?"
-	# drop item for player	
+	# drop item for player
 	for item in player.inventory:
 		if second_word.to_lower() == item.item_name.to_lower():
 			player.drop_item(item)
 			current_room.add_item(item)
-			return "You drop the " + item.item_name
+			return "You dropped the " + item.item_name
 	return "You don't have that item."
 	
 	
@@ -89,11 +91,39 @@ func inventory() -> String:
 	return player.get_inventory_list()
 
 
+# handles use command mechanics to use item
+func use(second_word: String) -> String:
+	if second_word == "":
+		return "Use what?"
+		
+	# loop through all items in players inventory
+	for item in player.inventory:
+		# comand == valid item nme
+		if second_word.to_lower() == item.item_name.to_lower(): 
+			# get what type of item it is
+			match item.item_type:
+				# item = key
+				Types.ItemTypes.KEY:
+					# unlock a door
+					# make sure room is connected to the exit we are currently in
+					for exit in current_room.exits.values():
+						# player is in a valid room with a valid exit and item is in current room that has a valid item to unlock room 2 for player
+						if exit.room_2 == item.use_value: 
+							# unlock the room
+							exit.room_2_is_locked = false
+							player.drop_item(item) # removes item from player inventory
+							return "You used the %s to unlock a door to %s" % [item.item_name, exit.room_2.room_name]
+						return "Item does not open any doors in this room."
+					
+				_: # invalid item
+					return "Error - item cannot be used this way."
+	
+	return "You don't have that item."
 # PRE: input help by user
 # POST: displays users commands avaliable
 func help() -> String:
 	return "Avaliable Commands:
-go [location], take [item], inventory, drop [item], help"
+go [location], take [item], inventory, drop [item], use [item], help"
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:

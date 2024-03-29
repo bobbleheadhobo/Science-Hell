@@ -87,7 +87,6 @@ room_name = "Code Room"
 room_description = "Code puzzle"
 
 [node name="CooperRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-visible = false
 offset_left = 549.0
 offset_top = -1504.0
 offset_right = -214.0

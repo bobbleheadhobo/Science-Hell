@@ -4,13 +4,15 @@ extends Node
 func _ready() -> void:
 	var key = Item.new()
 	key.intialize("key", Types.ItemTypes.KEY) # prints to terminal
-	
-	# unlock stack room only from terminal room
-	$TerminalRoom.connect_exit_unlocked("east", $StackRoom)
-	
+	key.use_value = $StackRoom # key item unlocks Stack room
 	
 	# add key item to stack room only
-	$StackRoom.add_item(key)
+	$TerminalRoom.add_item(key)
+	# unlock stack room only from terminal room
+	$TerminalRoom.connect_exit_locked("east", $StackRoom)
+	
+	# add key item to stack room only
+	#$StackRoom.add_item(key)
 	# exit stack room takes player to heap
 	$StackRoom.connect_exit_locked("north", $HeapRoom)
 	
