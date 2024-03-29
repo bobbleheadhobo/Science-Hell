@@ -88,7 +88,8 @@ func inventory() -> String:
 # PRE: input help by user
 # POST: displays users commands avaliable
 func help() -> String:
-	return "You can use these commands: go [location], take[item], inventory, drop[item], help"
+	return "Avaliable Commands:
+go [location], take [item], inventory, drop [item], help"
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:

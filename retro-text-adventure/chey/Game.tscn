@@ -42,19 +42,58 @@ script = ExtResource("2_3lrur")
 script = ExtResource("3_vy8n6")
 
 [node name="TerminalRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 57.0
-offset_top = -666.0
-offset_right = -706.0
-offset_bottom = -1114.0
+offset_left = 93.0
+offset_top = -357.0
+offset_right = -670.0
+offset_bottom = -805.0
+room_name = "Terminal Room"
 room_description = "You are in a Terminal. Terminal puzzle. "
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 531.0
-offset_top = -667.0
-offset_right = -232.0
-offset_bottom = -1115.0
+offset_left = 580.0
+offset_top = -342.0
+offset_right = -183.0
+offset_bottom = -790.0
 room_name = "Stack Room"
-room_description = "you are in a Stack. Path Puzzle."
+room_description = "Stack (Path) Puzzle."
+
+[node name="HeapRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 575.0
+offset_top = -588.0
+offset_right = 964.0
+offset_bottom = -388.0
+grow_horizontal = 1
+grow_vertical = 1
+room_name = "Heap Room"
+room_description = "Stack puzzle."
+
+[node name="TextRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
+offset_left = 564.0
+offset_top = -896.0
+offset_right = -199.0
+offset_bottom = -1344.0
+room_name = "Text Room"
+room_description = "Text puzzle."
+
+[node name="CodeRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
+offset_left = 556.0
+offset_top = -1189.0
+offset_right = -207.0
+offset_bottom = -1637.0
+room_name = "Code Room"
+room_description = "Code puzzle"
+
+[node name="CooperRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
+visible = false
+offset_left = 549.0
+offset_top = -1504.0
+offset_right = -214.0
+offset_bottom = -1952.0
+room_name = "Cooper Room"
+room_description = "Save Cooper Puzzle."
 
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -84,7 +123,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rl3jm")
 [node name="Scroll" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
 layout_mode = 2
 horizontal_scroll_mode = 0
-metadata/_edit_group_ = true
 
 [node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
 layout_mode = 2

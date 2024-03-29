@@ -62,7 +62,7 @@ func get_item_description() -> String:
 
 # exit description
 func get_exit_description() -> String:
-	return "Exits: " + "\n".join(PackedStringArray(exits.keys()))
+	return "Exits: " + " ".join(PackedStringArray(exits.keys()))
 
 
 # connect exit only runs when function is called
