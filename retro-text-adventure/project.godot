@@ -14,3 +14,7 @@ config/name="retro-text-adventure"
 run/main_scene="res://chey/Game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://chey/icon.svg"
+
+[autoload]
+
+Types="*res://chey/globals/Types.gd"

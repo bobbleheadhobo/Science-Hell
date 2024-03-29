@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://chey/Game.gd" id="1_e0p6v"]
 [ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
-[ext_resource type="Script" path="res://chey/Input.gd" id="1_yo6lk"]
+[ext_resource type="Script" path="res://chey/input/Input.gd" id="1_yo6lk"]
 [ext_resource type="Script" path="res://chey/CommandProcessor.gd" id="2_3lrur"]
-[ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/Room.tscn" id="3_4cv05"]
-[ext_resource type="Script" path="res://chey/RoomManager.gd" id="3_vy8n6"]
+[ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/Room.tscn" id="3_4cv05"]
+[ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10hkn"]
 bg_color = Color(0, 0, 0, 1)
@@ -85,7 +85,6 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 20
 
 [node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
 custom_minimum_size = Vector2(0, 60)

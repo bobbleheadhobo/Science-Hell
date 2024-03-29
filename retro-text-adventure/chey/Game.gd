@@ -1,9 +1,9 @@
 extends Control
 
 # Response scene
-const Response = preload("res://chey/Response.tscn")
+const Response = preload("res://chey/input/Response.tscn")
 # script class not instance of game => save data
-const InputResponse = preload("res://chey/InputResponse.tscn")
+const InputResponse = preload("res://chey/input/InputResponse.tscn")
 
 # value can be edited in editor with export
 @export var max_lines_remembered := 30

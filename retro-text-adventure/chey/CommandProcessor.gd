@@ -53,10 +53,4 @@ func help() -> String:
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:
 	current_room = new_room
-	var exit_string = PackedStringArray(new_room.exits.keys())
-	var strings = "\n".join(PackedStringArray([
-		"You are now in: " + new_room.room_name + ". " + new_room.room_description,
-		"Exits: " + ", ".join(exit_string)
-	]))
-	#emit_signal("response_generated", strings)
-	return strings
+	return new_room.get_full_description()
