@@ -27,6 +27,11 @@ func  set_room_description(new_description: String):
 func add_item(item: Item):
 	items.append(item)
 
+# removes item from room add error checking
+func remove_item(item: Item):
+	items.erase(item)
+
+
 # all descriptions
 func get_full_description() -> String:
 	

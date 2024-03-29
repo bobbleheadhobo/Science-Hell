@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cbfokpod2i55h"]
+[gd_scene load_steps=13 format=3 uid="uid://cbfokpod2i55h"]
 
 [ext_resource type="Script" path="res://chey/Game.gd" id="1_e0p6v"]
 [ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
 [ext_resource type="Script" path="res://chey/input/Input.gd" id="1_yo6lk"]
 [ext_resource type="Script" path="res://chey/CommandProcessor.gd" id="2_3lrur"]
+[ext_resource type="Script" path="res://chey/Player.gd" id="2_rqjkp"]
 [ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/Room.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
 
@@ -30,6 +31,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e0p6v")
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("2_rqjkp")
 
 [node name="CommandProcessor" type="Node" parent="."]
 script = ExtResource("2_3lrur")
@@ -80,6 +84,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rl3jm")
 [node name="Scroll" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
 layout_mode = 2
 horizontal_scroll_mode = 0
+metadata/_edit_group_ = true
 
 [node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
 layout_mode = 2

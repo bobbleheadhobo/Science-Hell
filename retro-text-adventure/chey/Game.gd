@@ -17,9 +17,13 @@ const InputResponse = preload("res://chey/input/InputResponse.tscn")
 @onready var scroll = $Background/MarginContainer/Rows/GameInfo/Scroll
 # connect to the property
 @onready var scrollbar = scroll.get_v_scroll_bar()
-
 # connect to room node
 @onready var room_manager = $RoomManager
+# connect to player 
+@onready var player = $Player
+
+
+
 # PRE: nada
 # POST: main
 func _ready() -> void:
@@ -27,10 +31,10 @@ func _ready() -> void:
 	scrollbar.connect("changed",handle_scrollbar_changed)
 
 	create_response("Welcome to Science Hell... Type 'help' to see avaiable commands.")
-
+	
 	# connect before we intialize game
 	#command_processor.response_generated.connect(handle_response_generated)
-	var starting_room_response = command_processor.intialize(room_manager.get_child(0))
+	var starting_room_response = command_processor.intialize(room_manager.get_child(0), player)
 	create_response(starting_room_response)
 	# intialize game to starting room for player
 	#command_processor.intialize(room_manager.get_child(0))
