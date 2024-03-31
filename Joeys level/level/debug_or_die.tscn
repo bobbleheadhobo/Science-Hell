@@ -16,11 +16,9 @@ point_count = 5
 y_sort_enabled = true
 script = ExtResource("1_fcrlp")
 
-[node name="map" parent="." instance=ExtResource("1_7whnv")]
-metadata/_edit_lock_ = true
-
 [node name="player" parent="." instance=ExtResource("1_7ncg3")]
-position = Vector2(580, 332)
+z_index = 1
+position = Vector2(507, 58)
 
 [node name="Path2D" type="Path2D" parent="player"]
 position = Vector2(-580, -332)
@@ -31,6 +29,9 @@ unique_name_in_owner = true
 position = Vector2(-441, -370)
 rotation = 1.57285
 
+[node name="map" parent="." instance=ExtResource("1_7whnv")]
+metadata/_edit_lock_ = true
+
 [node name="SpawnMobTimer" type="Timer" parent="."]
 wait_time = 4.0
 autostart = true
@@ -39,6 +40,18 @@ autostart = true
 unique_name_in_owner = true
 visible = false
 script = ExtResource("5_iq0yq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.5
+offset_right = 55.5
+offset_bottom = 27.0
+grow_horizontal = 2
+show_percentage = false
 
 [connection signal="health_empty" from="player" to="." method="_on_player_health_empty"]
 [connection signal="timeout" from="SpawnMobTimer" to="." method="_on_timer_timeout"]

@@ -252,6 +252,7 @@ _data = {
 }
 
 [node name="null_nightmare" type="CharacterBody2D"]
+z_index = 1
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_hktd3")

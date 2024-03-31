@@ -6,6 +6,8 @@ var health = 100.0
 const DAMAGE_RATE = 10.0
 const SPEED = 600
 
+var mobs_killed = 0
+
 enum {IDLE, WALK}
 var state = IDLE
 
@@ -22,6 +24,8 @@ var animTree_state_keys = [
 	"idle",
 	'walk'
 ]
+
+
 
 func _physics_process(delta):
 	move(delta)
@@ -44,6 +48,7 @@ func shoot():
 	var gun = $AR_15
 	if gun:
 		gun.shoot()
+		
 		
 		
 		
