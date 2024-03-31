@@ -23,12 +23,12 @@ var spawn_4_beat = 0
 
 var lane = 0
 var rand = 0
-var note = load("res://Scenes/Note.tscn")
+var note = preload("res://Scenes/Note.tscn")
 var instance
 
 
 func _ready():
-	randomize()
+	pass
 	$Conductor.play_with_beat_offset(8)
 
 
@@ -38,18 +38,18 @@ func _input(event):
 			print ("Error changing scene to Menu")
 
 
-func _on_Conductor_measure(position):
-	if position == 1:
+func _on_Conductor_measure(current_position):
+	if current_position == 1:
 		_spawn_notes(spawn_1_beat)
-	elif position == 2:
+	elif current_position == 2:
 		_spawn_notes(spawn_2_beat)
-	elif position == 3:
+	elif current_position == 3:
 		_spawn_notes(spawn_3_beat)
-	elif position == 4:
+	elif current_position == 4:
 		_spawn_notes(spawn_4_beat)
 
-func _on_Conductor_beat(position):
-	song_position_in_beats = position
+func _on_Conductor_beat(current_position):
+	song_position_in_beats = current_position
 	if song_position_in_beats > 36:
 		spawn_1_beat = 1
 		spawn_2_beat = 1
@@ -119,17 +119,17 @@ func _on_Conductor_beat(position):
 
 func _spawn_notes(to_spawn):
 	if to_spawn > 0:
-		lane = randi() % 3
+		lane = randi() % 4
 		instance = note.instantiate()
-		instance.initialize(lane)
 		add_child(instance)
+		instance.initialize(lane)
 	if to_spawn > 1:
 		while rand == lane:
-			rand = randi() % 3
+			rand = randi() % 4
 		lane = rand
 		instance = note.instantiate()
-		instance.initialize(lane)
 		add_child(instance)
+		instance.initialize(lane)
 		
 
 

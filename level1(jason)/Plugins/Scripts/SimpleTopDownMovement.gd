@@ -1,16 +1,16 @@
 extends CharacterBody2D
 
 
-var velocity = Vector2()
+var vel = Vector2()
 var move_direction = Vector2()
 
 var SPEED = 30
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	_process_input()
-	velocity = move_direction * SPEED
-	set_velocity(velocity)
+	vel = move_direction * SPEED
+	set_velocity(vel)
 	move_and_slide()
 
 
