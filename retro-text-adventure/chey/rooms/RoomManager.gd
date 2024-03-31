@@ -8,7 +8,7 @@ func _ready() -> void:
 	# add key item to stack room only
 	$TerminalRoom.add_item(key)
 	# unlock stack room only from terminal room
-	var exit = $TerminalRoom.connect_exit_locked("east", $StackRoom) # , "inside"
+	var exit = $TerminalRoom.connect_exit_unlocked("east", $StackRoom) # , "inside"
 	key.use_value = exit # key item unlocks Stack room
 	# add key item to stack room only
 	$StackRoom.add_item(key)
@@ -40,4 +40,4 @@ func _ready() -> void:
 	$CooperRoom.connect_exit_locked("north", $TerminalRoom)
 	
 	# lock cooper room from terminal room 
-	$TerminalRoom.connect_exit_locked("south", $CooperRoom) 
+	#$TerminalRoom.connect_exit_unlocked("south", $CooperRoom) 

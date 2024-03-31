@@ -42,18 +42,18 @@ script = ExtResource("2_3lrur")
 script = ExtResource("3_vy8n6")
 
 [node name="TerminalRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 93.0
-offset_top = -357.0
-offset_right = -670.0
-offset_bottom = -805.0
+offset_left = 126.0
+offset_top = -346.0
+offset_right = -637.0
+offset_bottom = -794.0
 room_name = "Terminal Room"
 room_description = "You are in a Terminal. Terminal puzzle. "
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 580.0
-offset_top = -342.0
-offset_right = -183.0
-offset_bottom = -790.0
+offset_left = 584.0
+offset_top = -347.0
+offset_right = -179.0
+offset_bottom = -795.0
 room_name = "Stack Room"
 room_description = "Stack (Path) Puzzle."
 
@@ -99,8 +99,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_right = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_10hkn")
@@ -129,6 +127,7 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 20
 
 [node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
 custom_minimum_size = Vector2(0, 60)
