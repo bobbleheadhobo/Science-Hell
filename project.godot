@@ -11,9 +11,20 @@ config_version=5
 [application]
 
 config/name="science-hell"
-run/main_scene="res://Joeys level/level/debug_or_die.tscn"
+run/main_scene="res://science_hell/src_node/science_hell.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Health="*res://science_hell/gui/hearts/hearts_container.gd"
+
+[display]
+
+window/size/viewport_width=3000
+window/size/viewport_height=1964
+window/size/mode=2
+window/stretch/scale=4.0
 
 [input]
 
