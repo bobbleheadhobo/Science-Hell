@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cirre5y42lq71"]
+[gd_scene load_steps=8 format=3 uid="uid://cirre5y42lq71"]
 
-[ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://Joeys level/player_lvl5/player_lvl5.tscn" id="1_7ncg3"]
-[ext_resource type="PackedScene" uid="uid://bytlwpssdwr6p" path="res://Joeys level/map/map.tscn" id="1_7whnv"]
+[ext_resource type="PackedScene" uid="uid://bytlwpssdwr6p" path="res://Joeys level/map/map_old.tscn" id="1_7whnv"]
 [ext_resource type="Script" path="res://Joeys level/level/debug_or_die.gd" id="1_fcrlp"]
+[ext_resource type="PackedScene" uid="uid://c0pn2xkehu2j8" path="res://Joeys level/map/map.tscn" id="3_4cntp"]
+[ext_resource type="PackedScene" uid="uid://djdq6pyatghw6" path="res://Joeys level/lvl5_player/lvl5_player.tscn" id="3_xqqv7"]
 [ext_resource type="PackedScene" uid="uid://cfgdkd5t2y6oa" path="res://Joeys level/ui/game_over.tscn" id="4_pljea"]
 [ext_resource type="Script" path="res://Joeys level/ui/game_over.gd" id="5_iq0yq"]
 
@@ -16,21 +17,23 @@ point_count = 5
 y_sort_enabled = true
 script = ExtResource("1_fcrlp")
 
-[node name="player_lvl5" parent="." instance=ExtResource("1_7ncg3")]
-z_index = 1
-position = Vector2(507, 58)
+[node name="map_old" parent="." instance=ExtResource("1_7whnv")]
+visible = false
+metadata/_edit_lock_ = true
 
-[node name="Path2D" type="Path2D" parent="player_lvl5"]
+[node name="Map" parent="." instance=ExtResource("3_4cntp")]
+
+[node name="lvl5_Player" parent="." instance=ExtResource("3_xqqv7")]
+z_index = 1
+
+[node name="Path2D" type="Path2D" parent="lvl5_Player"]
 position = Vector2(-580, -332)
 curve = SubResource("Curve2D_b5eqj")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="player_lvl5/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="lvl5_Player/Path2D"]
 unique_name_in_owner = true
 position = Vector2(-441, -370)
 rotation = 1.57285
-
-[node name="map" parent="." instance=ExtResource("1_7whnv")]
-metadata/_edit_lock_ = true
 
 [node name="SpawnMobTimer" type="Timer" parent="."]
 wait_time = 4.0
@@ -53,5 +56,4 @@ offset_bottom = 27.0
 grow_horizontal = 2
 show_percentage = false
 
-[connection signal="health_empty" from="player_lvl5" to="." method="_on_player_health_empty"]
 [connection signal="timeout" from="SpawnMobTimer" to="." method="_on_timer_timeout"]
