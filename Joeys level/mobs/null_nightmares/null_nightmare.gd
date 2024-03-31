@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var player = get_node("/root/Debug_or_die/player") # Assuming player node path
+@onready var player = get_node("/root/Debug_or_die/player_lvl5") # Assuming player node path
 
 signal mob_killed
 

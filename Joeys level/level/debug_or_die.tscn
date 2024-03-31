@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cirre5y42lq71"]
 
-[ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://Joeys level/player/player.tscn" id="1_7ncg3"]
+[ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://Joeys level/player_lvl5/player_lvl5.tscn" id="1_7ncg3"]
 [ext_resource type="PackedScene" uid="uid://bytlwpssdwr6p" path="res://Joeys level/map/map.tscn" id="1_7whnv"]
 [ext_resource type="Script" path="res://Joeys level/level/debug_or_die.gd" id="1_fcrlp"]
 [ext_resource type="PackedScene" uid="uid://cfgdkd5t2y6oa" path="res://Joeys level/ui/game_over.tscn" id="4_pljea"]
@@ -16,15 +16,15 @@ point_count = 5
 y_sort_enabled = true
 script = ExtResource("1_fcrlp")
 
-[node name="player" parent="." instance=ExtResource("1_7ncg3")]
+[node name="player_lvl5" parent="." instance=ExtResource("1_7ncg3")]
 z_index = 1
 position = Vector2(507, 58)
 
-[node name="Path2D" type="Path2D" parent="player"]
+[node name="Path2D" type="Path2D" parent="player_lvl5"]
 position = Vector2(-580, -332)
 curve = SubResource("Curve2D_b5eqj")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="player/Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="player_lvl5/Path2D"]
 unique_name_in_owner = true
 position = Vector2(-441, -370)
 rotation = 1.57285
@@ -53,5 +53,5 @@ offset_bottom = 27.0
 grow_horizontal = 2
 show_percentage = false
 
-[connection signal="health_empty" from="player" to="." method="_on_player_health_empty"]
+[connection signal="health_empty" from="player_lvl5" to="." method="_on_player_health_empty"]
 [connection signal="timeout" from="SpawnMobTimer" to="." method="_on_timer_timeout"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=36 format=3 uid="uid://dsbij3axtbtoo"]
 
-[ext_resource type="Script" path="res://Joeys level/player/hero.gd" id="1_33uym"]
-[ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://Joeys level/player/ham.png" id="2_b20jn"]
+[ext_resource type="Script" path="res://Joeys level/player_lvl5/hero_lvl5.gd" id="1_33uym"]
+[ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://Joeys level/player_lvl5/ham_lvl5.png" id="2_wi4b2"]
 [ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="3_2ducu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m1eej"]
@@ -33,7 +33,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -87,7 +87,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -141,7 +141,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -195,7 +195,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -249,7 +249,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -291,7 +291,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -333,7 +333,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -375,7 +375,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -417,7 +417,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_b20jn")]
+"values": [ExtResource("2_wi4b2")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -556,12 +556,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="hero" type="CharacterBody2D"]
+[node name="hero_lvl5" type="CharacterBody2D"]
 script = ExtResource("1_33uym")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4.625, 4.4375)
-texture = ExtResource("2_b20jn")
+texture = ExtResource("2_wi4b2")
 hframes = 10
 vframes = 2
 frame = 4
