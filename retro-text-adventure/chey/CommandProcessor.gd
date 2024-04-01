@@ -38,6 +38,8 @@ func process_command(input: String) -> String:
 			return drop(second_word)
 		"use":
 			return use(second_word)
+		"talk":
+			return talk(second_word)
 		"help":
 			return help()
 		# defualt case for invalid input
@@ -119,6 +121,23 @@ func use(second_word: String) -> String:
 					return "Error - item cannot be used this way."
 	
 	return "You don't have that item."
+	
+	
+# PRE
+# POST
+func talk(second_word: String) -> String:
+	if second_word == "":
+		return "Talk to who?"
+		
+	# print npc dialog
+	for npc in current_room.npcs:
+		if npc.npc_name.to_lower() == second_word:
+			return npc.npc_name + ": \"" + npc.initial_dialog + "\""
+			
+	return "That person does not exist in this room."
+	
+	
+	
 # PRE: input help by user
 # POST: displays users commands avaliable
 func help() -> String:
