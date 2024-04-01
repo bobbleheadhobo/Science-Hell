@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bufpx04xloh51"]
+
+[ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles/19_Hospital_16x16.png" id="2_nakwn"]
+
+[node name="Spawner" type="Marker2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 0.999992)
+scale = Vector2(6.28125, 5.3125)
+texture = ExtResource("2_nakwn")
+hframes = 8
+vframes = 55

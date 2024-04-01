@@ -1,42 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://cirre5y42lq71"]
+[gd_scene load_steps=7 format=3 uid="uid://c4av4ra6dwn2i"]
 
-[ext_resource type="PackedScene" uid="uid://bytlwpssdwr6p" path="res://Joeys level/map/map_old.tscn" id="1_7whnv"]
 [ext_resource type="Script" path="res://Joeys level/level/debug_or_die.gd" id="1_fcrlp"]
 [ext_resource type="PackedScene" uid="uid://c0pn2xkehu2j8" path="res://Joeys level/map/map.tscn" id="3_4cntp"]
 [ext_resource type="PackedScene" uid="uid://djdq6pyatghw6" path="res://Joeys level/lvl5_player/lvl5_player.tscn" id="3_xqqv7"]
 [ext_resource type="PackedScene" uid="uid://cfgdkd5t2y6oa" path="res://Joeys level/ui/game_over.tscn" id="4_pljea"]
 [ext_resource type="Script" path="res://Joeys level/ui/game_over.gd" id="5_iq0yq"]
-
-[sub_resource type="Curve2D" id="Curve2D_b5eqj"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -441, -370, 0, 0, 0, 0, -444, 1089, 0, 0, 0, 0, 1612, 1078, 0, 0, 0, 0, 1621, -368, 0, 0, 0, 0, -438, -373)
-}
-point_count = 5
+[ext_resource type="PackedScene" uid="uid://ck460lkuai80n" path="res://Joeys level/mobs/spawners_container.tscn" id="7_lrcur"]
 
 [node name="Debug_or_die" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_fcrlp")
 
-[node name="map_old" parent="." instance=ExtResource("1_7whnv")]
-visible = false
-metadata/_edit_lock_ = true
-
 [node name="Map" parent="." instance=ExtResource("3_4cntp")]
+z_index = -1
 
 [node name="lvl5_Player" parent="." instance=ExtResource("3_xqqv7")]
 z_index = 1
 
-[node name="Path2D" type="Path2D" parent="lvl5_Player"]
-position = Vector2(-580, -332)
-curve = SubResource("Curve2D_b5eqj")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="lvl5_Player/Path2D"]
-unique_name_in_owner = true
-position = Vector2(-441, -370)
-rotation = 1.57285
-
 [node name="SpawnMobTimer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 2.0
 autostart = true
 
 [node name="GameOver" parent="." instance=ExtResource("4_pljea")]
@@ -56,4 +38,7 @@ offset_bottom = 27.0
 grow_horizontal = 2
 show_percentage = false
 
-[connection signal="timeout" from="SpawnMobTimer" to="." method="_on_timer_timeout"]
+[node name="Spawners_container" parent="." instance=ExtResource("7_lrcur")]
+position = Vector2(304, 8)
+
+[connection signal="timeout" from="SpawnMobTimer" to="Spawners_container" method="_on_spawn_mob_timer_timeout"]
