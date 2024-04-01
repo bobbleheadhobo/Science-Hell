@@ -8,6 +8,7 @@ class_name GameRoom
 
 # add exits room
 var exits: Dictionary = {}
+var npcs: Array = []
 var items: Array = [] # hold enum items in array
 
 # setter method: updates value and variable in editor for labels
@@ -23,6 +24,15 @@ func  set_room_description(new_description: String):
 	$MarginContainer/Rows/RoomDescription.text = new_description
 	room_description = new_description
 
+# add npc to room
+func add_npc(npc: NPC):
+	npcs.append(npc)
+
+# remove npc to room
+#func remove_npc(npc: NPC):
+	#pass
+	
+	
 # add item to room for player
 func add_item(item: Item):
 	items.append(item)
@@ -35,12 +45,21 @@ func remove_item(item: Item):
 # all descriptions
 func get_full_description() -> String:
 	
-	var full_description =  "\n".join(PackedStringArray([
-		get_room_description(),
-		get_item_description(),
-		get_exit_description()
-	]))
-	return full_description
+	var full_description = PackedStringArray([get_room_description()])
+	
+	var npc_description = get_npc_description()
+	if npc_description != "":
+		full_description.append(npc_description)
+	
+	
+	var item_description = get_item_description()
+	if item_description != "":
+		full_description.append(item_description)
+
+	full_description.append(get_exit_description())
+
+	var full_description_string = ("\n").join(full_description)
+	return full_description_string
 
 
 # room description
@@ -48,11 +67,20 @@ func get_room_description() -> String:
 	return "You are now in: " + room_name + ". " + room_description
 	
 
+# npc dialog
+func get_npc_description() -> String:
+	if npcs.size() == 0:
+		return ""
+	var npc_string = ""
+	for npc in npcs:
+		npc_string += npc.npc_name + " "
+	return "NPCs: " +  npc_string
+
 # item description
 func get_item_description() -> String:
 	
 	if items.size() == 0:
-		return "No items to pick up."
+		return ""
 	
 	var item_string = ""
 	for item in items:
@@ -65,6 +93,7 @@ func get_exit_description() -> String:
 	return "Exits: " + " ".join(PackedStringArray(exits.keys()))
 
 # handles telling player exit is unlocked
+@warning_ignore("unused_parameter")
 func connect_exit_unlocked(direction: String, room: GameRoom, room_2_override_name = "null"):
 	return _connect_exit(direction, room, false) # false not locking exit
 
@@ -74,6 +103,7 @@ func connect_exit_locked(direction: String, room: GameRoom, room_2_override_name
 
 
 # create function to lock both sides of room
+@warning_ignore("unused_parameter")
 func connect_both_exit_locked(direction: String, room: GameRoom, room_2_override_name):
 	pass
 

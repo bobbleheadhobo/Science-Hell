@@ -2,42 +2,51 @@ extends Node
 
 
 func _ready() -> void:
-	var key = Item.new()
-	key.intialize("key", Types.ItemTypes.KEY) # prints to terminal
 	
+	
+	
+	
+	
+	# unlock stack room only from terminal room
+	var exit = $TerminalRoom.connect_exit_unlocked("south", $StackRoom) # , "inside"
+	var key = load_item("Key")
+	var bug = load_npc("Bug")
+	$TerminalRoom.add_npc(bug)
 	# add key item to stack room only
 	$TerminalRoom.add_item(key)
-	# unlock stack room only from terminal room
-	var exit = $TerminalRoom.connect_exit_unlocked("east", $StackRoom) # , "inside"
 	key.use_value = exit # key item unlocks Stack room
-	# add key item to stack room only
-	$StackRoom.add_item(key)
-	
+
 	
 	# add key item to stack room only
 	#$StackRoom.add_item(key)
+	
+	
 	# exit stack room takes player to heap
-	exit = $StackRoom.connect_exit_locked("north", $HeapRoom)
+	exit = $StackRoom.connect_exit_locked("east", $HeapRoom)
 	
-	# add key item to heap room only
-	$HeapRoom.add_item(key)
+
 	# exit geap room takes player to text
-	$HeapRoom.connect_exit_locked("north", $TextRoom)
+	$HeapRoom.connect_exit_unlocked("north", $TextRoom)
 	
-	# add key item to text room only
-	$TextRoom.add_item(key)
+
 	# exit text room takes player to code
-	$TextRoom.connect_exit_locked("north", $CodeRoom)
+	$TextRoom.connect_exit_unlocked("west", $CodeRoom)
 	
-	# add key code to heap room only
-	$CodeRoom.add_item(key)
+
 	# exit code room takes player to cooper
-	$CodeRoom.connect_exit_locked("north", $CooperRoom)
+	$CodeRoom.connect_exit_unlocked("north", $CooperRoom)
 	
-	# add key item to cooper room only
-	$CooperRoom.add_item(key)
+	var cooper = load_npc("Cooper")
+	$CooperRoom.add_npc(cooper)	
 	# exit cooper room takes player to terminal for now but main map soon
-	$CooperRoom.connect_exit_locked("north", $TerminalRoom)
-	
+	$CooperRoom.connect_exit_unlocked("south", $TerminalRoom)
 	# lock cooper room from terminal room 
-	#$TerminalRoom.connect_exit_unlocked("south", $CooperRoom) 
+	#$TerminalRoom.connect_exit_unlocked("south", $CooperRoom)
+	
+# helper dynamic file fider for item resources
+func load_item(item_name: String):
+	return load("res://chey/items/" + item_name + ".tres")
+	
+# helper dynamic file fider for npcs resources
+func load_npc(npc_name: String):
+	return load("res://chey/npcs/" + npc_name + ".tres")

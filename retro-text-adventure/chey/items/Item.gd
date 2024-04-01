@@ -10,9 +10,6 @@ class_name Item # can create item resources now
 # set null to set item to whatever it wants
 var use_value = null
 
-func intialize(item_name: String, item_type: Types.ItemTypes):
-	# set our setters
-	self.item_name = item_name
-	self.item_type = item_type
+
 	
 

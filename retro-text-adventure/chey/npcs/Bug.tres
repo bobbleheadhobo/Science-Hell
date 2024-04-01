@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://co0fm78ot7mpa"]
+
+[ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_ens7v"]
+
+[resource]
+script = ExtResource("1_ens7v")
+npc_name = "bug"
+initial_dialog = "your friend in this game. To win you must make your way through the four memory segments to save Dr. Cooper. First, find the stack room by using the 'go' command. Good luck! Don't get lost, or else you'll get stuck here too....."
+post_quest_dialog = ""
