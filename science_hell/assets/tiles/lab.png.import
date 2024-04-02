@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdjnxm48ar3eq"
-path="res://.godot/imported/19_Hospital_16x16.png-c726d4850cb5e22b99e6ac266dcc226b.ctex"
+uid="uid://t2li5xqvpjq4"
+path="res://.godot/imported/lab.png-0038c31ac3356c2c016dbec7f818999a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/19_Hospital_16x16.png"
-dest_files=["res://.godot/imported/19_Hospital_16x16.png-c726d4850cb5e22b99e6ac266dcc226b.ctex"]
+source_file="res://science_hell/assets/tiles/lab.png"
+dest_files=["res://.godot/imported/lab.png-0038c31ac3356c2c016dbec7f818999a.ctex"]
 
 [params]
 

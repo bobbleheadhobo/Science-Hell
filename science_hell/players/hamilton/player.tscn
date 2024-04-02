@@ -3,9 +3,8 @@
 [ext_resource type="Script" path="res://science_hell/players/hamilton/hero.gd" id="1_33uym"]
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="2_b20jn"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hk5yo"]
-radius = 32.151
-height = 72.2934
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dauad"]
+size = Vector2(19.0283, 9.99975)
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -443,11 +442,10 @@ vframes = 2
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-1, 39)
-rotation = -1.61716
-shape = SubResource("CapsuleShape2D_hk5yo")
-metadata/_edit_lock_ = true
+position = Vector2(0, 6)
+rotation = -1.56366
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_dauad")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
