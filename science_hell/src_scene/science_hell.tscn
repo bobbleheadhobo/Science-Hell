@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://balwvcgrw67pc"]
 
-[ext_resource type="Script" path="res://science_hell/src_node/science_hell.gd" id="1_4n0go"]
+[ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
-[ext_resource type="TileSet" uid="uid://rru2hagpatg1" path="res://science_hell/main_map_tile_set.tres" id="2_2ycby"]
+[ext_resource type="TileSet" uid="uid://rru2hagpatg1" path="res://science_hell/assets/main_map_tile_set.tres" id="2_2ycby"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05liu"]
 size = Vector2(17, 20)

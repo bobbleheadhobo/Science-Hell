@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=35 format=3 uid="uid://e64usurynlms"]
+[gd_resource type="TileSet" load_steps=35 format=3 uid="uid://byo83x2tlr5ll"]
 
 [ext_resource type="Texture2D" uid="uid://br5s0p8bwuknj" path="res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png" id="1_dg2bg"]
 [ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png" id="2_n5324"]
