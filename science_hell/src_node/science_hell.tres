@@ -1,11 +1,11 @@
-[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://dxyr1d3jivmnw"]
+[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://bw6rixmkifuvi"]
 
-[ext_resource type="Texture2D" uid="uid://br5s0p8bwuknj" path="res://science_hell/assets/tiles/Room_Builder_16x16.png" id="1_ydrgr"]
-[ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles/19_Hospital_16x16.png" id="2_myysv"]
+[ext_resource type="Texture2D" path="res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png" id="1_ydrgr"]
+[ext_resource type="Texture2D" path="res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png" id="2_myysv"]
 [ext_resource type="Texture2D" uid="uid://c72s6d0ywt0l6" path="res://science_hell/assets/tiles/hallways.png" id="3_6ooeg"]
 [ext_resource type="Texture2D" uid="uid://bjlmqcpjy6sn0" path="res://science_hell/assets/tiles/22_Museum.png" id="4_m2jqm"]
-[ext_resource type="Texture2D" uid="uid://cf52kowwh8t2h" path="res://science_hell/assets/tiles/courtyard2.png" id="5_6hphx"]
-[ext_resource type="Texture2D" uid="uid://bc0s3pbiyyjro" path="res://science_hell/assets/tiles/tiles.png" id="6_1tnhr"]
+[ext_resource type="Texture2D" path="res://science_hell/assets/tiles_main_map/courtyard2.png" id="5_6hphx"]
+[ext_resource type="Texture2D" path="res://science_hell/assets/tiles_main_map/tiles.png" id="6_1tnhr"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vwptk"]
 tile_data = PackedInt32Array(0, 2621440, 41, 65536, 2621440, 1342177321, 1, 2621440, 805306409, 65537, 2621440, 1610612777)
