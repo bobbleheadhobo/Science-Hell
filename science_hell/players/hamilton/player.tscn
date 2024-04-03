@@ -444,7 +444,6 @@ frame = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 rotation = -1.56366
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_dauad")
 
 [node name="Camera2D" type="Camera2D" parent="."]
