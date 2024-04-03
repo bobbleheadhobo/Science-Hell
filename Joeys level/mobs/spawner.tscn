@@ -1,12 +1,56 @@
-[gd_scene load_steps=2 format=3 uid="uid://bufpx04xloh51"]
+[gd_scene load_steps=6 format=3 uid="uid://bufpx04xloh51"]
 
-[ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles/19_Hospital_16x16.png" id="2_nakwn"]
+[ext_resource type="Texture2D" uid="uid://th0lmtwma7rk" path="res://science_hell/assets/animated_objects/animated_old_tv.png" id="1_exmke"]
+[ext_resource type="Script" path="res://Joeys level/mobs/spawner.gd" id="1_fh02w"]
+
+[sub_resource type="Animation" id="Animation_5vnfl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_00p7y"]
+resource_name = "idle"
+length = 0.55
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k1nlx"]
+_data = {
+"RESET": SubResource("Animation_5vnfl"),
+"idle": SubResource("Animation_00p7y")
+}
 
 [node name="Spawner" type="Marker2D"]
+script = ExtResource("1_fh02w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 0.999992)
 scale = Vector2(6.28125, 5.3125)
-texture = ExtResource("2_nakwn")
-hframes = 8
-vframes = 55
+texture = ExtResource("1_exmke")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k1nlx")
+}

@@ -13,9 +13,11 @@ script = ExtResource("1_fcrlp")
 
 [node name="Map" parent="." instance=ExtResource("3_4cntp")]
 z_index = -1
+scale = Vector2(3, 3)
 
 [node name="lvl5_Player" parent="." instance=ExtResource("3_xqqv7")]
 z_index = 1
+position = Vector2(4342, 2641)
 
 [node name="SpawnMobTimer" type="Timer" parent="."]
 wait_time = 2.0
@@ -39,6 +41,6 @@ grow_horizontal = 2
 show_percentage = false
 
 [node name="Spawners_container" parent="." instance=ExtResource("7_lrcur")]
-position = Vector2(304, 8)
+position = Vector2(2023, 1397)
 
 [connection signal="timeout" from="SpawnMobTimer" to="Spawners_container" method="_on_spawn_mob_timer_timeout"]

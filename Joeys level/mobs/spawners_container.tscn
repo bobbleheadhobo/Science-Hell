@@ -9,10 +9,10 @@ script = ExtResource("1_sb5fn")
 [node name="Spawner" parent="." instance=ExtResource("1_wbaw7")]
 
 [node name="Spawner2" parent="." instance=ExtResource("1_wbaw7")]
-position = Vector2(7, 1958)
+position = Vector2(-31, 3139)
 
 [node name="Spawner3" parent="." instance=ExtResource("1_wbaw7")]
-position = Vector2(2987, 1951)
+position = Vector2(4582, 2981)
 
 [node name="Spawner4" parent="." instance=ExtResource("1_wbaw7")]
-position = Vector2(2920, 0)
+position = Vector2(4583, 0)
