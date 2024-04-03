@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="science-hell"
-run/main_scene="res://science_hell/src_node/science_hell.tscn"
+run/main_scene="res://science_hell/src_scene/science_hell.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

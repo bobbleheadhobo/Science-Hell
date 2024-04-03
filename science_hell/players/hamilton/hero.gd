@@ -43,3 +43,17 @@ func move_and_animate(delta):
 func animate() -> void:
 	state_machine.travel(animTree_state_keys[state])
 	animationTree.set(blend_pos_paths[state], blend_position)
+
+func player():
+	pass
+
+func _process(delta):
+	pass
+
+func current_camera():
+	if MG.current_scene == "ScienceHell":
+		$main_camera.enabled = true
+		$lab_camera.enabled = false 
+	if MG.current_scene == "Lab":
+		$main_camera.enabled = false
+		$lab_camera.enabled = true

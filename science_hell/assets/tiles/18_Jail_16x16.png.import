@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf52kowwh8t2h"
-path="res://.godot/imported/courtyard2.png-f850d31f12ef696adb05838afc2320e6.ctex"
+uid="uid://bdpeppx3f5a2r"
+path="res://.godot/imported/18_Jail_16x16.png-13e9da52cd8d7d5c4c8fbe44f34c40d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/courtyard2.png"
-dest_files=["res://.godot/imported/courtyard2.png-f850d31f12ef696adb05838afc2320e6.ctex"]
+source_file="res://science_hell/assets/tiles/18_Jail_16x16.png"
+dest_files=["res://.godot/imported/18_Jail_16x16.png-13e9da52cd8d7d5c4c8fbe44f34c40d9.ctex"]
 
 [params]
 
