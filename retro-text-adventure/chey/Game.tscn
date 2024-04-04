@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://chey/input/Input.gd" id="1_yo6lk"]
 [ext_resource type="Script" path="res://chey/CommandProcessor.gd" id="2_3lrur"]
 [ext_resource type="Script" path="res://chey/Player.gd" id="2_rqjkp"]
-[ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/Room.tscn" id="3_4cv05"]
+[ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10hkn"]
@@ -42,12 +42,13 @@ script = ExtResource("2_3lrur")
 script = ExtResource("3_vy8n6")
 
 [node name="TerminalRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 607.0
-offset_top = -671.0
-offset_right = -156.0
-offset_bottom = -1119.0
+offset_left = 605.0
+offset_top = -668.0
+offset_right = -158.0
+offset_bottom = -1116.0
 room_name = "Terminal Room"
-room_description = "You are in a Terminal. Terminal puzzle. "
+room_description = "You are in a Terminal. 
+Terminal puzzle. "
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 614.0
@@ -122,6 +123,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rl3jm")
 [node name="Scroll" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
 layout_mode = 2
 follow_focus = true
+horizontal_scroll_mode = 0
 
 [node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
 layout_mode = 2

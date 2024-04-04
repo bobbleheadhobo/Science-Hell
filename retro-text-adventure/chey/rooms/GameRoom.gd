@@ -74,7 +74,7 @@ func get_npc_description() -> String:
 	var npc_string = ""
 	for npc in npcs:
 		npc_string += npc.npc_name + " "
-	return "NPCs: " +  npc_string
+	return "\nNPCs: " +  npc_string 
 
 # item description
 func get_item_description() -> String:

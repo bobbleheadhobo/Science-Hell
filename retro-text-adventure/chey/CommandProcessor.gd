@@ -142,7 +142,7 @@ func talk(second_word: String) -> String:
 # POST: displays users commands avaliable
 func help() -> String:
 	return "Avaliable Commands:
-go [location], take [item], inventory, drop [item], use [item], help"
+go [location], take [item], inventory, drop [item], use [item], talk [NPC], help"
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:
