@@ -8,16 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10hkn"]
-bg_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dj5n"]
+bg_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rl3jm"]
-bg_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-border_width_left = 10
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
 border_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arq5v"]
-bg_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugmq6"]
+bg_color = Color(0.25098, 0.25098, 0.25098, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3srrx"]
 
@@ -47,8 +46,7 @@ offset_top = -668.0
 offset_right = -158.0
 offset_bottom = -1116.0
 room_name = "Terminal Room"
-room_description = "You are in a Terminal. 
-Terminal puzzle. "
+room_description = "You are in a Terminal. Terminal puzzle. "
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 614.0
@@ -102,7 +100,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_10hkn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4dj5n")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background"]
 layout_mode = 2
@@ -123,7 +121,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rl3jm")
 [node name="Scroll" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
 layout_mode = 2
 follow_focus = true
-horizontal_scroll_mode = 0
 
 [node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
 layout_mode = 2
@@ -134,7 +131,7 @@ theme_override_constants/separation = 20
 [node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_arq5v")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ugmq6")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/Rows/InputArea"]
 layout_mode = 2
