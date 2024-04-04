@@ -5,26 +5,28 @@
 [ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="2_t4vag"]
 
 [node name="InputResponse" type="VBoxContainer"]
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 1034.0
-offset_bottom = 610.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 0
 script = ExtResource("1_2mslg")
 
 [node name="InputHistory" type="Label" parent="."]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-size_flags_stretch_ratio = 0.1
+size_flags_vertical = 1
 theme_override_colors/font_color = Color(0.631373, 0.631373, 0.631373, 1)
 theme_override_fonts/font = ExtResource("1_firi7")
 theme_override_font_sizes/font_size = 24
 text = " > This is what the user typed"
-autowrap_mode = 3
+autowrap_mode = 1
 
 [node name="Response" type="Label" parent="."]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
+size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_t4vag")
 theme_override_font_sizes/font_size = 28
 text = " This is what the game will give back"
