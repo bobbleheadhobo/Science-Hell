@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6q7frbheyvac"
-path="res://.godot/imported/ducky_2_spritesheet.png-923a59e0b6b91055735f70af7db9b11c.ctex"
+path="res://.godot/imported/ducky.png-99d9c48392e9591c89a4206b772efc5f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/mobs/ducky_2_spritesheet.png"
-dest_files=["res://.godot/imported/ducky_2_spritesheet.png-923a59e0b6b91055735f70af7db9b11c.ctex"]
+source_file="res://science_hell/assets/mobs/ducky.png"
+dest_files=["res://.godot/imported/ducky.png-99d9c48392e9591c89a4206b772efc5f.ctex"]
 
 [params]
 
