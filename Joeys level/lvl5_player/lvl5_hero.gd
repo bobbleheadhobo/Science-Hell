@@ -29,6 +29,7 @@ var animTree_state_keys = [
 var knockback_duration = 0.2  # Duration of the knockback effect in seconds
 var knockback_timer = 0.0
 var knockback_direction = Vector2.ZERO
+var last_mob_id = null
 
 
 
@@ -71,8 +72,12 @@ func handle_mob_collision(delta):
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		for mob in overlapping_mobs:
+			if mob.get_mob_id() == last_mob_id:
+				mob.queue_free()
+				print("Killed buggy mob")
 			knockback_direction = (global_position - mob.global_position).normalized()
 			knockback_timer = knockback_duration
+			last_mob_id = mob.get_mob_id()
 		update_health()
 	
 	if knockback_timer > 0:

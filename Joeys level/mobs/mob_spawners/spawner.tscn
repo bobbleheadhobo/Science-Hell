@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bufpx04xloh51"]
 
 [ext_resource type="Texture2D" uid="uid://th0lmtwma7rk" path="res://science_hell/assets/animated_objects/animated_old_tv.png" id="1_exmke"]
-[ext_resource type="Script" path="res://Joeys level/mobs/spawner.gd" id="1_fh02w"]
+[ext_resource type="Script" path="res://Joeys level/mobs/mob_spawners/spawner.gd" id="1_fh02w"]
 
 [sub_resource type="Animation" id="Animation_5vnfl"]
 length = 0.001

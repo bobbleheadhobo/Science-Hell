@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4av4ra6dwn2i"]
+[gd_scene load_steps=9 format=3 uid="uid://c4av4ra6dwn2i"]
 
 [ext_resource type="Script" path="res://Joeys level/level/debug_or_die.gd" id="1_fcrlp"]
 [ext_resource type="PackedScene" uid="uid://c0pn2xkehu2j8" path="res://Joeys level/map/map.tscn" id="3_4cntp"]
 [ext_resource type="PackedScene" uid="uid://djdq6pyatghw6" path="res://Joeys level/lvl5_player/lvl5_player.tscn" id="3_xqqv7"]
 [ext_resource type="PackedScene" uid="uid://cfgdkd5t2y6oa" path="res://Joeys level/ui/game_over.tscn" id="4_pljea"]
 [ext_resource type="Script" path="res://Joeys level/ui/game_over.gd" id="5_iq0yq"]
-[ext_resource type="PackedScene" uid="uid://ck460lkuai80n" path="res://Joeys level/mobs/spawners_container.tscn" id="7_lrcur"]
+[ext_resource type="PackedScene" uid="uid://d2w0nbaqxw5vh" path="res://Joeys level/mobs/rubber_ducky/Duck.tscn" id="7_4u0cg"]
+[ext_resource type="PackedScene" uid="uid://ck460lkuai80n" path="res://Joeys level/mobs/mob_spawners/spawners_container.tscn" id="7_lrcur"]
+[ext_resource type="PackedScene" uid="uid://c3c1nj04tqxkv" path="res://Joeys level/mobs/bat/bat.tscn" id="8_2f8vk"]
 
 [node name="Debug_or_die" type="Node2D"]
 y_sort_enabled = true
@@ -42,5 +44,20 @@ show_percentage = false
 
 [node name="Spawners_container" parent="." instance=ExtResource("7_lrcur")]
 position = Vector2(2023, 1397)
+
+[node name="Duck" parent="." instance=ExtResource("7_4u0cg")]
+position = Vector2(3162, 2529)
+
+[node name="Duck2" parent="." instance=ExtResource("7_4u0cg")]
+position = Vector2(3179, 2777)
+
+[node name="Bat" parent="." instance=ExtResource("8_2f8vk")]
+position = Vector2(2851, 2495)
+
+[node name="Bat2" parent="." instance=ExtResource("8_2f8vk")]
+position = Vector2(2913, 2783)
+
+[node name="Bat3" parent="." instance=ExtResource("8_2f8vk")]
+position = Vector2(2987, 2031)
 
 [connection signal="timeout" from="SpawnMobTimer" to="Spawners_container" method="_on_spawn_mob_timer_timeout"]

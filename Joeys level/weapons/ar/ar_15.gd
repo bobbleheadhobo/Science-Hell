@@ -1,4 +1,5 @@
 extends Area2D
+const BULLET = preload("res://Joeys level/weapons/AR/ar_bullet.tscn")
 
 func _physics_process(delta):
 	var enemies_in_range = get_overlapping_bodies()
@@ -8,7 +9,6 @@ func _physics_process(delta):
 
 func shoot():
 	print("PEW!")
-	const BULLET = preload("res://Joeys level/weapons/AR/ar_bullet.tscn")
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %shooting_point.global_position
 	new_bullet.global_rotation = global_rotation

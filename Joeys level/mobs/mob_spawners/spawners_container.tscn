@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ck460lkuai80n"]
 
-[ext_resource type="Script" path="res://Joeys level/mobs/spawners_container.gd" id="1_sb5fn"]
-[ext_resource type="PackedScene" uid="uid://bufpx04xloh51" path="res://Joeys level/mobs/spawner.tscn" id="1_wbaw7"]
+[ext_resource type="Script" path="res://Joeys level/mobs/mob_spawners/spawners_container.gd" id="1_sb5fn"]
+[ext_resource type="PackedScene" uid="uid://bufpx04xloh51" path="res://Joeys level/mobs/mob_spawners/spawner.tscn" id="1_wbaw7"]
 
 [node name="Spawners_container" type="Node2D"]
 script = ExtResource("1_sb5fn")

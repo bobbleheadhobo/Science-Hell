@@ -22,7 +22,8 @@ func _on_lab_transition_body_entered(body):
 func change_scene():
 	if MG.transition_scene == true: 
 		if MG.current_scene == "ScienceHell": 
-			get_tree().change_scene_to_file("res://science_hell/scenes/lab.tscn")
+			var lab = load("res://science_hell/scenes/lab.tscn")
+			get_tree().change_scene_to_packed(lab)
 			MG.game_first_loadin = false 
 			MG.finish_change_scene()
 

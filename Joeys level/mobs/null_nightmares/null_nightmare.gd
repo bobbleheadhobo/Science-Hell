@@ -7,15 +7,19 @@ signal mob_killed
 var health = 3
 var invincible = false
 var rng = RandomNumberGenerator.new()
+var mob_id = null
 
 
 func _ready():
 	$null_animation.play_walking_animation(1)
+	mob_id = generate_mob_id()
+	
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * 300.0
 	move_and_slide()
+	flip_sprite(direction)
 
 func take_damage():
 	if invincible:
@@ -44,3 +48,20 @@ func teleport_closer_to_player():
 	$null_animation.play_appear_animation(3.0) 
 	await get_tree().create_timer(0.4).timeout
 	$null_animation.play_walking_animation(1.0)
+
+
+func generate_mob_id():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	mob_id = rng.randi()
+	return mob_id
+
+func get_mob_id():
+	return mob_id
+	
+func flip_sprite(direction):
+	# Flip the sprite based on the direction of movement
+		if direction.x > 0:
+			$Sprite2D.flip_h = true
+		elif direction.x < 0:
+			$Sprite2D.flip_h = false
