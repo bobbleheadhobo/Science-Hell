@@ -7,6 +7,8 @@ extends CharacterBody2D
 var prevDir = 0
 var horizontalDirection = -2
 
+var wallJumpPushBack = 100
+
 func _physics_process(delta):
 	
 	if(!is_on_floor()):
@@ -15,9 +17,19 @@ func _physics_process(delta):
 		
 		if velocity.y > 999:
 			velocity.y = 999
-
+		
+			
 	if(Input.is_action_just_pressed("jump") && is_on_floor()):
 		velocity.y = -jumpForce
+		
+	if(is_on_wall() and Input.is_action_just_pressed("moveRight")):
+		velocity.y = -jumpForce
+		velocity.x = -wallJumpPushBack
+		
+	if(is_on_wall() and Input.is_action_just_pressed("moveLeft")):
+		velocity.y = -jumpForce
+		velocity.x = wallJumpPushBack
+		
 	
 	if(prevDir == horizontalDirection && horizontalDirection != 0):
 		theAcc += 1
