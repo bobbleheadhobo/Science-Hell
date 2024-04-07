@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://bnq530scow18l" path="res://Frames/red_button.tres" id="2"]
 [ext_resource type="SpriteFrames" uid="uid://dn14iopqgj3u5" path="res://Frames/blue_button.tres" id="3"]
 [ext_resource type="Texture2D" uid="uid://cxh0qgfgyj3m7" path="res://Sprites/game/road/road.png" id="4"]
-[ext_resource type="AudioStream" uid="uid://r6n1eps6xpp" path="res://Sounds/song.ogg" id="5"]
+[ext_resource type="AudioStream" uid="uid://g0gppev2hm0e" path="res://Sounds/5-Note Nightmare.ogg" id="5"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="6"]
 [ext_resource type="SpriteFrames" uid="uid://cg78bg673kxb8" path="res://Frames/green_button.tres" id="6_tl1u6"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="7"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://g0gppev2hm0e"
+path="res://.godot/imported/5-Note Nightmare.ogg-7da3f0a154124bd3f830cc1a48153d70.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/5-Note Nightmare.ogg"
+dest_files=["res://.godot/imported/5-Note Nightmare.ogg-7da3f0a154124bd3f830cc1a48153d70.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
