@@ -15,10 +15,6 @@ run/main_scene="res://Level/level.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
-[autoload]
-
-level="*res://Level/level.tscn"
-
 [display]
 
 window/stretch/scale=3.5

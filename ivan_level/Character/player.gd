@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @export var speed : float = 200.0
 @export var jump_velocity : float = -250.0
-
+@export var level_start_pos : Node2D 
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -61,7 +61,7 @@ func handle_danger() -> void:
 	reset_play()
 
 func reset_play() -> void:
-	#global_position = level.level_start_pos.global_position
+	global_position = level_start_pos.global_position
 	visible = true 
 	can_control = true
 

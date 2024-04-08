@@ -3731,17 +3731,20 @@ shape = SubResource("RectangleShape2D_8ukjd")
 
 [node name="Player" parent="." instance=ExtResource("2_pd7pn")]
 top_level = true
+light_mask = 15
+visibility_layer = 15
 position = Vector2(21, 85)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="PlayerStart" type="Node2D" parent="."]
-position = Vector2(22, 83)
+position = Vector2(4, 82)
+scale = Vector2(1.1542e+07, -31133.7)
 
 [node name="enemy" parent="." instance=ExtResource("7_d5r0g")]
 top_level = true
-position = Vector2(76, -76)
+position = Vector2(393, 91)
 
 [node name="Ivan" type="Sprite2D" parent="."]
 top_level = true
