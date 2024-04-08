@@ -40,6 +40,8 @@ func process_command(input: String) -> String:
 			return use(second_word)
 		"talk":
 			return talk(second_word)
+		"give":
+			return give(second_word)
 		"help":
 			return help()
 		# defualt case for invalid input
@@ -132,17 +134,47 @@ func talk(second_word: String) -> String:
 	# print npc dialog
 	for npc in current_room.npcs:
 		if npc.npc_name.to_lower() == second_word:
-			return npc.npc_name + ": \"" + npc.initial_dialog + "\""
+			var dialog = npc.post_quest_dialog if npc.has_recieved_quest_item else npc.initial_dialog
+			return npc.npc_name + ": \"" + dialog + "\""
 			
 	return "That person does not exist in this room."
+
+func give(second_word: String) -> String:
 	
+	if second_word == "":
+		return "Give what?"
 	
-	
+	var has_item := false
+	# loop through all items
+	for item in player.inventory:
+		if second_word.to_lower() == item.item_name.to_lower():
+			has_item = true
+
+	if not has_item:
+		return "You don't have that item."
+		
+		
+	# find NPC that wants item
+	for npc in current_room.npcs:
+		if npc.quest_item != null and second_word.to_lower() == npc.quest_item.item_name.to_lower():
+			npc.has_recieved_quest_item = true
+			#player.drop_item(Item)
+			return "You gave the %s this item %s." % [npc.npc_name, second_word]
+			
+			
+	return "Nobody here wants that item."
 # PRE: input help by user
 # POST: displays users commands avaliable
 func help() -> String:
 	return "Avaliable Commands:
-cd [location], take [item], inventory, drop [item], use [item], talk [NPC], help"
+cd [location],
+ take [item], 
+inventory, 
+drop [item], 
+use [item], 
+talk [NPC], 
+give [item], 
+help"
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:

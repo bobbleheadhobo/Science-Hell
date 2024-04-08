@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://i8p6dpvx73h6"]
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://i8p6dpvx73h6"]
 
+[ext_resource type="Resource" uid="uid://c6ctrbthu7q66" path="res://chey/items/DuckieToken.tres" id="1_cert1"]
 [ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_kv2bw"]
 
 [resource]
@@ -12,3 +13,4 @@ initial_dialog = "Hey, I'm Duckie. Look, we don't have much time. Listen closely
 4. Be carefuk! Not all items are meant to be taken,
 6. I'll be there when you need me... but don't call for me too much... or else..."
 post_quest_dialog = "Ah yes, you found the key to unlock... "
+quest_item = ExtResource("1_cert1")

@@ -9,22 +9,26 @@ func _ready() -> void:
 	
 	# unlock stack room only from terminal room
 	var exit = $TerminalRoom.connect_exit_locked("south", $StackRoom) # , "inside"
-	var key = load_item("Key")
-	var duckie = load_npc("Duckie")
-	$TerminalRoom.add_npc(duckie)
+	var key = load_item("TerminalKey")
+	var bug = load_npc("Bug")
+	$TerminalRoom.add_npc(bug)
 	# add key item to stack room only
 	$TerminalRoom.add_item(key)
 	key.use_value = exit # key item unlocks Stack room
+	# add key item to stack room only
 
 	
-	# add key item to stack room only
-	$StackRoom.add_item(key)
+
 	
 	
 	# exit stack room takes player to heap
 	exit = $StackRoom.connect_exit_locked("south", $HeapRoom)
-	
-	$HeapRoom.connect_exit_locked("south", $TextRoom)
+	var duckie = load_npc("Duckie")
+	$StackRoom.add_npc(duckie)
+	var token = load_item("DuckieToken")
+	$StackRoom.add_item(token)
+	token.use_value = exit
+	exit = $HeapRoom.connect_exit_locked("south", $TextRoom)
 	
 	$TextRoom.connect_exit_locked("south", $CodeRoom)
 	$TextRoom.connect_exit_locked("west", $HintRoom)

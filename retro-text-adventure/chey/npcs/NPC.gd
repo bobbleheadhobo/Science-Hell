@@ -8,4 +8,7 @@ class_name NPC
 @export_multiline var post_quest_dialog:String
 
 
-@export var quest_item:Item
+@export var quest_item:Resource
+
+# flags if NPC recieved quest item
+var has_recieved_quest_item := false
