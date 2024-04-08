@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c4q5nx7enfcl5"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_fnenx"]
+[ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_fnenx"]
 [ext_resource type="Texture2D" uid="uid://bo2qpr8ywog6m" path="res://Enemy/error_404_enemy_sprite.png" id="1_qwp1d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dp8wk"]
