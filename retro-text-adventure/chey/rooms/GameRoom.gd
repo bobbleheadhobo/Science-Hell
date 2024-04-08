@@ -124,26 +124,14 @@ func _connect_exit(direction: String, room: GameRoom, is_locked: bool = false, r
 	else: # no override name
 		# connect both cardinal directions of connection
 		match direction:
-			"/terminal":
-				room.exits["/stack"] = exit
-			"/stack":
-				room.exits["/heap"] = exit
-			"/heap":
-				room.exits["/text"] = exit # resource
-			"/text":
-				room.exits["/code"] = exit
-			"/code":
-				room.exits["/cooper1"] = exit
-			"/cooper1":
-				room.exits["/hint.txt"] = exit
-			"/bash_profile":
-				room.exits["/code.sh"] = exit
-			"/hint.txt":
-				room.exits["/bash_profile"] = exit
-			"/code.sh":
-				room.exits["/cooper2"] = exit
-			"/cooper2":
-				room.exits["exit"] = exit
+			"north":
+				room.exits["south"] = exit
+			"south":
+				room.exits["north"] = exit
+			"east":
+				room.exits["west"] = exit
+			"west":
+				room.exits["east"] = exit
 			_:
 				printerr("Tried to connect invalid direction: %s", direction)
 	return exit

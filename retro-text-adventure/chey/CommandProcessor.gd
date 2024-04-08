@@ -29,7 +29,7 @@ func process_command(input: String) -> String:
 	# switch cases for commands
 	match first_word:
 		"cd": 
-			return go(second_word)
+			return cd(second_word)
 		"take":
 			return take(second_word)
 		"inventory":
@@ -49,7 +49,7 @@ func process_command(input: String) -> String:
 			
 # PRE function call
 # POST returns command action for go
-func go(second_word: String) -> String:
+func cd(second_word: String) -> String:
 	if second_word == "":
 		return "Go where?"
 	# getting all keys and check if room can be exitable
@@ -142,7 +142,7 @@ func talk(second_word: String) -> String:
 # POST: displays users commands avaliable
 func help() -> String:
 	return "Avaliable Commands:
-cd /filename, take [item], inventory, drop [item], use [item], talk [NPC], help"
+cd [location], take [item], inventory, drop [item], use [item], talk [NPC], help"
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:
