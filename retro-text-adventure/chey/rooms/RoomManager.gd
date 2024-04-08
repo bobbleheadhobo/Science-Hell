@@ -10,8 +10,8 @@ func _ready() -> void:
 	# unlock stack room only from terminal room
 	var exit = $TerminalRoom.connect_exit_locked("south", $StackRoom) # , "inside"
 	var key = load_item("Key")
-	var bug = load_npc("Bug")
-	$TerminalRoom.add_npc(bug)
+	var duckie = load_npc("Duckie")
+	$TerminalRoom.add_npc(duckie)
 	# add key item to stack room only
 	$TerminalRoom.add_item(key)
 	key.use_value = exit # key item unlocks Stack room
