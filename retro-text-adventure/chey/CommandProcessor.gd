@@ -149,11 +149,12 @@ func give(second_word: String) -> String:
 	for item in player.inventory:
 		if second_word.to_lower() == item.item_name.to_lower():
 			has_item = true
-
+			player.drop_item(item)
+			
 	if not has_item:
 		return "You don't have that item."
 		
-		
+
 	# find NPC that wants item
 	for npc in current_room.npcs:
 		if npc.quest_item != null and second_word.to_lower() == npc.quest_item.item_name.to_lower():
