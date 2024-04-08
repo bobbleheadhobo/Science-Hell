@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://boxgc874qssvm"]
+
+[ext_resource type="Script" path="res://Obstacles/danger.gd" id="1_7qec3"]
+
+[node name="danger2" type="Area2D"]
+position = Vector2(442, 29)
+collision_layer = 12
+collision_mask = 8
+monitorable = false
+script = ExtResource("1_7qec3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -242,4 +242,4 @@ visible = false
 shape = SubResource("CapsuleShape2D_y8kns")
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-49, 0)
+position = Vector2(-69, -42)
