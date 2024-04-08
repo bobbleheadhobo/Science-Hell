@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn4e417kvr2px"]
+
+[ext_resource type="Texture2D" uid="uid://bc2gau158iaxh" path="res://Joeys level/mobs/syntax_spiders/syntax_spider_idle.png" id="1_qn73v"]
+
+[node name="SyntaxSpider" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_qn73v")
+hframes = 4
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
