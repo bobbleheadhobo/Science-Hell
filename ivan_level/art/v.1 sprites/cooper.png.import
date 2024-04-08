@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dshsosc3r23fu"
-path="res://.godot/imported/cooper.png-c37f5163b67de395dc94d1280d9c5f8c.ctex"
+path="res://.godot/imported/cooper.png-46b742dc8009c7dc47422e3187aa7498.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/v.1 sprites/cooper.png"
-dest_files=["res://.godot/imported/cooper.png-c37f5163b67de395dc94d1280d9c5f8c.ctex"]
+source_file="res://ivan_level/art/v.1 sprites/cooper.png"
+dest_files=["res://.godot/imported/cooper.png-46b742dc8009c7dc47422e3187aa7498.ctex"]
 
 [params]
 

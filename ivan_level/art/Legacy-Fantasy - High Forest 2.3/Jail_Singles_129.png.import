@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ryxn4owhj57x"
-path="res://.godot/imported/Jail_Singles_129.png-7db10a396c85ce472af0a605ebe1d1c0.ctex"
+path="res://.godot/imported/Jail_Singles_129.png-451486285727aa9a62fad4d318a3139c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png"
-dest_files=["res://.godot/imported/Jail_Singles_129.png-7db10a396c85ce472af0a605ebe1d1c0.ctex"]
+source_file="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png"
+dest_files=["res://.godot/imported/Jail_Singles_129.png-451486285727aa9a62fad4d318a3139c.ctex"]
 
 [params]
 

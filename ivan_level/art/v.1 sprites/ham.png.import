@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvtkcxbuxrfvs"
-path="res://.godot/imported/ham.png-37610a611bd263c947c7c0db9a482685.ctex"
+path="res://.godot/imported/ham.png-4630e549e3ce4a58ad8a9bf2802cc496.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/v.1 sprites/ham.png"
-dest_files=["res://.godot/imported/ham.png-37610a611bd263c947c7c0db9a482685.ctex"]
+source_file="res://ivan_level/art/v.1 sprites/ham.png"
+dest_files=["res://.godot/imported/ham.png-4630e549e3ce4a58ad8a9bf2802cc496.ctex"]
 
 [params]
 

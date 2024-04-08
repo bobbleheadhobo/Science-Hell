@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deli8o01fl1pa"
-path="res://.godot/imported/Run-Sheet.png-f1a1f509f5cbf29da8dd6d4817bd62ea.ctex"
+path="res://.godot/imported/Run-Sheet.png-b4bf5bc88a4eaf7e366a6c1c2aae02d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png"
-dest_files=["res://.godot/imported/Run-Sheet.png-f1a1f509f5cbf29da8dd6d4817bd62ea.ctex"]
+source_file="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png"
+dest_files=["res://.godot/imported/Run-Sheet.png-b4bf5bc88a4eaf7e366a6c1c2aae02d3.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u10xishplp7"
-path="res://.godot/imported/cavesofgallet.png-ec2a334a6aea0386f0a00cbac715d0b6.ctex"
+path="res://.godot/imported/cavesofgallet.png-8175e5c2f16bf7e025a05478a356cf23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cavesofgallet/cavesofgallet.png"
-dest_files=["res://.godot/imported/cavesofgallet.png-ec2a334a6aea0386f0a00cbac715d0b6.ctex"]
+source_file="res://ivan_level/art/cavesofgallet/cavesofgallet.png"
+dest_files=["res://.godot/imported/cavesofgallet.png-8175e5c2f16bf7e025a05478a356cf23.ctex"]
 
 [params]
 

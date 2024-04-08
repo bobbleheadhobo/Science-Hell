@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpxg68wfwq0vn"
-path="res://.godot/imported/ivan.png-3f39bff2b98ab17e7ae1870dc54f1c4d.ctex"
+path="res://.godot/imported/ivan.png-28712ccebd9ff6cd9f97d1a0e60b7865.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/v.1 sprites/ivan.png"
-dest_files=["res://.godot/imported/ivan.png-3f39bff2b98ab17e7ae1870dc54f1c4d.ctex"]
+source_file="res://ivan_level/art/v.1 sprites/ivan.png"
+dest_files=["res://.godot/imported/ivan.png-28712ccebd9ff6cd9f97d1a0e60b7865.ctex"]
 
 [params]
 
