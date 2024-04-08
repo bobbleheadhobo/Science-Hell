@@ -3775,6 +3775,7 @@ position = Vector2(148, 62)
 texture = ExtResource("5_0el8t")
 
 [node name="JailSingles130" type="Sprite2D" parent="."]
+show_behind_parent = true
 top_level = true
 position = Vector2(180, 62)
 texture = ExtResource("6_qjvsl")
