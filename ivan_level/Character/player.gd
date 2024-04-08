@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 
@@ -11,7 +12,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
 
+var can_control : bool = true
+
 func _physics_process(delta):
+	if not can_control: return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -46,3 +51,17 @@ func update_facing_direction():
 	
 	elif direction.x < 0:
 		animated_sprite.flip_h = true
+		
+func handle_danger() -> void:
+	print("Player died")
+	visible = false
+	can_control = false
+	
+	await get_tree().create_timer(1).timeout
+	reset_play()
+
+func reset_play() -> void:
+	#global_position = level.level_start_pos.global_position
+	visible = true 
+	can_control = true
+

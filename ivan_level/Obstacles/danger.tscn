@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmv5r1ldorwn2"]
+
+[ext_resource type="Script" path="res://Obstacles/danger.gd" id="1_keujd"]
+
+[node name="danger" type="Area2D"]
+collision_layer = 4
+collision_mask = 8
+monitorable = false
+script = ExtResource("1_keujd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

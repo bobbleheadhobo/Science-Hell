@@ -223,10 +223,11 @@ animations = [{
 radius = 4.0
 height = 23.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("level_start_pos")]
 collision_layer = 11
 collision_mask = 7
 script = ExtResource("1_0pnel")
+level_start_pos = NodePath("Node2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-13, -19)
@@ -238,3 +239,6 @@ centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_y8kns")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-2, 0)
