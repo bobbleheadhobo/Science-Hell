@@ -8,7 +8,7 @@ func _ready() -> void:
 	
 	
 	# unlock stack room only from terminal room
-	var exit = $TerminalRoom.connect_exit_unlocked("south", $StackRoom) # , "inside"
+	var exit = $TerminalRoom.connect_exit_locked("/stack", $StackRoom) # , "inside"
 	var key = load_item("Key")
 	var bug = load_npc("Bug")
 	$TerminalRoom.add_npc(bug)
@@ -22,26 +22,38 @@ func _ready() -> void:
 	
 	
 	# exit stack room takes player to heap
-	exit = $StackRoom.connect_exit_locked("east", $HeapRoom)
+	exit = $StackRoom.connect_exit_locked("/heap", $HeapRoom)
 	
-
+	#$StackRoom.connect_exit_unlocked("/terminal", $Terminal)
 	# exit geap room takes player to text
-	$HeapRoom.connect_exit_unlocked("north", $TextRoom)
+	$HeapRoom.connect_exit_locked("/text", $TextRoom)
 	
 
 	# exit text room takes player to code
-	$TextRoom.connect_exit_unlocked("west", $CodeRoom)
+	$TextRoom.connect_exit_locked("/code", $CodeRoom)
 	
 
 	# exit code room takes player to cooper
-	$CodeRoom.connect_exit_unlocked("north", $CooperRoom)
+	$CodeRoom.connect_exit_locked("/cooper1", $CooperRoom)
 	
+	# cooper 1 room with npc
+	$CooperRoom.connect_exit_locked("/hint.txt", $HintRoom)
 	var cooper = load_npc("Cooper")
-	$CooperRoom.add_npc(cooper)	
-	# exit cooper room takes player to terminal for now but main map soon
-	$CooperRoom.connect_exit_unlocked("south", $TerminalRoom)
-	# lock cooper room from terminal room 
-	#$TerminalRoom.connect_exit_unlocked("south", $CooperRoom)
+	$CooperRoom.add_npc(cooper)
+	
+	# hint room
+	$HintRoom.connect_exit_locked("/bash_profile", $BashRoom)
+	
+	# bash profile room
+	$BashRoom.connect_exit_locked("/code.sh", $CodeShRoom)
+	
+	# code.sh room
+	$CodeShRoom.connect_exit_locked("/cooper2", $Cooper2Room)
+	
+	# cooper 2 final room
+	$Cooper2Room.connect_exit_locked("exit", $ExitRoom)
+	
+
 	
 # helper dynamic file fider for item resources
 func load_item(item_name: String):
