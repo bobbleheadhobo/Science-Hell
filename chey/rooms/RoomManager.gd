@@ -24,7 +24,7 @@ func _ready() -> void:
 	bug.quest_reward = exit
 	
 	# token unlocks heap room from stack room
-	exit  = $HeapRoom.connect_exit_unlocked("south", $TextRoom)
+	exit  = $HeapRoom.connect_exit_locked("south", $TextRoom)
 	
 	# add roopa to heap room
 	var roopa = load_npc("Roopa")
@@ -49,7 +49,7 @@ func _ready() -> void:
 	$CodeRoom.add_npc(main)
 	
 	# bash room
-	$BashRoom.connect_exit_unlocked("east", $CodeShRoom)
+	$BashRoom.connect_exit_locked("east", $CodeShRoom)
 	var bash_duckie = load_npc("BashDuckie")
 	$BashRoom.add_npc(bash_duckie)
 	
@@ -59,13 +59,13 @@ func _ready() -> void:
 	$CodeShRoom.add_npc(bats)
 
 	# cooper 2 room
-	$TerminalRoom.connect_exit_unlocked("east", $Cooper2Room)
-	$Cooper2Room.connect_exit_unlocked("east", $ExitRoom)
+	$TerminalRoom.connect_exit_locked("east", $Cooper2Room)
+	$Cooper2Room.connect_exit_locked("east", $ExitRoom)
 	var cooper2 = load_npc("Cooper2")
 	$Cooper2Room.add_npc(cooper2)
 	
 	# SH terminal Exit room
-	$ExitRoom.connect_exit_unlocked("west", $Cooper2Room)
+	$ExitRoom.connect_exit_locked("west", $Cooper2Room)
 	var sh_cooper = load_npc("SHCooper")
 	var sh_duckie = load_npc("SHDuckie")
 	$ExitRoom.add_npc(sh_cooper)
