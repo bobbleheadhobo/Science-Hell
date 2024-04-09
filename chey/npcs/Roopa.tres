@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://dysi4ltr0urfp"]
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://dysi4ltr0urfp"]
 
+[ext_resource type="Resource" uid="uid://cyx0wogyaq8jf" path="res://chey/items/RoopaItem3.tres" id="1_o4dao"]
 [ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_uswom"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_uswom")
 npc_name = "roopa"
 initial_dialog = "says some stuff"
 post_quest_dialog = "unlocks text room and then gives some hint or something"
+quest_item = ExtResource("1_o4dao")

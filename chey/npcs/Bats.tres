@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_qh8oq")
 npc_name = "bats"
-initial_dialog = ""
-post_quest_dialog = ""
+initial_dialog = "text"
+post_quest_dialog = "text"

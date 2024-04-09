@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://fr74qglmkigk"]
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://fr74qglmkigk"]
 
+[ext_resource type="Resource" uid="uid://cv03pvsu1hrcq" path="res://chey/items/BugItemCooper1.tres" id="1_81r15"]
 [ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_xdeh2"]
 
 [resource]
 script = ExtResource("1_xdeh2")
 npc_name = "cooper"
-initial_dialog = ""
-post_quest_dialog = ""
+initial_dialog = "text"
+post_quest_dialog = "cooper1 item from bug unlocks room cooper2"
+quest_item = ExtResource("1_81r15")

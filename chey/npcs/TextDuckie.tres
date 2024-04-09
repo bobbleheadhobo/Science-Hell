@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://b21tsslq8yfp6"]
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://b21tsslq8yfp6"]
 
 [ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_2yg7d"]
+[ext_resource type="Resource" uid="uid://hpsiifh5g2k4" path="res://chey/items/SHItem.tres" id="1_xuah0"]
 
 [resource]
 script = ExtResource("1_2yg7d")
 npc_name = "NPC Name"
 initial_dialog = ""
 post_quest_dialog = ""
+quest_item = ExtResource("1_xuah0")
