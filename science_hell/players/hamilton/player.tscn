@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="2_b20jn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dauad"]
-size = Vector2(19.0283, 9.99975)
+size = Vector2(2.51433, 9.99975)
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -442,7 +442,7 @@ vframes = 2
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(-0.0589238, 14.2568)
 rotation = -1.56366
 shape = SubResource("RectangleShape2D_dauad")
 
