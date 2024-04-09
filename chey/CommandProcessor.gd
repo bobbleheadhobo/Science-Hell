@@ -1,8 +1,5 @@
 extends Node
 
-# signal for response text that needs to be sent to game script
-#signal response_generated(response_text)
-
 # no room
 var current_room = null
 
@@ -168,10 +165,6 @@ func give(second_word: String) -> String:
 				if "is_locked" in reward:
 					# unlock it as part of the quest reward
 					reward.is_locked = false
-				
-				# attempt to make password entry reward? did not work
-				#if "BARF.*?" in reward:
-					#reward.is_locked = false
 				
 				# note to developer warning error
 				else:

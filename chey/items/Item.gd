@@ -11,5 +11,4 @@ class_name Item # can create item resources now
 var use_value = null
 
 
-	
 

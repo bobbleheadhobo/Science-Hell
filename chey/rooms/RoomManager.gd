@@ -3,15 +3,11 @@ extends Node
 
 func _ready() -> void:
 	
-	
-	
-	
-	
 	# unlock stack room only from terminal room
 	var exit = $TerminalRoom.connect_exit_locked("south", $StackRoom) # , "inside"
-	var key = load_item("TerminalKey")
-	var token = load_item("DuckieToken")	
+	var key = load_item("BugKey")
 	var bug = load_npc("Bug")
+	
 	$TerminalRoom.add_npc(bug)
 	# add key item to stack room only
 	$TerminalRoom.add_item(key)
@@ -20,12 +16,13 @@ func _ready() -> void:
 	exit = $StackRoom.connect_exit_locked("south", $HeapRoom)
 	
 	
-	
+	var token = load_item("DuckieToken")
 	var duckie = load_npc("Duckie")
-	$StackRoom.add_npc(duckie)
 	$StackRoom.add_item(token)
-	# token unlocks heap room from stack room
+	$StackRoom.add_npc(duckie)
 	duckie.quest_reward = exit
+	
+	# token unlocks heap room from stack room
 	exit  = $HeapRoom.connect_exit_locked("south", $TextRoom)
 	
 	
