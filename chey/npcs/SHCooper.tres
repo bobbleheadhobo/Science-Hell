@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://bp7afiunap2ae"]
+
+[ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_i33pq"]
+
+[resource]
+script = ExtResource("1_i33pq")
+npc_name = "cooper"
+initial_dialog = ""
+post_quest_dialog = ""
