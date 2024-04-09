@@ -24,22 +24,54 @@ func _ready() -> void:
 	bug.quest_reward = exit
 	
 	# token unlocks heap room from stack room
-	exit  = $HeapRoom.connect_exit_locked("south", $TextRoom)
+	exit  = $HeapRoom.connect_exit_unlocked("south", $TextRoom)
+	
+	# add roopa to heap room
+	var roopa = load_npc("Roopa")
+	$HeapRoom.add_npc(roopa)
+	# add roopa's items to heap room
+	
+	# texy room
+	$TextRoom.connect_exit_unlocked("south", $CodeRoom)
+	var text_duckie = load_npc("TextDuckie")
+	$TextRoom.add_npc(text_duckie)
+	$TextRoom.connect_exit_unlocked("west", $HintRoom)
 	
 	
+	# hint room
+	$HintRoom.connect_exit_unlocked("east", $TextRoom)
+	var text_cooper = load_npc("Cooper")
+	$HintRoom.add_npc(text_cooper)
 	
-	$TextRoom.connect_exit_locked("south", $CodeRoom)
-	$TextRoom.connect_exit_locked("west", $HintRoom)
+	# code room
+	$CodeRoom.connect_exit_unlocked("east", $BashRoom)
+	var main = load_npc("Main")
+	$CodeRoom.add_npc(main)
 	
+	# bash room
+	$BashRoom.connect_exit_unlocked("east", $CodeShRoom)
+	var bash_duckie = load_npc("BashDuckie")
+	$BashRoom.add_npc(bash_duckie)
 	
-	$CodeRoom.connect_exit_locked("east", $BashRoom)
-	$BashRoom.connect_exit_locked("east", $CodeShRoom)
-	
-	$CodeShRoom.connect_exit_locked("east", $CooperRoom)
-	
+	# code.sh room
+	$CodeShRoom.connect_exit_unlocked("east", $CooperRoom)
+	var bats = load_npc("Bats")
+	$CodeShRoom.add_npc(bats)
 
-	$TerminalRoom.connect_exit_locked("east", $Cooper2Room)
-	$Cooper2Room.connect_exit_locked("east", $ExitRoom)
+	# cooper 2 room
+	$TerminalRoom.connect_exit_unlocked("east", $Cooper2Room)
+	$Cooper2Room.connect_exit_unlocked("east", $ExitRoom)
+	var cooper2 = load_npc("Cooper2")
+	$Cooper2Room.add_npc(cooper2)
+	
+	# SH terminal Exit room
+	$ExitRoom.connect_exit_unlocked("west", $Cooper2Room)
+	var sh_cooper = load_npc("SHCooper")
+	var sh_duckie = load_npc("SHDuckie")
+	$ExitRoom.add_npc(sh_cooper)
+	$ExitRoom.add_npc(sh_duckie)
+	
+	
 	
 # helper dynamic file fider for item resources
 func load_item(item_name: String):

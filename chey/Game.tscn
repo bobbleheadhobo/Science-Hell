@@ -131,8 +131,8 @@ offset_right = 1827.0
 offset_bottom = -1138.0
 grow_horizontal = 1
 grow_vertical = 1
-room_name = "exit"
-room_description = "exit room"
+room_name = "sh terminal"
+room_description = "sh terminal exit room"
 
 [node name="CodeShRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 1469.0
