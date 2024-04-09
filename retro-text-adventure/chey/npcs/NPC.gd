@@ -12,3 +12,8 @@ class_name NPC
 
 # flags if NPC recieved quest item
 var has_recieved_quest_item := false
+
+# exit that gets unlocked with quest_item
+# will implement password entry to unlock quest item
+var quest_reward = null
+

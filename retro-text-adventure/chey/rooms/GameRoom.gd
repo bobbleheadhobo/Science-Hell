@@ -102,10 +102,11 @@ func connect_exit_locked(direction: String, room: GameRoom, room_2_override_name
 	return _connect_exit(direction, room, true, room_2_override_name) # true locking exit
 
 
-# create function to lock both sides of room
-@warning_ignore("unused_parameter")
-func connect_both_exit_locked(direction: String, room: GameRoom, room_2_override_name):
-	pass
+## create function to lock both sides of room
+#@warning_ignore("unused_parameter")
+#func connect_both_exit_locked(direction: String, room: GameRoom, room_2_override_name):
+	#pass
+
 
 
 # using as private function _
