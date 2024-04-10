@@ -18,11 +18,16 @@ config/icon="res://icon.svg"
 [autoload]
 
 Health="*res://science_hell/gui/hearts/hearts_container.gd"
-SceneManager="*res://science_hell/scripts/scene_manager.gd"
+SceneManager="*res://addons/scene_manager/scene_manager.tscn"
+Scenes="*res://addons/scene_manager/scenes.gd"
 
 [display]
 
 window/stretch/scale=4.0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
 
 [input]
 
