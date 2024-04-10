@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://thvtpjwkq60x"]
+
+[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_71kvl"]
+
+[node name="Response" type="Label"]
+custom_minimum_size = Vector2(20, 0)
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("1_71kvl")
+theme_override_font_sizes/font_size = 28
+text = " This is what the game will give back"
+autowrap_mode = 3

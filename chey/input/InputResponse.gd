@@ -1,8 +1,13 @@
-extends VBoxContainer
+extends MarginContainer
 
 
-func set_text(input: String, response: String):
-	# concante both strings
-	$InputHistory.text = " > " + input
-	# changes setting text property on Response label 
-	$Response.text = response
+@onready var input_label = $Rows/InputHistory
+@onready var response_label = $Rows/Response
+
+func set_text(response: String, input: String =""):
+	if input == "":
+		input_label.queue_free()
+	else:
+		input_label.text = " > " + input
+
+	response_label.text = response

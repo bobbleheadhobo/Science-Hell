@@ -1,9 +1,11 @@
 extends PanelContainer
 
 # Response scene
-const Response = preload("res://chey/input/Response.tscn")
+#const Response = preload("res://chey/input/Response.tscn")
+
+
 # script class not instance of game => save data
-const InputResponse = preload("res://chey/input/InputResponse.tscn")
+const INPUT_RESPONSE = preload("res://chey/input/InputResponse.tscn")
 
 # value can be edited in editor with export
 @export var max_lines_remembered := 30
@@ -28,19 +30,19 @@ func _ready() -> void:
 # generate response for each room for player. responds to anything
 func create_response(response_text: String):
 	# instance of Respone and add response
-	var response = Response.instantiate()
+	var response = INPUT_RESPONSE.instantiate()
 	# eventually use export var or JSON
-	response.text = response_text
 	_add_response_to_game(response)
+	response.set_text(response_text)
 	
 # generate response for each room for player. responds to anything
 func create_response_with_input(response_text: String, input_text: String):
-	var input_response = InputResponse.instantiate()
+	var input_response = INPUT_RESPONSE.instantiate()
 	
 	# show user input (validation and scroll scroll history), new response from command processor
-	input_response.set_text(input_text, response_text)
 	# add response to game
 	_add_response_to_game(input_response)
+	input_response.set_text( response_text, input_text)
 
 ##### PRIVATE #####
 # PRE connected scroll bar signal coming from ready
