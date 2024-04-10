@@ -22,6 +22,8 @@ SceneManager="*res://science_hell/scripts/scene_manager.gd"
 
 [display]
 
+window/size/viewport_width=3000
+window/size/viewport_height=1960
 window/stretch/scale=4.0
 
 [input]
