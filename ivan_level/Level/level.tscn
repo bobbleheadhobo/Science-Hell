@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://djquaxa4fkpdj"]
+[gd_scene load_steps=20 format=3 uid="uid://djquaxa4fkpdj"]
 
 [ext_resource type="Script" path="res://ivan_level/Level/level.gd" id="1_1uj5n"]
 [ext_resource type="Texture2D" uid="uid://u10xishplp7" path="res://ivan_level/art/cavesofgallet/cavesofgallet.png" id="1_whjnr"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://boxgc874qssvm" path="res://ivan_level/Obstacles/danger_2.tscn" id="5_1ytrn"]
 [ext_resource type="Texture2D" uid="uid://d271derdg4mco" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png" id="6_qjvsl"]
 [ext_resource type="PackedScene" uid="uid://c4q5nx7enfcl5" path="res://ivan_level/Enemy/enemy.tscn" id="7_d5r0g"]
+[ext_resource type="Script" path="res://ivan_level/Level/PlayerStart.gd" id="7_i3vnv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_moets"]
 texture = ExtResource("1_whjnr")
@@ -3710,14 +3711,22 @@ sources/0 = SubResource("TileSetAtlasSource_moets")
 sources/1 = SubResource("TileSetAtlasSource_0kf07")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ukjd"]
-size = Vector2(29.1443, 173)
+size = Vector2(32.5722, 173)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n204h"]
 size = Vector2(325, 175)
 
-[node name="level" type="Node2D" node_paths=PackedStringArray("level_start_pos")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61tpk"]
+size = Vector2(179.5, 60.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0g7j"]
+size = Vector2(122.5, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akqal"]
+size = Vector2(435, 229)
+
+[node name="level" type="Node2D"]
 script = ExtResource("1_1uj5n")
-level_start_pos = NodePath("PlayerStart")
 
 [node name="TileMap" type="TileMap" parent="."]
 show_behind_parent = true
@@ -3734,23 +3743,43 @@ position = Vector2(467.25, 185.5)
 shape = SubResource("RectangleShape2D_8ukjd")
 
 [node name="danger2" parent="TileMap" instance=ExtResource("5_1ytrn")]
+position = Vector2(442, 27)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/danger2"]
 position = Vector2(519.5, 140.5)
 shape = SubResource("RectangleShape2D_n204h")
 
+[node name="danger3" parent="TileMap" instance=ExtResource("4_4l314")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/danger3"]
+position = Vector2(1882.25, 455.75)
+shape = SubResource("RectangleShape2D_61tpk")
+
+[node name="danger4" parent="TileMap" instance=ExtResource("4_4l314")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/danger4"]
+position = Vector2(2291.75, 424)
+shape = SubResource("RectangleShape2D_s0g7j")
+
+[node name="danger5" parent="TileMap" instance=ExtResource("4_4l314")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/danger5"]
+position = Vector2(2760.5, 446.5)
+shape = SubResource("RectangleShape2D_akqal")
+
 [node name="Player" parent="." instance=ExtResource("2_pd7pn")]
 top_level = true
 light_mask = 15
 visibility_layer = 15
-position = Vector2(22, 84)
+position = Vector2(23, 84)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
 
 [node name="PlayerStart" type="Node2D" parent="."]
-position = Vector2(4, 82)
+position = Vector2(1, 80)
 scale = Vector2(1.1542e+07, -31133.7)
+script = ExtResource("7_i3vnv")
 
 [node name="enemy" parent="." instance=ExtResource("7_d5r0g")]
 top_level = true
@@ -3763,7 +3792,7 @@ scale = Vector2(1, 0.84375)
 texture = ExtResource("3_eh1al")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(22, 84)
+position = Vector2(23, 84)
 process_callback = 0
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
