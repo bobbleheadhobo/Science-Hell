@@ -22,11 +22,11 @@ func _physics_process(delta):
 	if(Input.is_action_just_pressed("jump") && is_on_floor()):
 		velocity.y = -jumpForce
 		
-	if(is_on_wall() and Input.is_action_just_pressed("moveRight")):
+	if(is_on_wall() and Input.is_action_just_pressed("move_right")):
 		velocity.y = -jumpForce
 		velocity.x = -wallJumpPushBack
 		
-	if(is_on_wall() and Input.is_action_just_pressed("moveLeft")):
+	if(is_on_wall() and Input.is_action_just_pressed("move_left")):
 		velocity.y = -jumpForce
 		velocity.x = wallJumpPushBack
 		
@@ -47,7 +47,7 @@ func _physics_process(delta):
 		
 	prevDir = horizontalDirection
 	
-	horizontalDirection = Input.get_axis("moveLeft", "moveRight")
+	horizontalDirection = Input.get_axis("move_left", "move_right")
 	
 	# velocity.x = speed * horizontalDirection
 	set_velocity(velocity)
