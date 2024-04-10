@@ -7,17 +7,10 @@
 [ext_resource type="Script" path="res://chey/Player.gd" id="2_rqjkp"]
 [ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
+[ext_resource type="PackedScene" uid="uid://tg2a3ws3eojy" path="res://chey/GameInfo.tscn" id="6_4qxhm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dj5n"]
 bg_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rl3jm"]
-bg_color = Color(0.164706, 0.164706, 0.164706, 1)
-border_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugmq6"]
 bg_color = Color(0.25098, 0.25098, 0.25098, 1)
@@ -162,20 +155,8 @@ theme_override_constants/margin_bottom = 25
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="GameInfo" type="PanelContainer" parent="Background/MarginContainer/Rows"]
+[node name="GameInfo" parent="Background/MarginContainer/Rows" instance=ExtResource("6_4qxhm")]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_rl3jm")
-
-[node name="Scroll" type="ScrollContainer" parent="Background/MarginContainer/Rows/GameInfo"]
-layout_mode = 2
-follow_focus = true
-
-[node name="HistoryRows" type="VBoxContainer" parent="Background/MarginContainer/Rows/GameInfo/Scroll"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 20
 
 [node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
 custom_minimum_size = Vector2(0, 60)

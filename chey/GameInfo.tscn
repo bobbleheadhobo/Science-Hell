@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://tg2a3ws3eojy"]
+
+[ext_resource type="Script" path="res://chey/GameInfo.gd" id="1_gwyb8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rl3jm"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+border_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="GameInfo" type="PanelContainer"]
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rl3jm")
+script = ExtResource("1_gwyb8")
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+layout_mode = 2
+follow_focus = true
+
+[node name="HistoryRows" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
