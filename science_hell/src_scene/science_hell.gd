@@ -20,3 +20,4 @@ func health_example():
 	
 	await get_tree().create_timer(2).timeout
 	Health.update_health(10)
+

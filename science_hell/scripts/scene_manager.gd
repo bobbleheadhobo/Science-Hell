@@ -3,7 +3,7 @@ extends Node
 var current_scene = null
 
 # TO use in other scripts
-#Global.change_scene("res://science_hell/scenes/lab.tscn")
+#Global.change_scene("res://ivan_level/Level/level.tscn")
 
 var scene_node_paths = {
 	"labroof": "Lab/Roof",
@@ -11,7 +11,8 @@ var scene_node_paths = {
 
 var scene_file_paths = {
 	"lab": "res://science_hell/scenes/lab.tscn",
-	"sciencehall": "res://science_hell/src_scene/science_hell.tscn"
+	"sciencehall": "res://science_hell/src_scene/science_hell.tscn",
+	"ivanlevel" : "res://ivan_level/level/level.tscn"
 }
 
 func _ready():
