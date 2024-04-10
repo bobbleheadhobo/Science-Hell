@@ -1,6 +1,5 @@
 res://default_env.tres
-res://Scenes/basicVirus.tscn
 res://Scenes/VirusWorld.tscn
-res://Scenes/basicVirus.gd
 res://Scenes/RockyPlatform.tscn
 res://Scenes/Player.tscn
+res://Scenes/basicVirus.tscn
