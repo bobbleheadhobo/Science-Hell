@@ -44,6 +44,7 @@ polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, 
 position = Vector2(-25, 55)
 
 [node name="collisionInner" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="plant" type="CollisionPolygon2D" parent="collisionInner"]
 polygon = PackedVector2Array(-400, 159, -305, 159, -305, 240, -400, 240, -400, 160, -392, 171, -386, 165, -395, 160, -400, 160)

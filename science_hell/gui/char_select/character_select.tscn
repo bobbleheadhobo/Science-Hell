@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb8m3e6jpm88f"]
+
+[ext_resource type="Script" path="res://science_hell/gui/char_select/character_select.gd" id="1_7ll75"]
+[ext_resource type="Texture2D" uid="uid://b6nfnnf1p6j64" path="res://science_hell/gui/char_select/character_corkboard.png" id="2_ulecy"]
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_7ll75")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ulecy")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_top = 2.0
+offset_right = -9.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ulecy")
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013
+anchor_right = 1.0
+anchor_bottom = 1.002
+offset_left = -15.476
+offset_right = 0.5
+offset_bottom = -0.296082
+grow_horizontal = 2
+columns = 3
