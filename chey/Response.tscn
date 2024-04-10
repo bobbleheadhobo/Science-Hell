@@ -2,10 +2,14 @@
 
 [ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_71kvl"]
 
-[node name="Response" type="Label"]
+[node name="Response" type="RichTextLabel"]
 custom_minimum_size = Vector2(20, 0)
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("1_71kvl")
-theme_override_font_sizes/font_size = 28
-text = " This is what the game will give back"
-autowrap_mode = 3
+offset_left = 2.0
+offset_top = 22.0
+offset_right = 850.0
+offset_bottom = 59.0
+theme_override_fonts/normal_font = ExtResource("1_71kvl")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "Hello [color=green] World [/color]  this is [color=red]so cool!!!  [/color] "
+fit_content = true
