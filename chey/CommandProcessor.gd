@@ -43,19 +43,19 @@ func process_command(input: String) -> String:
 			return help()
 		# defualt case for invalid input
 		_:
-			return "Unrecognized command - please try again."
+			return Types.wrap_system_text("Unrecognized command - please try again.")
 			
 			
 # PRE function call
 # POST returns command action for go
 func cd(second_word: String) -> String:
 	if second_word == "":
-		return "Go where?"
+		return Types.wrap_system_text("Go where?")
 	# getting all keys and check if room can be exitable
 	if current_room.exits.keys().has(second_word):
 		var exit = current_room.exits[second_word]
 		if exit.is_locked:
-			return "The way %s is currently locked!" %  second_word
+			return "The way " + Types.wrap_location_text(second_word) + " is currently " + Types.wrap_system_text(" locked!") 
 			
 		var change_response = change_room(exit.get_other_room(current_room))
 		return "\n".join(PackedStringArray(["You go %s." % second_word, change_response]))
