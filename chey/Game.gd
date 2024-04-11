@@ -16,10 +16,8 @@ extends Control
 # PRE: nada
 # POST: main
 func _ready() -> void:
+	game_info.create_response(Types.wrap_system_text("Welcome to Science Hell... Type 'help' to see avaiable commands."))
 
-
-	game_info.create_response("Welcome to Science Hell... Type 'help' to see avaiable commands.")
-	
 	# connect before we intialize game
 	#command_processor.response_generated.connect(handle_response_generated)
 	var starting_room_response = command_processor.intialize(room_manager.get_child(0), player)
