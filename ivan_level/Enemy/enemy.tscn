@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4q5nx7enfcl5"]
+
+[ext_resource type="Script" path="res://ivan_level/Enemy/enemy.gd" id="1_fnenx"]
+[ext_resource type="Texture2D" uid="uid://bo2qpr8ywog6m" path="res://ivan_level/Enemy/error_404_enemy_sprite.png" id="1_qwp1d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dp8wk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qwp1d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soimo"]
+size = Vector2(195, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m5ng8"]
+radius = 4.0
+
+[node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_fnenx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dp8wk")
+offset = Vector2(0, -4)
+
+[node name="detection_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(5.5, 0)
+shape = SubResource("RectangleShape2D_soimo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m5ng8")
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
