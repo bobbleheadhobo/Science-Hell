@@ -18,7 +18,3 @@ config/icon="res://chey/icon.svg"
 [autoload]
 
 Types="*res://chey/globals/Types.gd"
-
-[display]
-
-window/size/mode=3
