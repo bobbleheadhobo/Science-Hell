@@ -1,8 +1,7 @@
-res://Scenes/Game.tscn
 res://default_env.tres
 res://Scenes/ArrowButton.tscn
-res://Frames/yellow_button.tres
 res://Frames/note_frames.tres
+res://Frames/yellow_button.tres
 res://Frames/red_button.tres
 res://Frames/blue_button.tres
 res://Frames/green_button.tres
@@ -10,4 +9,4 @@ res://Scenes/Conductor.tscn
 res://Scenes/Menu.tscn
 res://Scenes/End.tscn
 res://Scenes/Note.tscn
-res://Scripts/Conductor.gd
+res://Scenes/Game.tscn
