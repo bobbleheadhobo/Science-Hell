@@ -21,6 +21,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Rows" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="InfoLabel" type="Label" parent="MarginContainer/Rows"]
 layout_mode = 2
@@ -36,6 +37,7 @@ text = "A Room Label
 A Room"
 
 [node name="Spacer" type="Label" parent="MarginContainer/Rows"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_aeeyb")
 text = "
@@ -44,6 +46,31 @@ text = "
 [node name="RoomDescriptionLabel" type="Label" parent="MarginContainer/Rows"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.4, 0, 1)
 theme_override_fonts/font = ExtResource("2_683os")
 text = "Room desciption goes here"
 autowrap_mode = 3
+
+[node name="ExitLabel" type="RichTextLabel" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_683os")
+bbcode_enabled = true
+text = "Exits: 
+Option"
+fit_content = true
+
+[node name="NpcLabel" type="RichTextLabel" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_683os")
+bbcode_enabled = true
+text = "NPC: 
+Option"
+fit_content = true
+
+[node name="ItemLabel" type="RichTextLabel" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_683os")
+bbcode_enabled = true
+text = "Items:
+Option"
+fit_content = true
