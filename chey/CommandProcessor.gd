@@ -62,6 +62,7 @@ func cd(second_word: String) -> String:
 	else:
 		return "This room has no " +Types.wrap_location_text(second_word) + " exit."
 
+
 func take(second_word: String) -> String:
 	if second_word == "":
 		return Types.wrap_system_text("Take what?")
@@ -71,10 +72,11 @@ func take(second_word: String) -> String:
 		if second_word.to_lower() == item.item_name.to_lower():
 			current_room.remove_item(item)
 			player.take_item(item)
-			return "You take the " + item.item_name
+			return "You take the " + Types.wrap_item_text(second_word) + "."
 	# error message
-	return "The item " + second_word + "does not exist."
-		
+	return  "There is no " + Types.wrap_item_text(second_word) + " here."
+
+
 # player drops item command
 func drop(second_word: String) -> String:
 	if second_word == "":
@@ -84,10 +86,12 @@ func drop(second_word: String) -> String:
 		if second_word.to_lower() == item.item_name.to_lower():
 			player.drop_item(item)
 			current_room.add_item(item)
-			return "You dropped the " + item.item_name
-	return "You don't have that item."
+			return "You drop the " + Types.wrap_item_text(item.item_name) + "."
+	return "You don't have anything called " + Types.wrap_item_text(second_word) + "."
 	
-	
+
+
+
 func inventory() -> String:
 	return player.get_inventory_list()
 
@@ -141,16 +145,17 @@ func give(second_word: String) -> String:
 	
 	if second_word == "":
 		return  Types.wrap_system_text("Give what?")
-	
+
 	var has_item := false
-	# loop through all items
+	# check if player has item in their inventory
 	for item in player.inventory:
 		if second_word.to_lower() == item.item_name.to_lower():
 			has_item = true
 
-
 	if not has_item:
 		return "You don't have a " + Types.wrap_item_text(second_word) + "."
+		
+
 	# find NPC that wants item
 	for npc in current_room.npcs:
 		if npc.quest_item != null and second_word.to_lower() == npc.quest_item.item_name.to_lower():
@@ -168,9 +173,12 @@ func give(second_word: String) -> String:
 				# note to developer warning error
 				else:
 					printerr("Warning - tried to have a quest reward type that is not implemented.")
-					
-			# removes item from player's inventory
-			player.drop_item(second_word)
+			
+			# remove item from player inventory
+			for item in player.inventory:
+				if second_word.to_lower() == item.item_name.to_lower():
+					player.drop_item(item)
+
 			return "You give the " + Types.wrap_item_text(second_word) + " to the " +  Types.wrap_npc_text(npc.npc_name) + "."
 
 	return "Nobody here wants a" + Types.wrap_item_text(second_word) + "."
