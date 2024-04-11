@@ -9,7 +9,9 @@ const INPUT_RESPONSE = preload("res://chey/input/InputResponse.tscn")
 
 # value can be edited in editor with export
 @export var max_lines_remembered := 30
-#var max_scroll_length := 0
+
+# flag determines if room needs to be zebra or not
+var should_zebra := false
 
 @onready var scroll = $Scroll
 # connect to the property
@@ -72,5 +74,12 @@ func _delete_history_beyond_limit():
 func _add_response_to_game(response: Control):
 	# add scene to child as history rows
 	history_rows.add_child(response)
+	
+	# add zebra to room
+	if not should_zebra:
+		response.zebra.hide()
+	# flips to true or false if it should be zebra trick
+	should_zebra = !should_zebra
+	
 	# deletes msg < 30 msgs
 	_delete_history_beyond_limit()
