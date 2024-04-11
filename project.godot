@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Health="*res://science_hell/gui/hearts/hearts_container.gd"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
+Characters="*res://science_hell/gui/char_select/character_select.gd"
 
 [display]
 

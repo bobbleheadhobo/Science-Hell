@@ -19,6 +19,9 @@ var animTree_state_keys = [
 	'walk'
 ]
 
+func _ready():
+	$Sprite2D.texture = Characters.current_sprite
+
 func _physics_process(delta):
 	move_and_animate(delta)
 	
