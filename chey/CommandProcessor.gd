@@ -58,13 +58,13 @@ func cd(second_word: String) -> String:
 			return "The way " + Types.wrap_location_text(second_word) + " is currently " + Types.wrap_system_text(" locked!") 
 			
 		var change_response = change_room(exit.get_other_room(current_room))
-		return "\n".join(PackedStringArray(["You go %s." % second_word, change_response]))
+		return "\n".join(PackedStringArray(["You go " + Types.wrap_location_text(second_word) + ".", change_response]))
 	else:
-		return "That room has no exit in that direction!"
+		return "This room has no " +Types.wrap_location_text(second_word) + " exit."
 
 func take(second_word: String) -> String:
 	if second_word == "":
-		return "Take what?"
+		return Types.wrap_system_text("Take what?")
 	
 	# finds item when take[item] command used
 	for item in current_room.items:
@@ -78,7 +78,7 @@ func take(second_word: String) -> String:
 # player drops item command
 func drop(second_word: String) -> String:
 	if second_word == "":
-		return "Drop what?"
+		return Types.wrap_system_text("Drop what?")
 	# drop item for player
 	for item in player.inventory:
 		if second_word.to_lower() == item.item_name.to_lower():
@@ -95,7 +95,7 @@ func inventory() -> String:
 # handles use command mechanics to use item
 func use(second_word: String) -> String:
 	if second_word == "":
-		return "Use what?"
+		return Types.wrap_system_text("Use what?")
 		
 	# loop through all items in players inventory
 	for item in player.inventory:
@@ -113,45 +113,44 @@ func use(second_word: String) -> String:
 							# unlock the room
 							exit.is_locked = false
 							player.drop_item(item) # removes item from player inventory
-							return "You use %s to unlock a door to %s" % [item.item_name, exit.get_other_room(current_room).room_name]
-						return "Item does not open any doors in this room."
-					
+							return "You use a " + Types.wrap_item_text(second_word) + " to unlock the way " + Types.wrap_location_text(exit.get_other_room(current_room).room_name) + "."
+						return "Your " + Types.wrap_item_text(second_word) + " does not unlock anything here."
+
 				_: # invalid item
 					return "Error - item cannot be used this way."
-	
-	return "You don't have that item."
-	
-	
-# PRE
-# POST
+
+	return "You don't have a " + Types.wrap_item_text(second_word) + "."
+
+
+# handles npc dialog
 func talk(second_word: String) -> String:
 	if second_word == "":
-		return "Talk to who?"
+		return Types.wrap_system_text("Talk to who?")
 		
 	# print npc dialog
 	for npc in current_room.npcs:
 		if npc.npc_name.to_lower() == second_word:
 			var dialog = npc.post_quest_dialog if npc.has_recieved_quest_item else npc.initial_dialog
-			return npc.npc_name + ": \"" + dialog + "\""
+			return Types.wrap_npc_text(npc.npc_name + ": ") + Types.wrap_speech_text("\"" + dialog + "\"")
+
 			
-	return "That person does not exist in this room."
+	return "There is no " + Types.wrap_npc_text(second_word) + " here."
+
 
 func give(second_word: String) -> String:
 	
 	if second_word == "":
-		return "Give what?"
+		return  Types.wrap_system_text("Give what?")
 	
 	var has_item := false
 	# loop through all items
 	for item in player.inventory:
 		if second_word.to_lower() == item.item_name.to_lower():
 			has_item = true
-			player.drop_item(item)
-			
-	if not has_item:
-		return "You don't have that item."
-		
 
+
+	if not has_item:
+		return "You don't have a " + Types.wrap_item_text(second_word) + "."
 	# find NPC that wants item
 	for npc in current_room.npcs:
 		if npc.quest_item != null and second_word.to_lower() == npc.quest_item.item_name.to_lower():
@@ -165,28 +164,31 @@ func give(second_word: String) -> String:
 				if "is_locked" in reward:
 					# unlock it as part of the quest reward
 					reward.is_locked = false
-				
+
 				# note to developer warning error
 				else:
 					printerr("Warning - tried to have a quest reward type that is not implemented.")
 					
-			return "You gave the %s this item %s." % [npc.npc_name, second_word]
-			
-			
-	return "Nobody here wants that item."
-	
-	
+			# removes item from player's inventory
+			player.drop_item(second_word)
+			return "You give the " + Types.wrap_item_text(second_word) + " to the " +  Types.wrap_npc_text(npc.npc_name) + "."
+
+	return "Nobody here wants a" + Types.wrap_item_text(second_word) + "."
+
+
 # PRE: input help by user
 # POST: displays users commands avaliable
 func help() -> String:
-	return "Avaliable Commands:
-	cd [location],
- 	take [item], 
-	inventory, 
-	use [item], 
-	talk [NPC], 
-	give [item], 
-	help"
+	return "\n".join(PackedStringArray([
+		"You can use these commands: ",
+		" cd " + Types.wrap_location_text("[location]"),
+		" take " + Types.wrap_item_text("[item]"),
+		" drop " + Types.wrap_item_text("[item]"),
+		" use " + Types.wrap_item_text("[item]"),
+		" talk " + Types.wrap_npc_text("[npc]"),
+		" give " + Types.wrap_item_text("[item]"),
+		" inventory",
+		" help"]))
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:
