@@ -98,9 +98,11 @@ func get_exit_description() -> String:
 func connect_exit_unlocked(direction: String, room: GameRoom, room_2_override_name = "null"):
 	return _connect_exit(direction, room, false) # false not locking exit
 
+
 # handles locking exits
 func connect_exit_locked(direction: String, room: GameRoom, room_2_override_name = "null"):
 	return _connect_exit(direction, room, true, room_2_override_name) # true locking exit
+
 
 
 ## create function to lock both sides of room

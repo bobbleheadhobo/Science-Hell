@@ -16,14 +16,14 @@ extends Control
 # PRE: nada
 # POST: main
 func _ready() -> void:
+	var side_panel = $Background/MarginContainer/Columns/SidePanel
+	command_processor.room_changed.connect(Callable(side_panel, "handle_room_changed"))
+	
 	game_info.create_response(Types.wrap_system_text("Welcome to Science Hell... Type 'help' to see avaiable commands."))
+	
 
-	# connect before we intialize game
-	#command_processor.response_generated.connect(handle_response_generated)
 	var starting_room_response = command_processor.intialize(room_manager.get_child(0), player)
 	game_info.create_response(starting_room_response)
-	# intialize game to starting room for player
-	#command_processor.intialize(room_manager.get_child(0))
 
 
 

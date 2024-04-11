@@ -1,5 +1,8 @@
 extends Node
 
+
+signal room_changed(new_room)
+
 # no room
 var current_room = null
 
@@ -201,4 +204,5 @@ func help() -> String:
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:
 	current_room = new_room
+	emit_signal("room_changed", new_room)
 	return new_room.get_full_description()

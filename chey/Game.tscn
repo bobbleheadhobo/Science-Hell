@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbfokpod2i55h"]
+[gd_scene load_steps=14 format=3 uid="uid://cbfokpod2i55h"]
 
 [ext_resource type="Script" path="res://chey/Game.gd" id="1_e0p6v"]
 [ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
 [ext_resource type="PackedScene" uid="uid://tg2a3ws3eojy" path="res://chey/GameInfo.tscn" id="6_4qxhm"]
+[ext_resource type="PackedScene" uid="uid://b1js2hgip12fo" path="res://chey/SidePanel.tscn" id="9_ymbxp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dj5n"]
 bg_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
@@ -51,7 +52,7 @@ offset_top = -1105.0
 offset_right = -224.0
 offset_bottom = -1553.0
 room_name = "stack"
-room_description = "Stack (Path) Puzzle."
+room_description = "stack room"
 
 [node name="HeapRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 anchors_preset = 0
@@ -64,7 +65,7 @@ offset_bottom = -655.0
 grow_horizontal = 1
 grow_vertical = 1
 room_name = "heap"
-room_description = "Stack puzzle."
+room_description = "Heap room."
 
 [node name="TextRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 556.0
@@ -72,7 +73,7 @@ offset_top = -607.0
 offset_right = -207.0
 offset_bottom = -1055.0
 room_name = "text"
-room_description = "Text puzzle."
+room_description = "text room"
 
 [node name="CodeRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 569.0
@@ -80,7 +81,7 @@ offset_top = -363.0
 offset_right = -194.0
 offset_bottom = -811.0
 room_name = "code"
-room_description = "Code puzzle"
+room_description = "code room"
 
 [node name="CooperRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 1933.0
@@ -88,7 +89,7 @@ offset_top = -369.0
 offset_right = 1170.0
 offset_bottom = -817.0
 room_name = "cooper 1"
-room_description = "Save Cooper Puzzle."
+room_description = "cooper 1 room"
 
 [node name="Cooper2Room" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 1002.0
@@ -153,6 +154,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="Columns" type="HBoxContainer" parent="Background/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Rows" type="VBoxContainer" parent="Background/MarginContainer/Columns"]
 layout_mode = 2
@@ -185,6 +187,9 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_3srrx")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2sefp")
 max_length = 48
 script = ExtResource("1_yo6lk")
+
+[node name="SidePanel" parent="Background/MarginContainer/Columns" instance=ExtResource("9_ymbxp")]
+layout_mode = 2
 
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
