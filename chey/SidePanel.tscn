@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1js2hgip12fo"]
+
+[ext_resource type="StyleBox" uid="uid://ddprpkgo0dl1f" path="res://chey/main_panel.tres" id="1_n1ihg"]
+[ext_resource type="FontFile" uid="uid://4qak0sy5hr0h" path="res://chey/fonts/plex_mono_24.tres" id="2_683os"]
+[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="3_aeeyb"]
+
+[node name="SidePanel" type="PanelContainer"]
+custom_minimum_size = Vector2(128, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 10.0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_n1ihg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="InfoLabel" type="Label" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.631373, 0.631373, 0.631373, 1)
+theme_override_fonts/font = ExtResource("2_683os")
+text = "Current Room Label
+You are in..."
+
+[node name="RoomNameLabel" type="Label" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_aeeyb")
+text = "A Room Label
+A Room"
+
+[node name="Spacer" type="Label" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_aeeyb")
+text = "
+"
+
+[node name="RoomDescriptionLabel" type="Label" parent="MarginContainer/Rows"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_683os")
+text = "Room desciption goes here"
+autowrap_mode = 3

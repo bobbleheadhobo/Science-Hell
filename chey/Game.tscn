@@ -146,33 +146,37 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4dj5n")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background"]
 layout_mode = 2
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 25
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 25
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="Rows" type="VBoxContainer" parent="Background/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 25
-
-[node name="GameInfo" parent="Background/MarginContainer/Rows" instance=ExtResource("6_4qxhm")]
+[node name="Columns" type="HBoxContainer" parent="Background/MarginContainer"]
 layout_mode = 2
 
-[node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Rows"]
+[node name="Rows" type="VBoxContainer" parent="Background/MarginContainer/Columns"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="GameInfo" parent="Background/MarginContainer/Columns/Rows" instance=ExtResource("6_4qxhm")]
+layout_mode = 2
+
+[node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Columns/Rows"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ugmq6")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/Rows/InputArea"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/Columns/Rows/InputArea"]
 layout_mode = 2
 
-[node name="Caret" type="Label" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+[node name="Caret" type="Label" parent="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_q34yp")
 theme_override_font_sizes/font_size = 28
 text = " > "
 
-[node name="Input" type="LineEdit" parent="Background/MarginContainer/Rows/InputArea/HBoxContainer"]
+[node name="Input" type="LineEdit" parent="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("1_q34yp")
@@ -182,5 +186,5 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_2sefp")
 max_length = 48
 script = ExtResource("1_yo6lk")
 
-[connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
-[connection signal="text_submitted" from="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
+[connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]

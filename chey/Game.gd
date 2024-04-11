@@ -4,7 +4,7 @@ extends Control
 # $ => get access to node/scene of tree (has to be in scene tree)
 # happens on ready()
 
-@onready var game_info = $Background/MarginContainer/Rows/GameInfo
+@onready var game_info = $Background/MarginContainer/Columns/Rows/GameInfo
 @onready var command_processor = $CommandProcessor
 # connect to room node
 @onready var room_manager = $RoomManager
