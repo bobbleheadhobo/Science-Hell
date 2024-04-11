@@ -11,6 +11,8 @@ var current_room = null
 # starting player
 var player = null
 
+# State to track quitting process
+var is_quitting = false
 
 # function gets called when room node needs to run
 @warning_ignore("shadowed_variable")
@@ -19,6 +21,17 @@ func intialize(starting_room, player) -> String:
 	return change_room(starting_room)
 
 func process_command(input: String) -> String:
+	 # Handle quitting process
+	if is_quitting:
+		if input.to_lower() == "yes":
+			get_tree().quit()  # This command stops the game engine.
+			return "Quitting game... See you next time!"
+		elif input.to_lower() == "no":
+			is_quitting = false
+			return "Quit cancelled. Continue playing!"
+		else:
+			return "Please type 'yes' to quit or 'no' to continue playing."
+
 	# accept spaces false= no empty words
 	var words = input.split(" ", false)
 	if words.size() == 0:
@@ -44,6 +57,8 @@ func process_command(input: String) -> String:
 			return talk(second_word)
 		"give":
 			return give(second_word)
+		"quit":
+			return quit()
 		"help":
 			return help()
 		# defualt case for invalid input
@@ -190,7 +205,10 @@ func give(second_word: String) -> String:
 
 	return "Nobody here wants a" + Types.wrap_item_text(second_word) + "."
 
-
+func quit():
+	is_quitting = true
+	return Types.wrap_system_text("Are you sure you want to quit this level? Type 'yes' to quit or 'no' to continue playing.")
+	
 # PRE: input help by user
 # POST: displays users commands avaliable
 func help() -> String:
