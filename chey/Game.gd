@@ -18,7 +18,7 @@ extends Control
 func _ready() -> void:
 	var side_panel = $Background/MarginContainer/Columns/SidePanel
 	command_processor.room_changed.connect(Callable(side_panel, "handle_room_changed"))
-	
+	command_processor.room_updated.connect(Callable(side_panel, "handle_room_updated"))
 	game_info.create_response(Types.wrap_system_text("Welcome to Science Hell... Type 'help' to see avaiable commands."))
 	
 

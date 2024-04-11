@@ -28,6 +28,12 @@ func handle_room_changed(new_room):
 	else:
 		item_label.show()
 		item_label.text = item_string
+		
+
+
+
+func handle_room_updated(current_room):
+	handle_room_changed(current_room)
 
 	#npc_label.text = new_room.get_npc_description()
 	#item_label.text = new_room.get_item_description()

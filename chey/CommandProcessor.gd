@@ -2,6 +2,8 @@ extends Node
 
 
 signal room_changed(new_room)
+signal room_updated(current_room)
+
 
 # no room
 var current_room = null
@@ -75,6 +77,7 @@ func take(second_word: String) -> String:
 		if second_word.to_lower() == item.item_name.to_lower():
 			current_room.remove_item(item)
 			player.take_item(item)
+			emit_signal("room_updated", current_room)
 			return "You take the " + Types.wrap_item_text(second_word) + "."
 	# error message
 	return  "There is no " + Types.wrap_item_text(second_word) + " here."
@@ -89,6 +92,7 @@ func drop(second_word: String) -> String:
 		if second_word.to_lower() == item.item_name.to_lower():
 			player.drop_item(item)
 			current_room.add_item(item)
+			emit_signal("room_updated", current_room)
 			return "You drop the " + Types.wrap_item_text(item.item_name) + "."
 	return "You don't have anything called " + Types.wrap_item_text(second_word) + "."
 	
