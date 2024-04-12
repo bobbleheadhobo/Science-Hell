@@ -2,7 +2,7 @@ extends Node
 
 
 func _ready():
-	pass
+	MainMenu.stop()
 
 func _process(delta):
 	pass
@@ -20,3 +20,4 @@ func health_example():
 	
 	await get_tree().create_timer(2).timeout
 	Health.update_health(10)
+

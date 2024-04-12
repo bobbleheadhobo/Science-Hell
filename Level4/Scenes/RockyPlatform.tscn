@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfxyexytl62gg"]
+
+[ext_resource type="Texture2D" uid="uid://ddpdqjjtes5e0" path="res://Level4/Assets/TileSheets/testTiles.png" id="1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hu8xc"]
+texture = ExtResource("1")
+texture_region_size = Vector2i(32, 32)
+1:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6jjlr"]
+texture = ExtResource("1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5f05s"]
+texture = ExtResource("1")
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/3 = SubResource("TileSetAtlasSource_hu8xc")
+sources/4 = SubResource("TileSetAtlasSource_6jjlr")
+sources/5 = SubResource("TileSetAtlasSource_5f05s")
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(190, 96)
+
+[node name="RockyPlatform" type="StaticBody2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+format = 2
+layer_0/tile_data = PackedInt32Array(-131075, 65539, 5, -131074, 65539, 5, -131073, 65539, 5, -196608, 65539, 5, -196607, 65539, 5, -196606, 65539, 5, -131071, 65539, 5, -131072, 65539, 5, -65537, 65539, 5, -65538, 65539, 5, -1, 65539, 5, -65536, 65539, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -48)
+shape = SubResource("2")

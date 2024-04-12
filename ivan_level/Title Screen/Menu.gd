@@ -1,11 +1,12 @@
 extends Control
 
-
-
+func _ready():
+	Health.set_visibility(false)
+	MainMenu.play()
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Level/level.tscn")
-
+	SceneManager.change_scene("sciencehall")
+	
 func _on_options_pressed():
 	pass # Replace with function body.
 
