@@ -91,3 +91,8 @@ func update_health(new_health : int):
 			if current_heart_state != heart.Heart_State.EMPTY:
 				heart.update_state(heart.Heart_State.EMPTY)
 				
+func set_visibility(visible: bool):
+	if visible:
+		hearts_container.show()
+	else:
+		hearts_container.hide()
