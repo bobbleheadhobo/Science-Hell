@@ -27,6 +27,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_cuyhe")
 layout_mode = 2
 theme_override_constants/separation = 0
 
+[node name="Spacer" parent="Rows" instance=ExtResource("2_8dl07")]
+visible = false
+layout_mode = 2
+size_flags_stretch_ratio = 0.1
+text = "
+
+"
+
 [node name="InputHistory" parent="Rows" instance=ExtResource("2_8dl07")]
 layout_mode = 2
 

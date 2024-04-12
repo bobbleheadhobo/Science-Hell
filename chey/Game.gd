@@ -11,7 +11,7 @@ extends Control
 # connect to player 
 @onready var player = $Player
 
-
+@onready var camera = $Camera2D
 
 # PRE: nada
 # POST: main
@@ -19,18 +19,14 @@ func _ready() -> void:
 	var side_panel = $Background/MarginContainer/Columns/SidePanel
 	command_processor.room_changed.connect(Callable(side_panel, "handle_room_changed"))
 	command_processor.room_updated.connect(Callable(side_panel, "handle_room_updated"))
-	game_info.create_response(Types.wrap_system_text("Welcome to Science Hell... Type 'help' to see avaiable commands."))
+	game_info.create_response(Types.wrap_system_text("\n" + "\n" + "Welcome to Science Hell... Type 'help' to see avaiable commands."))
 	
 
 	var starting_room_response = command_processor.intialize(room_manager.get_child(0), player)
 	game_info.create_response(starting_room_response)
 	
-	#ScaleManager.set_stretch_scale(4.0)
-
-
-func _exit_tree():
-	# When the scene is exited, reset the scale to the original setting
-	ScaleManager.reset_stretch_scale()
+	camera.zoom = Vector2(0.25, 0.25) # Since 1/4 is the inverse of 4, if the global scale is 4
+	
   
 # PRE param is text entered by player
 # POST so much stuff

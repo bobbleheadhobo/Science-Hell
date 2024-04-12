@@ -23,6 +23,10 @@ SceneManager="*res://science_hell/scripts/scene_manager.gd"
 Types="*res://chey/globals/Types.gd"
 ScaleManager="*res://chey/ScaleManager.gd"
 
+[display]
+
+window/stretch/scale=4.0
+
 [input]
 
 jump={
