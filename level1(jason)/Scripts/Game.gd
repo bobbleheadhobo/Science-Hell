@@ -128,7 +128,7 @@ func _spawn_notes(to_spawn):
 		while rand == lane:
 			rand = randi() % 3
 		lane = rand
-		instance = note.instantiate()
+		instance = note.get_instance_id()
 		instance.initialize(lane)
 		add_child(instance)
 		

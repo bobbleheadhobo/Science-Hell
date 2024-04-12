@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dagto1d00gt1f"]
+[gd_scene load_steps=9 format=3 uid="uid://dagto1d00gt1f"]
 
 [ext_resource type="PackedScene" uid="uid://6ueumlgnt5eq" path="res://Scenes/ArrowButton.tscn" id="1"]
 [ext_resource type="SpriteFrames" uid="uid://bnq530scow18l" path="res://Frames/red_button.tres" id="2"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cxh0qgfgyj3m7" path="res://Sprites/game/road/road.png" id="4"]
 [ext_resource type="AudioStream" uid="uid://g0gppev2hm0e" path="res://Sounds/5-Note Nightmare.ogg" id="5"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="6"]
-[ext_resource type="SpriteFrames" uid="uid://cg78bg673kxb8" path="res://Frames/green_button.tres" id="6_tl1u6"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="7"]
 [ext_resource type="PackedScene" uid="uid://heju11u4s4kk" path="res://Scenes/Conductor.tscn" id="8"]
 
@@ -17,12 +16,6 @@ script = ExtResource("6")
 position = Vector2(100, 0)
 texture = ExtResource("4")
 centered = false
-
-[node name="road2" type="Sprite2D" parent="."]
-position = Vector2(136, 0)
-texture = ExtResource("4")
-centered = false
-offset = Vector2(4, 0)
 
 [node name="sButton" parent="." instance=ExtResource("1")]
 position = Vector2(160, 164)
@@ -40,12 +33,6 @@ position = Vector2(200, 164)
 scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("3")
 input = "key_d"
-
-[node name="fButton" parent="." instance=ExtResource("1")]
-position = Vector2(240, 164)
-scale = Vector2(1.5, 1.5)
-sprite_frames = ExtResource("6_tl1u6")
-input = "key_f"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 4.0
