@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=9 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -9,6 +9,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
 size = Vector2(61, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ml83q"]
+size = Vector2(14, 21)
 
 [node name="ScienceHell" type="Node2D"]
 script = ExtResource("1_4n0go")
@@ -37,6 +40,12 @@ script = ExtResource("4_biitn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entry_level/Area2D2"]
 position = Vector2(-1184.5, 165)
 shape = SubResource("RectangleShape2D_cn771")
+
+[node name="Reynolds office (5)" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reynolds office (5)"]
+position = Vector2(-952, -566)
+shape = SubResource("RectangleShape2D_ml83q")
 
 [node name="Lab" parent="." instance=ExtResource("4_ds2d8")]
 position = Vector2(-575, -517)
@@ -116,5 +125,6 @@ polygon = PackedVector2Array(-84, -672, -16, -672, -16, -640, 112, -640, 112, -2
 polygon = PackedVector2Array(-2135, -704, -2304, -704, -2304, -565, -2301, -565, -2297, -565, -2206, -565, -2206, -560, -352, -560, -352, -576, -336, -576, -336, -560, -224, -560, -224, -576, -160, -576, -160, -594, -160, -612, -145, -612, -128, -612, -128, -576, -96, -576, -96, -624, -87, -624, -87, -627, -96, -627, -96, -666, -96, -668.875, -84, -669, -84, -672, -112, -672, -112, -624, -160, -624, -160, -736, -416, -736, -416, -704, -2132, -704, -2132, -698, -409, -698, -409, -730, -167, -730, -167, -624, -231, -624, -231, -608, -329, -608, -329, -624, -359, -624, -359, -608, -2297, -608, -2297, -698, -2135, -698)
 
 [connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
 [connection signal="body_exited" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_exited"]
