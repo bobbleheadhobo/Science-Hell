@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="2_b20jn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dauad"]
-size = Vector2(3.50717, 9.99975)
+size = Vector2(4.99987, 9.99975)
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [2]
 }
 
 [sub_resource type="Animation" id="Animation_cyjyv"]
@@ -27,24 +27,72 @@ resource_name = "idle_up"
 length = 0.6
 loop_mode = 1
 step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 2, 3]
+}
 
 [sub_resource type="Animation" id="Animation_2wfny"]
 resource_name = "idle_up"
 length = 0.6
 loop_mode = 1
 step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [1, 0, 1]
+}
 
 [sub_resource type="Animation" id="Animation_585kv"]
 resource_name = "idle_up"
 length = 0.6
 loop_mode = 1
 step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [7, 6, 7]
+}
 
 [sub_resource type="Animation" id="Animation_inm8l"]
 resource_name = "idle_up"
 length = 0.6
 loop_mode = 1
 step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 4, 5]
+}
 
 [sub_resource type="Animation" id="Animation_v17yy"]
 resource_name = "left"
@@ -61,7 +109,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [4, 5, 6, 7]
+"values": [12, 13, 14, 15]
 }
 
 [sub_resource type="Animation" id="Animation_k73e8"]
@@ -79,7 +127,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [8, 9, 10, 11]
 }
 
 [sub_resource type="Animation" id="Animation_2f1ha"]
@@ -97,7 +145,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [15, 16, 17, 18]
+"values": [20, 21, 22, 23]
 }
 
 [sub_resource type="Animation" id="Animation_t314j"]
@@ -115,7 +163,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [11, 12, 13, 14]
+"values": [16, 17, 18, 19]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ihkl0"]
@@ -217,11 +265,12 @@ script = ExtResource("1_33uym")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_b20jn")
-hframes = 10
-vframes = 2
+hframes = 4
+vframes = 6
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.0553813, 13.7604)
+position = Vector2(-3.49246e-09, 13)
 rotation = -1.56366
 shape = SubResource("RectangleShape2D_dauad")
 

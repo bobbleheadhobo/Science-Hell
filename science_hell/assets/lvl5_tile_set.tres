@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://peyuthl87add"]
+[gd_resource type="TileSet" load_steps=37 format=3 uid="uid://wkv4fsjcfk1a"]
 
 [ext_resource type="Texture2D" uid="uid://br5s0p8bwuknj" path="res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png" id="1_xl53b"]
 [ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png" id="2_6hy56"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bvqmwt4qlqqrh" path="res://science_hell/assets/tiles/1_Generic_16x16.png" id="11_ex3ol"]
 [ext_resource type="Texture2D" uid="uid://dlxysdqkynn3v" path="res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png" id="12_860r7"]
 [ext_resource type="Texture2D" uid="uid://hnfavqg8tuwx" path="res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png" id="13_4g1g0"]
-[ext_resource type="Texture2D" path="res://science_hell/assets/tiles/11_Halloween_16x16.png" id="14_nclef"]
+[ext_resource type="Texture2D" uid="uid://cuijqsulv6x66" path="res://science_hell/assets/tiles/11_Halloween_16x16.png" id="14_nclef"]
 [ext_resource type="Texture2D" uid="uid://beu4kqr2x0gf7" path="res://science_hell/assets/tiles/12_Kitchen_16x16.png" id="15_fwi30"]
 [ext_resource type="Texture2D" uid="uid://bc0s3pbiyyjro" path="res://science_hell/assets/tiles_main_map/tiles.png" id="16_uirkd"]
 

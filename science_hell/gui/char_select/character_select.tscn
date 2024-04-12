@@ -1,16 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://cn800qf7sasau"]
+[gd_scene load_steps=11 format=3 uid="uid://dcydhj6xvvlhr"]
 
-[ext_resource type="Script" path="res://science_hell/gui/char_select/character_select.gd" id="1_7ll75"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/character_corkboard.png" id="2_ulecy"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/bianka.png" id="3_03wug"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/chey.png" id="4_vrdbw"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/chris.png" id="5_0f3yq"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/jason.png" id="6_bn3f5"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/johnathan.png" id="7_8o0s3"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/pat.png" id="8_b2eue"]
-[ext_resource type="Texture2D" path="res://science_hell/gui/char_select/joey.png" id="9_i2ctw"]
+[ext_resource type="Script" path="res://science_hell/gui/char_select/character_select_ui.gd" id="1_a2qq0"]
+[ext_resource type="Texture2D" uid="uid://b6nfnnf1p6j64" path="res://science_hell/gui/char_select/character_corkboard.png" id="2_ulecy"]
+[ext_resource type="Texture2D" uid="uid://ctffib2a7y1hh" path="res://science_hell/gui/char_select/bianka.png" id="3_03wug"]
+[ext_resource type="Texture2D" uid="uid://ch73b5nnt3uqw" path="res://science_hell/gui/char_select/chey.png" id="4_vrdbw"]
+[ext_resource type="Texture2D" uid="uid://b6l573p2x5evu" path="res://science_hell/gui/char_select/chris.png" id="5_0f3yq"]
+[ext_resource type="Texture2D" uid="uid://w0jcf4s6ablf" path="res://science_hell/gui/char_select/jason.png" id="6_bn3f5"]
+[ext_resource type="Texture2D" uid="uid://bmrlqbk7a3gyl" path="res://science_hell/gui/char_select/johnathan.png" id="7_8o0s3"]
+[ext_resource type="Texture2D" uid="uid://br3b6jujhhvwh" path="res://science_hell/gui/char_select/pat.png" id="8_b2eue"]
+[ext_resource type="Texture2D" uid="uid://d1jt152p86vxq" path="res://science_hell/gui/char_select/joey.png" id="9_i2ctw"]
+[ext_resource type="PackedScene" uid="uid://gncj06nn4srt" path="res://science_hell/gui/char_select/cursor.tscn" id="10_75qk3"]
 
-[node name="CharacterSelect" type="Control"]
+[node name="CharacterSelectUI" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,9 +19,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-script = ExtResource("1_7ll75")
+script = ExtResource("1_a2qq0")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,12 +31,32 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_ulecy")
 
+[node name="Control1" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.228
+anchor_right = 0.25
+anchor_bottom = 0.424
+offset_top = 0.255997
+offset_bottom = 0.247986
+texture = ExtResource("9_i2ctw")
+expand_mode = 3
+
 [node name="Control2" type="Control" parent="."]
 layout_mode = 1
 anchor_right = 1.0
 anchor_bottom = 0.999
 offset_right = 1.0
-offset_bottom = 0.959858
+offset_bottom = 0.959839
 
 [node name="TextureRect" type="TextureRect" parent="Control2"]
 layout_mode = 1
@@ -43,10 +65,10 @@ anchor_left = 0.328
 anchor_top = 0.233
 anchor_right = 0.453
 anchor_bottom = 0.425
-offset_left = -0.328003
-offset_top = -0.446991
-offset_right = 0.544922
-offset_bottom = -0.574951
+offset_left = -0.328033
+offset_top = -1.05666
+offset_right = 0.544861
+offset_bottom = -1.18463
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_03wug")
@@ -65,10 +87,10 @@ anchor_left = 0.546
 anchor_top = 0.229
 anchor_right = 0.672
 anchor_bottom = 0.421
-offset_left = 1.45399
-offset_top = -0.611033
-offset_right = -0.672152
-offset_bottom = -0.739066
+offset_left = 1.45398
+offset_top = 1.53659
+offset_right = -0.67218
+offset_bottom = 1.40857
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_vrdbw")
@@ -78,44 +100,45 @@ layout_mode = 1
 anchor_right = 1.0
 anchor_bottom = 0.999
 offset_right = 1.0
-offset_bottom = 0.959858
+offset_bottom = 0.959839
 
 [node name="TextureRect" type="TextureRect" parent="Control4"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.656
-anchor_top = 0.592
-anchor_right = 0.781
-anchor_bottom = 0.784
-offset_left = -0.656054
-offset_top = 0.271985
-offset_right = 0.218946
-offset_bottom = 0.143923
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_0f3yq")
-
-[node name="Control5" type="Control" parent="."]
-layout_mode = 1
-anchor_right = 1.0
-anchor_bottom = 0.999
-offset_right = 1.0
-offset_bottom = 0.959858
-
-[node name="TextureRect" type="TextureRect" parent="Control5"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.749
 anchor_top = 0.221
 anchor_right = 0.874
 anchor_bottom = 0.412
-offset_left = 0.250961
-offset_top = -0.939031
-offset_right = 1.12596
-offset_bottom = 0.891941
+offset_left = 0.250977
+offset_top = -0.939026
+offset_right = 1.12598
+offset_bottom = 0.891937
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_b2eue")
+
+[node name="Control5" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_right = 1.0
+offset_bottom = 0.959839
+
+[node name="TextureRect" type="TextureRect" parent="Control5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.227
+anchor_top = 0.6
+anchor_right = 0.352
+anchor_bottom = 0.792
+offset_left = -1.22705
+offset_top = 0.599945
+offset_right = -0.352081
+offset_bottom = 0.471863
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_bn3f5")
+metadata/_edit_use_anchors_ = true
 
 [node name="Control6" type="Control" parent="."]
 layout_mode = 1
@@ -127,14 +150,14 @@ offset_bottom = 0.959858
 [node name="TextureRect" type="TextureRect" parent="Control6"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.123
-anchor_top = 0.225
-anchor_right = 0.253
-anchor_bottom = 0.421
-offset_left = 6.87705
-offset_top = -0.775017
-offset_right = -7.253
-offset_bottom = -8.73907
+anchor_left = 0.437
+anchor_top = 0.596
+anchor_right = 0.562
+anchor_bottom = 0.788
+offset_left = 0.562988
+offset_top = 0.435974
+offset_right = 1.43787
+offset_bottom = 0.307892
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_8o0s3")
@@ -144,42 +167,30 @@ layout_mode = 1
 anchor_right = 1.0
 anchor_bottom = 0.999
 offset_right = 1.0
-offset_bottom = 0.959858
+offset_bottom = 0.959839
 
 [node name="TextureRect" type="TextureRect" parent="Control7"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.227
-anchor_top = 0.6
-anchor_right = 0.352
-anchor_bottom = 0.792
-offset_left = -1.22704
-offset_top = 0.599953
-offset_right = -0.352084
-offset_bottom = 0.471892
+anchor_left = 0.656
+anchor_top = 0.592
+anchor_right = 0.781
+anchor_bottom = 0.784
+offset_left = -0.656067
+offset_top = 0.271973
+offset_right = 0.218933
+offset_bottom = 0.14389
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_b2eue")
-metadata/_edit_use_anchors_ = true
+texture = ExtResource("5_0f3yq")
 
-[node name="Control8" type="Control" parent="."]
+[node name="Cursor" parent="." instance=ExtResource("10_75qk3")]
 layout_mode = 1
-anchor_right = 1.0
-anchor_bottom = 0.999
-offset_right = 1.0
-offset_bottom = 0.959858
-
-[node name="TextureRect" type="TextureRect" parent="Control8"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.437
-anchor_top = 0.596
-anchor_right = 0.562
-anchor_bottom = 0.788
-offset_left = 0.562981
-offset_top = 0.435969
-offset_right = 1.43789
-offset_bottom = 0.307908
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_i2ctw")
+anchor_left = 0.122
+anchor_top = 0.225
+anchor_right = 0.253
+anchor_bottom = 0.424
+offset_left = -0.544006
+offset_top = 0.199997
+offset_right = -0.456024
+offset_bottom = 0.247986

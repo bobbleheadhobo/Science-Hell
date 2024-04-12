@@ -14,17 +14,16 @@ config/name="science-hell"
 run/main_scene="res://science_hell/src_scene/science_hell.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+<<<<<<<HEADconfig/name="Parth's Level"
 
 [autoload]
 
 Health="*res://science_hell/gui/hearts/hearts_container.gd"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
-Characters="*res://science_hell/gui/char_select/character_select.gd"
+Characters="*res://science_hell/gui/char_select/character_select_global.gd"
 
 [display]
 
-window/size/viewport_width=3000
-window/size/viewport_height=1960
 window/stretch/scale=4.0
 
 [input]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtr1wu25xegmp"
-path="res://.godot/imported/Spritesheet_UI_Flat_Select_02.png-dbe096f2e7705d6705c84aacb6696af9.ctex"
+uid="uid://dqw6653wfheyt"
+path="res://.godot/imported/cursor_0001.png-1be09d5103aafe27f86270a3cc2cbcba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/gui/char_select/Spritesheet_UI_Flat_Select_02.png"
-dest_files=["res://.godot/imported/Spritesheet_UI_Flat_Select_02.png-dbe096f2e7705d6705c84aacb6696af9.ctex"]
+source_file="res://science_hell/gui/char_select/cursor_0001.png"
+dest_files=["res://.godot/imported/cursor_0001.png-1be09d5103aafe27f86270a3cc2cbcba.ctex"]
 
 [params]
 
