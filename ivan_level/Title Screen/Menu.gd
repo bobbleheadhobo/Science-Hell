@@ -5,8 +5,8 @@ func _ready():
 	MainMenu.play()
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn")
-
+	SceneManager.change_scene("sciencehall")
+	
 func _on_options_pressed():
 	pass # Replace with function body.
 
