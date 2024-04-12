@@ -5,7 +5,7 @@ func _ready():
 	MainMenu.play()
 
 func _on_play_pressed():
-	SceneManager.change_scene("sciencehall")
+	SceneManager.change_scene("char_select")
 	
 func _on_options_pressed():
 	pass # Replace with function body.

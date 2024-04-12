@@ -1,6 +1,5 @@
 [gd_scene load_steps=11 format=3 uid="uid://b7t3jxpmvege6"]
 
-[ext_resource type="Script" path="res://ivan_level/Level/level.gd" id="1_d4nva"]
 [ext_resource type="Script" path="res://ivan_level/Title Screen/menu.gd" id="1_xu57c"]
 [ext_resource type="Shader" path="res://ivan_level/Title Screen/title/auto_scroller.gdshader" id="2_d275l"]
 [ext_resource type="Texture2D" uid="uid://cb7at3tbn5jv7" path="res://ivan_level/Title Screen/title/title_0004.png" id="2_ocoq2"]
@@ -20,6 +19,18 @@ shader_parameter/speed_scale = 0.005
 shader = ExtResource("2_d275l")
 shader_parameter/direction = Vector2(1, 0)
 shader_parameter/speed_scale = 0.02
+
+[sub_resource type="GDScript" id="GDScript_tg4ql"]
+script/source = "class_name Level
+extends Node
+
+func _ready():
+	Ivan_Music.play()
+
+
+func _on_danger_body_entered(body):
+	pass # Replace with function body.
+"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -101,7 +112,7 @@ text = "Options"
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Exit"
-script = ExtResource("1_d4nva")
+script = SubResource("GDScript_tg4ql")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

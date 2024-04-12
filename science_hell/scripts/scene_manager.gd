@@ -12,7 +12,8 @@ var scene_node_paths = {
 var scene_file_paths = {
 	"lab": "res://science_hell/scenes/lab.tscn",
 	"sciencehall": "res://science_hell/src_scene/science_hell.tscn",
-	"ivanlevel" : "res://ivan_level/level/level.tscn"
+	"ivanlevel" : "res://ivan_level/level/level.tscn",
+	"char_select": "res://science_hell/gui/char_select/character_select.tscn"
 }
 
 func _ready():

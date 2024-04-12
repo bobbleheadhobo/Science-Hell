@@ -22,7 +22,6 @@ size_flags_horizontal = 4
 script = ExtResource("1_a2qq0")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

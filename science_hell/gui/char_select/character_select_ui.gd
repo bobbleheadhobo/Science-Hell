@@ -37,4 +37,4 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("ui_accept"):
 		Characters.change_character_global(current_character)
-		#SceneManager.change_scene("sciencehall")
+		SceneManager.change_scene("sciencehall")
