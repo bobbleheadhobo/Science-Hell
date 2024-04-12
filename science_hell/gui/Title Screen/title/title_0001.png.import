@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nawsvntvxg13"
-path="res://.godot/imported/title_0005.png-63dc7377dbb894d395f0b191cc6d87ed.ctex"
+uid="uid://dcojlx6kqylso"
+path="res://.godot/imported/title_0001.png-b3fbb22872b9804164adf6e91268ba6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ivan_level/Title Screen/title/title_0005.png"
-dest_files=["res://.godot/imported/title_0005.png-63dc7377dbb894d395f0b191cc6d87ed.ctex"]
+source_file="res://science_hell/gui/Title Screen/title/title_0001.png"
+dest_files=["res://.godot/imported/title_0001.png-b3fbb22872b9804164adf6e91268ba6f.ctex"]
 
 [params]
 
