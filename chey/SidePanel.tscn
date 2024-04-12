@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1js2hgip12fo"]
+[gd_scene load_steps=4 format=3 uid="uid://b1js2hgip12fo"]
 
 [ext_resource type="StyleBox" uid="uid://ddprpkgo0dl1f" path="res://chey/main_panel.tres" id="1_n1ihg"]
-[ext_resource type="FontFile" uid="uid://4qak0sy5hr0h" path="res://chey/fonts/plex_mono_24.tres" id="2_683os"]
 [ext_resource type="Script" path="res://chey/SidePanel.gd" id="2_h6bpt"]
-[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="3_aeeyb"]
+[ext_resource type="FontFile" uid="uid://dv81judasubyo" path="res://chey/fonts/retro_computer_personal_use.ttf" id="3_his1v"]
 
 [node name="SidePanel" type="PanelContainer"]
 custom_minimum_size = Vector2(320, 0)
@@ -32,14 +31,14 @@ theme_override_constants/separation = 0
 [node name="InfoLabel" type="Label" parent="MarginContainer/Rows/TitleSection"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.631373, 0.631373, 0.631373, 1)
-theme_override_fonts/font = ExtResource("2_683os")
+theme_override_fonts/font = ExtResource("3_his1v")
 text = "You are in..."
 
 [node name="RoomNameLabel" type="Label" parent="MarginContainer/Rows/TitleSection"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.4, 0, 1)
-theme_override_fonts/font = ExtResource("3_aeeyb")
+theme_override_fonts/font = ExtResource("3_his1v")
 theme_override_font_sizes/font_size = 24
 text = "A Room"
 autowrap_mode = 3
@@ -48,7 +47,7 @@ autowrap_mode = 3
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_683os")
+theme_override_fonts/font = ExtResource("3_his1v")
 text = "Room desciption goes here"
 autowrap_mode = 3
 
@@ -57,21 +56,21 @@ layout_mode = 2
 
 [node name="ExitLabel" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_683os")
+theme_override_fonts/normal_font = ExtResource("3_his1v")
 bbcode_enabled = true
 text = "Exits: Option"
 fit_content = true
 
 [node name="NpcLabel" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_683os")
+theme_override_fonts/normal_font = ExtResource("3_his1v")
 bbcode_enabled = true
 text = "NPC: Option"
 fit_content = true
 
 [node name="ItemLabel" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_683os")
+theme_override_fonts/normal_font = ExtResource("3_his1v")
 bbcode_enabled = true
 text = "Items: Option"
 fit_content = true
@@ -80,6 +79,6 @@ fit_content = true
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_fonts/font = ExtResource("2_683os")
+theme_override_fonts/font = ExtResource("3_his1v")
 text = "Type 'help' to see all possible commands if you get lost."
 autowrap_mode = 3

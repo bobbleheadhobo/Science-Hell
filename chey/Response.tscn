@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://thvtpjwkq60x"]
 
-[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_71kvl"]
+[ext_resource type="FontFile" uid="uid://dv81judasubyo" path="res://chey/fonts/retro_computer_personal_use.ttf" id="1_r87pw"]
 
 [node name="Response" type="RichTextLabel"]
 custom_minimum_size = Vector2(20, 0)
@@ -8,7 +8,7 @@ offset_left = 2.0
 offset_top = 22.0
 offset_right = 850.0
 offset_bottom = 59.0
-theme_override_fonts/normal_font = ExtResource("1_71kvl")
+theme_override_fonts/normal_font = ExtResource("1_r87pw")
 theme_override_font_sizes/normal_font_size = 28
 bbcode_enabled = true
 text = "Hello [color=green] World [/color]  this is [color=red]so cool!!!  [/color] "

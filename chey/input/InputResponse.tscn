@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dod3v4nxmanim"]
+[gd_scene load_steps=6 format=3 uid="uid://dod3v4nxmanim"]
 
 [ext_resource type="Script" path="res://chey/input/InputResponse.gd" id="1_2mslg"]
 [ext_resource type="PackedScene" uid="uid://btbjxhagu7un6" path="res://chey/InputHistory.tscn" id="2_8dl07"]
 [ext_resource type="PackedScene" uid="uid://thvtpjwkq60x" path="res://chey/Response.tscn" id="3_en7p3"]
+[ext_resource type="FontFile" uid="uid://dv81judasubyo" path="res://chey/fonts/retro_computer_personal_use.ttf" id="3_lgtrf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cuyhe"]
 bg_color = Color(1, 1, 1, 0.0627451)
@@ -31,12 +32,15 @@ theme_override_constants/separation = 0
 visible = false
 layout_mode = 2
 size_flags_stretch_ratio = 0.1
+theme_override_fonts/font = ExtResource("3_lgtrf")
 text = "
 
 "
 
 [node name="InputHistory" parent="Rows" instance=ExtResource("2_8dl07")]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_lgtrf")
 
 [node name="Response" parent="Rows" instance=ExtResource("3_en7p3")]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_lgtrf")
