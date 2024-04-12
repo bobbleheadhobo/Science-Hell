@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://sqsjmklhuu7n"]
-
-[ext_resource type="AudioStream" uid="uid://c1ox7wlruqbw2" path="res://ivan_level/Music/Battle at Chuga Jung castle.wav" id="1_svktn"]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_svktn")
-max_distance = 387790.0

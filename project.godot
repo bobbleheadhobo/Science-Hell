@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="science-hell"
-run/main_scene="res://science_hell/src_scene/science_hell.tscn"
+run/main_scene="res://science_hell/gui/Title Screen/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADconfig/name="Parth's Level"
@@ -21,9 +21,9 @@ config/icon="res://icon.svg"
 Health="*res://science_hell/gui/hearts/hearts_container.gd"
 Types="*res://chey/globals/Types.gd"
 ScaleManager="*res://chey/ScaleManager.gd"
-Ivan_Music="*res://ivan_level/Music/Ivan Music.tscn"
-MainMenu="*res://ivan_level/Music/main_menu.tscn"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
+Characters="*res://science_hell/gui/char_select/character_select_global.gd"
+MusicManager="*res://science_hell/Music/music_manager_global.gd"
 
 [display]
 
@@ -31,7 +31,7 @@ window/stretch/scale=4.0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
