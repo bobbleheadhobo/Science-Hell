@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://hpsiifh5g2k4"]
+
+[ext_resource type="Script" path="res://chey/items/Item.gd" id="1_htwqs"]
+
+[resource]
+script = ExtResource("1_htwqs")
+item_name = "sh terminal item"
+item_type = 1

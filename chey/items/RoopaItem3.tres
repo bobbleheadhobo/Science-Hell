@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cyx0wogyaq8jf"]
+
+[ext_resource type="Script" path="res://chey/items/Item.gd" id="1_v5shy"]
+
+[resource]
+script = ExtResource("1_v5shy")
+item_name = "roopa item"
+item_type = 1
