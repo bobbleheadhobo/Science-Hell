@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://b884xopeq7ej7"]
+
+[ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_fvst6"]
+[ext_resource type="Resource" uid="uid://c5j4ymhuhsukf" path="res://chey/items/CooperItemHint.tres" id="1_p7sgl"]
+
+[resource]
+script = ExtResource("1_fvst6")
+npc_name = "func main:"
+initial_dialog = "cooper item from hint.txt is given to this NPC"
+post_quest_dialog = "text"
+quest_item = ExtResource("1_p7sgl")
