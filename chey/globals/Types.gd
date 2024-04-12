@@ -10,7 +10,7 @@ enum ItemTypes{
 
 # Colors for font
 const COLOR_NPC = Color("#cc0000")
-const COLOR_ITEM = Color("#3300cc")
+const COLOR_ITEM = Color("#4287f5")
 const COLOR_SPEECH = Color("#00b32d")
 const COLOR_LOCATION = Color("#006600")
 const COLOR_SYSTEM = Color("#ffff00")
