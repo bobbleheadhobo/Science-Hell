@@ -61,7 +61,7 @@ func handle_danger() -> void:
 	reset_play()
 
 func reset_play() -> void:
-	global_position = level_start_pos.global_position
+	global_position = Vector2.ZERO
 	visible = true 
 	can_control = true
 

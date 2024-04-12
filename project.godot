@@ -22,6 +22,8 @@ Health="*res://science_hell/gui/hearts/hearts_container.gd"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
 Types="*res://chey/globals/Types.gd"
 ScaleManager="*res://chey/ScaleManager.gd"
+Ivan_Music="*res://ivan_level/Music/Ivan Music.tscn"
+MainMenu="*res://ivan_level/Music/main_menu.tscn"
 
 [display]
 
