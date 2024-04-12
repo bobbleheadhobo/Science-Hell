@@ -7,7 +7,7 @@ const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
 const LEFT_LANE_SPAWN = Vector2(120, SPAWN_Y)
 const CENTRE_LANE_SPAWN = Vector2(160, SPAWN_Y)
 const RIGHT_LANE_SPAWN = Vector2(200, SPAWN_Y)
-const FAR_RIGHT_LANE = Vector2(240, SPAWN_Y)
+#const FAR_RIGHT_LANE = Vector2(240, SPAWN_Y)
 
 var speed = 0
 var hit = false
@@ -36,9 +36,9 @@ func initialize(lane):
 	elif lane == 2:
 		$AnimatedSprite2D.frame = 2
 		position = RIGHT_LANE_SPAWN
-	elif lane == 3:
-		$AnimatedSprite2D.frame = 3
-		position = FAR_RIGHT_LANE
+	#elif lane == 3:
+		#$AnimatedSprite2D.frame = 3
+		#position = FAR_RIGHT_LANE
 		
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
@@ -65,3 +65,7 @@ func destroy(score):
 
 func _on_Timer_timeout():
 	queue_free()
+
+
+func _on_label_ready():
+	pass # Replace with function body.

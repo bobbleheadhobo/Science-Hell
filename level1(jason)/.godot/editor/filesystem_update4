@@ -1,12 +1,15 @@
 res://default_env.tres
 res://Scenes/ArrowButton.tscn
-res://Frames/note_frames.tres
 res://Frames/yellow_button.tres
+res://Frames/note_frames.tres
 res://Frames/red_button.tres
 res://Frames/blue_button.tres
 res://Frames/green_button.tres
+res://Scripts/Game.gd
 res://Scenes/Conductor.tscn
 res://Scenes/Menu.tscn
 res://Scenes/End.tscn
 res://Scenes/Note.tscn
 res://Scenes/Game.tscn
+res://Scripts/Note.gd
+res://Scripts/Conductor.gd

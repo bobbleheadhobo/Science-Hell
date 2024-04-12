@@ -28,7 +28,7 @@ var instance
 
 
 func _ready():
-	pass
+	randomize()
 	$Conductor.play_with_beat_offset(8)
 
 
@@ -118,18 +118,20 @@ func _on_Conductor_beat(current_position):
 
 
 func _spawn_notes(to_spawn):
+	rand = 0
 	if to_spawn > 0:
-		lane = randi() % 4
+		lane = randi() % 3
 		instance = note.instantiate()
-		add_child(instance)
 		instance.initialize(lane)
+		add_child(instance)
 	if to_spawn > 1:
 		while rand == lane:
-			rand = randi() % 4
+			rand = randi() % 3
 		lane = rand
 		instance = note.instantiate()
-		add_child(instance)
 		instance.initialize(lane)
+		add_child(instance)
+		
 		
 
 
@@ -162,3 +164,6 @@ func increment_score(by):
 func reset_combo():
 	combo = 0
 	$Combo.text = ""
+
+
+

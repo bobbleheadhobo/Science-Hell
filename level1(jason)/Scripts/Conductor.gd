@@ -35,8 +35,10 @@ func _report_beat():
 	if last_reported_beat < song_position_in_beats:
 		if measure > measures:
 			measure = 1
-		emit_signal("beat", song_position_in_beats)
-		emit_signal("temp", measure)
+		beat.emit(song_position_in_beats)
+		temp.emit(measure)
+		#emit_signal("beat", song_position_in_beats)
+		#emit_signal("temp", measure)
 		last_reported_beat = song_position_in_beats
 		measure += 1
 
@@ -72,3 +74,5 @@ func _on_StartTimer_timeout():
 		play()
 		$StartTimer.stop()
 	_report_beat()
+
+
