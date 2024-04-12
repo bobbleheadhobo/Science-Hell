@@ -3,3 +3,4 @@ extends Node
 
 func _ready():
 	Ivan_Music.play()
+	

@@ -4,3 +4,4 @@
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_svktn")
+max_distance = 387790.0
