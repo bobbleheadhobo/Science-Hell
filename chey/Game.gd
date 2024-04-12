@@ -24,10 +24,13 @@ func _ready() -> void:
 
 	var starting_room_response = command_processor.intialize(room_manager.get_child(0), player)
 	game_info.create_response(starting_room_response)
+	
+	#ScaleManager.set_stretch_scale(4.0)
 
 
-
-
+func _exit_tree():
+	# When the scene is exited, reset the scale to the original setting
+	ScaleManager.reset_stretch_scale()
   
 # PRE param is text entered by player
 # POST so much stuff

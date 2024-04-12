@@ -80,3 +80,11 @@ func load_item(item_name: String):
 # helper dynamic file fider for npcs resources
 func load_npc(npc_name: String):
 	return load("res://chey/npcs/" + npc_name + ".tres")
+
+#func _enter_tree():
+	## Override the scale for this specific scene
+	#ScaleManager.set_stretch_scale(1.0)
+#
+#func _exit_tree():
+	## Reset the scale to the global setting when leaving the scene
+	#ScaleManager.set_stretch_scale(ScaleManager.original_scale)

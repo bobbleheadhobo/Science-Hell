@@ -21,10 +21,7 @@ config/icon="res://icon.svg"
 Health="*res://science_hell/gui/hearts/hearts_container.gd"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
 Types="*res://chey/globals/Types.gd"
-
-[display]
-
-window/stretch/scale=4.0
+ScaleManager="*res://chey/ScaleManager.gd"
 
 [input]
 

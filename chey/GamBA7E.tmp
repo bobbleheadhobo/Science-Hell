@@ -25,12 +25,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("1_e0p6v")
 
 [node name="Player" type="Node" parent="."]
@@ -141,9 +137,12 @@ room_name = "code.sh"
 room_description = "'01000010 01000001 01010010 01000110'"
 
 [node name="Background" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4dj5n")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background"]
@@ -163,7 +162,6 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 20
 
 [node name="GameInfo" parent="Background/MarginContainer/Columns/Rows" instance=ExtResource("6_4qxhm")]
-clip_contents = true
 layout_mode = 2
 
 [node name="InputArea" type="PanelContainer" parent="Background/MarginContainer/Columns/Rows"]
