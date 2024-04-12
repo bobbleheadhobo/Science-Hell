@@ -20,10 +20,9 @@ config/icon="res://icon.svg"
 Health="*res://science_hell/gui/hearts/hearts_container.gd"
 Types="*res://chey/globals/Types.gd"
 ScaleManager="*res://chey/ScaleManager.gd"
-Ivan_Music="*res://ivan_level/Music/Ivan Music.tscn"
-MainMenu="*res://ivan_level/Music/main_menu.tscn"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
 Characters="*res://science_hell/gui/char_select/character_select_global.gd"
+MusicManager="*res://science_hell/Music/music_manager_global.gd"
 
 [display]
 
