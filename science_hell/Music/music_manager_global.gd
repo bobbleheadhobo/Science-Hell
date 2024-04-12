@@ -1,8 +1,8 @@
 extends Node
 
 var songs = {
-	"menu": preload("res://science_hell/Music/Heaven or Hell (Menu DEMO).wav"),
-	# Add more songs as needed
+	"menu": "res://science_hell/Music/Heaven or Hell (Menu DEMO).wav",
+	"ivan": "res://science_hell/Music/Battle at Chuga Jung castle.wav"
 }
 
 var current_song = ""
@@ -14,14 +14,14 @@ func _ready():
 func play_song(song_name, fade_duration = 1.0):
 	if song_name in songs:
 		var song_path = songs[song_name]
-		var song_path_str = song_path.resource_path  # Convert song_path to a string
+		var song_path_str = song_path  # Convert song_path to a string
 		if current_song != song_path_str:
 			# Stop the currently playing music
 			stop_music(fade_duration)
 			
 			# Set the new song and play it
 			current_song = song_path_str
-			music_player.stream = song_path
+			music_player.stream = load(song_path)
 			music_player.play()
 			
 			# Fade in the new song

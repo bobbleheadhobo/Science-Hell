@@ -1,7 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://djquaxa4fkpdj"]
 
 [ext_resource type="Texture2D" uid="uid://u10xishplp7" path="res://ivan_level/art/cavesofgallet/cavesofgallet.png" id="1_whjnr"]
-[ext_resource type="Script" path="res://ivan_level/level/level.gd" id="1_x5syg"]
 [ext_resource type="Texture2D" uid="uid://b30akjv8jdvv1" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/18_Jail_16x16.png" id="2_2ikd1"]
 [ext_resource type="PackedScene" uid="uid://c12br51lomy63" path="res://ivan_level/Character/player.tscn" id="2_pd7pn"]
 [ext_resource type="Texture2D" uid="uid://dpxg68wfwq0vn" path="res://ivan_level/art/v.1 sprites/ivan.png" id="3_eh1al"]
@@ -10,6 +9,18 @@
 [ext_resource type="Texture2D" uid="uid://d271derdg4mco" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png" id="6_qjvsl"]
 [ext_resource type="PackedScene" uid="uid://c4q5nx7enfcl5" path="res://ivan_level/Enemy/enemy.tscn" id="7_d5r0g"]
 [ext_resource type="Script" path="res://ivan_level/Level/PlayerStart.gd" id="7_i3vnv"]
+
+[sub_resource type="GDScript" id="GDScript_tg4ql"]
+script/source = "class_name Level
+extends Node
+
+func _ready():
+	Ivan_Music.play()
+
+
+func _on_danger_body_entered(body):
+	pass # Replace with function body.
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_moets"]
 texture = ExtResource("1_whjnr")
@@ -3725,7 +3736,7 @@ size = Vector2(325, 175)
 size = Vector2(32.5722, 173)
 
 [node name="level" type="Node2D"]
-script = ExtResource("1_x5syg")
+script = SubResource("GDScript_tg4ql")
 
 [node name="TileMap" type="TileMap" parent="."]
 show_behind_parent = true

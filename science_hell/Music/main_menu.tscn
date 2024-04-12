@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://drvete3uppl4s"]
-
-[ext_resource type="AudioStream" uid="uid://l8fc55qhajvf" path="res://science_hell/Music/Heaven or Hell (Menu DEMO).wav" id="1_qywhy"]
-
-[node name="Main Menu" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_qywhy")

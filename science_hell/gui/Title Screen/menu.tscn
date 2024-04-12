@@ -1,14 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7t3jxpmvege6"]
+[gd_scene load_steps=11 format=3 uid="uid://c5dna72ng1fqr"]
 
 [ext_resource type="Script" path="res://science_hell/gui/Title Screen/menu.gd" id="1_xu57c"]
+[ext_resource type="Texture2D" uid="uid://dcojlx6kqylso" path="res://science_hell/gui/Title Screen/title/title_0001.png" id="2_7ereu"]
 [ext_resource type="Shader" path="res://science_hell/gui/Title Screen/title/auto_scroller.gdshader" id="2_d275l"]
 [ext_resource type="Texture2D" uid="uid://cb7at3tbn5jv7" path="res://science_hell/gui/Title Screen/title/title_0004.png" id="2_ocoq2"]
 [ext_resource type="Texture2D" uid="uid://bvjela7u1rqxy" path="res://science_hell/gui/Title Screen/title/title_0003.png" id="3_rky5w"]
 [ext_resource type="Texture2D" uid="uid://df8kces3qfjms" path="res://science_hell/gui/Title Screen/title/title_0002.png" id="4_n7u7o"]
 [ext_resource type="Texture2D" uid="uid://nawsvntvxg13" path="res://science_hell/gui/Title Screen/title/title_0005.png" id="5_idp0f"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cen1x"]
-load_path = "res://.godot/imported/title_0001.png-d8fd5678125b24ba4c25b1e332ce80d7.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_707hn"]
 shader = ExtResource("2_d275l")
@@ -25,7 +23,8 @@ script/source = "class_name Level
 extends Node
 
 func _ready():
-	Ivan_Music.play()
+	#Ivan_Music.play()
+	pass
 
 
 func _on_danger_body_entered(body):
@@ -46,7 +45,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource("CompressedTexture2D_cen1x")
+texture = ExtResource("2_7ereu")
 
 [node name="angry" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_707hn")
