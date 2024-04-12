@@ -19,7 +19,8 @@ config/icon="res://icon.svg"
 
 Health="*res://science_hell/gui/hearts/hearts_container.gd"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
-Music="*res://ivan_level/Music/audio_stream_player_2d.tscn"
+Ivan_Music="*res://ivan_level/Music/Ivan Music.tscn"
+MainMenu="*res://ivan_level/Music/main_menu.tscn"
 
 [display]
 

@@ -2,7 +2,7 @@ extends Node
 
 
 func _ready():
-	pass
+	MainMenu.stop()
 
 func _process(delta):
 	pass
