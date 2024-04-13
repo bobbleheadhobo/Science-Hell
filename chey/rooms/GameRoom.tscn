@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjxq2gn64le60"]
+[gd_scene load_steps=4 format=3 uid="uid://dt4l1fxuxre4u"]
 
 [ext_resource type="Script" path="res://chey/rooms/GameRoom.gd" id="1_5o1sk"]
 [ext_resource type="FontFile" uid="uid://c13xce3j37r5h" path="res://chey/fonts/IBMPlexMono-Medium.ttf" id="1_y2tpg"]
