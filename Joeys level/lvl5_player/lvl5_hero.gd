@@ -31,7 +31,8 @@ var knockback_timer = 0.0
 var knockback_direction = Vector2.ZERO
 var last_mob_id = null
 
-
+func _ready():
+	$Sprite2D.texture = Characters.current_sprite
 
 func _physics_process(delta):
 	move(delta)

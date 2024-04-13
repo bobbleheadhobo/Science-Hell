@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	MusicManager.play_song("reynolds")
+
 func spawn_null_nightmare():
 	var null_nightmare = preload("res://Joeys level/mobs/null_nightmares/null_nightmare.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
