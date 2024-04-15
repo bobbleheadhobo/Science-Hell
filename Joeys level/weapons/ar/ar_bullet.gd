@@ -5,7 +5,7 @@ var direction = Vector2.ZERO
 
 func _physics_process(delta):
 	const SPEED = 700
-	const RANGE = 1200
+	const RANGE = 500
 	
 	position += direction * SPEED * delta
 	

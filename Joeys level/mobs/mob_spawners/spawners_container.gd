@@ -1,5 +1,7 @@
 extends Node2D
 
+signal update_progress_mob_killed
+
 var spawner_positions = []
 
 var mobs = {
@@ -22,6 +24,9 @@ func spawn_mob(mob):
 	add_child(new_mob)
 	new_mob.global_position = spawn_position
 	
+	# Connect the mob's "mob_killed" signal to the spawner's "_on_mob_killed" method
+	var _error = new_mob.mob_killed.connect(self._on_mob_killed)
+	
 func choose_mob():
 	var mob_keys = mobs.keys()
 	var random_key = mob_keys[randi() % mob_keys.size()]
@@ -31,3 +36,6 @@ func choose_mob():
 func _on_spawn_mob_timer_timeout():
 	var new_mob = choose_mob()
 	spawn_mob(new_mob)
+	
+func _on_mob_killed():
+	emit_signal("update_progress_mob_killed")

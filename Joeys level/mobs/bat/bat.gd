@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Debug_or_die/lvl5_Player")
 var health = 3
 
+signal mob_killed
+
 func _ready():
 	$AnimationPlayer.play("fly")
 
@@ -25,5 +27,6 @@ func take_damage():
 	health -= 1
 
 	if health <= 0:
+		emit_signal("mob_killed")
 		queue_free()
 		return # Exit function after queue_free

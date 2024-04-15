@@ -7,6 +7,8 @@ var duck_bullet_scene = preload("res://Joeys level/mobs/rubber_ducky/duck_bullet
 var health = 3
 var can_shoot = true
 
+signal mob_killed
+
 func _ready():
 	$AnimationPlayer.play("idle")
 	shoot()
@@ -58,5 +60,6 @@ func flip_sprite(direction):
 func take_damage():
 	health -= 1
 	if health <= 0:
+		emit_signal("mob_killed")
 		queue_free()
 		return # Exit function after queue_free
