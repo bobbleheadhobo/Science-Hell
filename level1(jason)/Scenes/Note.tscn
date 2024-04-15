@@ -12,6 +12,8 @@ size = Vector2(8, 8)
 script = ExtResource("4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.168, 0)
+scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("1")
 script = ExtResource("4")
 
