@@ -2,8 +2,7 @@ extends Node
 
 
 func _ready():
-	#MusicManager.stop_music()
-	pass
+	MusicManager.play_song("sciencehall")
 
 func _process(delta):
 	pass
