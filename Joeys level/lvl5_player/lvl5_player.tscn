@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="2_l4st2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smeod"]
-radius = 30.0
-height = 80.4299
+radius = 28.1188
+height = 80.2046
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -183,26 +183,26 @@ _data = {
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_7ispw"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6xk3m"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_morur"]
 animation = &"idle_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pluuo"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5rp27"]
 animation = &"idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yk1jn"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sd86f"]
 animation = &"idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ce68b"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uqdrn"]
 animation = &"idle_up"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_s5on0"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_6xk3m")
+blend_point_0/node = SubResource("AnimationNodeAnimation_morur")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_pluuo")
+blend_point_1/node = SubResource("AnimationNodeAnimation_5rp27")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_yk1jn")
+blend_point_2/node = SubResource("AnimationNodeAnimation_sd86f")
 blend_point_2/pos = Vector2(0, 1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_ce68b")
+blend_point_3/node = SubResource("AnimationNodeAnimation_uqdrn")
 blend_point_3/pos = Vector2(0, -1)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_j50us"]
@@ -216,26 +216,26 @@ node_connections = [&"TimeScale", 0, &"idle_bsd2", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_hy0yx"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cxana"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vetq1"]
 animation = &"walk_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uww5q"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ljjnm"]
 animation = &"walk_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ip7ef"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_occdr"]
 animation = &"walk_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e4ubp"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mkuvw"]
 animation = &"walk_down"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_tyoa3"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_cxana")
+blend_point_0/node = SubResource("AnimationNodeAnimation_vetq1")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_uww5q")
+blend_point_1/node = SubResource("AnimationNodeAnimation_ljjnm")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_ip7ef")
+blend_point_2/node = SubResource("AnimationNodeAnimation_occdr")
 blend_point_2/pos = Vector2(0, -0.9)
-blend_point_3/node = SubResource("AnimationNodeAnimation_e4ubp")
+blend_point_3/node = SubResource("AnimationNodeAnimation_mkuvw")
 blend_point_3/pos = Vector2(0, 1)
 blend_mode = 1
 
@@ -279,8 +279,9 @@ vframes = 6
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 27)
-rotation = -1.59958
+visible = false
+position = Vector2(0, 24)
+rotation = 0.0524688
 shape = SubResource("CapsuleShape2D_smeod")
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713144620
+::res://::1713147337
 icon.svg::CompressedTexture2D::2062727279551925687::1713037787::1713037820::1::::<><>::
 README.md::TextFile::-1::1713037819::0::1::::<><>::
 ::res://chey/::1713038106
@@ -180,14 +180,14 @@ danger.gd::GDScript::-1::1713037788::0::1::::<>Area2D<>::
 danger.tscn::PackedScene::5660312674912884533::1713037788::0::1::::<><>::res://ivan_level/Obstacles/danger.gd
 danger_2.tscn::PackedScene::3416914840557371598::1713037788::0::1::::<><>::res://ivan_level/Obstacles/danger.gd
 ::res://Joeys level/::1713037787
-::res://Joeys level/level/::1713144347
-debug_or_die.gd::GDScript::-1::1713142525::0::1::::<>Node2D<>::
-debug_or_die.tscn::PackedScene::6809645572070819218::1713144347::0::1::::<><>::res://Joeys level/level/debug_or_die.gd<>uid://c0pn2xkehu2j8::::res://Joeys level/map/map.tscn<>uid://djdq6pyatghw6::::res://Joeys level/lvl5_player/lvl5_player.tscn<>uid://cfgdkd5t2y6oa::::res://Joeys level/ui/game_over.tscn<>res://Joeys level/ui/game_over.gd<>uid://ck460lkuai80n::::res://Joeys level/mobs/mob_spawners/spawners_container.tscn
+::res://Joeys level/level/::1713147328
+debug_or_die.gd::GDScript::-1::1713147107::0::1::::<>Node2D<>::
+debug_or_die.tscn::PackedScene::6809645572070819218::1713147328::0::1::::<><>::res://Joeys level/level/debug_or_die.gd<>uid://c0pn2xkehu2j8::::res://Joeys level/map/map.tscn<>uid://djdq6pyatghw6::::res://Joeys level/lvl5_player/lvl5_player.tscn<>uid://cfgdkd5t2y6oa::::res://Joeys level/ui/game_over.tscn<>res://Joeys level/ui/game_over.gd<>uid://ck460lkuai80n::::res://Joeys level/mobs/mob_spawners/spawners_container.tscn
 globals.gd::GDScript::-1::1713037787::0::1::::<>Node<>::
 Spawner.gd::GDScript::-1::1713037787::0::1::::<>Marker2D<>::
-::res://Joeys level/lvl5_player/::1713144346
+::res://Joeys level/lvl5_player/::1713147189
 lvl5_hero.gd::GDScript::-1::1713143763::0::1::::<>CharacterBody2D<>::
-lvl5_player.tscn::PackedScene::7798182433530282375::1713144346::0::1::::<><>::res://Joeys level/lvl5_player/lvl5_hero.gd<>uid://bpjprwldrjsi3::::res://science_hell/players/hamilton/ham.png<>uid://cs3lld32j5874::::res://Joeys level/weapons/ar/ar_15.tscn
+lvl5_player.tscn::PackedScene::7798182433530282375::1713147189::0::1::::<><>::res://Joeys level/lvl5_player/lvl5_hero.gd<>uid://bpjprwldrjsi3::::res://science_hell/players/hamilton/ham.png<>uid://cs3lld32j5874::::res://Joeys level/weapons/ar/ar_15.tscn
 rey.png::CompressedTexture2D::6839971214157881582::1713037787::1713038106::1::::<><>::
 ::res://Joeys level/map/::1713037787
 map.tscn::PackedScene::6559366885666315727::1713037787::0::1::::<><>::uid://wkv4fsjcfk1a::::res://science_hell/assets/lvl5_tile_set.tres<>uid://c4plldrkn0u1s::::res://Joeys level/lvl5_player/rey.png
@@ -199,15 +199,15 @@ Objects.png::CompressedTexture2D::8476539068204840240::1713037787::1713038106::1
 water_coasts.png::CompressedTexture2D::5458187738908167793::1713037787::1713038106::1::::<><>::
 water_detilazation_v2.png::CompressedTexture2D::6442416211852293966::1713037787::1713038106::1::::<><>::
 ::res://Joeys level/mobs/::1713037787
-::res://Joeys level/mobs/bat/::1713144347
+::res://Joeys level/mobs/bat/::1713147190
 bat.gd::GDScript::-1::1713143523::0::1::::<>CharacterBody2D<>::
-bat.tscn::PackedScene::6743860114565855317::1713144347::0::1::::<><>::res://Joeys level/mobs/bat/bat.gd<>uid://2yuduk7e4xt::::res://science_hell/assets/mobs/bat.png
-::res://Joeys level/mobs/mob_spawners/::1713142559
+bat.tscn::PackedScene::6743860114565855317::1713147190::0::1::::<><>::res://Joeys level/mobs/bat/bat.gd<>uid://2yuduk7e4xt::::res://science_hell/assets/mobs/bat.png
+::res://Joeys level/mobs/mob_spawners/::1713147118
 spawner.gd::GDScript::-1::1713037787::0::1::::<>Marker2D<>::
 spawner.tscn::PackedScene::3801472632318712690::1713037787::0::1::::<><>::uid://th0lmtwma7rk::::res://science_hell/assets/animated_objects/animated_old_tv.png<>res://Joeys level/mobs/mob_spawners/spawner.gd
-spawners_container.gd::GDScript::-1::1713142559::0::1::::<>Node2D<>::
+spawners_container.gd::GDScript::-1::1713147118::0::1::::<>Node2D<>::
 spawners_container.tscn::PackedScene::5536524224371599907::1713037787::0::1::::<><>::res://Joeys level/mobs/mob_spawners/spawners_container.gd<>uid://bufpx04xloh51::::res://Joeys level/mobs/mob_spawners/spawner.tscn
-::res://Joeys level/mobs/null_nightmares/::1713144347
+::res://Joeys level/mobs/null_nightmares/::1713147190
 ghost-appears.png::CompressedTexture2D::1422212913966160217::1713037787::1713038106::1::::<><>::
 ghost-die.png::CompressedTexture2D::2320298554198190002::1713037787::1713038106::1::::<><>::
 ghost-idle.png::CompressedTexture2D::5149931505825262468::1713037787::1713038106::1::::<><>::
@@ -215,26 +215,28 @@ ghost-shriek.png::CompressedTexture2D::5759937524967456426::1713037787::17130381
 ghost-vanish.png::CompressedTexture2D::8263166148882256845::1713037787::1713038106::1::::<><>::
 null_animation.gd::GDScript::-1::1713037787::0::1::::<>Node2D<>::
 null_nightmare.gd::GDScript::-1::1713143524::0::1::::<>CharacterBody2D<>::
-null_nightmare.tscn::PackedScene::1783713074251517679::1713144347::0::1::::<><>::res://Joeys level/mobs/null_nightmares/null_nightmare.gd<>uid://cfmwvcekfjhl1::::res://Joeys level/mobs/null_nightmares/ghost-idle.png<>res://Joeys level/mobs/null_nightmares/null_animation.gd<>uid://ui6vytr521gn::::res://Joeys level/mobs/null_nightmares/ghost-appears.png<>uid://dpy0ey6phawsb::::res://Joeys level/mobs/null_nightmares/ghost-vanish.png<>uid://8b78i1xswuqs::::res://Joeys level/mobs/null_nightmares/ghost-die.png
-::res://Joeys level/mobs/rubber_ducky/::1713144347
-Duck.gd::GDScript::-1::1713143523::0::1::::<>CharacterBody2D<>::
-Duck.tscn::PackedScene::9101318333317370601::1713144347::0::1::::<><>::uid://c6q7frbheyvac::::res://science_hell/assets/mobs/ducky.png<>res://Joeys level/mobs/rubber_ducky/Duck.gd
+null_nightmare.tscn::PackedScene::1783713074251517679::1713147190::0::1::::<><>::res://Joeys level/mobs/null_nightmares/null_nightmare.gd<>uid://cfmwvcekfjhl1::::res://Joeys level/mobs/null_nightmares/ghost-idle.png<>res://Joeys level/mobs/null_nightmares/null_animation.gd<>uid://ui6vytr521gn::::res://Joeys level/mobs/null_nightmares/ghost-appears.png<>uid://dpy0ey6phawsb::::res://Joeys level/mobs/null_nightmares/ghost-vanish.png<>uid://8b78i1xswuqs::::res://Joeys level/mobs/null_nightmares/ghost-die.png
+::res://Joeys level/mobs/rubber_ducky/::1713147337
+blue_bullets.png::CompressedTexture2D::2608835564162028281::1713145794::1713145834::1::::<><>::
+duck.gd::GDScript::-1::1713147328::0::1::::<>CharacterBody2D<>::
+Duck.tscn::PackedScene::9101318333317370601::1713147337::0::1::::<><>::uid://c6q7frbheyvac::::res://science_hell/assets/mobs/ducky.png<>res://Joeys level/mobs/rubber_ducky/duck.gd
+duck_bullets.gd::GDScript::-1::1713146127::0::1::::<>Area2D<>::
+duck_bullets.tscn::PackedScene::6862946246049890897::1713147190::0::1::::<><>::res://Joeys level/mobs/rubber_ducky/duck_bullets.gd<>uid://bdf0e1rujf85b::::res://Joeys level/mobs/rubber_ducky/blue_bullets.png
 ::res://Joeys level/mobs/syntax_spiders/::1713038105
 syntax_spider.tscn::PackedScene::5745459361066626713::1713037787::0::1::::<><>::uid://bc2gau158iaxh::::res://Joeys level/mobs/syntax_spiders/syntax_spider_idle.png
 syntax_spider_idle.png::CompressedTexture2D::2582901964324773285::1713037787::1713038105::1::::<><>::
 ::res://Joeys level/ui/::1713037787
 game_over.gd::GDScript::-1::1713037787::0::1::::<>CanvasLayer<>::
 game_over.tscn::PackedScene::5136372065832587688::1713037787::0::1::::<><>::
-::res://Joeys level/weapons/::1713144620
+::res://Joeys level/weapons/::1713144906
 arrow.png::CompressedTexture2D::6221973566948002212::1713144573::1713144622::1::::<><>::
-blue_bullets.png::CompressedTexture2D::2608835564162028281::1713144573::1713144601::1::::<><>::
 weapons.png::CompressedTexture2D::5564594793171691200::1713037787::1713038105::1::::<><>::
-::res://Joeys level/weapons/ar/::1713038105
+::res://Joeys level/weapons/ar/::1713147190
 AR-15.png::CompressedTexture2D::666210992301510406::1713037787::1713038105::1::::<><>::
 ar_15.gd::GDScript::-1::1713037787::0::1::::<>Area2D<>::
 ar_15.tscn::PackedScene::6094730862702419649::1713037787::0::1::::<><>::res://Joeys level/weapons/ar/ar_15.gd<>uid://jqynr0sjeqpy::::res://Joeys level/weapons/ar/AR-15.png
-ar_bullet.gd::GDScript::-1::1713037787::0::1::::<>Area2D<>::
-ar_bullet.tscn::PackedScene::2782327068696216337::1713037787::0::1::::<><>::res://Joeys level/weapons/ar/ar_bullet.gd<>uid://bwkwy3foqbp3r::::res://Joeys level/weapons/ar/red_bullets.png
+ar_bullet.gd::GDScript::-1::1713144877::0::1::::<>Area2D<>::
+ar_bullet.tscn::PackedScene::2782327068696216337::1713147190::0::1::::<><>::res://Joeys level/weapons/ar/ar_bullet.gd<>uid://bwkwy3foqbp3r::::res://Joeys level/weapons/ar/red_bullets.png
 red_bullets.png::CompressedTexture2D::3952599133200352013::1713037787::1713038105::1::::<><>::
 ::res://Level4/::1713037819
 ::res://Level4/Assets/::1713038106

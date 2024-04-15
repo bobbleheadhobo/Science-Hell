@@ -62,6 +62,12 @@ func move(delta):
 	
 	animate()
 	move_and_slide()
+	
+		# Flip the sprite based on the direction of movement
+	if direction.x < 0:
+		GUN.flip_sprite(true)
+	elif direction.x > 0:
+		GUN.flip_sprite(false)
 		
 
 func animate() -> void:
@@ -80,7 +86,7 @@ func handle_mob_collision(delta):
 				last_mob_id = mob.get_mob_id()
 			knockback_direction = (global_position - mob.global_position).normalized()
 			knockback_timer = knockback_duration
-		update_health()
+		take_damage()
 	
 	if knockback_timer > 0:
 		var knockback_force = 5000 # Adjust this value to control the knockback strength
@@ -89,9 +95,8 @@ func handle_mob_collision(delta):
 		velocity += knockback_velocity * interpolation_factor
 		knockback_timer -= delta
 		
-func update_health():
-	Health.update_health(Health.current_health - 0.1)
-	print(Health.current_health)
+func take_damage():
+	Health.update_health(Health.current_health - 1)
 	if Health.current_health <= 0:
 		print("DEAD!")
 		health_empty.emit()

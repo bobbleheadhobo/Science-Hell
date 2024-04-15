@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://d2w0nbaqxw5vh"]
 
-[ext_resource type="Texture2D" uid="uid://c6q7frbheyvac" path="res://science_hell/assets/mobs/ducky.png" id="1_i58px"]
-[ext_resource type="Script" path="res://Joeys level/mobs/rubber_ducky/Duck.gd" id="1_op86x"]
+[ext_resource type="Script" path="res://Joeys level/mobs/rubber_ducky/duck.gd" id="1_skjhq"]
+[ext_resource type="Texture2D" uid="uid://c6q7frbheyvac" path="res://science_hell/assets/mobs/ducky.png" id="2_araar"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uft6j"]
 radius = 9.0
@@ -99,15 +99,15 @@ _data = {
 "walk_bounce": SubResource("Animation_7wph6")
 }
 
-[node name="Duck" type="CharacterBody2D"]
+[node name="duck" type="CharacterBody2D"]
 scale = Vector2(5, 5)
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_op86x")
+script = ExtResource("1_skjhq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -1)
-texture = ExtResource("1_i58px")
+texture = ExtResource("2_araar")
 hframes = 6
 vframes = 4
 
