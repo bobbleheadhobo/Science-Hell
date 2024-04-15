@@ -63,11 +63,11 @@ func move(delta):
 	animate()
 	move_and_slide()
 	
-		# Flip the sprite based on the direction of movement
-	if direction.x < 0:
-		GUN.flip_sprite(true)
-	elif direction.x > 0:
-		GUN.flip_sprite(false)
+	## Flip the gun based on the direction of movement
+	#if direction.x < 0:
+		#GUN.flip_sprite(true)
+	#elif direction.x > 0:
+		#GUN.flip_sprite(false)
 		
 
 func animate() -> void:
