@@ -1,21 +1,21 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712944740
+::res://::1712945031
 icon.svg::CompressedTexture2D::4045829556977790957::1712615007::1712635450::1::::<><>::
-::res://chey/::1712944723
+::res://chey/::1712944860
 CommandProcessor.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
 Game.gd::GDScript::-1::1712944698::0::1::::<>Control<>::
-Game.tscn::PackedScene::4854220805282564299::1712944698::0::1::::<><>::res://chey/Game.gd<>uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres<>res://chey/input/Input.gd<>res://chey/CommandProcessor.gd<>res://chey/Player.gd<>uid://bjxq2gn64le60::::res://chey/rooms/GameRoom.tscn<>res://chey/rooms/RoomManager.gd<>uid://tg2a3ws3eojy::::res://chey/GameInfo.tscn<>uid://b1js2hgip12fo::::res://chey/SidePanel.tscn
+Game.tscn::PackedScene::4854220805282564299::1712944860::0::1::::<><>::res://chey/Game.gd<>uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres<>res://chey/input/Input.gd<>res://chey/CommandProcessor.gd<>res://chey/Player.gd<>uid://bjxq2gn64le60::::res://chey/rooms/GameRoom.tscn<>res://chey/rooms/RoomManager.gd<>uid://tg2a3ws3eojy::::res://chey/GameInfo.tscn<>uid://b1js2hgip12fo::::res://chey/SidePanel.tscn
 GameInfo.gd::GDScript::-1::1712944698::0::1::::<>PanelContainer<>::
-GameInfo.tscn::PackedScene::1347615159946598434::1712944698::0::1::::<><>::res://chey/GameInfo.gd<>uid://ddprpkgo0dl1f::::res://chey/main_panel.tres
+GameInfo.tscn::PackedScene::1347615159946598434::1712944860::0::1::::<><>::res://chey/GameInfo.gd<>uid://ddprpkgo0dl1f::::res://chey/main_panel.tres
 icon.svg::CompressedTexture2D::4954327842017481374::1712944698::1712944741::1::::<><>::
-InputHistory.tscn::PackedScene::3722660984728558505::1712944698::0::1::::<><>::uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
+InputHistory.tscn::PackedScene::3722660984728558505::1712944860::0::1::::<><>::uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
 main_panel.tres::StyleBoxFlat::7401853759261864077::1712944698::0::1::::<><>::
 Player.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-Response.tscn::PackedScene::1349348463100422661::1712944698::0::1::::<><>::uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
+Response.tscn::PackedScene::1349348463100422661::1712944860::0::1::::<><>::uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
 ScaleManager.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
 SidePanel.gd::GDScript::-1::1712944698::0::1::::<>PanelContainer<>::
-SidePanel.tscn::PackedScene::4231051517690568804::1712944698::0::1::::<><>::uid://ddprpkgo0dl1f::::res://chey/main_panel.tres<>res://chey/SidePanel.gd<>uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
-::res://chey/fonts/::1712944718
+SidePanel.tscn::PackedScene::4231051517690568804::1712944860::0::1::::<><>::uid://ddprpkgo0dl1f::::res://chey/main_panel.tres<>res://chey/SidePanel.gd<>uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
+::res://chey/fonts/::1712944741
 2p_28.tres::FontFile::842119544276159402::1712944698::0::1::::<><>::
 IBMPlexMono-Bold.ttf::FontFile::5560953426178506905::1712944698::1712944741::1::::<><>::
 IBMPlexMono-BoldItalic.ttf::FontFile::312936039934821668::1712944698::1712944741::1::::<><>::
@@ -41,48 +41,48 @@ upheaval.txt::TextFile::-1::1712944698::0::1::::<><>::
 upheavtt.ttf::FontFile::6938422846583173794::1712944698::1712944741::1::::<><>::
 ::res://chey/globals/::1712944718
 Types.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-::res://chey/input/::1712944718
+::res://chey/input/::1712944860
 Input.gd::GDScript::-1::1712944698::0::1::::<>LineEdit<>::
 InputHistory.tscn::PackedScene::9012112594461855760::1712944698::0::1::::<><>::uid://4qak0sy5hr0h::::res://chey/fonts/plex_mono_24.tres
 InputResponse.gd::GDScript::-1::1712944698::0::1::::<>MarginContainer<>::
-InputResponse.tscn::PackedScene::8149838117064077360::1712944698::0::1::::<><>::res://chey/input/InputResponse.gd<>uid://btbjxhagu7un6::::res://chey/InputHistory.tscn<>uid://thvtpjwkq60x::::res://chey/Response.tscn<>uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
+InputResponse.tscn::PackedScene::8149838117064077360::1712944860::0::1::::<><>::res://chey/input/InputResponse.gd<>uid://btbjxhagu7un6::::res://chey/InputHistory.tscn<>uid://thvtpjwkq60x::::res://chey/Response.tscn
 Response.tscn::PackedScene::3488640699986072209::1712944698::0::1::::<><>::uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres
 ::res://chey/items/::1712944718
-Bats.tres::Resource/Item::8074297527905783761::1712944698::0::1::::<><>::res://chey/items/Item.gd
-BugItemCooper1.tres::Resource/Item::6300144522082991600::1712944698::0::1::::<><>::res://chey/items/Item.gd
-BugToken.tres::Resource/Item::6954008339252957661::1712944698::0::1::::<><>::res://chey/items/Item.gd
-CooperItemCooper2.tres::Resource/Item::6297782737239046652::1712944698::0::1::::<><>::res://chey/items/Item.gd
-CooperItemHint.tres::Resource/Item::6898890370170282985::1712944698::0::1::::<><>::res://chey/items/Item.gd
-DuckieItemBash.tres::Resource/Item::2124823375548638364::1712944698::0::1::::<><>::res://chey/items/Item.gd
-DuckieItemText.tres::Resource/Item::3262545712134333708::1712944698::0::1::::<><>::res://chey/items/Item.gd
-DuckieKey.tres::Resource/Item::9095423467031374518::1712944698::0::1::::<><>::res://chey/items/Item.gd
+Bats.tres::Resource/Resource::8074297527905783761::1712944698::0::1::::<><>::res://chey/items/Item.gd
+BugItemCooper1.tres::Resource/Resource::6300144522082991600::1712944698::0::1::::<><>::res://chey/items/Item.gd
+BugToken.tres::Resource/Resource::6954008339252957661::1712944698::0::1::::<><>::res://chey/items/Item.gd
+CooperItemCooper2.tres::Resource/Resource::6297782737239046652::1712944698::0::1::::<><>::res://chey/items/Item.gd
+CooperItemHint.tres::Resource/Resource::6898890370170282985::1712944698::0::1::::<><>::res://chey/items/Item.gd
+DuckieItemBash.tres::Resource/Resource::2124823375548638364::1712944698::0::1::::<><>::res://chey/items/Item.gd
+DuckieItemText.tres::Resource/Resource::3262545712134333708::1712944698::0::1::::<><>::res://chey/items/Item.gd
+DuckieKey.tres::Resource/Resource::9095423467031374518::1712944698::0::1::::<><>::res://chey/items/Item.gd
 Item.gd::GDScript::-1::1712944698::0::1::::Item<>Resource<>::
-MainItem.tres::Resource/Item::8463154568082824610::1712944698::0::1::::<><>::res://chey/items/Item.gd
-RoopaItem2.tres::Resource/Item::1530689844575058928::1712944698::0::1::::<><>::res://chey/items/Item.gd
-RoopaItem3.tres::Resource/Item::6506412261014269499::1712944698::0::1::::<><>::res://chey/items/Item.gd
-RoopaItem.tres::Resource/Item::7253277876113043062::1712944698::0::1::::<><>::res://chey/items/Item.gd
-SHItem.tres::Resource/Item::523395192267387533::1712944698::0::1::::<><>::res://chey/items/Item.gd
+MainItem.tres::Resource/Resource::8463154568082824610::1712944698::0::1::::<><>::res://chey/items/Item.gd
+RoopaItem2.tres::Resource/Resource::1530689844575058928::1712944698::0::1::::<><>::res://chey/items/Item.gd
+RoopaItem3.tres::Resource/Resource::6506412261014269499::1712944698::0::1::::<><>::res://chey/items/Item.gd
+RoopaItem.tres::Resource/Resource::7253277876113043062::1712944698::0::1::::<><>::res://chey/items/Item.gd
+SHItem.tres::Resource/Resource::523395192267387533::1712944698::0::1::::<><>::res://chey/items/Item.gd
 ::res://chey/npcs/::1712944723
-BashDuckie.tres::Resource/NPC::809612668692803719::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://dstu6iwmf04py::::res://chey/items/MainItem.tres
-Bats.tres::Resource/NPC::7290002375791868559::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
-Bug.tres::Resource/NPC::630601511219067085::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://c6ctrbthu7q66::::res://chey/items/BugToken.tres
-Cooper1Bug.tres::Resource/NPC::5751323847002864024::1712944698::0::1::::<><>::uid://dnbirayf2xopt::::res://chey/items/Bats.tres<>res://chey/npcs/NPC.gd
-Cooper2.tres::Resource/NPC::388034221959603942::1712944698::0::1::::<><>::uid://cv03pvsu1hrcq::::res://chey/items/BugItemCooper1.tres<>res://chey/npcs/NPC.gd
-Cooper.tres::Resource/NPC::1118637854442053284::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
-Duckie.tres::Resource/NPC::5807421369049349726::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
-HintCooper.tres::Resource/NPC::2685262996467593640::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
-Main.tres::Resource/NPC::4772579614385536418::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://c5j4ymhuhsukf::::res://chey/items/CooperItemHint.tres
+BashDuckie.tres::Resource/Resource::809612668692803719::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://dstu6iwmf04py::::res://chey/items/MainItem.tres
+Bats.tres::Resource/Resource::7290002375791868559::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
+Bug.tres::Resource/Resource::630601511219067085::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://c6ctrbthu7q66::::res://chey/items/BugToken.tres
+Cooper1Bug.tres::Resource/Resource::5751323847002864024::1712944698::0::1::::<><>::uid://dnbirayf2xopt::::res://chey/items/Bats.tres<>res://chey/npcs/NPC.gd
+Cooper2.tres::Resource/Resource::388034221959603942::1712944698::0::1::::<><>::uid://cv03pvsu1hrcq::::res://chey/items/BugItemCooper1.tres<>res://chey/npcs/NPC.gd
+Cooper.tres::Resource/Resource::1118637854442053284::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
+Duckie.tres::Resource/Resource::5807421369049349726::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
+HintCooper.tres::Resource/Resource::2685262996467593640::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
+Main.tres::Resource/Resource::4772579614385536418::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://c5j4ymhuhsukf::::res://chey/items/CooperItemHint.tres
 NPC.gd::GDScript::-1::1712944698::0::1::::NPC<>Resource<>::
-Roopa.tres::Resource/NPC::8881491229845282061::1712944698::0::1::::<><>::uid://cyx0wogyaq8jf::::res://chey/items/RoopaItem3.tres<>res://chey/npcs/NPC.gd
-SHCooper.tres::Resource/NPC::3505322807037194888::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
-SHDuckie.tres::Resource/NPC::6831764525343969260::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
-TextDuckie.tres::Resource/NPC::4336380013863547201::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
+Roopa.tres::Resource/Resource::8881491229845282061::1712944698::0::1::::<><>::uid://cyx0wogyaq8jf::::res://chey/items/RoopaItem3.tres<>res://chey/npcs/NPC.gd
+SHCooper.tres::Resource/Resource::3505322807037194888::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
+SHDuckie.tres::Resource/Resource::6831764525343969260::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd
+TextDuckie.tres::Resource/Resource::4336380013863547201::1712944698::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
 ::res://chey/rooms/::1712944718
 Exit.gd::GDScript::-1::1712944698::0::1::::Exit<>Resource<>::
 GameRoom.gd::GDScript::-1::1712944698::0::1::::GameRoom<>PanelContainer<>::
 GameRoom.tscn::PackedScene::3066620989768711183::1712944698::0::1::::<><>::res://chey/rooms/GameRoom.gd<>uid://c13xce3j37r5h::::res://chey/fonts/IBMPlexMono-Medium.ttf<>uid://b570kmbms8al8::::res://chey/fonts/IBMPlexMono-Regular.ttf
 RoomManager.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-::res://ivan_level/::1712944618
+::res://ivan_level/::1712944852
 ::res://ivan_level/art/::1712615174
 ::res://ivan_level/art/cavesofgallet/::1712635450
 cavesofgallet.png::CompressedTexture2D::42912062964029426::1712615148::1712635450::1::::<><>::
@@ -170,9 +170,9 @@ player.tscn::PackedScene::6653582193208225722::1712615147::0::1::::<><>::res://i
 enemy.gd::GDScript::-1::1712615147::0::1::::<>CharacterBody2D<>::
 enemy.tscn::PackedScene::6843193859727963156::1712615147::0::1::::<><>::res://ivan_level/Enemy/enemy.gd<>uid://bo2qpr8ywog6m::::res://ivan_level/Enemy/error_404_enemy_sprite.png
 error_404_enemy_sprite.png::CompressedTexture2D::3425801897773911250::1712615147::1712635449::1::::<><>::
-::res://ivan_level/Level/::1712944618
+::res://ivan_level/Level/::1712944861
 level.gd::GDScript::-1::1712944613::0::1::::Level<>Node<>::
-level.tscn::PackedScene::7825207237103653099::1712944613::0::1::::<><>::res://ivan_level/Level/level.gd<>uid://u10xishplp7::::res://ivan_level/art/cavesofgallet/cavesofgallet.png<>uid://b30akjv8jdvv1::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/18_Jail_16x16.png<>uid://c12br51lomy63::::res://ivan_level/Character/player.tscn<>uid://dpxg68wfwq0vn::::res://ivan_level/art/v.1 sprites/ivan.png<>uid://cmv5r1ldorwn2::::res://ivan_level/Obstacles/danger.tscn<>uid://ryxn4owhj57x::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png<>uid://d271derdg4mco::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png<>uid://c4q5nx7enfcl5::::res://ivan_level/Enemy/enemy.tscn<>res://ivan_level/Level/PlayerStart.gd
+level.tscn::PackedScene::7825207237103653099::1712944861::0::1::::<><>::res://ivan_level/Level/level.gd<>uid://u10xishplp7::::res://ivan_level/art/cavesofgallet/cavesofgallet.png<>uid://b30akjv8jdvv1::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/18_Jail_16x16.png<>uid://c12br51lomy63::::res://ivan_level/Character/player.tscn<>uid://dpxg68wfwq0vn::::res://ivan_level/art/v.1 sprites/ivan.png<>uid://cmv5r1ldorwn2::::res://ivan_level/Obstacles/danger.tscn<>uid://ryxn4owhj57x::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png<>uid://d271derdg4mco::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png<>uid://c4q5nx7enfcl5::::res://ivan_level/Enemy/enemy.tscn<>res://ivan_level/Level/PlayerStart.gd
 PlayerStart.gd::GDScript::-1::1712944613::0::1::::<>Node2D<>::
 ::res://ivan_level/Music/::1712944618
 Battle at Chuga Jung castle.wav::AudioStreamWAV::6628107400076777771::1712615148::1712886909::1::::<><>::
@@ -183,10 +183,10 @@ main_menu.tscn::PackedScene::7819451649782781431::1712944613::0::1::::<><>::uid:
 danger.gd::GDScript::-1::1712777435::0::1::::<>Area2D<>::
 danger.tscn::PackedScene::5660312674912884533::1712777423::0::1::::<><>::res://ivan_level/Obstacles/danger.gd
 danger_2.tscn::PackedScene::3416914840557371598::1712615148::0::1::::<><>::res://ivan_level/Obstacles/danger.gd
-::res://ivan_level/Title Screen/::1712944618
+::res://ivan_level/Title Screen/::1712944861
 export_presets.cfg::TextFile::-1::1712615148::0::1::::<><>::
 Menu.gd::GDScript::-1::1712944613::0::1::::<>Control<>::
-menu.tscn::PackedScene::4673404237162450159::1712944613::0::1::::<><>::res://ivan_level/Title Screen/Menu.gd<>uid://cgju6mvj1sonx::::res://ivan_level/Title Screen/title.png
+menu.tscn::PackedScene::4673404237162450159::1712944861::0::1::::<><>::res://ivan_level/Title Screen/Menu.gd<>uid://cgju6mvj1sonx::::res://ivan_level/Title Screen/title.png
 title.png::CompressedTexture2D::5213824191632797593::1712615148::1712635449::1::::<><>::
 ::res://Joeys level/::1712943495
 ::res://Joeys level/level/::1712943495
@@ -259,10 +259,10 @@ VirusWorld.tscn::PackedScene::773241697188950863::1712943474::0::1::::<><>::uid:
 ::res://Level4/Scripts/::1712943495
 basicVirus.gd::GDScript::-1::1712943474::0::1::::<>CharacterBody2D<>::
 PlayerScript.gd::GDScript::-1::1712943474::0::1::::<>CharacterBody2D<>::
-::res://science_hell/::1712944707
-::res://science_hell/assets/::1712943565
-lvl5_tile_set.tres::TileSet::1566125473283678596::1712943559::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://dlxysdqkynn3v::::res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
-main_map_tile_set.tres::TileSet::1229567687912458978::1712943556::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://qvl24ma6x4hk::::res://science_hell/assets/tiles/courtyard3.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png<>uid://br5qxtqv3ohd4::::res://science_hell/assets/tiles/main_map_extras.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png
+::res://science_hell/::1712944816
+::res://science_hell/assets/::1712944816
+lvl5_tile_set.tres::TileSet::1566125473283678596::1712944807::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://dlxysdqkynn3v::::res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
+main_map_tile_set.tres::TileSet::1229567687912458978::1712944804::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://qvl24ma6x4hk::::res://science_hell/assets/tiles/courtyard3.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png<>uid://br5qxtqv3ohd4::::res://science_hell/assets/tiles/main_map_extras.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png
 science_hell.tres::TileSet::3995618656373907210::1712943474::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
 tilemap.tres::TileSet::4101909133178794065::1712943474::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://dlxysdqkynn3v::::res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
 ::res://science_hell/assets/animated_objects/::1712943507
@@ -323,6 +323,6 @@ lab.gd::GDScript::-1::1712615007::0::1::::<>Node2D<>::
 scene_manager.gd::GDScript::-1::1712944613::0::1::::<>Node<>::
 ::res://science_hell/singleton/::1712944707
 player_stats.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-::res://science_hell/src_scene/::1712944618
+::res://science_hell/src_scene/::1712944860
 science_hell.gd::GDScript::-1::1712944613::0::1::::<>Node<>::
-science_hell.tscn::PackedScene::2410502229619207928::1712944613::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn
+science_hell.tscn::PackedScene::2410502229619207928::1712944860::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn
