@@ -85,7 +85,7 @@ func _on_Conductor_beat(current_position):
 		spawn_2_beat = 2
 		spawn_3_beat = 1
 		spawn_4_beat = 2
-	if song_position_in_beats > 300:
+	if song_position_in_beats > 304:
 		spawn_1_beat = 0
 		spawn_2_beat = 0
 		spawn_3_beat = 0
@@ -105,7 +105,7 @@ func _on_Conductor_beat(current_position):
 		#spawn_2_beat = 0
 		#spawn_3_beat = 0
 		#spawn_4_beat = 0
-	if song_position_in_beats > 308:
+	if song_position_in_beats > 312:
 		Global.set_score(score)
 		Global.combo = max_combo
 		Global.great = great
