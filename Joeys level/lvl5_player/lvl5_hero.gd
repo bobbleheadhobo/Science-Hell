@@ -73,12 +73,13 @@ func handle_mob_collision(delta):
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		for mob in overlapping_mobs:
-			if mob.get_mob_id() == last_mob_id:
-				mob.queue_free()
-				print("Killed buggy mob")
+			if mob.has_method("get_mob_id"):
+				if mob.get_mob_id() == last_mob_id:
+					mob.queue_free() 
+					print("Killed buggy mob")
+				last_mob_id = mob.get_mob_id()
 			knockback_direction = (global_position - mob.global_position).normalized()
 			knockback_timer = knockback_duration
-			last_mob_id = mob.get_mob_id()
 		update_health()
 	
 	if knockback_timer > 0:

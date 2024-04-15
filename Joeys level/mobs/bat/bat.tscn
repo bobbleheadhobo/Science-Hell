@@ -7,6 +7,21 @@
 radius = 6.0
 height = 26.0276
 
+[sub_resource type="Animation" id="Animation_apg7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_kid8y"]
 resource_name = "fly"
 length = 0.15
@@ -24,21 +39,6 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_apg7j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r2wew"]
 _data = {
 "RESET": SubResource("Animation_apg7j"),
@@ -47,6 +47,8 @@ _data = {
 
 [node name="Bat" type="CharacterBody2D"]
 scale = Vector2(4, 4)
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_hw8ry")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

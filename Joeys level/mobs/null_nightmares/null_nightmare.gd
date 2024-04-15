@@ -26,7 +26,6 @@ func take_damage():
 		return
 
 	health -= 1
-	print("Ouch!")
 
 	if health <= 0:
 		$null_animation.play_death_animation(3)

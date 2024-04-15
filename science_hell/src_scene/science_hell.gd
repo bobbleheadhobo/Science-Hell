@@ -3,6 +3,7 @@ extends Node
 
 func _ready():
 	MusicManager.play_song("sciencehall")
+	Health.set_visibility(true)
 
 func _process(delta):
 	pass

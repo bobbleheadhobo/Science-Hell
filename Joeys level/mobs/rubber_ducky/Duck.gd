@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var player = get_node("/root/Debug_or_die/lvl5_Player")
 @onready var shooting_range = 300.0  # Adjust this value to set the shooting range
 
+var health = 3
+
 func _ready():
 	$AnimationPlayer.play("idle")
 
@@ -45,3 +47,10 @@ func flip_sprite(direction):
 			$Sprite2D.flip_h = true
 		elif direction.x > 0:
 			$Sprite2D.flip_h = false
+			
+func take_damage():
+	health -= 1
+
+	if health <= 0:
+		queue_free()
+		return # Exit function after queue_free

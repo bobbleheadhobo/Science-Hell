@@ -101,6 +101,8 @@ _data = {
 
 [node name="Duck" type="CharacterBody2D"]
 scale = Vector2(5, 5)
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_op86x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
