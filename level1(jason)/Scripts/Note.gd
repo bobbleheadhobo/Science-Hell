@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 const TARGET_Y = 164
 const SPAWN_Y = -16
@@ -28,10 +28,10 @@ func _physics_process(delta):
 
 func initialize(lane):
 	if lane == 0:
-		$AnimatedSprite2D.frame = 0
+		$AnimatedSprite2D.frame = 1
 		position = LEFT_LANE_SPAWN
 	elif lane == 1:
-		$AnimatedSprite2D.frame = 1
+		$AnimatedSprite2D.frame = 3
 		position = CENTRE_LANE_SPAWN
 	elif lane == 2:
 		$AnimatedSprite2D.frame = 2

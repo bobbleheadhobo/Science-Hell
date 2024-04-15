@@ -1,19 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cai7keu73g4bu"]
+[gd_scene load_steps=6 format=3 uid="uid://cai7keu73g4bu"]
 
 [ext_resource type="SpriteFrames" uid="uid://blj47d5u7wi5u" path="res://Frames/note_frames.tres" id="1"]
 [ext_resource type="Texture2D" uid="uid://bca8atla8jwtr" path="res://Sprites/game/particles/star.png" id="2"]
 [ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="3"]
 [ext_resource type="Script" path="res://Scripts/Note.gd" id="4"]
 
-[sub_resource type="GDScript" id="GDScript_hpx0r"]
-script/source = "extends Node2D
-"
-
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 8)
 
 [node name="Note" type="Area2D" groups=["note"]]
-script = SubResource("GDScript_hpx0r")
+script = ExtResource("4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1")

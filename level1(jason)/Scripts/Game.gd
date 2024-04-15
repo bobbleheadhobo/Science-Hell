@@ -9,7 +9,7 @@ var good = 0
 var okay = 0
 var missed = 0
 
-var bpm = 115
+var bpm = 160
 
 var song_position = 0.0
 var song_position_in_beats = 0
@@ -29,7 +29,7 @@ var instance
 
 func _ready():
 	randomize()
-	$Conductor.play_with_beat_offset(8)
+	$Conductor.play_with_beat_offset(9.5)
 
 
 func _input(event):
@@ -128,7 +128,7 @@ func _spawn_notes(to_spawn):
 		while rand == lane:
 			rand = randi() % 3
 		lane = rand
-		instance = note.get_instance_id()
+		instance = note.instantiate()
 		instance.initialize(lane)
 		add_child(instance)
 		

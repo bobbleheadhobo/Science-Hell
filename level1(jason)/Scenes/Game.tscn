@@ -54,6 +54,6 @@ theme_override_fonts/font = ExtResource("7")
 [node name="Conductor" parent="." instance=ExtResource("8")]
 stream = ExtResource("5")
 volume_db = -15.0
-bpm = 115
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
+[connection signal="temp" from="Conductor" to="." method="_on_Conductor_measure"]
