@@ -39,9 +39,9 @@ script = ExtResource("5_iq0yq")
 [node name="Spawners_container" parent="." instance=ExtResource("7_lrcur")]
 position = Vector2(2023, 1397)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MobsKilled" type="CanvasLayer" parent="."]
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+[node name="ProgressBar" type="ProgressBar" parent="MobsKilled"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -55,4 +55,5 @@ show_percentage = false
 script = ExtResource("6_ocmks")
 
 [connection signal="timeout" from="SpawnMobTimer" to="Spawners_container" method="_on_spawn_mob_timer_timeout"]
-[connection signal="update_progress_mob_killed" from="Spawners_container" to="CanvasLayer/ProgressBar" method="_on_spawners_container_update_progress_mob_killed"]
+[connection signal="update_progress_mob_killed" from="Spawners_container" to="MobsKilled/ProgressBar" method="_on_spawners_container_update_progress_mob_killed"]
+[connection signal="progress_bar_full" from="MobsKilled/ProgressBar" to="." method="_on_progress_bar_progress_bar_full"]
