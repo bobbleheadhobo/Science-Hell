@@ -1,6 +1,4 @@
-class_name Level
-extends Node
+extends Node2D
 
 func _ready():
-	Ivan_Music.play()
-	
+	MusicManager.play_song("ivan")
