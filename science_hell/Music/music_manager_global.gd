@@ -12,6 +12,7 @@ var music_player = AudioStreamPlayer.new()
 
 func _ready():
 	add_child(music_player)
+	music_player.connect("finished", MusicManager._on_music_finished)
 
 func play_song(song_name, fade_duration = 1.0):
 	if song_name in songs:
@@ -36,3 +37,9 @@ func stop_music(fade_duration = 1.0):
 		tween.tween_property(music_player, "volume_db", -80, fade_duration).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 		tween.connect("finished", music_player.stop)
 		tween.connect("finished", tween.kill)
+		
+func _on_music_finished():
+	if current_song != "":
+		# Pause the stream and start playing from the beginning
+		music_player.stream_paused = true
+		music_player.play(0)

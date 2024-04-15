@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwpkq4l5yd8t3"
-path="res://.godot/imported/bullets.png-c68b22a2460b7d0490d3a4ab67e7e3df.ctex"
+uid="uid://bdf0e1rujf85b"
+path="res://.godot/imported/blue_bullets.png-d31b67f08ac3e2b8041b7738d87fbd48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Joeys level/weapons/bullets.png"
-dest_files=["res://.godot/imported/bullets.png-c68b22a2460b7d0490d3a4ab67e7e3df.ctex"]
+source_file="res://Joeys level/weapons/blue_bullets.png"
+dest_files=["res://.godot/imported/blue_bullets.png-d31b67f08ac3e2b8041b7738d87fbd48.ctex"]
 
 [params]
 
