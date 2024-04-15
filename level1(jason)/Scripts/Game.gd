@@ -9,7 +9,7 @@ var good = 0
 var okay = 0
 var missed = 0
 
-var bpm = 160
+var bpm = 165
 
 var song_position = 0.0
 var song_position_in_beats = 0
@@ -29,7 +29,7 @@ var instance
 
 func _ready():
 	randomize()
-	$Conductor.play_with_beat_offset(9.5)
+	$Conductor.play_with_beat_offset(10)
 
 
 func _input(event):
@@ -85,27 +85,27 @@ func _on_Conductor_beat(current_position):
 		spawn_2_beat = 2
 		spawn_3_beat = 1
 		spawn_4_beat = 2
-	if song_position_in_beats > 288:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 0
-		spawn_4_beat = 2
-	if song_position_in_beats > 322:
-		spawn_1_beat = 3
-		spawn_2_beat = 2
-		spawn_3_beat = 2
-		spawn_4_beat = 1
-	if song_position_in_beats > 388:
-		spawn_1_beat = 1
-		spawn_2_beat = 0
-		spawn_3_beat = 0
-		spawn_4_beat = 0
-	if song_position_in_beats > 396:
+	if song_position_in_beats > 300:
 		spawn_1_beat = 0
 		spawn_2_beat = 0
 		spawn_3_beat = 0
 		spawn_4_beat = 0
-	if song_position_in_beats > 200:
+	#if song_position_in_beats > 316:
+		#spawn_1_beat = 0
+		#spawn_2_beat = 0
+		#spawn_3_beat = 0
+		#spawn_4_beat = 0
+	#if song_position_in_beats > 388:
+		#spawn_1_beat = 1
+		#spawn_2_beat = 0
+		#spawn_3_beat = 0
+		#spawn_4_beat = 0
+	#if song_position_in_beats > 396:
+		#spawn_1_beat = 0
+		#spawn_2_beat = 0
+		#spawn_3_beat = 0
+		#spawn_4_beat = 0
+	if song_position_in_beats > 308:
 		Global.set_score(score)
 		Global.combo = max_combo
 		Global.great = great
