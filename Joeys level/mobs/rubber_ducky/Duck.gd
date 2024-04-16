@@ -9,6 +9,9 @@ var can_shoot = true
 var mob_id = null
 var is_hurt = false
 
+var knockback_strength = 500.0
+var knockback = Vector2.ZERO
+
 signal mob_killed
 
 func _ready():
@@ -26,16 +29,17 @@ func _physics_process(delta):
 			
 			# Move towards the player if outside the shooting range
 			var direction = global_position.direction_to(player.global_position)
-			velocity = direction * 300.0
+			velocity = direction * 300.0 + knockback
 			move_and_slide()
 			flip_sprite(direction)
 			
 		else:
+			velocity = knockback
 			# Play the idle animation
 			play_animation("idle")
 			
 			# Stop moving when within the shooting range
-			velocity = Vector2.ZERO
+			#velocity = Vector2.ZERO
 			
 			# only shoot every 3 seconds
 			if can_shoot:
@@ -43,6 +47,9 @@ func _physics_process(delta):
 				can_shoot = false
 				await get_tree().create_timer(3.0).timeout
 				can_shoot = true
+				
+	move_and_slide()
+	knockback = lerp(knockback, Vector2.ZERO, 0.1)
 
 func shoot():
 	var duck_bullet = duck_bullet_scene.instantiate()
@@ -59,7 +66,7 @@ func flip_sprite(direction):
 	elif direction.x > 0:
 		$Sprite2D.flip_h = false
 
-func take_damage():
+func take_damage(damage_location):
 	if health <= 0:
 		emit_signal("mob_killed")
 		queue_free()
@@ -73,6 +80,9 @@ func take_damage():
 	play_animation("hurt")
 	await get_tree().create_timer(hurt_animation_length).timeout
 	is_hurt = false
+	
+	var direction = damage_location.direction_to(global_position)
+	knockback = direction * knockback_strength
 	
 		
 func generate_mob_id():
