@@ -75,18 +75,27 @@ func animate() -> void:
 	animationTree.set(blend_pos_paths[state], blend_position)
 
 
+var last_hit_time = 0
+
 func handle_mob_collision(delta):
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		for mob in overlapping_mobs:
 			if mob.has_method("get_mob_id"):
-				if mob.get_mob_id() == last_mob_id:
-					mob.queue_free() 
+				var mob_id = mob.get_mob_id()
+				var current_time = Time.get_ticks_msec() / 1000.0  # Get current time in seconds
+
+				if mob_id == last_mob_id and current_time - last_hit_time <= 0.3:
+					mob.queue_free()
 					print("Killed buggy mob")
-				last_mob_id = mob.get_mob_id()
-			knockback_direction = (global_position - mob.global_position).normalized()
-			knockback_timer = knockback_duration
-		take_damage()
+				else:
+					last_mob_id = mob_id
+					last_hit_time = current_time
+					print(last_mob_id)
+
+				knockback_direction = (global_position - mob.global_position).normalized()
+				knockback_timer = knockback_duration
+				take_damage()
 	
 	if knockback_timer > 0:
 		var knockback_force = 5000 # Adjust this value to control the knockback strength

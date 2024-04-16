@@ -6,41 +6,43 @@ extends CharacterBody2D
 var duck_bullet_scene = preload("res://Joeys level/mobs/rubber_ducky/duck_bullets.tscn")
 var health = 3
 var can_shoot = true
+var mob_id = null
+var is_hurt = false
 
 signal mob_killed
 
 func _ready():
-	$AnimationPlayer.play("idle")
+	play_animation("idle")
 	shoot()
+	mob_id = generate_mob_id()
 
 func _physics_process(delta):
-	var distance_to_player = global_position.distance_to(player.global_position)
-	
-	if distance_to_player > shooting_range:
-		# Play the walk animation
-		if not $AnimationPlayer.current_animation == "walk_bounce":
-			$AnimationPlayer.play("walk_bounce")
+	if not is_hurt:
+		var distance_to_player = global_position.distance_to(player.global_position)
 		
-		# Move towards the player if outside the shooting range
-		var direction = global_position.direction_to(player.global_position)
-		velocity = direction * 300.0
-		move_and_slide()
-		flip_sprite(direction)
-		
-	else:
-		# Play the idle animation
-		if not $AnimationPlayer.current_animation == "idle":
-			$AnimationPlayer.play("idle")
-		
-		# Stop moving when within the shooting range
-		velocity = Vector2.ZERO
-		
-		# only shoot every 3 seconds
-		if can_shoot:
-			shoot()
-			can_shoot = false
-			await get_tree().create_timer(3.0).timeout
-			can_shoot = true
+		if distance_to_player > shooting_range:
+			# Play the walk animation
+			play_animation("walk")
+			
+			# Move towards the player if outside the shooting range
+			var direction = global_position.direction_to(player.global_position)
+			velocity = direction * 300.0
+			move_and_slide()
+			flip_sprite(direction)
+			
+		else:
+			# Play the idle animation
+			play_animation("idle")
+			
+			# Stop moving when within the shooting range
+			velocity = Vector2.ZERO
+			
+			# only shoot every 3 seconds
+			if can_shoot:
+				shoot()
+				can_shoot = false
+				await get_tree().create_timer(3.0).timeout
+				can_shoot = true
 
 func shoot():
 	var duck_bullet = duck_bullet_scene.instantiate()
@@ -58,8 +60,32 @@ func flip_sprite(direction):
 		$Sprite2D.flip_h = false
 
 func take_damage():
-	health -= 1
 	if health <= 0:
 		emit_signal("mob_killed")
 		queue_free()
 		return # Exit function after queue_free
+		
+	health -= 1
+	print("duck hurt")
+	is_hurt = true
+	$AnimationPlayer.stop()
+	var hurt_animation_length = $AnimationPlayer.get_animation("hurt").length
+	play_animation("hurt")
+	await get_tree().create_timer(hurt_animation_length).timeout
+	is_hurt = false
+	
+		
+func generate_mob_id():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	mob_id = rng.randi()
+	return mob_id
+
+func get_mob_id():
+	return mob_id
+
+
+func play_animation(name: String):
+	if not $AnimationPlayer.current_animation == name:
+		$AnimationPlayer.play(name)
+	

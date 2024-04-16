@@ -16,7 +16,7 @@ func _physics_process(delta):
 func _on_body_entered(body):
 	queue_free()
 	if body.has_method("take_damage"):
-		body.take_damage()
+		body.take_damage(global_position)
 
 func play_shoot_animation():
 	%AnimationPlayer.play("pew_pew")

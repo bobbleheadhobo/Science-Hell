@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0pn2xkehu2j8"]
+[gd_scene load_steps=5 format=3 uid="uid://c0pn2xkehu2j8"]
 
 [ext_resource type="TileSet" uid="uid://wkv4fsjcfk1a" path="res://science_hell/assets/lvl5_tile_set.tres" id="1_w5vad"]
 [ext_resource type="Texture2D" uid="uid://c4plldrkn0u1s" path="res://Joeys level/lvl5_player/rey.png" id="2_8u5pe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75ji4"]
+size = Vector2(2782, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drn1k"]
+size = Vector2(13, 1769)
 
 [node name="Map" type="Node2D"]
 
@@ -24,3 +30,17 @@ layer_5/tile_data = PackedInt32Array(3539046, 262155, 69, 3604582, 262155, 70, 3
 [node name="Rey" type="Sprite2D" parent="."]
 position = Vector2(1522, 918)
 texture = ExtResource("2_8u5pe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="TopWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1488, 88)
+shape = SubResource("RectangleShape2D_75ji4")
+
+[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(104.5, 980.5)
+shape = SubResource("RectangleShape2D_drn1k")
+
+[node name="office" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1529, 968.5)
+polygon = PackedVector2Array(-96, -87.5, -104, -71.5, -104, 86.5, 134, 86.5, 135, -71.5, 126, -88.5)

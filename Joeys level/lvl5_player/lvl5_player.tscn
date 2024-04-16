@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="1_o3wty"]
 [ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="2_l4st2"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smeod"]
-radius = 28.1188
-height = 80.2046
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdvq7"]
+size = Vector2(39, 12)
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -264,8 +263,8 @@ transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(133.11, -15.0076)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxiua"]
-radius = 44.0
-height = 102.0
+radius = 29.8021
+height = 105.992
 
 [node name="Lvl5Player" type="CharacterBody2D"]
 script = ExtResource("1_bgup8")
@@ -279,10 +278,8 @@ vframes = 6
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, 24)
-rotation = 0.0524688
-shape = SubResource("CapsuleShape2D_smeod")
+position = Vector2(-0.5, 60)
+shape = SubResource("RectangleShape2D_fdvq7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)
@@ -314,11 +311,11 @@ parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
 
 [node name="hurtbox" type="Area2D" parent="."]
 unique_name_in_owner = true
-visible = false
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(0, 13)
-rotation = 1.63696
+visible = false
+position = Vector2(1, 15)
+rotation = 3.15406
 shape = SubResource("CapsuleShape2D_gxiua")
