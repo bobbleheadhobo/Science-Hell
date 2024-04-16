@@ -108,4 +108,4 @@ func take_damage():
 	Health.update_health(Health.current_health - 1)
 	if Health.current_health <= 0:
 		print("DEAD!")
-		health_empty.emit()
+		SceneManager.change_scene("dead")

@@ -1,11 +1,10 @@
-[gd_scene load_steps=34 format=3 uid="uid://djdq6pyatghw6"]
+[gd_scene load_steps=32 format=3 uid="uid://d02pbn08lcvxe"]
 
-[ext_resource type="Script" path="res://Joeys level/lvl5_player/lvl5_hero.gd" id="1_bgup8"]
-[ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="1_o3wty"]
-[ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="2_l4st2"]
+[ext_resource type="Script" path="res://Joeys level/mobs/reynolds_boss/reynolds.gd" id="1_8r87l"]
+[ext_resource type="Texture2D" uid="uid://7hkh268fc70s" path="res://science_hell/players/rey.png" id="2_wx7xm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdvq7"]
-size = Vector2(39, 12)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7b1ow"]
+size = Vector2(9, 20)
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -253,7 +252,7 @@ node_connections = [&"TimeScale", 0, &"walk_bsd2", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gxllx"]
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_7d5ot"]
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_4hqbm"]
 states/Start/position = Vector2(222, 114)
 states/idle/node = SubResource("AnimationNodeBlendTree_j50us")
 states/idle/position = Vector2(403, 39)
@@ -262,30 +261,20 @@ states/walk/position = Vector2(403, 154)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_0ende"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_i73g2"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_gxllx")]
 graph_offset = Vector2(133.11, -15.0076)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxiua"]
-radius = 29.8021
-height = 105.992
+[node name="Reynolds" type="CharacterBody2D"]
+script = ExtResource("1_8r87l")
 
-[node name="Lvl5Player" type="CharacterBody2D"]
-script = ExtResource("1_bgup8")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_7b1ow")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 10)
 scale = Vector2(4, 4)
-texture = ExtResource("1_o3wty")
+texture = ExtResource("2_wx7xm")
 hframes = 4
 vframes = 6
 frame = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 60)
-shape = SubResource("RectangleShape2D_fdvq7")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.3, 0.3)
-
-[node name="AR_15" parent="." instance=ExtResource("2_l4st2")]
-position = Vector2(30, 33)
 
 [node name="player" type="Node2D" parent="."]
 
@@ -302,20 +291,9 @@ root_node = NodePath("%AnimationTree/../..")
 libraries = {
 "": SubResource("AnimationLibrary_ihkl0")
 }
-tree_root = SubResource("AnimationNodeStateMachine_7d5ot")
+tree_root = SubResource("AnimationNodeStateMachine_4hqbm")
 anim_player = NodePath("../AnimationPlayer")
 parameters/idle/TimeScale/scale = 1.0
 parameters/idle/idle_bsd2/blend_position = Vector2(0.00569797, -0.978836)
 parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
-
-[node name="hurtbox" type="Area2D" parent="."]
-unique_name_in_owner = true
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-visible = false
-position = Vector2(1, 15)
-rotation = 3.15406
-shape = SubResource("CapsuleShape2D_gxiua")

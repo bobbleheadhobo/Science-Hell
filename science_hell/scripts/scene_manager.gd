@@ -14,7 +14,8 @@ var scene_file_paths = {
 	"sciencehall": "res://science_hell/src_scene/science_hell.tscn",
 	"ivanlevel" : "res://ivan_level/level/level.tscn",
 	"char_select": "res://science_hell/gui/char_select/character_select.tscn",
-	"reynoldslevel": "res://Joeys level/level/debug_or_die.tscn"
+	"reynoldslevel": "res://Joeys level/level/debug_or_die.tscn",
+	"dead": "res://Joeys level/level/dead.tscn"
 }
 
 func _ready():

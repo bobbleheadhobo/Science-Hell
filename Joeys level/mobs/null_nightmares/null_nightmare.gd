@@ -8,6 +8,7 @@ var health = 3
 var invincible = false
 var rng = RandomNumberGenerator.new()
 var mob_id = null
+var is_hurt = false
 
 
 func _ready():
@@ -16,12 +17,14 @@ func _ready():
 	
 
 func _physics_process(delta):
-	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * 300.0
-	move_and_slide()
-	flip_sprite(direction)
+	if not invincible: #also means if not hurt
+		$null_animation.play_walking_animation(1)	
+		var direction = global_position.direction_to(player.global_position)
+		velocity = direction * 300.0
+		move_and_slide()
+		flip_sprite(direction)
 
-func take_damage():
+func take_damage(damage_location):
 	if invincible:
 		return
 
@@ -36,7 +39,7 @@ func take_damage():
 		invincible = true # Set invincibility to true  while animation
 		$null_animation.play_vanish_animation(3.0)
 		teleport_closer_to_player()
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(0.2).timeout # dont change
 		invincible = false # Set invincibility back to false after the duration
 
 func teleport_closer_to_player():

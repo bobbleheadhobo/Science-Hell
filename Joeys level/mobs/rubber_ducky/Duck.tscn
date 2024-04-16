@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://d2w0nbaqxw5vh"]
 
 [ext_resource type="Script" path="res://Joeys level/mobs/rubber_ducky/duck.gd" id="1_skjhq"]
-[ext_resource type="Texture2D" path="res://science_hell/assets/mobs/ducky2.png" id="2_rmae1"]
+[ext_resource type="Texture2D" uid="uid://c6x5mrxv5iaya" path="res://science_hell/assets/mobs/ducky2.png" id="2_rmae1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uft6j"]
 radius = 9.0
@@ -24,7 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_7fmak"]
 resource_name = "hurt"
-length = 0.1
+length = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

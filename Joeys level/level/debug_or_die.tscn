@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Joeys level/ui/game_over.gd" id="5_iq0yq"]
 [ext_resource type="Script" path="res://Joeys level/level/ProgressBar.gd" id="6_ocmks"]
 [ext_resource type="PackedScene" uid="uid://ck460lkuai80n" path="res://Joeys level/mobs/mob_spawners/spawners_container.tscn" id="7_lrcur"]
-[ext_resource type="PackedScene" uid="uid://d2w0nbaqxw5vh" path="res://Joeys level/mobs/rubber_ducky/duck.tscn" id="8_dpdn7"]
+[ext_resource type="PackedScene" uid="uid://d02pbn08lcvxe" path="res://Joeys level/mobs/reynolds_boss/reynolds.tscn" id="10_cgdnd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f578t"]
 bg_color = Color(0.313726, 0.694118, 0.368627, 1)
@@ -55,8 +55,8 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_f578t")
 show_percentage = false
 script = ExtResource("6_ocmks")
 
-[node name="duck" parent="." instance=ExtResource("8_dpdn7")]
-position = Vector2(4048, 2684)
+[node name="Reynolds" parent="." instance=ExtResource("10_cgdnd")]
+position = Vector2(3788, 2682)
 
 [connection signal="timeout" from="SpawnMobTimer" to="Spawners_container" method="_on_spawn_mob_timer_timeout"]
 [connection signal="update_progress_mob_killed" from="Spawners_container" to="MobsKilled/ProgressBar" method="_on_spawners_container_update_progress_mob_killed"]

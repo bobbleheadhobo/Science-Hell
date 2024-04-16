@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7hkh268fc70s"
-path="res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"
+uid="uid://cr3n02ee0tkvr"
+path="res://.godot/imported/stein.jpeg-2e3868db888a2168d498849449317b19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/players/rey.png"
-dest_files=["res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"]
+source_file="res://Joeys level/level/stein.jpeg"
+dest_files=["res://.godot/imported/stein.jpeg-2e3868db888a2168d498849449317b19.ctex"]
 
 [params]
 

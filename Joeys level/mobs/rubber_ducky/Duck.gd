@@ -67,13 +67,13 @@ func flip_sprite(direction):
 		$Sprite2D.flip_h = false
 
 func take_damage(damage_location):
+	health -= 1
+	
 	if health <= 0:
 		emit_signal("mob_killed")
 		queue_free()
 		return # Exit function after queue_free
 		
-	health -= 1
-	print("duck hurt")
 	is_hurt = true
 	$AnimationPlayer.stop()
 	var hurt_animation_length = $AnimationPlayer.get_animation("hurt").length
