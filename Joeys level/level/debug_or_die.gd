@@ -7,6 +7,7 @@ var current_wave = Rey.current_wave
 
 func _ready():
 	MusicManager.play_song("reynolds")
+	Health.update_health(0)
 
 func _on_progress_bar_progress_bar_full():
 	Rey.next_wave()

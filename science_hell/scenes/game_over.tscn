@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://pl6xqeiienji"]
 
-[ext_resource type="Script" path="res://Joeys level/level/game_over.gd" id="1_tysui"]
-[ext_resource type="Texture2D" uid="uid://cr3n02ee0tkvr" path="res://Joeys level/level/stein.jpeg" id="2_bvuqr"]
+[ext_resource type="Script" path="res://science_hell/game_over.gd" id="1_vi2en"]
+[ext_resource type="Texture2D" uid="uid://cr3n02ee0tkvr" path="res://Joeys level/level/stein.jpeg" id="2_vqfqm"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tysui")
+script = ExtResource("1_vi2en")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -34,7 +34,7 @@ offset_right = 0.207947
 offset_bottom = -0.223999
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_bvuqr")
+texture = ExtResource("2_vqfqm")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
