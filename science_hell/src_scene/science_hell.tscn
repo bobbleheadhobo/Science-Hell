@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=9 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
 [ext_resource type="TileSet" uid="uid://rru2hagpatg1" path="res://science_hell/assets/main_map_tile_set.tres" id="2_2ycby"]
+[ext_resource type="PackedScene" uid="uid://dq4wkwge4my22" path="res://science_hell/scenes/entry_level.tscn" id="3_3lyxy"]
+[ext_resource type="Script" path="res://science_hell/scripts/entry_level.gd" id="4_biitn"]
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
+size = Vector2(61, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ml83q"]
+size = Vector2(14, 21)
 
 [node name="ScienceHell" type="Node2D"]
 script = ExtResource("1_4n0go")
@@ -24,6 +32,21 @@ layer_4/tile_data = PackedInt32Array(-458875, 65538, 4, -2359433, 65538, 4, -235
 layer_5/name = "windows"
 layer_5/tile_data = PackedInt32Array(-196719, 6, 536870914, -131183, 6, 536870913, -65647, 6, 536870912, -196718, 65542, 536870914, -131182, 65542, 536870913, -65646, 65542, 536870912, -196717, 131078, 536870914, -131181, 131078, 536870913, -65645, 131078, 536870912, -196714, 6, 536870914, -131178, 6, 536870913, -65642, 6, 536870912, -196713, 65542, 536870914, -131177, 65542, 536870913, -65641, 65542, 536870912, -196712, 131078, 536870914, -131176, 131078, 536870913, -65640, 131078, 536870912, -2621446, 6, 1, -2555910, 6, 2, -2621445, 65542, 1, -2555909, 65542, 2, -2490373, 6, 3, -2424837, 6, 4, -2621444, 65542, 1, -2555908, 65542, 2, -2490372, 65542, 3, -2424836, 65542, 4, -2621443, 131078, 1, -2555907, 131078, 2, -2686982, 6, 0, -2686981, 65542, 0, -2686980, 65542, 0, -2686979, 131078, 0)
 
+[node name="entry_level" parent="." instance=ExtResource("3_3lyxy")]
+script = ExtResource("4_biitn")
+
+[node name="Area2D2" type="Area2D" parent="entry_level"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entry_level/Area2D2"]
+position = Vector2(-1184.5, 165)
+shape = SubResource("RectangleShape2D_cn771")
+
+[node name="Reynolds office (5)" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reynolds office (5)"]
+position = Vector2(-952, -566)
+shape = SubResource("RectangleShape2D_ml83q")
+
 [node name="Lab" parent="." instance=ExtResource("4_ds2d8")]
 position = Vector2(-575, -517)
 
@@ -41,6 +64,9 @@ position = Vector2(312, 13)
 polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, -152, 493, -152, 519, -137, 520, -137, 493, -4, 492)
 
 [node name="hero" parent="." instance=ExtResource("1_ppq3m")]
+top_level = true
+light_mask = 15
+visibility_layer = 15
 position = Vector2(-25, 55)
 
 [node name="collisionInner" type="StaticBody2D" parent="."]
@@ -58,7 +84,7 @@ polygon = PackedVector2Array(-31, -87, -7, -87, -7, -74, -28, -74, -28, -36, -31
 polygon = PackedVector2Array(-480, 448, -464, 448, -464, 473, -480, 473, -480, 451, -472, 465, -469, 456, -474, 451, -480, 451)
 
 [node name="innerWall2" type="CollisionPolygon2D" parent="collisionInner"]
-polygon = PackedVector2Array(-418, 32, -1344, 32, -1344, -496, -1341, -503, -1336, -512, -1248, -512, -1248, -496, -1215, -496, -1212, -505, -1208, -512, -1040, -512, -1040, -496, -1007, -496, -1004, -505, -1000, -512, -443, -512, -443, -506, -992, -506, -992, -490, -1047, -490, -1047, -506, -1200, -506, -1200, -490, -1255, -490, -1255, -506, -1328, -506, -1328, -16, -769, -16, -769, -11, -418, -11)
+polygon = PackedVector2Array(-421, 32, -1344, 32, -1344, -496, -1341, -503, -1336, -512, -1248, -512, -1248, -496, -1215, -496, -1212, -505, -1208, -512, -1040, -512, -1040, -496, -1007, -496, -1004, -505, -1000, -512, -443, -512, -443, -506, -992, -506, -992, -490, -1047, -490, -1047, -506, -1200, -506, -1200, -490, -1255, -490, -1255, -506, -1328, -506, -1328, -16, -769, -16, -769, -11, -421, -11, -421, 11, -421, 14)
 
 [node name="innerWall3" type="CollisionPolygon2D" parent="collisionInner"]
 polygon = PackedVector2Array(-1168, 110, -1168, 96, -617, 96, -617, 160, -592, 160, -592, 112, -589, 104, -584, 96, -464, 96, -464, 358, -663, 358, -663, 310, -1143, 310, -1143, 182, -1168, 182, -1168, 176, -1136, 176, -1136, 304, -656, 304, -656, 352, -471, 352, -471, 102, -576, 102, -576, 166, -624, 166, -624, 102, -1136, 102, -1136, 176, -1152, 176, -1152, 144, -1168, 144, -1168, 127, -1168, 112)
@@ -73,13 +99,12 @@ polygon = PackedVector2Array(-78, 256, -32, 256, -32, 304, -112, 304, -112, 720,
 polygon = PackedVector2Array(-205, 272, -216, 272, -221, 280, -224, 288, -224, 352, -296, 352, -301, 361, -304, 368, -304, 432, -392, 432, -397, 441, -400, 448, -400, 496, -463, 496, -466, 496, -471, 496, -471, 503, -471, 624, -455, 624, -455, 1238, -375, 1238, -375, 1622, -327, 1622, -327, 1664, -256, 1664, -256, 1648, -224, 1648, -224, 1664, -208, 1664, -208, 1242, -224, 1242, -224, 1206, -208, 1206, -208, 1088, -224, 1088, -224, 1040, -208, 1040, -208, 912, -224, 912, -224, 864, -208, 864, -208, 746, -224, 746, -224, 710, -208, 710, -208, 640, -217, 640, -217, 624, -208, 624, -208, 320, -192, 320, -192, 272, -205, 272, -202, 312, -215, 312, -215, 358, -215, 618, -224, 618, -224, 646, -215, 646, -215, 704, -230, 704, -230, 752, -215, 752, -215, 858, -231, 858, -231, 918, -215, 918, -215, 1034, -231, 1034, -231, 1094, -215, 1094, -215, 1200, -230, 1200, -230, 1248, -215, 1248, -215, 1600, -263, 1600, -263, 1616, -368, 1616, -368, 1232, -448, 1232, -448, 617, -464, 617, -464, 504, -464, 502, -461, 502, -384, 502, -384, 438, -288, 438, -288, 358, -219, 358, -219, 297, -215, 288, -211, 287, -205, 277, -205, 274, -210, 281, -212, 275, -205, 274)
 
 [node name="innerWall7" type="CollisionPolygon2D" parent="collisionInner"]
-polygon = PackedVector2Array(-384, 32, -386, 32, -389, 32, -392, 32, -395, 32, -400, 32, -400, -11, -257, -11, -257, -16, -87, -16, -87, -506, -256, -506, -268, -506, -275, -506, -281, -506, -389, -506, -389, -512, -80, -512, -80, 32)
+polygon = PackedVector2Array(-385, 32, -385, 44, -388, 44, -393, 39, -396, 36, -400, 32, -400, -11, -257, -11, -257, -16, -87, -16, -87, -506, -256, -506, -268, -506, -275, -506, -281, -506, -389, -506, -389, -512, -80, -512, -80, 32)
 
 [node name="table" type="CollisionPolygon2D" parent="collisionInner"]
 polygon = PackedVector2Array(-76, -617, -76, -606, -82, -606, -82, -601, -80, -599, -48, -599, -46, -601, -46, -606, -52, -606, -52, -617)
 
 [node name="collisionOuter" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="wall1" type="CollisionPolygon2D" parent="collisionOuter"]
 polygon = PackedVector2Array(-128, 160, 0, 160, 0, 128, 16, 128, 16, 160, 144, 160, 144, 128, 160, 128, 160, 208, -112, 208, -112, 224, -128, 224, -128, 161, -122, 167, -120, 162, -127, 161, -128, 161)
@@ -99,5 +124,7 @@ polygon = PackedVector2Array(-84, -672, -16, -672, -16, -640, 112, -640, 112, -2
 [node name="wall6" type="CollisionPolygon2D" parent="collisionOuter"]
 polygon = PackedVector2Array(-2135, -704, -2304, -704, -2304, -565, -2301, -565, -2297, -565, -2206, -565, -2206, -560, -352, -560, -352, -576, -336, -576, -336, -560, -224, -560, -224, -576, -160, -576, -160, -594, -160, -612, -145, -612, -128, -612, -128, -576, -96, -576, -96, -624, -87, -624, -87, -627, -96, -627, -96, -666, -96, -668.875, -84, -669, -84, -672, -112, -672, -112, -624, -160, -624, -160, -736, -416, -736, -416, -704, -2132, -704, -2132, -698, -409, -698, -409, -730, -167, -730, -167, -624, -231, -624, -231, -608, -329, -608, -329, -624, -359, -624, -359, -608, -2297, -608, -2297, -698, -2135, -698)
 
+[connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
 [connection signal="body_exited" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_exited"]

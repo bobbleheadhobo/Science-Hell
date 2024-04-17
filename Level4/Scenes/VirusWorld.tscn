@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://latgbrqynxy2"]
+[gd_scene load_steps=6 format=3 uid="uid://cg4l3qiqj761s"]
 
-[ext_resource type="PackedScene" uid="uid://b0f51aq0q53k8" path="res://Level4/Scenes/Player.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://dfxyexytl62gg" path="res://Level4/Scenes/RockyPlatform.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://chsspm7t6mngu" path="res://Level4/Scenes/basicVirus.tscn" id="3_0a5mf"]
+[ext_resource type="PackedScene" path="res://Level4/Scenes/Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dj28nsiqofl5m" path="res://Level4/Scenes/RockyPlatform.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://Level4/Scenes/basicVirus.tscn" id="3_0a5mf"]
 
 [sub_resource type="QuadMesh" id="1"]
 size = Vector2(1000, 100)

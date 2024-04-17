@@ -1,3 +1,4 @@
+class_name Hero
 extends CharacterBody2D
 
 const SPEED = 200
@@ -18,6 +19,9 @@ var animTree_state_keys = [
 	"idle",
 	'walk'
 ]
+
+func _ready():
+	$Sprite2D.texture = Characters.current_sprite
 
 func _physics_process(delta):
 	move_and_animate(delta)
