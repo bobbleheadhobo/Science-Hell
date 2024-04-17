@@ -24,7 +24,8 @@ func process_command(input: String) -> String:
 	 # Handle quitting process
 	if is_quitting:
 		if input.to_lower() == "yes":
-			get_tree().quit()  # This command stops the game engine.
+			get_tree().current_scene# This command stops the game engine.
+			#get_tree().quit() 
 			return "Quitting game... See you next time!"
 		elif input.to_lower() == "no":
 			is_quitting = false
@@ -207,6 +208,7 @@ func give(second_word: String) -> String:
 
 func quit():
 	is_quitting = true
+	Health.update_health(Health.current_health - 1)
 	return Types.wrap_system_text("Are you sure you want to quit this level? Type 'yes' to quit or 'no' to continue playing.")
 	
 # PRE: input help by user
