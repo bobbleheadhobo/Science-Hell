@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c12br51lomy63"]
+[gd_scene load_steps=42 format=3 uid="uid://c12br51lomy63"]
 
 [ext_resource type="Script" path="res://ivan_level/Character/player.gd" id="1_0pnel"]
 [ext_resource type="Texture2D" uid="uid://cj5uv30j05olu" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="1_lg7he"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bguryp47eka1w" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jump-Start/Jump-Start-Sheet.png" id="4_fjutq"]
 [ext_resource type="Texture2D" uid="uid://bicwppjoc3hmf" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png" id="5_x8vqn"]
 [ext_resource type="Texture2D" uid="uid://deli8o01fl1pa" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png" id="6_pfte2"]
+[ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="8_040dn"]
 [ext_resource type="Texture2D" uid="uid://b4tmwxa8tq3bl" path="res://science_hell/players/joey.png" id="8_vx4kj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_34cma"]
@@ -310,3 +311,7 @@ libraries = {
 "": SubResource("AnimationLibrary_2ymds")
 }
 speed_scale = 1.626
+
+[node name="AR_15" parent="." instance=ExtResource("8_040dn")]
+position = Vector2(10, -1)
+scale = Vector2(0.295, 0.188)
