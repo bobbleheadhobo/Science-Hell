@@ -4,7 +4,8 @@ extends Node
 var current_sprite = preload("res://science_hell/players/hamilton/ham.png")
 
 var character_sprites = {
-	"joey": "res://science_hell/players/joey.png"
+	"joey": "res://science_hell/players/joey.png",
+	"reynolds": "res://science_hell/players/rey.png"
 }
 
 func _ready():

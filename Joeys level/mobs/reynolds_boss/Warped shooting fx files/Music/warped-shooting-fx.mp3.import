@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duce7143o8aya"
+path="res://.godot/imported/warped-shooting-fx.mp3-34490aa4f392fd09e50c0dbbbdd5b4fb.mp3str"
+
+[deps]
+
+source_file="res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Music/warped-shooting-fx.mp3"
+dest_files=["res://.godot/imported/warped-shooting-fx.mp3-34490aa4f392fd09e50c0dbbbdd5b4fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
