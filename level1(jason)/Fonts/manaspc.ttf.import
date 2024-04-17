@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://p778jumprym6"
-path="res://.godot/imported/manaspc.ttf-42f59c84c1d54fb62e87979d1b183d41.fontdata"
+path="res://.godot/imported/manaspc.ttf-a243bff1c1a48a62799ae86c61ba2c06.fontdata"
 
 [deps]
 
-source_file="res://Fonts/manaspc.ttf"
-dest_files=["res://.godot/imported/manaspc.ttf-42f59c84c1d54fb62e87979d1b183d41.fontdata"]
+source_file="res://level1(jason)/Fonts/manaspc.ttf"
+dest_files=["res://.godot/imported/manaspc.ttf-a243bff1c1a48a62799ae86c61ba2c06.fontdata"]
 
 [params]
 

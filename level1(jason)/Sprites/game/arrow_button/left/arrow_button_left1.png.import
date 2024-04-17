@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tw068vlgmhgm"
-path="res://.godot/imported/arrow_button_left1.png-425bca6e2194e85b409df0e9c954cbe0.ctex"
+path="res://.godot/imported/arrow_button_left1.png-bca2d5d6989cdf62334ca1a4daf49cd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/game/arrow_button/left/arrow_button_left1.png"
-dest_files=["res://.godot/imported/arrow_button_left1.png-425bca6e2194e85b409df0e9c954cbe0.ctex"]
+source_file="res://level1(jason)/Sprites/game/arrow_button/left/arrow_button_left1.png"
+dest_files=["res://.godot/imported/arrow_button_left1.png-bca2d5d6989cdf62334ca1a4daf49cd1.ctex"]
 
 [params]
 

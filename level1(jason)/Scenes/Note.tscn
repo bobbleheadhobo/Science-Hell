@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cai7keu73g4bu"]
 
-[ext_resource type="SpriteFrames" uid="uid://blj47d5u7wi5u" path="res://Frames/note_frames.tres" id="1"]
-[ext_resource type="Texture2D" uid="uid://bca8atla8jwtr" path="res://Sprites/game/particles/star.png" id="2"]
-[ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="3"]
-[ext_resource type="Script" path="res://Scripts/Note.gd" id="4"]
+[ext_resource type="SpriteFrames" uid="uid://blj47d5u7wi5u" path="res://level1(jason)/Frames/note_frames.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://bca8atla8jwtr" path="res://level1(jason)/Sprites/game/particles/star.png" id="2"]
+[ext_resource type="Script" path="res://level1(jason)/Scripts/Note.gd" id="4"]
+[ext_resource type="FontFile" uid="uid://cot35aaxy6oy7" path="res://level1(jason)/Fonts/HeartbitXX2Px.ttf" id="4_sbpse"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(8, 8)
@@ -46,4 +46,4 @@ offset_top = -8.0
 offset_right = 20.0
 offset_bottom = 6.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3")
+theme_override_fonts/font = ExtResource("4_sbpse")

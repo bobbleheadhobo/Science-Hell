@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddmeidckstisk"]
 
-[ext_resource type="Texture2D" uid="uid://deistk54tfrve" path="res://Sprites/ui/play_again_button/play_again1.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://d2vlvnb4f4dvr" path="res://Sprites/ui/back_to_menu_button/back_to_menu2.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://biafvjygh3rwo" path="res://Sprites/ui/back_to_menu_button/back_to_menu1.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://b5rxv7khjt87b" path="res://Sprites/ui/play_again_button/play_again2.png" id="4"]
-[ext_resource type="FontFile" path="res://Fonts/heartbit2x.tres" id="5"]
-[ext_resource type="Script" path="res://Scripts/End.gd" id="6"]
+[ext_resource type="Texture2D" uid="uid://deistk54tfrve" path="res://level1(jason)/Sprites/ui/play_again_button/play_again1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://d2vlvnb4f4dvr" path="res://level1(jason)/Sprites/ui/back_to_menu_button/back_to_menu2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://biafvjygh3rwo" path="res://level1(jason)/Sprites/ui/back_to_menu_button/back_to_menu1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b5rxv7khjt87b" path="res://level1(jason)/Sprites/ui/play_again_button/play_again2.png" id="4"]
+[ext_resource type="FontFile" path="res://level1(jason)/Fonts/heartbit2x.tres" id="5"]
+[ext_resource type="Script" path="res://level1(jason)/Scripts/End.gd" id="6"]
 
 [node name="End" type="Node2D"]
 script = ExtResource("6")
