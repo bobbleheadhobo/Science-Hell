@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
-const SPEED = 300
-const SHOOTING_RANGE = 100.0
+const SPEED = 400
+const SHOOTING_RANGE = 500.0
+const CLOSEST_DISTANCE = 100.0
+
 
 enum {IDLE, WALK}
 var state = IDLE
@@ -20,7 +22,7 @@ var animTree_state_keys = [
 	'walk'
 ]
 
-var duck_bullet_scene = preload("res://Joeys level/mobs/rubber_ducky/duck_bullets.tscn")
+var rey_bullet_scene = preload("res://Joeys level/mobs/reynolds_boss/reynolds_bullets.tscn")
 var can_shoot = true
 
 func _ready():
@@ -35,7 +37,7 @@ func move(delta):
 	var distance_to_player = global_position.distance_to(player.global_position)
 	var direction = global_position.direction_to(player.global_position)
 	
-	if distance_to_player > SHOOTING_RANGE:
+	if distance_to_player > CLOSEST_DISTANCE:
 		state = WALK
 		velocity = direction * SPEED
 		blend_position = direction.normalized()
@@ -44,19 +46,21 @@ func move(delta):
 		velocity = Vector2.ZERO
 		blend_position = Vector2.ZERO
 		
+	if distance_to_player < SHOOTING_RANGE:
 		if can_shoot:
 			shoot()
 			can_shoot = false
-			await get_tree().create_timer(3.0).timeout
+			await get_tree().create_timer(1.0).timeout
 			can_shoot = true
 
 func shoot():
-	var duck_bullet = duck_bullet_scene.instantiate()
-	add_child(duck_bullet)
-	duck_bullet.global_position = global_position
+	print("shoot")
+	var rey_bullet = rey_bullet_scene.instantiate()
+	add_child(rey_bullet)
+	rey_bullet.global_position = global_position
 	var bullet_direction = global_position.direction_to(player.global_position)
-	duck_bullet.set_direction(bullet_direction)
-	duck_bullet.play_shoot_animation(0.8)
+	rey_bullet.set_direction(bullet_direction)
+	rey_bullet.play_shoot_animation(1.7)
 
 func animate() -> void:
 	state_machine.travel(animTree_state_keys[state])

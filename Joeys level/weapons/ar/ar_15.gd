@@ -8,7 +8,6 @@ func _physics_process(delta):
 		look_at(target_enemy.global_position)
 
 func shoot():
-	print("PEW!")
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %shooting_point.global_position
 	new_bullet.global_rotation = global_rotation

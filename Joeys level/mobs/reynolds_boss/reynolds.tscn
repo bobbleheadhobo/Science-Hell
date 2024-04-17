@@ -262,6 +262,8 @@ transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(133.11, -15.0076)
 
 [node name="Reynolds" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_8r87l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -270,7 +272,7 @@ shape = SubResource("RectangleShape2D_7b1ow")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 10)
-scale = Vector2(4, 4)
+scale = Vector2(6, 6)
 texture = ExtResource("2_wx7xm")
 hframes = 4
 vframes = 6

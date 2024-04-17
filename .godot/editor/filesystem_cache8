@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713328511
+::res://::1713372389
 icon.svg::CompressedTexture2D::2062727279551925687::1713037787::1713037820::1::::<><>::
 README.md::TextFile::-1::1713037819::0::1::::<><>::
 ::res://chey/::1713240985
@@ -180,18 +180,18 @@ danger.gd::GDScript::-1::1713037788::0::1::::<>Area2D<>::
 danger.tscn::PackedScene::5660312674912884533::1713037788::0::1::::<><>::res://ivan_level/Obstacles/danger.gd
 danger_2.tscn::PackedScene::3416914840557371598::1713037788::0::1::::<><>::res://ivan_level/Obstacles/danger.gd
 ::res://Joeys level/::1713037787
-::res://Joeys level/level/::1713328375
-debug_or_die.gd::GDScript::-1::1713327489::0::1::::<>Node2D<>::
-debug_or_die.tscn::PackedScene::6809645572070819218::1713328374::0::1::::<><>::res://Joeys level/level/debug_or_die.gd<>uid://c0pn2xkehu2j8::::res://Joeys level/map/map.tscn<>uid://djdq6pyatghw6::::res://Joeys level/lvl5_player/lvl5_player.tscn<>uid://cfgdkd5t2y6oa::::res://Joeys level/ui/game_over.tscn<>res://Joeys level/ui/game_over.gd<>res://Joeys level/level/ProgressBar.gd<>uid://ck460lkuai80n::::res://Joeys level/mobs/mob_spawners/spawners_container.tscn<>uid://d02pbn08lcvxe::::res://Joeys level/mobs/reynolds_boss/reynolds.tscn
-game_over.gd::GDScript::-1::1713328374::0::1::::<>Control<>::
-game_over.tscn::PackedScene::1077464956827882894::1713328375::0::1::::<><>::res://Joeys level/level/game_over.gd<>uid://cr3n02ee0tkvr::::res://Joeys level/level/stein.jpeg
+::res://Joeys level/level/::1713330034
+debug_or_die.gd::GDScript::-1::1713329255::0::1::::<>Node2D<>::
+debug_or_die.tscn::PackedScene::6809645572070819218::1713330033::0::1::::<><>::res://Joeys level/level/debug_or_die.gd<>uid://c0pn2xkehu2j8::::res://Joeys level/map/map.tscn<>uid://djdq6pyatghw6::::res://Joeys level/lvl5_player/lvl5_player.tscn<>uid://cfgdkd5t2y6oa::::res://Joeys level/ui/game_over.tscn<>res://Joeys level/ui/game_over.gd<>res://Joeys level/level/ProgressBar.gd<>uid://ck460lkuai80n::::res://Joeys level/mobs/mob_spawners/spawners_container.tscn<>uid://c3c1nj04tqxkv::::res://Joeys level/mobs/bat/bat.tscn<>uid://d2w0nbaqxw5vh::::res://Joeys level/mobs/rubber_ducky/duck.tscn<>uid://d02pbn08lcvxe::::res://Joeys level/mobs/reynolds_boss/reynolds.tscn
+game_over.gd::GDScript::-1::1713329500::0::1::::<>Control<>::
+game_over.tscn::PackedScene::1077464956827882894::1713330034::0::1::::<><>::res://Joeys level/level/game_over.gd<>uid://cr3n02ee0tkvr::::res://Joeys level/level/stein.jpeg
 ProgressBar.gd::GDScript::-1::1713221952::0::1::::<>ProgressBar<>::
 reynolds_global.gd::GDScript::-1::1713221878::0::1::::<>Node<>::
 Spawner.gd::GDScript::-1::1713037787::0::1::::<>Marker2D<>::
 stein.jpeg::CompressedTexture2D::6024689676625593515::1713306143::1713306145::1::::<><>::
-::res://Joeys level/lvl5_player/::1713328374
-lvl5_hero.gd::GDScript::-1::1713322645::0::1::::<>CharacterBody2D<>::
-lvl5_player.tscn::PackedScene::7798182433530282375::1713328374::0::1::::<><>::res://Joeys level/lvl5_player/lvl5_hero.gd<>uid://bpjprwldrjsi3::::res://science_hell/players/hamilton/ham.png<>uid://cs3lld32j5874::::res://Joeys level/weapons/ar/ar_15.tscn
+::res://Joeys level/lvl5_player/::1713330033
+lvl5_hero.gd::GDScript::-1::1713329781::0::1::::<>CharacterBody2D<>::
+lvl5_player.tscn::PackedScene::7798182433530282375::1713330033::0::1::::<><>::res://Joeys level/lvl5_player/lvl5_hero.gd<>uid://bpjprwldrjsi3::::res://science_hell/players/hamilton/ham.png<>uid://cs3lld32j5874::::res://Joeys level/weapons/ar/ar_15.tscn
 rey.png::CompressedTexture2D::6839971214157881582::1713037787::1713038106::1::::<><>::
 ::res://Joeys level/map/::1713308760
 map.tscn::PackedScene::6559366885666315727::1713308760::0::1::::<><>::uid://wkv4fsjcfk1a::::res://science_hell/assets/lvl5_tile_set.tres<>uid://c4plldrkn0u1s::::res://Joeys level/lvl5_player/rey.png
@@ -203,9 +203,9 @@ Objects.png::CompressedTexture2D::8476539068204840240::1713037787::1713038106::1
 water_coasts.png::CompressedTexture2D::5458187738908167793::1713037787::1713038106::1::::<><>::
 water_detilazation_v2.png::CompressedTexture2D::6442416211852293966::1713037787::1713038106::1::::<><>::
 ::res://Joeys level/mobs/::1713309524
-::res://Joeys level/mobs/bat/::1713328375
+::res://Joeys level/mobs/bat/::1713330033
 bat.gd::GDScript::-1::1713308332::0::1::::<>CharacterBody2D<>::
-bat.tscn::PackedScene::6743860114565855317::1713328375::0::1::::<><>::res://Joeys level/mobs/bat/bat.gd<>uid://2yuduk7e4xt::::res://science_hell/assets/mobs/bat.png
+bat.tscn::PackedScene::6743860114565855317::1713330033::0::1::::<><>::res://Joeys level/mobs/bat/bat.gd<>uid://2yuduk7e4xt::::res://science_hell/assets/mobs/bat.png
 ::res://Joeys level/mobs/mob_spawners/::1713223727
 spawner.gd::GDScript::-1::1713037787::0::1::::<>Marker2D<>::
 spawner.tscn::PackedScene::3801472632318712690::1713037787::0::1::::<><>::uid://th0lmtwma7rk::::res://science_hell/assets/animated_objects/animated_old_tv.png<>res://Joeys level/mobs/mob_spawners/spawner.gd
@@ -220,15 +220,132 @@ ghost-vanish.png::CompressedTexture2D::8263166148882256845::1713307592::17133075
 null_animation.gd::GDScript::-1::1713037787::0::1::::<>Node2D<>::
 null_nightmare.gd::GDScript::-1::1713308369::0::1::::<>CharacterBody2D<>::
 null_nightmare.tscn::PackedScene::1783713074251517679::1713308760::0::1::::<><>::res://Joeys level/mobs/null_nightmares/null_nightmare.gd<>uid://cfmwvcekfjhl1::::res://Joeys level/mobs/null_nightmares/ghost-idle.png<>res://Joeys level/mobs/null_nightmares/null_animation.gd<>uid://ui6vytr521gn::::res://Joeys level/mobs/null_nightmares/ghost-appears.png<>uid://dpy0ey6phawsb::::res://Joeys level/mobs/null_nightmares/ghost-vanish.png<>uid://8b78i1xswuqs::::res://Joeys level/mobs/null_nightmares/ghost-die.png
-::res://Joeys level/mobs/reynolds_boss/::1713328375
-reynolds.gd::GDScript::-1::1713311303::0::1::::<>CharacterBody2D<>::
-reynolds.tscn::PackedScene::8970634605012963206::1713328375::0::1::::<><>::res://Joeys level/mobs/reynolds_boss/reynolds.gd<>uid://7hkh268fc70s::::res://science_hell/players/rey.png
-::res://Joeys level/mobs/rubber_ducky/::1713328375
+::res://Joeys level/mobs/reynolds_boss/::0
+reynolds_bullets.tscn::PackedScene::7475838956361921276::1713372445::0::1::::<><>::
+reynolds.gd::GDScript::-1::1713329854::0::1::::<>CharacterBody2D<>::
+reynolds.tscn::PackedScene::8970634605012963206::1713330034::0::1::::<><>::res://Joeys level/mobs/reynolds_boss/reynolds.gd<>uid://7hkh268fc70s::::res://science_hell/players/rey.png
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/::1713372834
+public-license.txt::TextFile::-1::1713372834::0::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Music/::1713373201
+warped-shooting-fx.mp3::AudioStreamMP3::8567469104422723160::1713372834::1713373199::1::::<><>::
+warped-shooting-fx.ogg::AudioStreamOggVorbis::5378233067854761151::1713372834::1713373199::1::::<><>::
+warped-shooting-fx.wav::AudioStreamWAV::5128429837477001342::1713372834::1713373201::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/::1713372840
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/Bolt/::1713372834
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/Bolt/frames/::1713373200
+bolt1.png::CompressedTexture2D::5877046096290152714::1713372835::1713373200::1::::<><>::
+bolt2.png::CompressedTexture2D::7705937179403386223::1713372834::1713373200::1::::<><>::
+bolt3.png::CompressedTexture2D::5815371820388424774::1713372834::1713373200::1::::<><>::
+bolt4.png::CompressedTexture2D::3162313457808341800::1713372835::1713373200::1::::<><>::
+bolt.png::CompressedTexture2D::5708745786503122007::1713373195::1713373200::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/charged/::1713372836
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/charged/frames/::1713373200
+charged1.png::CompressedTexture2D::4670817599551055137::1713372836::1713373200::1::::<><>::
+charged2.png::CompressedTexture2D::6712278895605967784::1713372836::1713373200::1::::<><>::
+charged3.png::CompressedTexture2D::3335931008588094086::1713372836::1713373200::1::::<><>::
+charged4.png::CompressedTexture2D::6557087051982365843::1713372836::1713373200::1::::<><>::
+charged5.png::CompressedTexture2D::120491819174715785::1713372836::1713373200::1::::<><>::
+charged6.png::CompressedTexture2D::8369543000126662054::1713372836::1713373200::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/crossed/::1713372835
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/crossed/frames/::1713373200
+crossed1.png::CompressedTexture2D::2822831326063153994::1713372835::1713373200::1::::<><>::
+crossed2.png::CompressedTexture2D::252802074485954956::1713372835::1713373200::1::::<><>::
+crossed3.png::CompressedTexture2D::6712932011424893128::1713372835::1713373200::1::::<><>::
+crossed4.png::CompressedTexture2D::7336452288679060203::1713372835::1713373200::1::::<><>::
+crossed5.png::CompressedTexture2D::5745632677414227931::1713372835::1713373200::1::::<><>::
+crossed6.png::CompressedTexture2D::1576947247125609127::1713372835::1713373199::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/::1713372839
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/hits-1/::1713372839
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/hits-1/frames/::1713373200
+hits-1-1.png::CompressedTexture2D::7101615629987676653::1713372840::1713373200::1::::<><>::
+hits-1-2.png::CompressedTexture2D::6492629129968029208::1713372839::1713373200::1::::<><>::
+hits-1-3.png::CompressedTexture2D::1577871339861424999::1713372839::1713373200::1::::<><>::
+hits-1-4.png::CompressedTexture2D::3315636659509524246::1713372839::1713373200::1::::<><>::
+hits-1-5.png::CompressedTexture2D::7572863393388084357::1713372839::1713373200::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-2/::1713372836
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-2/frames/::1713373200
+hits-2-1.png::CompressedTexture2D::4021172921540790442::1713372837::1713373200::1::::<><>::
+hits-2-2.png::CompressedTexture2D::3667271776829649314::1713372837::1713373200::1::::<><>::
+hits-2-3.png::CompressedTexture2D::6890368993347934185::1713372837::1713373200::1::::<><>::
+hits-2-4.png::CompressedTexture2D::7961396848209196396::1713372837::1713373200::1::::<><>::
+hits-2-5.png::CompressedTexture2D::4285345787505693072::1713372837::1713373200::1::::<><>::
+hits-2-6.png::CompressedTexture2D::4727998220220180089::1713372837::1713373200::1::::<><>::
+hits-2-7.png::CompressedTexture2D::6731811928633114120::1713372837::1713373200::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-3/::1713372838
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-3/frames/::1713373200
+hits-3-1.png::CompressedTexture2D::6907865040152824727::1713372838::1713373200::1::::<><>::
+hits-3-2.png::CompressedTexture2D::771205354101846619::1713372838::1713373200::1::::<><>::
+hits-3-3.png::CompressedTexture2D::1136673591203379499::1713372838::1713373200::1::::<><>::
+hits-3-4.png::CompressedTexture2D::9046728672300298319::1713372838::1713373200::1::::<><>::
+hits-3-5.png::CompressedTexture2D::8453109796589722639::1713372838::1713373200::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/hits-4/::1713372838
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/hits-4/frames/::1713373200
+hits-4-1.png::CompressedTexture2D::4629710826432921964::1713372838::1713373200::1::::<><>::
+hits-4-2.png::CompressedTexture2D::5400697763796070285::1713372838::1713373199::1::::<><>::
+hits-4-3.png::CompressedTexture2D::7598290778384424805::1713372838::1713373199::1::::<><>::
+hits-4-4.png::CompressedTexture2D::7732331171919551542::1713372838::1713373199::1::::<><>::
+hits-4-5.png::CompressedTexture2D::5960084564281127031::1713372838::1713373199::1::::<><>::
+hits-4-6.png::CompressedTexture2D::4033616275847036900::1713372838::1713373199::1::::<><>::
+hits-4-7.png::CompressedTexture2D::1128866144068192923::1713372838::1713373199::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-5/::1713372837
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-5/frames/::1713373199
+hits-5-1.png::CompressedTexture2D::3369353017401201815::1713372837::1713373199::1::::<><>::
+hits-5-2.png::CompressedTexture2D::8224326003675278009::1713372837::1713373199::1::::<><>::
+hits-5-3.png::CompressedTexture2D::5915058062266659159::1713372837::1713373199::1::::<><>::
+hits-5-4.png::CompressedTexture2D::1734677834461157550::1713372837::1713373199::1::::<><>::
+hits-5-5.png::CompressedTexture2D::5789370052370111531::1713372837::1713373199::1::::<><>::
+hits-5-6.png::CompressedTexture2D::3279577453845659698::1713372837::1713373199::1::::<><>::
+hits-5-7.png::CompressedTexture2D::4268020963863969794::1713372837::1713373199::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-6/::1713372839
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/hits/Hits-6/frames/::1713373200
+hits-6-preview1.png::CompressedTexture2D::4901968955958490104::1713372839::1713373199::1::::<><>::
+hits-6-preview2.png::CompressedTexture2D::6533956545035847633::1713372839::1713373199::1::::<><>::
+hits-6-preview3.png::CompressedTexture2D::7441944047570552973::1713372839::1713373199::1::::<><>::
+hits-6-preview4.png::CompressedTexture2D::8519613929219571390::1713372839::1713373199::1::::<><>::
+hits-6-preview5.png::CompressedTexture2D::594968138065143628::1713372839::1713373199::1::::<><>::
+hits-6-preview6.png::CompressedTexture2D::7442434105525922723::1713372839::1713373199::1::::<><>::
+hits-6-preview7.png::CompressedTexture2D::9215798182295914005::1713372839::1713373199::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/Pulse/::1713372836
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/Pulse/frames/::1713373199
+pulse1.png::CompressedTexture2D::2131574654691353650::1713372836::1713373199::1::::<><>::
+pulse2.png::CompressedTexture2D::4725986267478977344::1713372836::1713373199::1::::<><>::
+pulse3.png::CompressedTexture2D::2440712430519071568::1713372836::1713373199::1::::<><>::
+pulse4.png::CompressedTexture2D::1726420616651890873::1713372836::1713373199::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/spark/::1713372840
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/spark/frames/::1713373199
+spark-preview1.png::CompressedTexture2D::4172856718901444952::1713372840::1713373199::1::::<><>::
+spark-preview2.png::CompressedTexture2D::8440703456789135062::1713372841::1713373199::1::::<><>::
+spark-preview3.png::CompressedTexture2D::7174972954552682048::1713372840::1713373199::1::::<><>::
+spark-preview4.png::CompressedTexture2D::9131257007373006921::1713372840::1713373199::1::::<><>::
+spark-preview5.png::CompressedTexture2D::5968900492584242257::1713372840::1713373199::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/waveform/::1713372840
+::res://Joeys level/mobs/reynolds_boss/Warped shooting fx files/Pixelart/waveform/frames/::1713373199
+waveform1.png::CompressedTexture2D::7773935712996622252::1713372840::1713373199::1::::<><>::
+waveform2.png::CompressedTexture2D::315911307157095177::1713372840::1713373199::1::::<><>::
+waveform3.png::CompressedTexture2D::8488627596457623051::1713372840::1713373199::1::::<><>::
+waveform4.png::CompressedTexture2D::9175099769642908266::1713372840::1713373199::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/::1713372841
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/::1713372841
+._public-license.txt::TextFile::-1::1713372841::0::1::::<><>::
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Music/::1713372841
+._warped-shooting-fx.mp3::::-1::0::0::0::::<><>::
+._warped-shooting-fx.ogg::::-1::0::0::0::::<><>::
+._warped-shooting-fx.wav::::-1::0::0::0::::<><>::
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/::1713372841
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/charged/::1713372841
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/crossed/::1713372841
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/crossed/frames/::1713372841
+._crossed2.png::::-1::0::0::0::::<><>::
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/hits/::1713372841
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/hits/hits-1/::1713372841
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/hits/hits-4/::1713372841
+::res://Joeys level/mobs/reynolds_boss/__MACOSX/Warped shooting fx files/Pixelart/hits/Hits-5/::1713372841
+::res://Joeys level/mobs/rubber_ducky/::1713330034
 blue_bullets.png::CompressedTexture2D::2608835564162028281::1713145794::1713145834::1::::<><>::
 duck.gd::GDScript::-1::1713305202::0::1::::<>CharacterBody2D<>::
-duck.tscn::PackedScene::9101318333317370601::1713328374::0::1::::<><>::res://Joeys level/mobs/rubber_ducky/duck.gd<>uid://c6x5mrxv5iaya::::res://science_hell/assets/mobs/ducky2.png
+duck.tscn::PackedScene::9101318333317370601::1713330033::0::1::::<><>::res://Joeys level/mobs/rubber_ducky/duck.gd<>uid://c6x5mrxv5iaya::::res://science_hell/assets/mobs/ducky2.png
 duck_bullets.gd::GDScript::-1::1713158127::0::1::::<>Area2D<>::
-duck_bullets.tscn::PackedScene::6862946246049890897::1713328375::0::1::::<><>::res://Joeys level/mobs/rubber_ducky/duck_bullets.gd<>uid://bdf0e1rujf85b::::res://Joeys level/mobs/rubber_ducky/blue_bullets.png
+duck_bullets.tscn::PackedScene::6862946246049890897::1713330034::0::1::::<><>::res://Joeys level/mobs/rubber_ducky/duck_bullets.gd<>uid://bdf0e1rujf85b::::res://Joeys level/mobs/rubber_ducky/blue_bullets.png
 ::res://Joeys level/mobs/syntax_spiders/::1713038105
 syntax_spider.tscn::PackedScene::5745459361066626713::1713037787::0::1::::<><>::uid://bc2gau158iaxh::::res://Joeys level/mobs/syntax_spiders/syntax_spider_idle.png
 syntax_spider_idle.png::CompressedTexture2D::2582901964324773285::1713037787::1713038105::1::::<><>::
@@ -238,9 +355,9 @@ game_over.tscn::PackedScene::5136372065832587688::1713325824::0::1::::<><>::uid:
 ::res://Joeys level/weapons/::1713144906
 arrow.png::CompressedTexture2D::6221973566948002212::1713144573::1713144622::1::::<><>::
 weapons.png::CompressedTexture2D::5564594793171691200::1713037787::1713038105::1::::<><>::
-::res://Joeys level/weapons/ar/::1713308760
+::res://Joeys level/weapons/ar/::1713329781
 AR-15.png::CompressedTexture2D::666210992301510406::1713037787::1713038105::1::::<><>::
-ar_15.gd::GDScript::-1::1713162873::0::1::::<>Area2D<>::
+ar_15.gd::GDScript::-1::1713329781::0::1::::<>Area2D<>::
 ar_15.tscn::PackedScene::6094730862702419649::1713308760::0::1::::<><>::res://Joeys level/weapons/ar/ar_15.gd<>uid://jqynr0sjeqpy::::res://Joeys level/weapons/ar/AR-15.png
 ar_bullet.gd::GDScript::-1::1713242717::0::1::::<>Area2D<>::
 ar_bullet.tscn::PackedScene::2782327068696216337::1713240985::0::1::::<><>::res://Joeys level/weapons/ar/ar_bullet.gd<>uid://bwkwy3foqbp3r::::res://Joeys level/weapons/ar/red_bullets.png
@@ -259,11 +376,11 @@ VirusWorld.tscn::PackedScene::5254560126704224018::1713141274::0::1::::<><>::res
 ::res://Level4/Scripts/::1713037819
 basicVirus.gd::GDScript::-1::1713037819::0::1::::<>CharacterBody2D<>::
 PlayerScript.gd::GDScript::-1::1713037819::0::1::::<>CharacterBody2D<>::
-::res://science_hell/::1713328375
-dead.tscn::PackedScene::6848278710841389818::1713328375::0::1::::<><>::
-::res://science_hell/assets/::1713322586
-lvl5_tile_set.tres::TileSet::1566125473283678596::1713322583::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://dlxysdqkynn3v::::res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
-main_map_tile_set.tres::TileSet::1229567687912458978::1713322586::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://qvl24ma6x4hk::::res://science_hell/assets/tiles/courtyard3.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png<>uid://br5qxtqv3ohd4::::res://science_hell/assets/tiles/main_map_extras.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png
+::res://science_hell/::1713330034
+dead.tscn::PackedScene::6848278710841389818::1713330034::0::1::::<><>::
+::res://science_hell/assets/::1713372463
+lvl5_tile_set.tres::TileSet::1566125473283678596::1713372457::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://dlxysdqkynn3v::::res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
+main_map_tile_set.tres::TileSet::1229567687912458978::1713372463::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://qvl24ma6x4hk::::res://science_hell/assets/tiles/courtyard3.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png<>uid://br5qxtqv3ohd4::::res://science_hell/assets/tiles/main_map_extras.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png
 science_hell.tres::TileSet::3995618656373907210::1713037788::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
 tilemap.tres::TileSet::4101909133178794065::1713037788::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://dlxysdqkynn3v::::res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
 ::res://science_hell/assets/animated_objects/::1713038104
@@ -303,10 +420,10 @@ hallways.png::CompressedTexture2D::7075771025954486961::1713037789::1713038105::
 Room_Builder_16x16.png::CompressedTexture2D::3642700747783294411::1713037789::1713038107::1::::<><>::
 tiles.png::CompressedTexture2D::2579551512711359988::1713037789::1713038105::1::::<><>::
 ::res://science_hell/gui/::1713037820
-::res://science_hell/gui/char_select/::1713328376
+::res://science_hell/gui/char_select/::1713330034
 bianka.png::CompressedTexture2D::6117069250870993501::1713037820::1713038105::1::::<><>::
 character_corkboard.png::CompressedTexture2D::4589439239289647943::1713037820::1713038105::1::::<><>::
-character_select.tscn::PackedScene::7349379977661440579::1713328376::0::1::::<><>::res://science_hell/gui/char_select/character_select_ui.gd<>uid://b6nfnnf1p6j64::::res://science_hell/gui/char_select/character_corkboard.png<>uid://ctffib2a7y1hh::::res://science_hell/gui/char_select/bianka.png<>uid://ch73b5nnt3uqw::::res://science_hell/gui/char_select/chey.png<>uid://b6l573p2x5evu::::res://science_hell/gui/char_select/chris.png<>uid://w0jcf4s6ablf::::res://science_hell/gui/char_select/jason.png<>uid://bmrlqbk7a3gyl::::res://science_hell/gui/char_select/johnathan.png<>uid://br3b6jujhhvwh::::res://science_hell/gui/char_select/pat.png<>uid://d1jt152p86vxq::::res://science_hell/gui/char_select/joey.png<>uid://gncj06nn4srt::::res://science_hell/gui/char_select/cursor.tscn
+character_select.tscn::PackedScene::7349379977661440579::1713330034::0::1::::<><>::res://science_hell/gui/char_select/character_select_ui.gd<>uid://b6nfnnf1p6j64::::res://science_hell/gui/char_select/character_corkboard.png<>uid://ctffib2a7y1hh::::res://science_hell/gui/char_select/bianka.png<>uid://ch73b5nnt3uqw::::res://science_hell/gui/char_select/chey.png<>uid://b6l573p2x5evu::::res://science_hell/gui/char_select/chris.png<>uid://w0jcf4s6ablf::::res://science_hell/gui/char_select/jason.png<>uid://bmrlqbk7a3gyl::::res://science_hell/gui/char_select/johnathan.png<>uid://br3b6jujhhvwh::::res://science_hell/gui/char_select/pat.png<>uid://d1jt152p86vxq::::res://science_hell/gui/char_select/joey.png<>uid://gncj06nn4srt::::res://science_hell/gui/char_select/cursor.tscn
 character_select_global.gd::GDScript::-1::1713310915::0::1::::<>Node<>::
 character_select_ui.gd::GDScript::-1::1713037820::0::1::::<>Control<>::
 char_select.png::CompressedTexture2D::4432774708476909118::1713037820::1713038105::1::::<><>::
@@ -319,12 +436,12 @@ jason.png::CompressedTexture2D::1596314336686259183::1713037820::1713038105::1::
 joey.png::CompressedTexture2D::9003953057095870746::1713037820::1713038105::1::::<><>::
 johnathan.png::CompressedTexture2D::3264477758217851443::1713037820::1713038105::1::::<><>::
 pat.png::CompressedTexture2D::3637550183281956495::1713037820::1713038105::1::::<><>::
-::res://science_hell/gui/hearts/::1713328376
+::res://science_hell/gui/hearts/::1713330034
 HealthUI.png::CompressedTexture2D::8306176160754042271::1713037789::1713038105::1::::<><>::
 heart.gd::GDScript::-1::1713037789::0::1::::<>Panel<>::
 heart.tscn::PackedScene::8273324578383970957::1713037789::0::1::::<><>::res://science_hell/gui/hearts/heart.gd<>uid://dqltrjbmjkojv::::res://science_hell/gui/hearts/HealthUI.png
-hearts_container.gd::GDScript::-1::1713328374::0::1::::<>Node<>::
-hearts_container.tscn::PackedScene::6389855460293442815::1713328376::0::1::::<><>::res://science_hell/gui/hearts/hearts_container.gd
+hearts_container.gd::GDScript::-1::1713329687::0::1::::<>Node<>::
+hearts_container.tscn::PackedScene::6389855460293442815::1713330034::0::1::::<><>::res://science_hell/gui/hearts/hearts_container.gd
 ::res://science_hell/gui/Title Screen/::1713142559
 menu.gd::GDScript::-1::1713037820::0::1::::<>Control<>::
 menu.tscn::PackedScene::6885490853751947605::1713142559::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
@@ -363,6 +480,6 @@ lab.gd::GDScript::-1::1713037789::0::1::::<>Node2D<>::
 scene_manager.gd::GDScript::-1::1713326129::0::1::::<>Node<>::
 ::res://science_hell/singleton/::1713037821
 player_stats.gd::GDScript::-1::1713037821::0::1::::<>Node<>::
-::res://science_hell/src_scene/::1713328375
-science_hell.gd::GDScript::-1::1713141626::0::1::::<>Node<>::
-science_hell.tscn::PackedScene::2410502229619207928::1713328375::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn
+::res://science_hell/src_scene/::1713330034
+science_hell.gd::GDScript::-1::1713329255::0::1::::<>Node<>::
+science_hell.tscn::PackedScene::2410502229619207928::1713330034::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn

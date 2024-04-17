@@ -91,7 +91,6 @@ func handle_mob_collision(delta):
 				else:
 					last_mob_id = mob_id
 					last_hit_time = current_time
-					print(last_mob_id)
 
 				knockback_direction = (global_position - mob.global_position).normalized()
 				knockback_timer = knockback_duration
