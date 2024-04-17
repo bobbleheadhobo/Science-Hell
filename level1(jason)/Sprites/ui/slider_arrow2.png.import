@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b45mmumg3cpt0"
-path="res://.godot/imported/slider_arrow2.png-6619f150fa0da1c333d74705ab76d76d.ctex"
+path="res://.godot/imported/slider_arrow2.png-1eb41efea3d4bcfa5d282468f4844b04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level1(jason)/Sprites/ui/slider_arrow2.png"
-dest_files=["res://.godot/imported/slider_arrow2.png-6619f150fa0da1c333d74705ab76d76d.ctex"]
+source_file="res://Sprites/ui/slider_arrow2.png"
+dest_files=["res://.godot/imported/slider_arrow2.png-1eb41efea3d4bcfa5d282468f4844b04.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b40vmg01a1mvm"
-path="res://.godot/imported/3NotesFinal.png-ef4a87806fd9dad8bf39c6496a8728e9.ctex"
+path="res://.godot/imported/3NotesFinal.png-a79fed24f301760a1c6642c75346e7d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level1(jason)/Sprites/game/arrow_button/left/3NotesFinal.png"
-dest_files=["res://.godot/imported/3NotesFinal.png-ef4a87806fd9dad8bf39c6496a8728e9.ctex"]
+source_file="res://Sprites/game/arrow_button/left/3NotesFinal.png"
+dest_files=["res://.godot/imported/3NotesFinal.png-a79fed24f301760a1c6642c75346e7d8.ctex"]
 
 [params]
 

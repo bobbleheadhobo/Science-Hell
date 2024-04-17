@@ -1,15 +1,9 @@
-res://level1(jason)/Scenes/Game.tscn
-res://level1(jason)/Scenes/ArrowButton.tscn
-res://level1(jason)/Scenes/Conductor.tscn
-res://level1(jason)/Scenes/End.tscn
-res://level1(jason)/Scenes/Note.tscn
-res://level1(jason)/Scenes/Menu.tscn
-res://level1(jason)/Scenes/Global.tscn
-res://level1(jason)/Frames/yellow_button.tres
-res://level1(jason)/Frames/red_button.tres
-res://level1(jason)/Frames/blue_button.tres
-res://level1(jason)/Frames/note_frames.tres
-res://level1(jason)/Scripts/Game.gd
-res://level1(jason)/Scripts/End.gd
-res://level1(jason)/Scripts/Menu.gd
-res://level1(jason)/Scripts/Note.gd
+res://chey/GameInfo.tscn
+res://science_hell/assets/main_map_tile_set.tres
+res://science_hell/assets/lvl5_tile_set.tres
+res://chey/input/InputResponse.tscn
+res://chey/InputHistory.tscn
+res://science_hell/src_scene/science_hell.tscn
+res://chey/SidePanel.tscn
+res://chey/Response.tscn
+res://ivan_level/Title Screen/menu.tscn

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cihysy0h8kpuw"
-path="res://.godot/imported/GuitarNote2.png-7ebc4e0696b4ddd085c503b542802476.ctex"
+path="res://.godot/imported/GuitarNote2.png-3884ada581ca8d2b3e00638506e585a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level1(jason)/Sprites/game/arrow_button/left/GuitarNote2.png"
-dest_files=["res://.godot/imported/GuitarNote2.png-7ebc4e0696b4ddd085c503b542802476.ctex"]
+source_file="res://Sprites/game/arrow_button/left/GuitarNote2.png"
+dest_files=["res://.godot/imported/GuitarNote2.png-3884ada581ca8d2b3e00638506e585a7.ctex"]
 
 [params]
 

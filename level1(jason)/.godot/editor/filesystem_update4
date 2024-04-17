@@ -4,6 +4,7 @@ res://Frames/note_frames.tres
 res://Frames/yellow_button.tres
 res://Frames/red_button.tres
 res://Frames/blue_button.tres
+res://Scripts/Game.gd
 res://Scenes/Conductor.tscn
 res://Scenes/Menu.tscn
 res://Scenes/End.tscn

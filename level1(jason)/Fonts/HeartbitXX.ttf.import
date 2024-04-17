@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ns0yvehduv1x"
-path="res://.godot/imported/HeartbitXX.ttf-c3bfd43d23b93a19cfca5dda62ff1474.fontdata"
+path="res://.godot/imported/HeartbitXX.ttf-d65cd8a73fbcd9bb89a4f0431888d001.fontdata"
 
 [deps]
 
-source_file="res://level1(jason)/Fonts/HeartbitXX.ttf"
-dest_files=["res://.godot/imported/HeartbitXX.ttf-c3bfd43d23b93a19cfca5dda62ff1474.fontdata"]
+source_file="res://Fonts/HeartbitXX.ttf"
+dest_files=["res://.godot/imported/HeartbitXX.ttf-d65cd8a73fbcd9bb89a4f0431888d001.fontdata"]
 
 [params]
 
