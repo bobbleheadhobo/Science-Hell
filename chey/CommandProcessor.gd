@@ -24,7 +24,7 @@ func process_command(input: String) -> String:
 	 # Handle quitting process
 	if is_quitting:
 		if input.to_lower() == "yes":
-			get_tree().current_scene# This command stops the game engine.
+			SceneManager.change_scene('sciencehall')# This command stops the game engine.
 			#get_tree().quit() 
 			return "Quitting game... See you next time!"
 		elif input.to_lower() == "no":
