@@ -3,6 +3,13 @@ extends CharacterBody2D
 const SPEED = 400
 const SHOOTING_RANGE = 500.0
 const CLOSEST_DISTANCE = 100.0
+const MAX_HEALTH = 10
+
+var health = MAX_HEALTH
+var is_hurt = false
+
+var knockback_strength = 500.0
+var knockback = Vector2.ZERO
 
 
 enum {IDLE, WALK}
@@ -27,6 +34,7 @@ var can_shoot = true
 
 func _ready():
 	$Sprite2D.texture = Characters.set_character("reynolds")
+	$ProgressBar.value = MAX_HEALTH
 
 func _physics_process(delta):
 	move(delta)
@@ -61,6 +69,19 @@ func shoot():
 	var bullet_direction = global_position.direction_to(player.global_position)
 	rey_bullet.set_direction(bullet_direction)
 	rey_bullet.play_shoot_animation(1.7)
+	
+	
+func take_damage(damage_location):
+	health -= 1
+	$ProgressBar.value = health
+	
+	if health <= 0:
+		#emit_signal("mob_killed")
+		queue_free()
+		return # Exit function after queue_free
+	
+	var direction = damage_location.direction_to(global_position)
+	knockback = direction * knockback_strength
 
 func animate() -> void:
 	state_machine.travel(animTree_state_keys[state])

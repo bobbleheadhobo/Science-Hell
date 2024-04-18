@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal health_empty
 
 const SPEED = 600
-var knockback_force = 5000 # Adjust this value to control the knockback strength
+var knockback_force = 3000
 
 
 var mobs_killed = 0

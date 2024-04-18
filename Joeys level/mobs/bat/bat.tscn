@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://2yuduk7e4xt" path="res://science_hell/assets/mobs/bat.png" id="1_qg2pt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6pds4"]
-radius = 6.0
+radius = 7.00683
 height = 26.0276
 
 [sub_resource type="Animation" id="Animation_apg7j"]
@@ -65,7 +65,7 @@ _data = {
 [node name="Bat" type="CharacterBody2D"]
 scale = Vector2(4, 4)
 collision_layer = 2
-collision_mask = 0
+collision_mask = 3
 script = ExtResource("1_hw8ry")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
