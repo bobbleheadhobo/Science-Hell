@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2houwfag08oo"]
+
+[ext_resource type="Texture2D" uid="uid://0y5nbyqxfxqr" path="res://Level4/Assets/punch1.png" id="1_mjvho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5fvp"]
+size = Vector2(10, 4)
+
+[node name="punch1" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mjvho")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a5fvp")

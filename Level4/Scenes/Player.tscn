@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0f51aq0q53k8"]
+[gd_scene load_steps=5 format=3 uid="uid://b0f51aq0q53k8"]
 
 [ext_resource type="Texture2D" uid="uid://b02laheac3lci" path="res://Level4/Assets/icon.svg" id="1"]
 [ext_resource type="Script" path="res://Level4/Scripts/PlayerScript.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://c2houwfag08oo" path="res://Level4/Scenes/punch1.tscn" id="3_fctlk"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(48, 48)
@@ -21,3 +22,10 @@ shape = SubResource("1")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 162)
 offset = Vector2(0, -200)
+
+[node name="digitalJab1" type="Node2D" parent="."]
+position = Vector2(32, -23)
+
+[node name="Area2D" parent="digitalJab1" instance=ExtResource("3_fctlk")]
+position = Vector2(0, 6)
+collision_layer = 128
