@@ -9,8 +9,7 @@ func _ready():
 	MusicManager.play_song("reynolds")
 
 func _on_progress_bar_progress_bar_full():
-	Rey.next_wave()
-	current_wave = Rey.current_wave
+	current_wave = 	Rey.next_wave()
 	if current_wave == 1:
 		$SpawnMobTimer.wait_time = 2
 		$ui/Label.text = "
@@ -23,7 +22,7 @@ func _on_progress_bar_progress_bar_full():
 		$SpawnMobTimer.wait_time = 0.5
 		$ui/Label.text = "
 		wave " + str(current_wave)
-	else:
+	elif current_wave == 4:
 		$ui/Label.text = "
 		FINAL WAVE"
 		spawn_reynolds()

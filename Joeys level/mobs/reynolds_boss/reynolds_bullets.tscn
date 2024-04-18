@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Joeys level/mobs/reynolds_boss/reynolds_bullets.gd" id="1_lg0d4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_75i2i"]
-radius = 29.0689
+radius = 48.2597
 
 [sub_resource type="Animation" id="Animation_ad3gj"]
 length = 0.001
@@ -69,6 +69,8 @@ _data = {
 }
 
 [node name="ReynoldsBullets" type="Area2D"]
+collision_layer = 5
+collision_mask = 0
 script = ExtResource("1_lg0d4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -78,7 +80,7 @@ flip_h = true
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(33, 1)
+position = Vector2(58, 2)
 shape = SubResource("CircleShape2D_75i2i")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -86,3 +88,5 @@ libraries = {
 "": SubResource("AnimationLibrary_jt6fm")
 }
 speed_scale = 1.7
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

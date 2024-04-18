@@ -3,6 +3,7 @@ extends CharacterBody2D
 signal health_empty
 
 const SPEED = 600
+var knockback_force = 5000 # Adjust this value to control the knockback strength
 
 
 var mobs_killed = 0
@@ -49,8 +50,7 @@ func shoot():
 
 func move(delta):
 	# get input from keyboard (WASD)
-	var direction = Input.get_vector("move_left", "move_right", "move_up" , "move_down")
-	
+	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if direction == Vector2.ZERO:
 		state = IDLE
 	else:
@@ -60,14 +60,13 @@ func move(delta):
 	# calculate the velocity to move the player at
 	velocity = direction * SPEED
 	
+	if knockback_timer > 0:
+		var interpolation_factor = knockback_timer / knockback_duration
+		velocity = velocity.lerp(knockback_direction * knockback_force, 1 - interpolation_factor)
+		knockback_timer -= delta
+	
 	animate()
 	move_and_slide()
-	
-	## Flip the gun based on the direction of movement
-	#if direction.x < 0:
-		#GUN.flip_sprite(true)
-	#elif direction.x > 0:
-		#GUN.flip_sprite(false)
 		
 
 func animate() -> void:
@@ -79,31 +78,32 @@ var last_hit_time = 0
 
 func handle_mob_collision(delta):
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
+	print(overlapping_mobs)
 	if overlapping_mobs.size() > 0:
 		for mob in overlapping_mobs:
 			if mob.has_method("get_mob_id"):
 				var mob_id = mob.get_mob_id()
-				var current_time = Time.get_ticks_msec() / 1000.0  # Get current time in seconds
-
+				var current_time = Time.get_ticks_msec() / 1000.0 # Get current time in seconds
+				
 				if mob_id == last_mob_id and current_time - last_hit_time <= 0.3:
 					mob.queue_free()
 					print("Killed buggy mob")
 				else:
 					last_mob_id = mob_id
 					last_hit_time = current_time
-
-				knockback_direction = (global_position - mob.global_position).normalized()
-				knockback_timer = knockback_duration
-				take_damage()
-	
-	if knockback_timer > 0:
-		var knockback_force = 5000 # Adjust this value to control the knockback strength
-		var knockback_velocity = knockback_direction * knockback_force
-		var interpolation_factor = knockback_timer / knockback_duration
-		velocity += knockback_velocity * interpolation_factor
-		knockback_timer -= delta
+					
+					var mob_direction = (global_position - mob.global_position).normalized()
+					take_damage(mob_direction)
 		
-func take_damage():
+func take_damage(damage_direction):
 	Health.update_health(Health.current_health - 1)
+	
+	knockback_direction = damage_direction
+	knockback_timer = knockback_duration
+	
+	var knockback_velocity = knockback_direction * knockback_force
+	
+	velocity += knockback_velocity
+	
 	if Health.current_health <= 0:
 		print("DEAD!")

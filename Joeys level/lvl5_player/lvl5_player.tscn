@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="1_o3wty"]
 [ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="2_l4st2"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxiua"]
+radius = 33.0348
+height = 105.967
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdvq7"]
 size = Vector2(39, 12)
 
@@ -262,12 +266,18 @@ states/walk/position = Vector2(403, 154)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_0ende"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_i73g2"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_gxllx")]
 graph_offset = Vector2(133.11, -15.0076)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxiua"]
-radius = 29.8021
-height = 105.992
-
 [node name="Lvl5Player" type="CharacterBody2D"]
 script = ExtResource("1_bgup8")
+
+[node name="hurtbox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(1, 15)
+rotation = 3.15406
+shape = SubResource("CapsuleShape2D_gxiua")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 10)
@@ -308,14 +318,3 @@ parameters/idle/TimeScale/scale = 1.0
 parameters/idle/idle_bsd2/blend_position = Vector2(0.00569797, -0.978836)
 parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
-
-[node name="hurtbox" type="Area2D" parent="."]
-unique_name_in_owner = true
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-visible = false
-position = Vector2(1, 15)
-rotation = 3.15406
-shape = SubResource("CapsuleShape2D_gxiua")

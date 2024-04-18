@@ -67,8 +67,8 @@ func update_health(new_health : int):
 				heart.update_state(heart.Heart_State.EMPTY)
 
 	# show game over
-	if current_health <= 0 and not is_game_over:
-		game_over()
+	#if current_health <= 0 and not is_game_over:
+		#game_over()
 
 func game_over():
 	is_game_over = true
