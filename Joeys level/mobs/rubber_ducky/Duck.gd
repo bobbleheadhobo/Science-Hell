@@ -18,6 +18,7 @@ func _ready():
 	play_animation("idle")
 	shoot()
 	mob_id = generate_mob_id()
+	add_to_group("mobs")
 
 func _physics_process(delta):
 	if not is_hurt:

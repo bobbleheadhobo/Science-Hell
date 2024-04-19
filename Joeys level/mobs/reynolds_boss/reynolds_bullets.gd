@@ -19,7 +19,6 @@ func _physics_process(delta):
 		queue_free()
 
 func _on_body_entered(body):
-	print("body entered")
 	queue_free()
 	if body.has_method("take_damage"):
 		var damage_direction = (body.global_position - global_position).normalized()

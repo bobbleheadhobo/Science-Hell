@@ -13,6 +13,7 @@ signal mob_killed
 func _ready():
 	play_animation("fly")
 	mob_id = generate_mob_id()
+	add_to_group("mobs")
 
 func _physics_process(delta):
 	if not is_hurt:

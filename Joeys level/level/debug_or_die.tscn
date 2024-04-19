@@ -64,7 +64,7 @@ wave 1"
 horizontal_alignment = 1
 
 [node name="ReynoldsSpawnPoint" type="Marker2D" parent="."]
-position = Vector2(4656, 3172)
+position = Vector2(4175, 2836)
 
 [node name="duck" parent="." instance=ExtResource("7_yulw0")]
 position = Vector2(3573, 2874)

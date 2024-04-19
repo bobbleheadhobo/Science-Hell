@@ -47,8 +47,8 @@ func choose_mob():
 		
 func _on_spawn_mob_timer_timeout():
 	var new_mob = choose_mob()
+	#var new_mob = mobs["null_nightmare"]
 	spawn_mob(new_mob)
 	
 func _on_mob_killed():
-	print("mob killed")
 	emit_signal("update_progress_mob_killed")

@@ -1,12 +1,15 @@
 extends CharacterBody2D
 
-const SPEED = 400
+const SPEED = 500
 const SHOOTING_RANGE = 500.0
 const CLOSEST_DISTANCE = 100.0
-const MAX_HEALTH = 10
+const PUSH_FORCE = 1500.0
+@onready var health = $ProgressBar.max_value
 
-var health = MAX_HEALTH
+var mobs_in_area = []
+
 var is_hurt = false
+signal level_over
 
 var knockback_strength = 500.0
 var knockback = Vector2.ZERO
@@ -34,12 +37,17 @@ var can_shoot = true
 
 func _ready():
 	$Sprite2D.texture = Characters.set_character("reynolds")
-	$ProgressBar.value = MAX_HEALTH
+	$ProgressBar.value = health
+	
 
 func _physics_process(delta):
 	move(delta)
 	animate()
 	move_and_slide()
+	
+	for mob in mobs_in_area:
+		var push_direction = (mob.global_position - global_position).normalized()
+		mob.knockback = push_direction * PUSH_FORCE
 
 func move(delta):
 	var distance_to_player = global_position.distance_to(player.global_position)
@@ -62,7 +70,6 @@ func move(delta):
 			can_shoot = true
 
 func shoot():
-	print("shoot")
 	var rey_bullet = rey_bullet_scene.instantiate()
 	add_child(rey_bullet)
 	rey_bullet.global_position = global_position
@@ -76,7 +83,7 @@ func take_damage(damage_location):
 	$ProgressBar.value = health
 	
 	if health <= 0:
-		#emit_signal("mob_killed")
+		emit_signal("level_over")
 		queue_free()
 		return # Exit function after queue_free
 	
@@ -86,3 +93,13 @@ func take_damage(damage_location):
 func animate() -> void:
 	state_machine.travel(animTree_state_keys[state])
 	animationTree.set(blend_pos_paths[state], blend_position)
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("mobs") and not body in mobs_in_area:
+		mobs_in_area.append(body)
+
+
+func _on_area_2d_body_exited(body):
+	if body.is_in_group("mobs") and body in mobs_in_area:
+		mobs_in_area.erase(body)

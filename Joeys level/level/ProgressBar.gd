@@ -3,13 +3,18 @@ extends ProgressBar
 signal progress_bar_full
 
 func _ready():
-	max_value = 10  # Set the maximum value of the progress bar
-	value = 0  # Set the initial value of the progress bar
+	max_value = 10 
+	value = 0  
 
 func _on_spawners_container_update_progress_mob_killed():
-	print("updated value")
 	value += 10  # Increment the progress bar value by 10
+	print(Rey.current_wave, Rey.MAX_WAVES)
 
-	if value >= max_value:
+	if value >= max_value and Rey.current_wave < Rey.MAX_WAVES:
+		#increment to next wave
 		emit_signal("progress_bar_full")
-		value = 0  # Ensure the value doesn't exceed the maximum
+		
+		if Rey.current_wave == Rey.MAX_WAVES:
+			value = max_value 
+		else:
+			value = 0

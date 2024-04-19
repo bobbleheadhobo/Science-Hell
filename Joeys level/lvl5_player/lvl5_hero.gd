@@ -78,7 +78,6 @@ var last_hit_time = 0
 
 func handle_mob_collision(delta):
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
-	print(overlapping_mobs)
 	if overlapping_mobs.size() > 0:
 		for mob in overlapping_mobs:
 			if mob.has_method("get_mob_id"):
