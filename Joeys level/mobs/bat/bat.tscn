@@ -75,7 +75,6 @@ hframes = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
 rotation = -1.5861
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_6pds4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

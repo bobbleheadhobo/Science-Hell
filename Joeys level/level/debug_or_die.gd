@@ -46,7 +46,6 @@ func level_over():
 	Rey.game_over = true
 	kill_all("mobs")
 	$Map.open_elevator()
-	spawn_exit()
 	
 	
 
@@ -54,9 +53,3 @@ func kill_all(group_name):
 	var nodes_in_group = get_tree().get_nodes_in_group(group_name)
 	for node in nodes_in_group:
 		node.queue_free()
-
-
-func spawn_exit():
-	var exit = exit_scene.instantiate()
-	exit.global_position = $ReynoldsSpawnPoint.global_position
-	add_child(exit)

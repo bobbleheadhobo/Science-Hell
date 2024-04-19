@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://djdq6pyatghw6" path="res://Joeys level/lvl5_player/lvl5_player.tscn" id="3_xqqv7"]
 [ext_resource type="Script" path="res://Joeys level/level/ProgressBar.gd" id="6_ocmks"]
 [ext_resource type="PackedScene" uid="uid://ck460lkuai80n" path="res://Joeys level/mobs/mob_spawners/spawners_container.tscn" id="7_lrcur"]
-[ext_resource type="PackedScene" uid="uid://d2w0nbaqxw5vh" path="res://Joeys level/mobs/rubber_ducky/duck.tscn" id="7_yulw0"]
+[ext_resource type="PackedScene" uid="uid://cfpxvrl3u2hqr" path="res://Joeys level/level/exit.tscn" id="7_lrlfm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f578t"]
 bg_color = Color(0.313726, 0.694118, 0.368627, 1)
@@ -25,7 +25,7 @@ scale = Vector2(3, 3)
 [node name="lvl5_Player" parent="." instance=ExtResource("3_xqqv7")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(3673, 2362)
+position = Vector2(4157, 3115)
 
 [node name="SpawnMobTimer" type="Timer" parent="."]
 wait_time = 2.0
@@ -66,8 +66,7 @@ horizontal_alignment = 1
 [node name="ReynoldsSpawnPoint" type="Marker2D" parent="."]
 position = Vector2(4175, 2836)
 
-[node name="duck" parent="." instance=ExtResource("7_yulw0")]
-position = Vector2(3573, 2874)
+[node name="exit" parent="." instance=ExtResource("7_lrlfm")]
 
 [connection signal="timeout" from="SpawnMobTimer" to="Spawners_container" method="_on_spawn_mob_timer_timeout"]
 [connection signal="update_progress_mob_killed" from="Spawners_container" to="ui/ProgressBar" method="_on_spawners_container_update_progress_mob_killed"]

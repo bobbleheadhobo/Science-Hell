@@ -118,3 +118,5 @@ func update_invincibility(delta):
 		if invincibility_timer <= 0:
 			invincibility_timer = 0.0
 
+func player():
+	pass
