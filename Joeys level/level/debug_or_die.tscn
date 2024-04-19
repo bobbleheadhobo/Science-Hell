@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4av4ra6dwn2i"]
+
+[ext_resource type="Script" path="res://Joeys level/level/debug_or_die.gd" id="1_fcrlp"]
+[ext_resource type="PackedScene" uid="uid://c0pn2xkehu2j8" path="res://Joeys level/map/map.tscn" id="3_4cntp"]
+[ext_resource type="PackedScene" uid="uid://djdq6pyatghw6" path="res://Joeys level/lvl5_player/lvl5_player.tscn" id="3_xqqv7"]
+[ext_resource type="Script" path="res://Joeys level/level/ProgressBar.gd" id="6_ocmks"]
+[ext_resource type="PackedScene" uid="uid://ck460lkuai80n" path="res://Joeys level/mobs/mob_spawners/spawners_container.tscn" id="7_lrcur"]
+[ext_resource type="PackedScene" uid="uid://d02pbn08lcvxe" path="res://Joeys level/mobs/reynolds_boss/reynolds.tscn" id="10_cgdnd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f578t"]
+bg_color = Color(0.313726, 0.694118, 0.368627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Debug_or_die" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_fcrlp")
+
+[node name="Map" parent="." instance=ExtResource("3_4cntp")]
+z_index = -1
+scale = Vector2(3, 3)
+
+[node name="lvl5_Player" parent="." instance=ExtResource("3_xqqv7")]
+z_index = 1
+position = Vector2(3920, 2637)
+
+[node name="SpawnMobTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Spawners_container" parent="." instance=ExtResource("7_lrcur")]
+position = Vector2(2023, 1397)
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="ui"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -55.0
+offset_top = 2.0
+offset_right = 74.0
+offset_bottom = 12.0
+grow_horizontal = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_f578t")
+show_percentage = false
+script = ExtResource("6_ocmks")
+
+[node name="Label" type="Label" parent="ui"]
+anchors_preset = -1
+anchor_left = 0.486
+anchor_right = 0.535
+anchor_bottom = 0.048
+offset_left = 0.127991
+offset_right = -0.320007
+offset_bottom = -0.104
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+text = "
+wave 1"
+horizontal_alignment = 1
+
+[node name="Reynolds" parent="." instance=ExtResource("10_cgdnd")]
+position = Vector2(3788, 2682)
+
+[node name="ReynoldsSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(4656, 3172)
+
+[connection signal="timeout" from="SpawnMobTimer" to="Spawners_container" method="_on_spawn_mob_timer_timeout"]
+[connection signal="update_progress_mob_killed" from="Spawners_container" to="ui/ProgressBar" method="_on_spawners_container_update_progress_mob_killed"]
+[connection signal="progress_bar_full" from="ui/ProgressBar" to="." method="_on_progress_bar_progress_bar_full"]

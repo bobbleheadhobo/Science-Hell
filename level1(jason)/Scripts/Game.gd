@@ -106,12 +106,12 @@ func _on_Conductor_beat(current_position):
 		#spawn_3_beat = 0
 		#spawn_4_beat = 0
 	if song_position_in_beats > 312:
-		Global.set_score(score)
-		Global.combo = max_combo
-		Global.great = great
-		Global.good = good
-		Global.okay = okay
-		Global.missed = missed
+		Score.set_score(score)
+		Score.combo = max_combo
+		Score.great = great
+		Score.good = good
+		Score.okay = okay
+		Score.missed = missed
 		if get_tree().change_scene_to_file("res://Scenes/End.tscn") != OK:
 			print ("Error changing scene to End")
 

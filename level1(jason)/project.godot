@@ -17,7 +17,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Global="*res://Scenes/Global.tscn"
+Score="*res://Scenes/Score.tscn"
 
 [display]
 

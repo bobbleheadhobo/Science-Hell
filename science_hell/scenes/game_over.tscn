@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=3 uid="uid://pl6xqeiienji"]
+
+[ext_resource type="Script" path="res://science_hell/game_over.gd" id="1_vi2en"]
+[ext_resource type="Texture2D" uid="uid://cr3n02ee0tkvr" path="res://Joeys level/level/stein.jpeg" id="2_vqfqm"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vi2en")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.384314)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.144
+anchor_top = 0.145
+anchor_right = 0.821
+anchor_bottom = 0.863
+offset_left = 0.111984
+offset_top = 0.0399933
+offset_right = 0.207947
+offset_bottom = -0.223999
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vqfqm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.368
+anchor_top = 0.482
+anchor_right = 0.632
+anchor_bottom = 0.518
+offset_left = 0.0639648
+offset_top = 0.163971
+offset_right = -0.0640259
+offset_bottom = -0.164001
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU SHOULD RECONSIDER THIS MAJOR"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -143.0
+offset_right = 143.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "GAME OVER"
+
+[node name="drop_out" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.286
+anchor_top = 0.63
+anchor_right = 0.373
+anchor_bottom = 0.677
+offset_left = 0.527985
+offset_top = -0.240021
+offset_right = 0.303955
+offset_bottom = 0.303955
+text = "drop out
+"
+
+[node name="retry" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.598
+anchor_top = 0.628
+anchor_right = 0.685
+anchor_bottom = 0.676
+offset_left = 0.103943
+offset_top = 0.0559998
+offset_right = -0.120056
+offset_bottom = -1.04803
+text = "retry"
+
+[connection signal="pressed" from="drop_out" to="." method="_on_drop_out_pressed"]
+[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]

@@ -2,13 +2,13 @@ extends Node2D
 
 
 func _ready():
-	$GradeNumber.text = Global.grade
-	$ScoreNumber.text = str(Global.score)
-	$ComboNumber.text = str(Global.combo)
-	$GreatNumber.text = str(Global.great)
-	$GoodNumber.text = str(Global.good)
-	$OkayNumber.text = str(Global.okay)
-	$MissedNumber.text = str(Global.missed)
+	$GradeNumber.text = Score.grade
+	$ScoreNumber.text = str(Score.score)
+	$ComboNumber.text = str(Score.combo)
+	$GreatNumber.text = str(Score.great)
+	$GoodNumber.text = str(Score.good)
+	$OkayNumber.text = str(Score.okay)
+	$MissedNumber.text = str(Score.missed)
 	
 
 

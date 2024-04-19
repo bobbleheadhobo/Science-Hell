@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxbj8rwkf0hed"]
+
+[ext_resource type="Script" path="res://science_hell/gui/hearts/hearts_container.gd" id="1_6xgkt"]
+
+[node name="Hearts" type="HBoxContainer"]
+offset_right = 66.0
+offset_bottom = 11.0
+theme_override_constants/separation = 11
+script = ExtResource("1_6xgkt")

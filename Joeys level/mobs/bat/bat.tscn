@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3c1nj04tqxkv"]
+
+[ext_resource type="Script" path="res://Joeys level/mobs/bat/bat.gd" id="1_hw8ry"]
+[ext_resource type="Texture2D" uid="uid://2yuduk7e4xt" path="res://science_hell/assets/mobs/bat.png" id="1_qg2pt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6pds4"]
+radius = 6.0
+height = 26.0276
+
+[sub_resource type="Animation" id="Animation_apg7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_kid8y"]
+resource_name = "fly"
+length = 0.15
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_bsiux"]
+resource_name = "hurt"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r2wew"]
+_data = {
+"RESET": SubResource("Animation_apg7j"),
+"fly": SubResource("Animation_kid8y"),
+"hurt": SubResource("Animation_bsiux")
+}
+
+[node name="Bat" type="CharacterBody2D"]
+scale = Vector2(4, 4)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_hw8ry")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qg2pt")
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+rotation = -1.5861
+shape = SubResource("CapsuleShape2D_6pds4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r2wew")
+}
