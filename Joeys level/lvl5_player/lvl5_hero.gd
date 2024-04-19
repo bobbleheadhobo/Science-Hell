@@ -3,6 +3,7 @@ extends CharacterBody2D
 signal health_empty
 
 const SPEED = 600
+const INVINCIBILITY_DURATION = 1.0
 var knockback_force = 3000
 
 
@@ -31,6 +32,7 @@ var knockback_duration = 0.2  # Duration of the knockback effect in seconds
 var knockback_timer = 0.0
 var knockback_direction = Vector2.ZERO
 var last_mob_id = null
+var invincibility_timer = 0.0
 
 func _ready():
 	$Sprite2D.texture = Characters.current_sprite
@@ -40,6 +42,7 @@ func _physics_process(delta):
 	shoot()
 	handle_mob_collision(delta)
 	move_and_slide()
+	update_invincibility(delta)
 
 
 func shoot():
@@ -95,14 +98,23 @@ func handle_mob_collision(delta):
 					take_damage(mob_direction)
 		
 func take_damage(damage_direction):
+	if invincibility_timer > 0:
+		return  # Player is invincible, ignore damage
+
 	Health.update_health(Health.current_health - 1)
-	
 	knockback_direction = damage_direction
 	knockback_timer = knockback_duration
-	
 	var knockback_velocity = knockback_direction * knockback_force
-	
 	velocity += knockback_velocity
-	
+
 	if Health.current_health <= 0:
 		print("DEAD!")
+	else:
+		invincibility_timer = INVINCIBILITY_DURATION
+		
+func update_invincibility(delta):
+	if invincibility_timer > 0:
+		invincibility_timer -= delta
+		if invincibility_timer <= 0:
+			invincibility_timer = 0.0
+
