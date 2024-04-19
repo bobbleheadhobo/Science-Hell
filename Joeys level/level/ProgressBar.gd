@@ -3,7 +3,7 @@ extends ProgressBar
 signal progress_bar_full
 
 func _ready():
-	max_value = 10 
+	max_value = 10
 	value = 0  
 
 func _on_spawners_container_update_progress_mob_killed():

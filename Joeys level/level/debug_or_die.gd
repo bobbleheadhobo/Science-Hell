@@ -45,7 +45,6 @@ func level_over():
 		YOU WON!"
 	Rey.game_over = true
 	kill_all("mobs")
-	$Map.open_elevator()
 	$lvl5_Player.show_arrow()
 	
 

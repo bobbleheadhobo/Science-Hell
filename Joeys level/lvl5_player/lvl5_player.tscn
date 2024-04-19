@@ -358,6 +358,7 @@ parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
 
 [node name="ExitArrow" type="Marker2D" parent="."]
+visible = false
 position = Vector2(-2, 16)
 rotation = 4.695
 script = ExtResource("4_g2850")

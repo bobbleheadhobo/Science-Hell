@@ -2,12 +2,8 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	print("exit entered")
 	if body.has_method("player") and Rey.game_over:
-		#call_deferred("change")
-		print("exiting")
+		$"../Map".open_elevator()
+		await get_tree().create_timer(0.8).timeout
 		SceneManager.change_scene("Sciencehall")
 		
-
-func change():
-	SceneManager.change_scene("Sciencehall")
