@@ -25,8 +25,11 @@ func _physics_process(delta):
 		var distance_to_player = global_position.distance_to(player.global_position)
 		
 		if distance_to_player > shooting_range:
-			# Play the walk animation
-			play_animation("walk")
+			if health <= 1:
+				play_animation("walk_bounce")
+			else:
+				# Play the walk animation
+				play_animation("walk")
 			
 			# Move towards the player if outside the shooting range
 			var direction = global_position.direction_to(player.global_position)
@@ -36,8 +39,10 @@ func _physics_process(delta):
 			
 		else:
 			velocity = knockback
-			# Play the idle animation
-			play_animation("idle")
+			if health <= 1:
+				play_animation("idle_bounce")
+			else:
+				play_animation("idle_bounce")
 			
 			# Stop moving when within the shooting range
 			#velocity = Vector2.ZERO

@@ -120,3 +120,7 @@ func update_invincibility(delta):
 
 func player():
 	pass
+	
+func show_arrow():
+	$ExitArrow.show()
+	$ExitArrow/AnimationPlayer.play("point")

@@ -46,7 +46,7 @@ func level_over():
 	Rey.game_over = true
 	kill_all("mobs")
 	$Map.open_elevator()
-	
+	$lvl5_Player.show_arrow()
 	
 
 func kill_all(group_name):
