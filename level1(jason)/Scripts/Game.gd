@@ -23,18 +23,19 @@ var spawn_4_beat = 0
 
 var lane = 0
 var rand = 0
-var note = preload("res://Scenes/Note.tscn")
+var note = preload("res://level1(jason)/Scenes/Note.tscn")
 var instance
 
 
 func _ready():
+	Health.set_visibility(false)
 	randomize()
-	$Conductor.play_with_beat_offset(10)
+	$Conductor.play_with_beat_offset(9)
 
 
 func _input(event):
 	if event.is_action("escape"):
-		if get_tree().change_scene_to_file("res://Scenes/Menu.tscn") != OK:
+		if get_tree().change_scene_to_file("res://level1(jason)/Scenes/Menu.tscn") != OK:
 			print ("Error changing scene to Menu")
 
 
@@ -112,7 +113,7 @@ func _on_Conductor_beat(current_position):
 		Score.good = good
 		Score.okay = okay
 		Score.missed = missed
-		if get_tree().change_scene_to_file("res://Scenes/End.tscn") != OK:
+		if get_tree().change_scene_to_file("res://level1(jason)/Scenes/End.tscn") != OK:
 			print ("Error changing scene to End")
 
 

@@ -1,7 +1,7 @@
 res://default_env.tres
 res://Scenes/ArrowButton.tscn
-res://Frames/note_frames.tres
 res://Frames/yellow_button.tres
+res://Frames/note_frames.tres
 res://Frames/red_button.tres
 res://Frames/blue_button.tres
 res://Scenes/Conductor.tscn

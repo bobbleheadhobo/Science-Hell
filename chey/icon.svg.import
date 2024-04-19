@@ -2,13 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:chey/icon.svg.import
-uid="uid://cct6b5oc41ayo"
+uid="uid://dn07gvf62eef"
 path="res://.godot/imported/icon.svg-df148ab37de8db8b3b5991da23ce8ac1.ctex"
-========
-uid="uid://4ng21mpu4uvv"
-path="res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
->>>>>>>> dev:icon.svg.import
 metadata={
 "vram_texture": false
 }

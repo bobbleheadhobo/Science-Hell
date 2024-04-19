@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://heju11u4s4kk"]
 
-[ext_resource type="Script" path="res://Scripts/Conductor.gd" id="1"]
+[ext_resource type="Script" path="res://level1(jason)/Scripts/Conductor.gd" id="1"]
 
 [node name="Conductor" type="AudioStreamPlayer"]
 script = ExtResource("1")
