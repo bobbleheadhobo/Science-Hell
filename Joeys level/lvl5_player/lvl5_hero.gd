@@ -31,7 +31,8 @@ var knockback_timer = 0.0
 var knockback_direction = Vector2.ZERO
 var last_mob_id = null
 
-
+func _ready():
+	$Sprite2D.texture = Characters.current_sprite
 
 func _physics_process(delta):
 	move(delta)
@@ -61,6 +62,12 @@ func move(delta):
 	
 	animate()
 	move_and_slide()
+	
+	## Flip the gun based on the direction of movement
+	#if direction.x < 0:
+		#GUN.flip_sprite(true)
+	#elif direction.x > 0:
+		#GUN.flip_sprite(false)
 		
 
 func animate() -> void:
@@ -68,17 +75,26 @@ func animate() -> void:
 	animationTree.set(blend_pos_paths[state], blend_position)
 
 
+var last_hit_time = 0
+
 func handle_mob_collision(delta):
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		for mob in overlapping_mobs:
-			if mob.get_mob_id() == last_mob_id:
-				mob.queue_free()
-				print("Killed buggy mob")
-			knockback_direction = (global_position - mob.global_position).normalized()
-			knockback_timer = knockback_duration
-			last_mob_id = mob.get_mob_id()
-		update_health()
+			if mob.has_method("get_mob_id"):
+				var mob_id = mob.get_mob_id()
+				var current_time = Time.get_ticks_msec() / 1000.0  # Get current time in seconds
+
+				if mob_id == last_mob_id and current_time - last_hit_time <= 0.3:
+					mob.queue_free()
+					print("Killed buggy mob")
+				else:
+					last_mob_id = mob_id
+					last_hit_time = current_time
+
+				knockback_direction = (global_position - mob.global_position).normalized()
+				knockback_timer = knockback_duration
+				take_damage()
 	
 	if knockback_timer > 0:
 		var knockback_force = 5000 # Adjust this value to control the knockback strength
@@ -87,9 +103,7 @@ func handle_mob_collision(delta):
 		velocity += knockback_velocity * interpolation_factor
 		knockback_timer -= delta
 		
-func update_health():
-	Health.update_health(Health.current_health - 0.1)
-	print(Health.current_health)
+func take_damage():
+	Health.update_health(Health.current_health - 1)
 	if Health.current_health <= 0:
 		print("DEAD!")
-		health_empty.emit()

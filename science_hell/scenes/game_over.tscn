@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bt0wd1fthenhx"]
+[gd_scene load_steps=3 format=3 uid="uid://pl6xqeiienji"]
 
 [ext_resource type="Script" path="res://science_hell/game_over.gd" id="1_vi2en"]
-[ext_resource type="Texture2D" path="res://Joeys level/level/stein.jpeg" id="2_vqfqm"]
+[ext_resource type="Texture2D" uid="uid://cr3n02ee0tkvr" path="res://Joeys level/level/stein.jpeg" id="2_vqfqm"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3

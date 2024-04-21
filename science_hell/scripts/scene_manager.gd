@@ -10,9 +10,12 @@ var scene_node_paths = {
 }
 
 var scene_file_paths = {
+	"titlescreen": "res://science_hell/gui/Title Screen/menu.tscn",
 	"lab": "res://science_hell/scenes/lab.tscn",
 	"sciencehall": "res://science_hell/src_scene/science_hell.tscn",
-	"ivanlevel" : "res://ivan_level/level/level.tscn"
+	"ivanlevel" : "res://ivan_level/level/level.tscn",
+	"char_select": "res://science_hell/gui/char_select/character_select.tscn",
+	"reynoldslevel": "res://Joeys level/level/debug_or_die.tscn",
 }
 
 func _ready():

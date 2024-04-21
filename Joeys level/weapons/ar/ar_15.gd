@@ -8,7 +8,6 @@ func _physics_process(delta):
 		look_at(target_enemy.global_position)
 
 func shoot():
-	print("PEW!")
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %shooting_point.global_position
 	new_bullet.global_rotation = global_rotation
@@ -18,3 +17,11 @@ func shoot():
 	
 	get_tree().current_scene.add_child(new_bullet)
 	new_bullet.play_shoot_animation()
+
+func flip_sprite(flip: bool):
+	if flip:
+		$gun_pivot/ar.flip_h = flip
+	elif not flip:
+		$gun_pivot/ar.flip_h = flip
+	else:
+		push_error("Unknown command in ar_15 script flip spirte func")

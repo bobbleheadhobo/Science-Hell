@@ -12,6 +12,7 @@ collision_mask = 2
 script = ExtResource("1_3wlwo")
 
 [node name="gun_range" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_htgvb")
 
 [node name="gun_pivot" type="Marker2D" parent="."]

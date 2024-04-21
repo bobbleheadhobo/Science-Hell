@@ -1,14 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbfokpod2i55h"]
+[gd_scene load_steps=14 format=3 uid="uid://r3t8r5bbpxof"]
 
 [ext_resource type="Script" path="res://chey/Game.gd" id="1_e0p6v"]
-[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
+[ext_resource type="FontFile" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
 [ext_resource type="Script" path="res://chey/input/Input.gd" id="1_yo6lk"]
 [ext_resource type="Script" path="res://chey/CommandProcessor.gd" id="2_3lrur"]
 [ext_resource type="Script" path="res://chey/Player.gd" id="2_rqjkp"]
-[ext_resource type="PackedScene" uid="uid://bjxq2gn64le60" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
+[ext_resource type="PackedScene" uid="uid://dt4l1fxuxre4u" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
-[ext_resource type="PackedScene" uid="uid://tg2a3ws3eojy" path="res://chey/GameInfo.tscn" id="6_4qxhm"]
-[ext_resource type="PackedScene" uid="uid://b1js2hgip12fo" path="res://chey/SidePanel.tscn" id="9_ymbxp"]
+[ext_resource type="PackedScene" path="res://chey/GameInfo.tscn" id="6_4qxhm"]
+[ext_resource type="PackedScene" path="res://chey/SidePanel.tscn" id="9_ymbxp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dj5n"]
 bg_color = Color(0.0470588, 0.0470588, 0.0470588, 1)

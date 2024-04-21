@@ -2,7 +2,8 @@ extends Node
 
 
 func _ready():
-	MainMenu.stop()
+	MusicManager.play_song("sciencehall")
+	Health.set_visibility(true)
 
 func _process(delta):
 	pass
@@ -21,3 +22,6 @@ func health_example():
 	await get_tree().create_timer(2).timeout
 	Health.update_health(10)
 
+func _on_reynolds_office_body_entered(body):
+		if(body.has_method("player")):
+			SceneManager.change_scene("reynoldslevel")

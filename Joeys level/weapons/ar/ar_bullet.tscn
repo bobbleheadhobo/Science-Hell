@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bwkwy3foqbp3r" path="res://Joeys level/weapons/ar/red_bullets.png" id="2_nuorl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wndl"]
-radius = 7.99995
-height = 23.9927
+radius = 13.0035
+height = 42.0069
 
 [sub_resource type="Animation" id="Animation_amvvr"]
 length = 0.001
@@ -51,13 +51,12 @@ collision_mask = 2
 script = ExtResource("1_6g4as")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-15, 6.82121e-13)
-scale = Vector2(0.413462, 0.481818)
+position = Vector2(-7.25001, -6.375)
 texture = ExtResource("2_nuorl")
 hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-11, 1)
+position = Vector2(-20, -8)
 rotation = -1.57437
 shape = SubResource("CapsuleShape2D_5wndl")
 
