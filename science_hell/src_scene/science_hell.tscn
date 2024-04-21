@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=11 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://science_hell/scripts/entry_level.gd" id="4_biitn"]
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
 [ext_resource type="PackedScene" uid="uid://7v6h4gxmfm50" path="res://science_hell/NPC/NPC.tscn" id="7_fr326"]
+[ext_resource type="PackedScene" uid="uid://dssb1g8pnln1n" path="res://science_hell/scenes/npc spawn/npc_spawn.tscn" id="8_67ep7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
 size = Vector2(61, 20)
@@ -52,6 +53,7 @@ shape = SubResource("RectangleShape2D_ml83q")
 position = Vector2(-575, -517)
 
 [node name="Roof" type="TileMap" parent="Lab"]
+z_index = 3
 position = Vector2(-2, 10)
 tile_set = ExtResource("2_2ycby")
 format = 2
@@ -127,6 +129,8 @@ polygon = PackedVector2Array(-2135, -704, -2304, -704, -2304, -565, -2301, -565,
 
 [node name="NpcReyolds" parent="." instance=ExtResource("7_fr326")]
 position = Vector2(-62, 80)
+
+[node name="NPCSpawn" parent="." instance=ExtResource("8_67ep7")]
 
 [connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]

@@ -36,7 +36,7 @@ var rey_bullet_scene = preload("res://Joeys level/mobs/reynolds_boss/reynolds_bu
 var can_shoot = true
 
 func _ready():
-	$Sprite2D.texture = Characters.set_character("reynolds")
+	$Sprite2D.texture = Characters.set_professor("reynolds")
 	$ProgressBar.value = health
 	
 

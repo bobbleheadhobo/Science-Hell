@@ -4,6 +4,8 @@ extends Node
 func _ready():
 	MusicManager.play_song("sciencehall")
 	Health.set_visibility(true)
+	$NPCSpawn.spawn_unselected_players()
+	
 
 func _process(delta):
 	pass
@@ -25,3 +27,5 @@ func health_example():
 func _on_reynolds_office_body_entered(body):
 		if(body.has_method("player")):
 			SceneManager.change_scene("reynoldslevel")
+
+
