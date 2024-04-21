@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dsbij3axtbtoo"]
+[gd_scene load_steps=33 format=3 uid="uid://dsbij3axtbtoo"]
 
 [ext_resource type="Script" path="res://science_hell/players/hamilton/hero.gd" id="1_33uym"]
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="2_b20jn"]
@@ -261,6 +261,9 @@ states/walk/position = Vector2(403, 154)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_0ende"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_i73g2"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_gxllx")]
 graph_offset = Vector2(133.11, -15.0076)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrf2r"]
+size = Vector2(22, 12)
+
 [node name="hero" type="CharacterBody2D"]
 script = ExtResource("1_33uym")
 
@@ -298,3 +301,10 @@ parameters/idle/TimeScale/scale = 1.0
 parameters/idle/idle_bsd2/blend_position = Vector2(0.00569797, -0.978836)
 parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
+
+[node name="DoorwayDetector" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorwayDetector"]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_xrf2r")

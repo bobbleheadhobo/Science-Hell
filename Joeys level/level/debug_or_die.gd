@@ -2,7 +2,6 @@ extends Node2D
 
 signal boss_spawned(boss_node)
 var max_waves = 4
-#var is_game_over = false
 var current_wave = Rey.current_wave
 var reynolds_scene = preload("res://Joeys level/mobs/reynolds_boss/reynolds.tscn")
 var exit_scene = preload("res://Joeys level/level/exit.tscn")

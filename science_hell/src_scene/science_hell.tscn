@@ -32,7 +32,7 @@ layer_4/tile_data = PackedInt32Array(-458875, 65538, 4, -2359433, 65538, 4, -235
 layer_5/name = "windows"
 layer_5/tile_data = PackedInt32Array(-196719, 6, 536870914, -131183, 6, 536870913, -65647, 6, 536870912, -196718, 65542, 536870914, -131182, 65542, 536870913, -65646, 65542, 536870912, -196717, 131078, 536870914, -131181, 131078, 536870913, -65645, 131078, 536870912, -196714, 6, 536870914, -131178, 6, 536870913, -65642, 6, 536870912, -196713, 65542, 536870914, -131177, 65542, 536870913, -65641, 65542, 536870912, -196712, 131078, 536870914, -131176, 131078, 536870913, -65640, 131078, 536870912, -2621446, 6, 1, -2555910, 6, 2, -2621445, 65542, 1, -2555909, 65542, 2, -2490373, 6, 3, -2424837, 6, 4, -2621444, 65542, 1, -2555908, 65542, 2, -2490372, 65542, 3, -2424836, 65542, 4, -2621443, 131078, 1, -2555907, 131078, 2, -2686982, 6, 0, -2686981, 65542, 0, -2686980, 65542, 0, -2686979, 131078, 0)
 
-[node name="entry_level" parent="." instance=ExtResource("3_3lyxy")]
+[node name="entry_level" parent="." groups=["doorways"] instance=ExtResource("3_3lyxy")]
 script = ExtResource("4_biitn")
 
 [node name="Area2D2" type="Area2D" parent="entry_level"]
@@ -41,7 +41,7 @@ script = ExtResource("4_biitn")
 position = Vector2(-1184.5, 165)
 shape = SubResource("RectangleShape2D_cn771")
 
-[node name="Reynolds office (5)" type="Area2D" parent="."]
+[node name="Reynolds office (5)" type="Area2D" parent="." groups=["doorways"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Reynolds office (5)"]
 position = Vector2(-952, -566)
