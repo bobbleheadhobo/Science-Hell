@@ -14,6 +14,8 @@ func _ready():
 	for child in get_children():
 		if child is Marker2D:
 			spawner_positions.append(child.global_position)
+			
+	
 
 func spawn_mob(mob):
 	if spawner_positions.is_empty():

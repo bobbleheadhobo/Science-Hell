@@ -9,6 +9,7 @@ var exit_scene = preload("res://Joeys level/level/exit.tscn")
 
 func _ready():
 	MusicManager.play_song("reynolds")
+	start_mob_timer()
 
 func _on_progress_bar_progress_bar_full():
 	current_wave = 	Rey.next_wave()
@@ -32,6 +33,7 @@ func _on_progress_bar_progress_bar_full():
 		
 		
 func spawn_reynolds():
+	$Map.delete_npc_reynolds()
 	var reynolds = reynolds_scene.instantiate()
 	reynolds.global_position = $ReynoldsSpawnPoint.global_position
 	reynolds.level_over.connect(self.level_over)
@@ -51,3 +53,8 @@ func kill_all(group_name):
 	var nodes_in_group = get_tree().get_nodes_in_group(group_name)
 	for node in nodes_in_group:
 		node.queue_free()
+
+
+func start_mob_timer():
+	await get_tree().create_timer(8.0).timeout
+	$SpawnMobTimer.start()

@@ -29,7 +29,6 @@ position = Vector2(4157, 3115)
 
 [node name="SpawnMobTimer" type="Timer" parent="."]
 wait_time = 2.0
-autostart = true
 
 [node name="Spawners_container" parent="." instance=ExtResource("7_lrcur")]
 position = Vector2(2023, 1397)
