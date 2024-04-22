@@ -14,7 +14,6 @@ config/name="science-hell"
 run/main_scene="res://science_hell/gui/Title Screen/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<<HEADconfig/name="Parth's Level"
 
 [autoload]
 
@@ -24,7 +23,11 @@ ScaleManager="*res://chey/ScaleManager.gd"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
 Characters="*res://science_hell/gui/char_select/character_select_global.gd"
 MusicManager="*res://science_hell/Music/music_manager_global.gd"
+<<<<<<< HEAD
 Pause="*res://science_hell/gui/Pause/pause.gd"
+=======
+Rey="*res://Joeys level/level/reynolds_global.gd"
+>>>>>>> dev
 
 [display]
 

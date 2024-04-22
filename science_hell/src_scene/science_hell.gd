@@ -4,7 +4,8 @@ extends Node
 var paused = false
 
 func _ready():
-	MusicManager.stop_music()
+	MusicManager.play_song("sciencehall")
+	Health.set_visibility(true)
 
 func _process(delta):
 	if Input.is_action_just_pressed("Pause"):

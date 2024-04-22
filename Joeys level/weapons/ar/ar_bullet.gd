@@ -5,7 +5,7 @@ var direction = Vector2.ZERO
 
 func _physics_process(delta):
 	const SPEED = 700
-	const RANGE = 1200
+	const RANGE = 500
 	
 	position += direction * SPEED * delta
 	
@@ -14,10 +14,9 @@ func _physics_process(delta):
 		queue_free()
 
 func _on_body_entered(body):
-	print("hit")
 	queue_free()
 	if body.has_method("take_damage"):
-		body.take_damage()
+		body.take_damage(global_position)
 
 func play_shoot_animation():
 	%AnimationPlayer.play("pew_pew")
