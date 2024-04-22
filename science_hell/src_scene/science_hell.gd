@@ -6,7 +6,6 @@ func _ready():
 	Health.set_visibility(true)
 	$NPCSpawn.spawn_unselected_players()
 	
-
 func _process(delta):
 	pass
 

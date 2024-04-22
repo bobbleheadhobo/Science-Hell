@@ -27,7 +27,6 @@ var pause_timer = null
 var walk_timer = null
 
 func _ready():
-	$Sprite2D.texture = Characters.set_professor("reynolds")
 	pause_timer = get_tree().create_timer(randf_range(PAUSE_TIME_MIN, PAUSE_TIME_MAX))
 	pause_timer.connect("timeout", _on_pause_timer_timeout)
 	walk_timer = get_tree().create_timer(randf_range(1.0, 3.0))

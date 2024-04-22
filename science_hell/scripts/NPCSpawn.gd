@@ -18,6 +18,7 @@ func spawn_npc(character_sprite: String):
 	# Change the NPC's sprite
 	var sprite_node = npc.get_node("Sprite2D")  # Adjust the node path if necessary
 	sprite_node.texture = Characters.set_character(character_sprite)
+	print(sprite_node)
 
 	# Add the NPC as a child of the Path2D or any other desired parent node
 	add_child(npc)
@@ -26,7 +27,8 @@ func spawn_npc(character_sprite: String):
 func spawn_unselected_players():
 	var characters = Characters.character_sprites
 	if characters.has(Characters.current_sprite):
-		characters.erase(Characters.current_sprite)
+		characters.erase(Characters.current_sprite_key)
+	
 		
 	for key in characters.keys():
 		spawn_npc(key)
