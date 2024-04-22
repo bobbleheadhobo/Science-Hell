@@ -74,3 +74,8 @@ func reset_play() -> void:
 	visible = true 
 	can_control = true
 
+
+func _on_boss_room_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	print("here")
+	print(area)
+	pass # Replace with function body.
