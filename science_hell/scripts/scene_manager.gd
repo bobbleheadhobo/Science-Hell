@@ -10,6 +10,7 @@ var scene_node_paths = {
 }
 
 var scene_file_paths = {
+	"loading": "res://science_hell/gui/loading_screen/loading.tscn",
 	"titlescreen": "res://science_hell/gui/Title Screen/menu.tscn",
 	"lab": "res://science_hell/scenes/lab.tscn",
 	"sciencehall": "res://science_hell/src_scene/science_hell.tscn",
@@ -51,16 +52,56 @@ func reveal_scene(scene_name: String, show_scene: bool, fade_duration: float = 0
 		
 func change_scene(scene_name: String):
 	scene_name = scene_name.to_lower()
-
 	if scene_file_paths.has(scene_name):
 		var new_scene_path = scene_file_paths[scene_name]
-		call_deferred("_deferred_change_scene", new_scene_path)
+		
+		# Show the loading scene
+		var loading_scene = load(scene_file_paths["loading"]).instantiate()
+		get_tree().root.add_child(loading_scene)
+		
+		# Request to load the target scene
+		ResourceLoader.load_threaded_request(new_scene_path)
+		
+		var loading_status = ResourceLoader.THREAD_LOAD_IN_PROGRESS
+		var progress = [0.0]
+		
+		while loading_status == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+			# Update the status
+			loading_status = ResourceLoader.load_threaded_get_status(new_scene_path, progress)
+			
+			# Check the loading status
+			match loading_status:
+				ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+					# Update the progress bar value using the update_progress function
+					loading_scene.update_progress(progress[0] * 2)
+				ResourceLoader.THREAD_LOAD_LOADED:
+					# When done loading, change to the target scene
+					var new_scene = ResourceLoader.load_threaded_get(new_scene_path)
+					
+					# Yield for a frame before changing the scene
+					await get_tree().process_frame
+					
+					# Remove the loading scene and change to the new scene
+					get_tree().root.remove_child(loading_scene)
+					loading_scene.queue_free()
+					call_deferred("_deferred_change_scene", new_scene)
+					return
+				ResourceLoader.THREAD_LOAD_FAILED:
+					# Handle the error
+					print("Error. Could not load Resource")
+					get_tree().root.remove_child(loading_scene)
+					loading_scene.queue_free()
+					return
+			
+			# Yield for a frame to allow the progress bar to update
+			await get_tree().process_frame
 	else:
 		push_error("Scene not found in the dictionary: " + scene_name)
 
-func _deferred_change_scene(new_scene_path):
-	current_scene.free()
-	var new_scene = ResourceLoader.load(new_scene_path)
+func _deferred_change_scene(new_scene):
+	if is_instance_valid(current_scene):
+		current_scene.queue_free()
+	
 	current_scene = new_scene.instantiate()
 	get_tree().root.add_child(current_scene)
 	get_tree().current_scene = current_scene
