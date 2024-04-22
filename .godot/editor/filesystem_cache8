@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713820583
+::res://::1713821630
 icon.svg::CompressedTexture2D::2062727279551925687::1712615007::1713152307::1::::<><>::
 README.md::TextFile::-1::1713152307::0::1::::<><>::
 ::res://chey/::1713152321
@@ -83,7 +83,7 @@ Exit.gd::GDScript::-1::1712944698::0::1::::Exit<>Resource<>::
 GameRoom.gd::GDScript::-1::1712944698::0::1::::GameRoom<>PanelContainer<>::
 GameRoom.tscn::PackedScene::8553431651718980662::1713152307::0::1::::<><>::res://chey/rooms/GameRoom.gd<>uid://c13xce3j37r5h::::res://chey/fonts/IBMPlexMono-Medium.ttf<>uid://b570kmbms8al8::::res://chey/fonts/IBMPlexMono-Regular.ttf
 RoomManager.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-::res://ivan_level/::1713820581
+::res://ivan_level/::1713821626
 ::res://ivan_level/art/::1712615174
 ::res://ivan_level/art/cavesofgallet/::1712635450
 cavesofgallet.png::CompressedTexture2D::42912062964029426::1712615148::1712635450::1::::<><>::
@@ -164,19 +164,20 @@ parth.png::CompressedTexture2D::868378413971246145::1712615148::1712635449::1:::
 rey.png::CompressedTexture2D::5177161850384314910::1712615148::1712635449::1::::<><>::
 roopa.png::CompressedTexture2D::6547604496132604300::1712615148::1712635449::1::::<><>::
 song.png::CompressedTexture2D::4609287494415822809::1712615148::1712635449::1::::<><>::
-::res://ivan_level/Character/::1713820581
+::res://ivan_level/Character/::1713821630
+boss.tscn::PackedScene::2786529270248473673::1713821431::0::1::::<><>::uid://d08fval5knyf6::::res://ivan_level/Obstacles/bugzilla.png
+excaliboard.png::CompressedTexture2D::9099062970481899232::1713821621::1713821631::1::::<><>::
 player.gd::GDScript::-1::1713817305::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::6653582193208225722::1713820577::0::1::::<><>::res://ivan_level/Character/player.gd<>uid://cj5uv30j05olu::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://brf4hhws0f8rf::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jump-End/Jump-End-Sheet.png<>uid://bguryp47eka1w::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jump-Start/Jump-Start-Sheet.png<>uid://bicwppjoc3hmf::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>uid://deli8o01fl1pa::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://b4tmwxa8tq3bl::::res://science_hell/players/joey.png
-boss.tscn::PackedScene::2786529270248473673::1713820474::0::1::::<><>::
+player.tscn::PackedScene::6653582193208225722::1713821530::0::1::::<><>::res://ivan_level/Character/player.gd<>uid://cj5uv30j05olu::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>uid://brf4hhws0f8rf::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jump-End/Jump-End-Sheet.png<>uid://bguryp47eka1w::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jump-Start/Jump-Start-Sheet.png<>uid://bicwppjoc3hmf::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>uid://deli8o01fl1pa::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://b4tmwxa8tq3bl::::res://science_hell/players/joey.png
 ::res://ivan_level/Enemy/::1713820230
 enemy.gd::GDScript::-1::1713816145::0::1::::<>CharacterBody2D<>::
 enemy.tscn::PackedScene::6843193859727963156::1713820230::0::1::::<><>::res://ivan_level/Enemy/enemy.gd<>uid://bo2qpr8ywog6m::::res://ivan_level/Enemy/error_404_enemy_sprite.png
 error_404_enemy_sprite.png::CompressedTexture2D::3425801897773911250::1712615147::1712635449::1::::<><>::
-::res://ivan_level/Level/::1713820239
+::res://ivan_level/Level/::1713821438
 Barrier.gd::GDScript::-1::1713818432::0::1::::<>StaticBody2D<>::
 level.gd::GDScript::-1::1713152307::0::1::::<>Node2D<>::
-level.tscn::PackedScene::7825207237103653099::1713820230::0::1::::<><>::uid://u10xishplp7::::res://ivan_level/art/cavesofgallet/cavesofgallet.png<>res://ivan_level/level/level.gd<>uid://b30akjv8jdvv1::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/18_Jail_16x16.png<>uid://c12br51lomy63::::res://ivan_level/Character/player.tscn<>uid://dpxg68wfwq0vn::::res://ivan_level/art/v.1 sprites/ivan.png<>uid://cmv5r1ldorwn2::::res://ivan_level/Obstacles/danger.tscn<>uid://ryxn4owhj57x::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png<>res://ivan_level/Level/Barrier.gd<>uid://d271derdg4mco::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png<>uid://c4q5nx7enfcl5::::res://ivan_level/Enemy/enemy.tscn
-::res://ivan_level/Obstacles/::1713820729
+level.tscn::PackedScene::7825207237103653099::1713821431::0::1::::<><>::uid://u10xishplp7::::res://ivan_level/art/cavesofgallet/cavesofgallet.png<>res://ivan_level/level/level.gd<>uid://b30akjv8jdvv1::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/18_Jail_16x16.png<>uid://c12br51lomy63::::res://ivan_level/Character/player.tscn<>uid://dpxg68wfwq0vn::::res://ivan_level/art/v.1 sprites/ivan.png<>uid://cmv5r1ldorwn2::::res://ivan_level/Obstacles/danger.tscn<>uid://ryxn4owhj57x::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png<>res://ivan_level/Level/Barrier.gd<>uid://d271derdg4mco::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png<>uid://c4q5nx7enfcl5::::res://ivan_level/Enemy/enemy.tscn<>uid://bfx2y23rer1o4::::res://ivan_level/Character/boss.tscn
+::res://ivan_level/Obstacles/::1713821630
 bugzilla.png::CompressedTexture2D::8982448712919734065::1713820729::1713820730::1::::<><>::
 danger.gd::GDScript::-1::1712777435::0::1::::<>Area2D<>::
 danger.tscn::PackedScene::5660312674912884533::1713820230::0::1::::<><>::res://ivan_level/Obstacles/danger.gd
@@ -316,9 +317,9 @@ heart.gd::GDScript::-1::1712615007::0::1::::<>Panel<>::
 heart.tscn::PackedScene::8273324578383970957::1712786446::0::1::::<><>::res://science_hell/gui/hearts/heart.gd<>uid://dqltrjbmjkojv::::res://science_hell/gui/hearts/HealthUI.png
 hearts_container.gd::GDScript::-1::1712944613::0::1::::<>Node<>::
 hearts_container.tscn::PackedScene::6389855460293442815::1712884726::0::1::::<><>::res://science_hell/gui/hearts/hearts_container.gd
-::res://science_hell/gui/Title Screen/::1713820230
+::res://science_hell/gui/Title Screen/::1713821431
 menu.gd::GDScript::-1::1713152307::0::1::::<>Control<>::
-menu.tscn::PackedScene::6885490853751947605::1713820230::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
+menu.tscn::PackedScene::6885490853751947605::1713821431::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
 title.png::CompressedTexture2D::5213824191632797593::1713152307::1713378185::1::::<><>::
 ::res://science_hell/gui/Title Screen/title/::1713378185
 auto_scroller.gdshader::Shader::-1::1713152307::0::1::::<><>::
@@ -354,6 +355,6 @@ PointLight2D.gd::GDScript::-1::1713742517::0::1::::<>PointLight2D<>::
 scene_manager.gd::GDScript::-1::1713152307::0::1::::<>Node<>::
 ::res://science_hell/singleton/::1712944707
 player_stats.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-::res://science_hell/src_scene/::1713820225
+::res://science_hell/src_scene/::1713821431
 science_hell.gd::GDScript::-1::1713740848::0::1::::<>Node<>::
-science_hell.tscn::PackedScene::2410502229619207928::1713820225::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn<>res://science_hell/scripts/Background.gd<>res://science_hell/scripts/PointLight2D.gd
+science_hell.tscn::PackedScene::2410502229619207928::1713821431::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn<>res://science_hell/scripts/Background.gd<>res://science_hell/scripts/PointLight2D.gd
