@@ -11,8 +11,6 @@ func _physics_process(delta):
 		position += (player.position - position) / speed
 		# Add the gravity.
 		velocity.y += gravity * delta
-	
-		
 
 func _on_detection_area_body_entered(body):
 	player = body

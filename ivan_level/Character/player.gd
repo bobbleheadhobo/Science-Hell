@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var jump_velocity : float = -250.0
 @export var level_start_pos : Node2D 
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
-@onready var GUN = $AR_15
+@onready var GUN = $Excaliboard
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -49,9 +49,11 @@ func update_animation():
 			
 func update_facing_direction():
 	if direction.x > 0:
+		GUN.right()
 		animated_sprite.flip_h = false
 	
 	elif direction.x < 0:
+		GUN.left()
 		animated_sprite.flip_h = true
 		
 		
