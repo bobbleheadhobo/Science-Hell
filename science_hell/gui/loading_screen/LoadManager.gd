@@ -7,6 +7,9 @@ var current_scene
 
 @onready var progress_bar : ProgressBar = $ProgressBar
 
+func _ready():
+	Health.set_visibility(false)
+
 func show_loading_screen(new_scene_path, current):
 	$LoadingScreen.show()
 	ResourceLoader.load_threaded_request(new_scene_path)
@@ -18,6 +21,14 @@ func hide_loading_screen():
 
 func _process(_delta: float) -> void:
 	# Update the status
+	
+	
+	
+	
+	
+	
+	
+	
 	#loading_status = ResourceLoader.load_threaded_get_status(target_scene_path, progress)
 
 	# Check the loading status:
