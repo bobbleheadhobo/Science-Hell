@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://djquaxa4fkpdj"]
+[gd_scene load_steps=23 format=3 uid="uid://djquaxa4fkpdj"]
 
 [ext_resource type="Texture2D" uid="uid://u10xishplp7" path="res://ivan_level/art/cavesofgallet/cavesofgallet.png" id="1_whjnr"]
 [ext_resource type="Script" path="res://ivan_level/level/level.gd" id="1_x5syg"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://ivan_level/Level/Barrier.gd" id="5_ua6qj"]
 [ext_resource type="Texture2D" uid="uid://d271derdg4mco" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png" id="6_qjvsl"]
 [ext_resource type="PackedScene" uid="uid://c4q5nx7enfcl5" path="res://ivan_level/Enemy/enemy.tscn" id="7_d5r0g"]
+[ext_resource type="PackedScene" uid="uid://bfx2y23rer1o4" path="res://ivan_level/Character/boss.tscn" id="7_uxbyg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_moets"]
 texture = ExtResource("1_whjnr")
@@ -3740,6 +3741,7 @@ size = Vector2(1068.5, 354)
 size = Vector2(20, 90)
 
 [node name="level" type="Node2D"]
+position = Vector2(-1, 1)
 script = ExtResource("1_x5syg")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -3804,6 +3806,10 @@ drag_vertical_enabled = true
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../Camera2D")
 
+[node name="Boss" parent="." instance=ExtResource("7_uxbyg")]
+top_level = true
+position = Vector2(5607, 846)
+
 [node name="enemy2" parent="." instance=ExtResource("7_d5r0g")]
 top_level = true
 position = Vector2(393, 91)
@@ -3862,7 +3868,7 @@ position = Vector2(4195, 981)
 
 [node name="Ivan" type="Sprite2D" parent="."]
 top_level = true
-position = Vector2(124, 86)
+position = Vector2(122, 86)
 scale = Vector2(1, 0.84375)
 texture = ExtResource("3_eh1al")
 
