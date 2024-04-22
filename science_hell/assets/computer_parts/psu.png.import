@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvlpvftiv0bpu"
-path="res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"
+uid="uid://cxalf1l3wp180"
+path="res://.godot/imported/psu.png-b51570af5f050e9d1d18ceb1d384b0b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/players/rey.png"
-dest_files=["res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"]
+source_file="res://science_hell/assets/computer_parts/psu.png"
+dest_files=["res://.godot/imported/psu.png-b51570af5f050e9d1d18ceb1d384b0b8.ctex"]
 
 [params]
 

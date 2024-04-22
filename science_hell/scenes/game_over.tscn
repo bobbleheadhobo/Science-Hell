@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://pl6xqeiienji"]
+[gd_scene load_steps=3 format=3 uid="uid://df8yoo6qntmj2"]
 
 [ext_resource type="Script" path="res://science_hell/scripts/game_over.gd" id="1_i5bah"]
 [ext_resource type="Texture2D" uid="uid://cr3n02ee0tkvr" path="res://Joeys level/level/stein.jpeg" id="2_vqfqm"]
