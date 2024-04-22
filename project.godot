@@ -23,7 +23,7 @@ SceneManager="*res://science_hell/scripts/scene_manager.gd"
 
 [display]
 
-window/stretch/scale=4.0
+window/size/mode=3
 
 [input]
 
