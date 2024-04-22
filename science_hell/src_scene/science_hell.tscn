@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=14 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
 [ext_resource type="Script" path="res://science_hell/scripts/Background.gd" id="7_j3ftm"]
 [ext_resource type="Script" path="res://science_hell/scripts/PointLight2D.gd" id="7_oivax"]
+[ext_resource type="PackedScene" uid="uid://51i2c765snsj" path="res://science_hell/gui/Pause/pause.tscn" id="9_yi0ra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
 size = Vector2(61, 20)
@@ -82,6 +83,13 @@ top_level = true
 light_mask = 15
 visibility_layer = 15
 position = Vector2(-25, 55)
+
+[node name="Pause" parent="hero" instance=ExtResource("9_yi0ra")]
+visible = false
+offset_left = -18.0
+offset_top = -33.0
+offset_right = -18.0
+offset_bottom = -33.0
 
 [node name="PointLight2D" type="PointLight2D" parent="hero"]
 position = Vector2(2.38419e-07, -1)

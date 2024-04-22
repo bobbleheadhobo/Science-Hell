@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	var background = $background
+	var background = $Background
 	print(background)
 	pass
 

@@ -1,11 +1,25 @@
 extends Node
 
+@onready var pause_menu = $hero/Pause
+var paused = false
 
 func _ready():
 	MusicManager.stop_music()
 
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("Pause"):
+		pauseMenu()
+
+func pauseMenu():
+	if paused:
+		pause_menu.hide()
+		Engine.time_scale = 1
+	
+	else:
+		pause_menu.show()
+		Engine.time_scale = 0
+	
+	paused = !paused
 
 func health_example():
 	# change health example
