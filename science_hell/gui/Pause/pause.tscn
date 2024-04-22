@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://51i2c765snsj"]
+[gd_scene load_steps=4 format=3 uid="uid://51i2c765snsj"]
 
 [ext_resource type="Script" path="res://science_hell/gui/Pause/pause.gd" id="1_ugv3t"]
+[ext_resource type="Shader" path="res://science_hell/gui/Pause/pause.gdshader" id="2_renuj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xme4p"]
+shader = ExtResource("2_renuj")
+shader_parameter/amount = 0.564
 
 [node name="Pause" type="Control"]
 layout_mode = 3
@@ -10,6 +15,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ugv3t")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_xme4p")
+layout_mode = 0
+offset_left = -7118.0
+offset_top = -3079.0
+offset_right = 7126.0
+offset_bottom = 2931.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
