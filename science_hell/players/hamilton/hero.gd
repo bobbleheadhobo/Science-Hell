@@ -27,7 +27,6 @@ func _ready():
 		position = SceneManager.player_position
 	
 	SceneManager.player_position = position
-	print(is_inside_doorway())
 
 func _physics_process(delta):
 	move_and_animate(delta)

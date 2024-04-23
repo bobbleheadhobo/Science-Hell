@@ -5,8 +5,6 @@ func _ready():
 	MusicManager.play_song("sciencehall")
 	Health.set_visibility(true)
 	$NPCSpawn.spawn_unselected_players()
-	await get_tree().create_timer(5).timeout
-	Health.update_health(0)
 	
 	
 func _process(delta):
