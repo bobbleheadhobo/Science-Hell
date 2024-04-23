@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcydhj6xvvlhr"]
+[gd_scene load_steps=16 format=3 uid="uid://dcydhj6xvvlhr"]
 
 [ext_resource type="Script" path="res://science_hell/gui/char_select/character_select_ui.gd" id="1_a2qq0"]
 [ext_resource type="Texture2D" uid="uid://b6nfnnf1p6j64" path="res://science_hell/gui/char_select/character_corkboard.png" id="2_ulecy"]
@@ -10,6 +10,21 @@
 [ext_resource type="Texture2D" uid="uid://br3b6jujhhvwh" path="res://science_hell/gui/char_select/pat.png" id="8_b2eue"]
 [ext_resource type="Texture2D" uid="uid://d1jt152p86vxq" path="res://science_hell/gui/char_select/joey.png" id="9_i2ctw"]
 [ext_resource type="PackedScene" uid="uid://gncj06nn4srt" path="res://science_hell/gui/char_select/cursor.tscn" id="10_75qk3"]
+[ext_resource type="Texture2D" uid="uid://dvypmr06yvyxx" path="res://science_hell/gui/char_select/cursor/cursor_frames_0001.png" id="11_m1ye1"]
+[ext_resource type="Texture2D" uid="uid://qui7kc4t7gwl" path="res://science_hell/gui/char_select/cursor/cursor_frames_0002.png" id="12_gg0i8"]
+[ext_resource type="Texture2D" uid="uid://dl4vw1nmsu5es" path="res://science_hell/gui/char_select/cursor/cursor_frames_0003.png" id="13_8r7fp"]
+[ext_resource type="Texture2D" uid="uid://brtrup05bistx" path="res://science_hell/gui/char_select/cursor/cursor_frames_0004.png" id="14_eoppy"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_y3ejv"]
+frames = 4
+speed_scale = 6.0
+frame_0/texture = ExtResource("11_m1ye1")
+frame_1/texture = ExtResource("12_gg0i8")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("13_8r7fp")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("14_eoppy")
+frame_3/duration = 1.0
 
 [node name="CharacterSelectUI" type="Control"]
 layout_mode = 3
@@ -193,3 +208,4 @@ offset_left = -0.544006
 offset_top = 0.199997
 offset_right = -0.456024
 offset_bottom = 0.247986
+texture = SubResource("AnimatedTexture_y3ejv")
