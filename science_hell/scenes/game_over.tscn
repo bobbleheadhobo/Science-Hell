@@ -89,6 +89,3 @@ offset_top = 0.0559998
 offset_right = -0.120056
 offset_bottom = -1.04803
 text = "retry"
-
-[connection signal="pressed" from="drop_out" to="." method="_on_drop_out_pressed"]
-[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]

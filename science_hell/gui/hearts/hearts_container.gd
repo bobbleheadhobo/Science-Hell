@@ -67,8 +67,8 @@ func update_health(new_health : int):
 				heart.update_state(heart.Heart_State.EMPTY)
 
 	# show game over
-	#if current_health <= 0 and not is_game_over:
-		#game_over()
+	if current_health <= 0 and not is_game_over:
+		game_over()
 
 func game_over():
 	is_game_over = true
@@ -78,7 +78,8 @@ func game_over():
 	# Connect the button signals using call_deferred
 	dead.call_deferred("connect_buttons")
 	
-	get_tree().paused = true
+	#get_tree().paused = true
+	print(get_tree())
 
 func set_visibility(visible: bool):
 	if visible:
