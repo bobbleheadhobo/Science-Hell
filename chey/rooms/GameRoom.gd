@@ -64,7 +64,7 @@ func get_full_description() -> String:
 
 # room description
 func get_room_description() -> String:
-	return "\n" + "[color=#008080]Location: [/color]" + Types.wrap_location_text(room_name) + "\n" +"[color=#008080]Objective: [/color]" +Types.wrap_main_description(room_description) 
+	return "\n" + "[color=#008080]Location: [/color]" + Types.wrap_location_text(room_name) + "\n" +"[color=#008080]Objective: [/color]" + Types.wrap_main_description(room_description) 
 	
 
 # npc dialog

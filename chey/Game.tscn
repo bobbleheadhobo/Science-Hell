@@ -22,11 +22,10 @@ bg_color = Color(0.752941, 0.752941, 0.752941, 1)
 
 [node name="Game" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
+anchor_right = 1.195
+anchor_bottom = 1.229
+offset_right = -1376.64
+offset_bottom = -796.392
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -34,6 +33,8 @@ size_flags_vertical = 3
 script = ExtResource("1_e0p6v")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+position = Vector2(0, 3)
 anchor_mode = 0
 
 [node name="Player" type="Node" parent="."]
@@ -51,8 +52,7 @@ offset_top = -3273.0
 offset_right = -176.0
 offset_bottom = -3721.0
 room_name = "terminal"
-room_description = "[color=#F5F5DC]Find the item to unlock the door into Stack memory segment.  [/color]
-
+room_description = "[color=#333333]Find the item to unlock the stack memory segment.[/color] 
 [color=#8B0000]Hint: [/color] Try to talk to Duckie."
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
@@ -147,8 +147,8 @@ room_description = "'01000010 01000001 01010010 01000110'"
 
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1376.0
+offset_bottom = 802.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4dj5n")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background"]
@@ -190,6 +190,8 @@ text = " > "
 [node name="Input" type="LineEdit" parent="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_colors/selection_color = Color(0.2, 0.2, 0.2, 1)
 theme_override_fonts/font = ExtResource("1_q34yp")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3srrx")
