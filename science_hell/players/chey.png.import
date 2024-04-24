@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdbwt277qvj7i"
-path="res://.godot/imported/songRock.png-e56d6296455d73173dd909b18b12b929.ctex"
+uid="uid://dpwc21t7e6g8w"
+path="res://.godot/imported/chey.png-8b0c269707d13903d52bf9e1e6d6004b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/players/songRock.png"
-dest_files=["res://.godot/imported/songRock.png-e56d6296455d73173dd909b18b12b929.ctex"]
+source_file="res://science_hell/players/chey.png"
+dest_files=["res://.godot/imported/chey.png-8b0c269707d13903d52bf9e1e6d6004b.ctex"]
 
 [params]
 

@@ -5,6 +5,12 @@ var current_sprite = preload("res://science_hell/players/hamilton/ham.png")
 
 var character_sprites = {
 	"joey": "res://science_hell/players/joey.png",
+	"bianka": "res://science_hell/players/bianka.png",
+	"chey": "res://science_hell/players/chey.png",
+	"jason": "res://science_hell/players/jason.png",
+	"pat": "res://science_hell/players/pat.png",
+	"johnathan": "res://science_hell/players/johnathan.png",
+	"chris": "res://science_hell/players/chris.png",
 	"reynolds": "res://science_hell/players/rey.png"
 }
 
