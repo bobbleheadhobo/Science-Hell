@@ -1,0 +1,15 @@
+res://science_hell/src_scene/science_hell.tscn
+res://addons/dialogic/Editor/Theme/MainTheme.tres
+res://styleTest.tres
+res://science_hell/assets/lvl5_tile_set.tres
+res://level1(jason)/Frames/yellow_button.tres
+res://level1(jason)/Frames/red_button.tres
+res://level1(jason)/Frames/blue_button.tres
+res://level1(jason)/Frames/note_frames.tres
+res://science_hell/assets/main_map_tile_set.tres
+res://science_hell/gui/Title Screen/menu.tscn
+res://science_hell/scenes/entry_level.tscn
+res://science_hell/scenes/game_over.tscn
+res://science_hell/scenes/lab.tscn
+res://science_hell/players/hamilton/player.tscn
+res://level1(jason)/Scenes/Game.tscn

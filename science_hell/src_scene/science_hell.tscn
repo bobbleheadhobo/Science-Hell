@@ -1,4 +1,5 @@
 [gd_scene load_steps=14 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=23 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -9,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
 [ext_resource type="Script" path="res://science_hell/scripts/Background.gd" id="7_j3ftm"]
 [ext_resource type="Script" path="res://science_hell/scripts/PointLight2D.gd" id="7_oivax"]
+[ext_resource type="Script" path="res://science_hell/scripts/Ham_NPC.gd" id="7_gipsd"]
+[ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="8_nd86j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
 size = Vector2(61, 20)
@@ -28,6 +31,96 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 1)
 metadata/_snap_enabled = true
+[sub_resource type="AtlasTexture" id="AtlasTexture_srvtx"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(0, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_813x1"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(32, 96, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euuhu"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blt16"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42qta"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofdwy"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smohl"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(0, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl0u4"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(16, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40mmy"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(32, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrmbe"]
+atlas = ExtResource("8_nd86j")
+region = Rect2(48, 160, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ntjrs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srvtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_813x1")
+}],
+"loop": true,
+"name": &"front_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euuhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blt16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42qta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofdwy")
+}],
+"loop": true,
+"name": &"left_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smohl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl0u4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40mmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrmbe")
+}],
+"loop": true,
+"name": &"right_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_arr8w"]
+radius = 26.9258
 
 [node name="ScienceHell" type="Node2D"]
 script = ExtResource("1_4n0go")
@@ -158,6 +251,21 @@ polygon = PackedVector2Array(-2135, -704, -2304, -704, -2304, -565, -2301, -565,
 modulate = Color(0, 0, 0, 1)
 color = Color(0.894118, 0.894118, 0.894118, 1)
 script = ExtResource("7_j3ftm")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("7_gipsd")
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-62, 51)
+sprite_frames = SubResource("SpriteFrames_ntjrs")
+animation = &"front_idle"
+
+[node name="chatDet" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/chatDet"]
+position = Vector2(-62, 53)
+shape = SubResource("CircleShape2D_arr8w")
 
 [connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
@@ -167,3 +275,5 @@ script = ExtResource("7_j3ftm")
 [connection signal="body_exited" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="Background" method="_on_lab_area_body_exited"]
+[connection signal="body_entered" from="CharacterBody2D/chatDet" to="CharacterBody2D" method="_on_chat_det_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/chatDet" to="CharacterBody2D" method="_on_chat_det_body_exited"]
