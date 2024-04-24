@@ -64,7 +64,7 @@ func get_full_description() -> String:
 
 # room description
 func get_room_description() -> String:
-	return  "You are now in: " + Types.wrap_location_text(room_name) + ". It is " + room_description
+	return  "Location: " + Types.wrap_location_text(room_name) + ". \n" + "Objective: " + room_description
 	
 
 # npc dialog

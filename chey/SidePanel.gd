@@ -11,7 +11,9 @@ extends PanelContainer
 
 func handle_room_changed(new_room):
 	room_name.text = new_room.room_name
-	room_description.text = new_room.room_description
+	
+	
+	#room_description.text = new_room.room_descriptions
 	
 	exit_label.text = new_room.get_exit_description()
 	
