@@ -1,11 +1,14 @@
-[gd_scene load_steps=34 format=3 uid="uid://djdq6pyatghw6"]
+[gd_scene load_steps=38 format=3 uid="uid://djdq6pyatghw6"]
 
 [ext_resource type="Script" path="res://Joeys level/lvl5_player/lvl5_hero.gd" id="1_bgup8"]
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="1_o3wty"]
 [ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="2_l4st2"]
+[ext_resource type="Script" path="res://Joeys level/lvl5_player/ExitArrow.gd" id="4_g2850"]
+[ext_resource type="Texture2D" uid="uid://rjq72cjpf47u" path="res://science_hell/assets/animated_objects/arrow.png" id="5_b5p61"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdvq7"]
-size = Vector2(39, 12)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxiua"]
+radius = 33.0099
+height = 119.991
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -262,9 +265,43 @@ states/walk/position = Vector2(403, 154)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_0ende"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_i73g2"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_gxllx")]
 graph_offset = Vector2(133.11, -15.0076)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxiua"]
-radius = 29.8021
-height = 105.992
+[sub_resource type="Animation" id="Animation_soqgn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arrow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_36fdl"]
+resource_name = "point"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("arrow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sjile"]
+_data = {
+"RESET": SubResource("Animation_soqgn"),
+"point": SubResource("Animation_36fdl")
+}
 
 [node name="Lvl5Player" type="CharacterBody2D"]
 script = ExtResource("1_bgup8")
@@ -277,15 +314,26 @@ hframes = 4
 vframes = 6
 frame = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 60)
-shape = SubResource("RectangleShape2D_fdvq7")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.3, 0.3)
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+rotation = -3.12913
+shape = SubResource("CapsuleShape2D_gxiua")
+
 [node name="AR_15" parent="." instance=ExtResource("2_l4st2")]
 position = Vector2(30, 33)
+
+[node name="hurtbox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 13)
+rotation = 3.15406
+shape = SubResource("CapsuleShape2D_gxiua")
 
 [node name="player" type="Node2D" parent="."]
 
@@ -309,13 +357,21 @@ parameters/idle/idle_bsd2/blend_position = Vector2(0.00569797, -0.978836)
 parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
 
-[node name="hurtbox" type="Area2D" parent="."]
-unique_name_in_owner = true
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+[node name="ExitArrow" type="Marker2D" parent="."]
 visible = false
-position = Vector2(1, 15)
-rotation = 3.15406
-shape = SubResource("CapsuleShape2D_gxiua")
+position = Vector2(-2, 16)
+rotation = 4.695
+script = ExtResource("4_g2850")
+
+[node name="arrow" type="Sprite2D" parent="ExitArrow"]
+position = Vector2(91.9513, 3.59943)
+rotation = 1.59655
+scale = Vector2(2, 2)
+texture = ExtResource("5_b5p61")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ExitArrow"]
+libraries = {
+"": SubResource("AnimationLibrary_sjile")
+}
+speed_scale = 0.5

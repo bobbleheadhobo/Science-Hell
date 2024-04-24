@@ -9,20 +9,23 @@ var invincible = false
 var rng = RandomNumberGenerator.new()
 var mob_id = null
 var is_hurt = false
+var knockback = Vector2.ZERO
 
 
 func _ready():
 	$null_animation.play_walking_animation(1)
 	mob_id = generate_mob_id()
+	add_to_group("mobs")
 	
 
 func _physics_process(delta):
 	if not invincible: #also means if not hurt
-		$null_animation.play_walking_animation(1)	
+		$null_animation.play_walking_animation(1)
 		var direction = global_position.direction_to(player.global_position)
-		velocity = direction * 300.0
+		velocity = direction * 300.0 + knockback
 		move_and_slide()
 		flip_sprite(direction)
+		knockback = lerp(knockback, Vector2.ZERO, 0.1)
 
 func take_damage(damage_location):
 	if invincible:

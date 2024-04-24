@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://df8yoo6qntmj2"]
 
-[ext_resource type="Script" path="res://science_hell/game_over.gd" id="1_vi2en"]
+[ext_resource type="Script" path="res://science_hell/scripts/game_over.gd" id="1_i5bah"]
 [ext_resource type="Texture2D" uid="uid://cr3n02ee0tkvr" path="res://Joeys level/level/stein.jpeg" id="2_vqfqm"]
 
 [node name="GameOver" type="Control"]
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_vi2en")
+script = ExtResource("1_i5bah")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -89,6 +89,3 @@ offset_top = 0.0559998
 offset_right = -0.120056
 offset_bottom = -1.04803
 text = "retry"
-
-[connection signal="pressed" from="drop_out" to="." method="_on_drop_out_pressed"]
-[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]

@@ -13,7 +13,6 @@ config_version=5
 config/name="science-hell"
 run/main_scene="res://science_hell/gui/Title Screen/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -60,7 +59,8 @@ variables={}
 
 [display]
 
-window/stretch/scale=4.0
+window/stretch/mode="canvas_items"
+window/stretch/scale=2.4
 
 [editor_plugins]
 
