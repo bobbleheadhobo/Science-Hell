@@ -13,11 +13,7 @@ collision_mask = 2
 script = ExtResource("1_3wlwo")
 
 [node name="gun_range" type="CollisionShape2D" parent="."]
-<<<<<<< HEAD
 position = Vector2(9, -4)
-=======
-visible = false
->>>>>>> dev
 shape = SubResource("CircleShape2D_htgvb")
 
 [node name="ar" type="Sprite2D" parent="."]
@@ -27,4 +23,4 @@ texture = ExtResource("2_k46aj")
 
 [node name="shooting_point" type="Marker2D" parent="ar"]
 unique_name_in_owner = true
-position = Vector2(135.273, -0.444444)
+position = Vector2(21.8182, -2.22222)

@@ -44,7 +44,6 @@ _data = {
 }
 
 [node name="DuckBullets" type="Area2D"]
-collision_layer = 0
 script = ExtResource("1_kfb0u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

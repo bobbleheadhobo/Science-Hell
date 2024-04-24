@@ -1,16 +1,18 @@
 extends Node2D
 
+signal boss_spawned(boss_node)
 var max_waves = 4
-var is_game_over = false
 var current_wave = Rey.current_wave
+var reynolds_scene = preload("res://Joeys level/mobs/reynolds_boss/reynolds.tscn")
+var exit_scene = preload("res://Joeys level/level/exit.tscn")
 
 
 func _ready():
 	MusicManager.play_song("reynolds")
+	start_mob_timer()
 
 func _on_progress_bar_progress_bar_full():
-	Rey.next_wave()
-	current_wave = Rey.current_wave
+	current_wave = 	Rey.next_wave()
 	if current_wave == 1:
 		$SpawnMobTimer.wait_time = 2
 		$ui/Label.text = "
@@ -23,15 +25,36 @@ func _on_progress_bar_progress_bar_full():
 		$SpawnMobTimer.wait_time = 0.5
 		$ui/Label.text = "
 		wave " + str(current_wave)
-	else:
+	elif current_wave == 4:
 		$ui/Label.text = "
 		FINAL WAVE"
-		spawn_reynolds()
+		$SpawnMobTimer.wait_time = 1
+		call_deferred("spawn_reynolds")
 		
 		
 func spawn_reynolds():
-	var reynolds = load("res://Joeys level/mobs/reynolds_boss/reynolds.tscn").instantiate()
+	$Map.delete_npc_reynolds()
+	var reynolds = reynolds_scene.instantiate()
 	reynolds.global_position = $ReynoldsSpawnPoint.global_position
+	reynolds.level_over.connect(self.level_over)
 	add_child(reynolds)
+	emit_signal("boss_spawned", reynolds)
 	
 	
+func level_over():
+	$ui/Label.text = "
+		YOU WON!"
+	Rey.game_over = true
+	kill_all("mobs")
+	$lvl5_Player.show_arrow()
+	
+
+func kill_all(group_name):
+	var nodes_in_group = get_tree().get_nodes_in_group(group_name)
+	for node in nodes_in_group:
+		node.queue_free()
+
+
+func start_mob_timer():
+	await get_tree().create_timer(8.0).timeout
+	$SpawnMobTimer.start()

@@ -7,6 +7,7 @@ var regular_back = 282828
 
 func _ready():
 	bg.set_color("282828")
+	pass
 
 func _on_lab_area_body_entered(body):
 	if(body.has_method("player")):

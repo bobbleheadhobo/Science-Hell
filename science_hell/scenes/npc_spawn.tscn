@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dssb1g8pnln1n"]
+
+[ext_resource type="Script" path="res://science_hell/scripts/NPCSpawn.gd" id="1_8tt83"]
+
+[sub_resource type="Curve2D" id="Curve2D_hbwdy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1364, -487, 0, 0, 0, 0, -1377, 45, 0, 0, 0, 0, -2188, 58, 0, 0, 0, 0, -2175, -525, 0, 0, 0, 0, -66, -540, 0, 0, 0, 0, -61, 58, 0, 0, 0, 0, -360, 60, 0, 0, 0, 0, -356, 130, 0, 0, 0, 0, -173, 138, 0, 0, 0, 0, -165, 1674, 0, 0, 0, 0, -176, 244, 0, 0, 0, 0, -368, 277, 0, 0, 0, 0, -435, 219, 0, 0, 0, 0, -410, 37, 0, 0, 0, 0, -406, -43, 0, 0, 0, 0, -380, -53, 0, 0, 0, 0, -392, -420, 0, 0, 0, 0, -461, -344, 0, 0, 0, 0, -868, -345, 0, 0, 0, 0, -554, -319, 0, 0, 0, 0, -552, -209, 0, 0, 0, 0, -689, -206, 0, 0, 0, 0, -691, -37, 0, 0, 0, 0, -677, -206, 0, 0, 0, 0, -518, -205, 0, 0, 0, 0, -516, -34, 0, 0, 0, 0, -506, -203, 0, 0, 0, 0, -420, -201, 0, 0, 0, 0, -410, 59, 0, 0, 0, 0, -1349, 45)
+}
+point_count = 30
+
+[node name="NPCSpawn" type="Path2D"]
+curve = SubResource("Curve2D_hbwdy")
+script = ExtResource("1_8tt83")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-1364, -487)
+rotation = 1.59523
+
+[node name="_Timer_184620" type="Timer" parent="PathFollow2D"]
+wait_time = 0.2
+one_shot = true

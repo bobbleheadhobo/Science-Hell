@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d02pbn08lcvxe"]
+[gd_scene load_steps=34 format=3 uid="uid://d02pbn08lcvxe"]
 
 [ext_resource type="Script" path="res://Joeys level/mobs/reynolds_boss/reynolds.gd" id="1_8r87l"]
 [ext_resource type="Texture2D" uid="uid://dvlpvftiv0bpu" path="res://science_hell/players/rey.png" id="2_wx7xm"]
@@ -181,26 +181,26 @@ _data = {
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_7ispw"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v5m71"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7jvj1"]
 animation = &"idle_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xjqfn"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jk4xc"]
 animation = &"idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qdbqg"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p4pq5"]
 animation = &"idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d01td"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mguf2"]
 animation = &"idle_up"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_s5on0"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_v5m71")
+blend_point_0/node = SubResource("AnimationNodeAnimation_7jvj1")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_xjqfn")
+blend_point_1/node = SubResource("AnimationNodeAnimation_jk4xc")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_qdbqg")
+blend_point_2/node = SubResource("AnimationNodeAnimation_p4pq5")
 blend_point_2/pos = Vector2(0, 1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_d01td")
+blend_point_3/node = SubResource("AnimationNodeAnimation_mguf2")
 blend_point_3/pos = Vector2(0, -1)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_j50us"]
@@ -214,26 +214,26 @@ node_connections = [&"TimeScale", 0, &"idle_bsd2", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_hy0yx"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lpsb6"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vmf4c"]
 animation = &"walk_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uta2m"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_whk65"]
 animation = &"walk_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c5esv"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4t1ep"]
 animation = &"walk_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n0cq1"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_581mi"]
 animation = &"walk_down"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_tyoa3"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_lpsb6")
+blend_point_0/node = SubResource("AnimationNodeAnimation_vmf4c")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_uta2m")
+blend_point_1/node = SubResource("AnimationNodeAnimation_whk65")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_c5esv")
+blend_point_2/node = SubResource("AnimationNodeAnimation_4t1ep")
 blend_point_2/pos = Vector2(0, -0.9)
-blend_point_3/node = SubResource("AnimationNodeAnimation_n0cq1")
+blend_point_3/node = SubResource("AnimationNodeAnimation_581mi")
 blend_point_3/pos = Vector2(0, 1)
 blend_mode = 1
 
@@ -261,9 +261,15 @@ states/walk/position = Vector2(403, 154)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_0ende"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_i73g2"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_gxllx")]
 graph_offset = Vector2(133.11, -15.0076)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1sgr"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f30g8"]
+radius = 80.4984
+
 [node name="Reynolds" type="CharacterBody2D"]
-collision_layer = 0
-collision_mask = 0
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_8r87l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -299,3 +305,24 @@ parameters/idle/TimeScale/scale = 1.0
 parameters/idle/idle_bsd2/blend_position = Vector2(0.00569797, -0.978836)
 parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -60.0
+offset_top = -97.0
+offset_right = 67.0
+offset_bottom = -70.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_o1sgr")
+max_value = 30.0
+step = 1.0
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 35)
+shape = SubResource("CircleShape2D_f30g8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

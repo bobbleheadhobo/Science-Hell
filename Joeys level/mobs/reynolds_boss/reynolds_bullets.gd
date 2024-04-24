@@ -19,10 +19,10 @@ func _physics_process(delta):
 		queue_free()
 
 func _on_body_entered(body):
-	print("body entered")
 	queue_free()
 	if body.has_method("take_damage"):
-		body.take_damage()
+		var damage_direction = (body.global_position - global_position).normalized()
+		body.take_damage(damage_direction)
 
 func play_shoot_animation(speed = 1):
 	$AnimationPlayer.play("pew_pew", 1, speed)

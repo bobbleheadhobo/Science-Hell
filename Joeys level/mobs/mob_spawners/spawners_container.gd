@@ -14,6 +14,8 @@ func _ready():
 	for child in get_children():
 		if child is Marker2D:
 			spawner_positions.append(child.global_position)
+			
+	
 
 func spawn_mob(mob):
 	if spawner_positions.is_empty():
@@ -46,9 +48,10 @@ func choose_mob():
 		return mobs[random_key]
 		
 func _on_spawn_mob_timer_timeout():
-	var new_mob = choose_mob()
-	spawn_mob(new_mob)
+	if not Rey.game_over:
+		var new_mob = choose_mob()
+		#var new_mob = mobs["null_nightmare"]
+		spawn_mob(new_mob)
 	
 func _on_mob_killed():
-	print("mob killed")
 	emit_signal("update_progress_mob_killed")

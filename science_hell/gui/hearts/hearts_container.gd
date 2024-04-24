@@ -72,16 +72,27 @@ func update_health(new_health : int):
 
 func game_over():
 	is_game_over = true
+	
+	# Pause the current scene
+	get_tree().paused = true
+
+	
 	var dead = dead_scene.instantiate()
+	# Set the process_mode of the game over screen to PROCESS_MODE_ALWAYS
+	dead.process_mode = Node.PROCESS_MODE_ALWAYS
 	canvas_layer.add_child(dead)
 	
 	# Connect the button signals using call_deferred
 	dead.call_deferred("connect_buttons")
-	
-	get_tree().paused = true
+
 
 func set_visibility(visible: bool):
 	if visible:
 		hearts_container.show()
 	else:
 		hearts_container.hide()
+		
+func reset():
+	current_health = MAX_HEALTH
+	update_health(current_health)
+	is_game_over = false

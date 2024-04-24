@@ -1,8 +1,8 @@
 extends Node2D
 
 func _ready():
-	var background = $Background
-	print(background)
+	#var background = $Background
+	#print(background)
 	pass
 
 func _on_lab_area_body_entered(body):
