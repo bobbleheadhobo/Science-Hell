@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7ila3wr0glx7"]
+[gd_scene load_steps=24 format=3 uid="uid://b7ila3wr0glx7"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://science_hell/scripts/entry_level.gd" id="4_biitn"]
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
 [ext_resource type="Script" path="res://science_hell/scripts/Ham_NPC.gd" id="7_gipsd"]
+[ext_resource type="PackedScene" uid="uid://dssb1g8pnln1n" path="res://science_hell/scenes/npc_spawn.tscn" id="7_xem8p"]
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="8_nd86j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
@@ -163,6 +164,8 @@ top_level = true
 light_mask = 15
 visibility_layer = 15
 position = Vector2(-25, 55)
+
+[node name="NPCSpawn" parent="." instance=ExtResource("7_xem8p")]
 
 [node name="collisionInner" type="StaticBody2D" parent="."]
 
