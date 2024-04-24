@@ -36,6 +36,8 @@ var invincibility_timer = 0.0
 
 func _ready():
 	$Sprite2D.texture = Characters.current_sprite
+	if Rey.game_over:
+		$ExitArrow.show()
 
 func _physics_process(delta):
 	move(delta)

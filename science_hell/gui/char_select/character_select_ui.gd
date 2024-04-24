@@ -24,7 +24,7 @@ func _process(delta):
 		# Calculate the new index by subtracting 1 and wrapping around to the last character if necessary
 		current_index = (current_index - 1 + keys.size()) % keys.size()
 		current_character = keys[current_index]
-		$Cursor.position = CharacterSelect[current_character].position
+		$Cursor.global_position = CharacterSelect[current_character].global_position
 
 	if Input.is_action_just_pressed("move_right"):
 		var keys = CharacterSelect.keys()
@@ -33,7 +33,7 @@ func _process(delta):
 		# Calculate the new index by adding 1 and wrapping around to the last character if necessary
 		current_index = (current_index + 1) % keys.size()
 		current_character = keys[current_index]
-		$Cursor.position = CharacterSelect[current_character].position
+		$Cursor.global_position = CharacterSelect[current_character].global_position
 
 	if Input.is_action_just_pressed("ui_accept"):
 		Characters.change_character_global(current_character)

@@ -27,7 +27,8 @@ Rey="*res://Joeys level/level/reynolds_global.gd"
 
 [display]
 
-window/stretch/scale=4.0
+window/stretch/mode="canvas_items"
+window/stretch/scale=2.4
 
 [editor_plugins]
 
