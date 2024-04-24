@@ -4,6 +4,7 @@ extends Node2D
 var paused = false
 
 func _ready():
+	$Sprite2D.texture = Characters.current_sprite
 	MusicManager.play_song("ivan")
 	
 func _process(delta):
