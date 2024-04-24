@@ -47,80 +47,80 @@ script = ExtResource("2_3lrur")
 script = ExtResource("3_vy8n6")
 
 [node name="TerminalRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 587.0
-offset_top = -3273.0
-offset_right = -176.0
-offset_bottom = -3721.0
+offset_left = 594.0
+offset_top = -3405.0
+offset_right = -169.0
+offset_bottom = -3853.0
 room_name = "terminal"
 room_description = "[color=#333333]Find the item to unlock the stack memory segment.[/color] 
 [color=#8B0000]Hint: [/color] Try to talk to Duckie."
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 589.0
-offset_top = -3045.0
-offset_right = -174.0
-offset_bottom = -3493.0
+offset_left = 586.0
+offset_top = -3023.0
+offset_right = -177.0
+offset_bottom = -3471.0
 room_name = "stack"
-room_description = "stack room"
+room_description = "keep walking down."
 
 [node name="HeapRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 596.0
-offset_top = -2795.0
-offset_right = 985.0
-offset_bottom = -2595.0
+offset_left = 550.0
+offset_top = -2653.0
+offset_right = 1142.0
+offset_bottom = -2307.0
 grow_horizontal = 1
 grow_vertical = 1
 room_name = "heap"
 room_description = "Heap room."
 
 [node name="TextRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 606.0
-offset_top = -2547.0
-offset_right = -157.0
-offset_bottom = -2995.0
+offset_left = 556.0
+offset_top = -2266.0
+offset_right = -207.0
+offset_bottom = -2714.0
 room_name = "text"
 room_description = "text room"
 
 [node name="CodeRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 619.0
-offset_top = -2303.0
-offset_right = -144.0
-offset_bottom = -2751.0
+offset_left = 566.0
+offset_top = -1840.0
+offset_right = -197.0
+offset_bottom = -2288.0
 room_name = "code"
 room_description = "code room"
 
 [node name="CooperRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 1983.0
-offset_top = -2309.0
-offset_right = 1220.0
-offset_bottom = -2757.0
+offset_left = 2442.0
+offset_top = -2266.0
+offset_right = 1679.0
+offset_bottom = -2714.0
 room_name = "cooper 1"
 room_description = "cooper 1 room"
 
 [node name="Cooper2Room" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 1052.0
-offset_top = -3280.0
-offset_right = 289.0
-offset_bottom = -3728.0
+offset_left = 1266.0
+offset_top = -3401.0
+offset_right = 503.0
+offset_bottom = -3849.0
 room_name = "cooper 2"
 room_description = "cooper 2 room with duckie"
 
 [node name="HintRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 144.0
-offset_top = -2546.0
-offset_right = -619.0
-offset_bottom = -2994.0
+offset_left = -92.0
+offset_top = -2225.0
+offset_right = -855.0
+offset_bottom = -2673.0
 room_name = "hint.txt"
 room_description = "hint room"
 
 [node name="BashRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 1059.0
-offset_top = -2300.0
-offset_right = 296.0
-offset_bottom = -2748.0
+offset_left = 1177.0
+offset_top = -2261.0
+offset_right = 414.0
+offset_bottom = -2709.0
 room_name = "bash_profile"
 room_description = "bash room"
 
@@ -128,20 +128,20 @@ room_description = "bash room"
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 1488.0
-offset_top = -3278.0
-offset_right = 1877.0
-offset_bottom = -3078.0
+offset_left = 1923.0
+offset_top = -3388.0
+offset_right = 2344.0
+offset_bottom = -3081.0
 grow_horizontal = 1
 grow_vertical = 1
 room_name = "sh terminal"
 room_description = "sh terminal exit room"
 
 [node name="CodeShRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 1519.0
-offset_top = -2303.0
-offset_right = 756.0
-offset_bottom = -2751.0
+offset_left = 1807.0
+offset_top = -2268.0
+offset_right = 1044.0
+offset_bottom = -2716.0
 room_name = "code.sh"
 room_description = "'01000010 01000001 01010010 01000110'"
 

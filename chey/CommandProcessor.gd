@@ -109,7 +109,7 @@ func drop(second_word: String) -> String:
 			player.drop_item(item)
 			current_room.add_item(item)
 			emit_signal("room_updated", current_room)
-			return "You drop the " + Types.wrap_item_text(item.item_name) + "."
+			return  "You drop the " + Types.wrap_item_text(item.item_name) + "."
 	return "You don't have anything called " + Types.wrap_item_text(second_word) + "."
 	
 
