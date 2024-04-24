@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5fh4tg1oyfpv"
-path="res://.godot/imported/jason.png-5ce155e7f5a109127b7986833c7e32e7.ctex"
+uid="uid://bsj3yf3nkbf7i"
+path="res://.godot/imported/13_Conference_Hall_16x16.png-4293fc74a409b58d916c27d5adc0733f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/gui/char_select/jason.png"
-dest_files=["res://.godot/imported/jason.png-5ce155e7f5a109127b7986833c7e32e7.ctex"]
+source_file="res://science_hell/assets/tiles/13_Conference_Hall_16x16.png"
+dest_files=["res://.godot/imported/13_Conference_Hall_16x16.png-4293fc74a409b58d916c27d5adc0733f.ctex"]
 
 [params]
 

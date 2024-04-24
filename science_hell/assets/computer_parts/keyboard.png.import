@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5fh4tg1oyfpv"
-path="res://.godot/imported/jason.png-5ce155e7f5a109127b7986833c7e32e7.ctex"
+uid="uid://ibilkcrysi2f"
+path="res://.godot/imported/keyboard.png-12511e827f1276ba24314ff68146df25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/gui/char_select/jason.png"
-dest_files=["res://.godot/imported/jason.png-5ce155e7f5a109127b7986833c7e32e7.ctex"]
+source_file="res://science_hell/assets/computer_parts/keyboard.png"
+dest_files=["res://.godot/imported/keyboard.png-12511e827f1276ba24314ff68146df25.ctex"]
 
 [params]
 

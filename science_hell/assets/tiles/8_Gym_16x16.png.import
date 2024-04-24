@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvlpvftiv0bpu"
-path="res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"
+uid="uid://btluuonaqgfoc"
+path="res://.godot/imported/8_Gym_16x16.png-08cfbebd547768616647f555ad51e2a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/players/rey.png"
-dest_files=["res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"]
+source_file="res://science_hell/assets/tiles/8_Gym_16x16.png"
+dest_files=["res://.godot/imported/8_Gym_16x16.png-08cfbebd547768616647f555ad51e2a3.ctex"]
 
 [params]
 

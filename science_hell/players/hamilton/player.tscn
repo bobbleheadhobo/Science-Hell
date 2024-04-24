@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="2_b20jn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dauad"]
-size = Vector2(2.51433, 9.99975)
+size = Vector2(4.99987, 9.99975)
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -262,22 +262,25 @@ transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(133.11, -15.0076)
 
 [node name="hero" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_33uym")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
 texture = ExtResource("2_b20jn")
 hframes = 4
 vframes = 6
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.0589238, 14.2568)
 rotation = -1.56366
 shape = SubResource("RectangleShape2D_dauad")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -12)
 
 [node name="Animate" type="Node2D" parent="."]
+position = Vector2(0, -12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Animate"]
 root_node = NodePath("../..")
