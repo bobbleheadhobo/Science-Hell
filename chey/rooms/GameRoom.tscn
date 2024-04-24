@@ -32,6 +32,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0.501961, 0.501961, 1)
 theme_override_fonts/font = ExtResource("2_3bj8g")
 theme_override_font_sizes/font_size = 18
 text = "This is the description of the room. "

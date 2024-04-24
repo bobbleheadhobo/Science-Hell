@@ -51,9 +51,9 @@ offset_top = -3273.0
 offset_right = -176.0
 offset_bottom = -3721.0
 room_name = "terminal"
-room_description = "Find the item to unlock the door into Stack memory segment. 
+room_description = "[color=#F5F5DC]Find the item to unlock the door into Stack memory segment.  [/color]
 
-Hint: Try to talk to Duckie."
+[color=#8B0000]Hint: [/color] Try to talk to Duckie."
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 offset_left = 589.0

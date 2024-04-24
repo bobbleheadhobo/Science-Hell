@@ -79,7 +79,8 @@ fit_content = true
 [node name="HelpLabel" type="Label" parent="MarginContainer/Rows"]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_color = Color(0.545098, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_his1v")
-text = "Type 'help' to see all possible commands if you get lost."
+text = "
+Type 'help' to see all possible commands if you get lost."
 autowrap_mode = 3
