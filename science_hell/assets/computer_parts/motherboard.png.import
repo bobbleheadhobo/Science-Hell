@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvlpvftiv0bpu"
-path="res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"
+uid="uid://ckgkdc3lv4hjt"
+path="res://.godot/imported/motherboard.png-82eb68133ac5f9a4d5d19e12c2336f7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/players/rey.png"
-dest_files=["res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"]
+source_file="res://science_hell/assets/computer_parts/motherboard.png"
+dest_files=["res://.godot/imported/motherboard.png-82eb68133ac5f9a4d5d19e12c2336f7e.ctex"]
 
 [params]
 
