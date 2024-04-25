@@ -1,12 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714035277
-default_bus_layout.tres::AudioBusLayout::249438139147661180::1714035207::0::1::::<><>::
+::res://::1714036133
 icon.svg::CompressedTexture2D::2062727279551925687::1712875635::1713942791::1::::<><>::
 README.md::TextFile::-1::1713942791::0::1::::<><>::
-::res://chey/::1714035326
+::res://chey/::1714036932
 CommandProcessor.gd::GDScript::-1::1713949361::0::1::::<>Node<>::
-Game.gd::GDScript::-1::1714035325::0::1::::<>Control<>::
-Game.tscn::PackedScene::1252226412310121957::1714035326::0::1::::<><>::res://chey/Game.gd<>uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres<>res://chey/input/Input.gd<>res://chey/CommandProcessor.gd<>uid://baxq406bs2gj3::::res://chey/Roulette (with keycard).wav<>res://chey/Player.gd<>uid://dt4l1fxuxre4u::::res://chey/rooms/GameRoom.tscn<>res://chey/rooms/RoomManager.gd<>uid://tg2a3ws3eojy::::res://chey/GameInfo.tscn<>uid://b1js2hgip12fo::::res://chey/SidePanel.tscn
+Game.gd::GDScript::-1::1714036518::0::1::::<>Control<>::
+Game.tscn::PackedScene::1252226412310121957::1714036932::0::1::::<><>::res://chey/Game.gd<>uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres<>res://chey/input/Input.gd<>res://chey/CommandProcessor.gd<>uid://baxq406bs2gj3::::res://chey/Roulette (with keycard).wav<>res://chey/Player.gd<>uid://dt4l1fxuxre4u::::res://chey/rooms/GameRoom.tscn<>res://chey/rooms/RoomManager.gd<>uid://tg2a3ws3eojy::::res://chey/GameInfo.tscn<>uid://b1js2hgip12fo::::res://chey/SidePanel.tscn
 GameInfo.gd::GDScript::-1::1712888060::0::1::::<>PanelContainer<>::
 GameInfo.tscn::PackedScene::1347615159946598434::1714035030::0::1::::<><>::res://chey/GameInfo.gd<>uid://ddprpkgo0dl1f::::res://chey/main_panel.tres
 icon.svg::CompressedTexture2D::4954327842017481374::1712888060::1712888060::1::::<><>::
@@ -50,41 +49,30 @@ InputHistory.tscn::PackedScene::9012112594461855760::1714035031::0::1::::<><>::u
 InputResponse.gd::GDScript::-1::1712888060::0::1::::<>MarginContainer<>::
 InputResponse.tscn::PackedScene::8149838117064077360::1714035030::0::1::::<><>::res://chey/input/InputResponse.gd<>uid://btbjxhagu7un6::::res://chey/InputHistory.tscn<>uid://thvtpjwkq60x::::res://chey/Response.tscn
 Response.tscn::PackedScene::3488640699986072209::1712888060::0::1::::<><>::uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres
-::res://chey/items/::1713942843
-Bats.tres::Resource/Resource::8074297527905783761::1712888060::0::1::::<><>::res://chey/items/Item.gd
-BugItemCooper1.tres::Resource/Resource::6300144522082991600::1712888060::0::1::::<><>::res://chey/items/Item.gd
-BugToken.tres::Resource/Resource::6954008339252957661::1712888060::0::1::::<><>::res://chey/items/Item.gd
-CooperItemCooper2.tres::Resource/Resource::6297782737239046652::1712888060::0::1::::<><>::res://chey/items/Item.gd
-CooperItemHint.tres::Resource/Resource::6898890370170282985::1712888060::0::1::::<><>::res://chey/items/Item.gd
-DuckieItemBash.tres::Resource/Resource::2124823375548638364::1712888060::0::1::::<><>::res://chey/items/Item.gd
-DuckieItemText.tres::Resource/Resource::3262545712134333708::1712888060::0::1::::<><>::res://chey/items/Item.gd
-DuckieKey.tres::Resource/Resource::9095423467031374518::1712888060::0::1::::<><>::res://chey/items/Item.gd
+::res://chey/items/::1714036701
+BugToken.tres::Resource/Item::6954008339252957661::1714036572::0::1::::<><>::res://chey/items/Item.gd
+DuckieKey.tres::Resource/Resource::-1::1714035657::0::1::::<><>::
 Item.gd::GDScript::-1::1712888060::0::1::::Item<>Resource<>::
-MainItem.tres::Resource/Resource::8463154568082824610::1712888060::0::1::::<><>::res://chey/items/Item.gd
-RoopaItem2.tres::Resource/Resource::1530689844575058928::1712888060::0::1::::<><>::res://chey/items/Item.gd
-RoopaItem3.tres::Resource/Resource::6506412261014269499::1712888060::0::1::::<><>::res://chey/items/Item.gd
-RoopaItem.tres::Resource/Resource::7253277876113043062::1712888060::0::1::::<><>::res://chey/items/Item.gd
-SHItem.tres::Resource/Resource::523395192267387533::1712888060::0::1::::<><>::res://chey/items/Item.gd
-::res://chey/npcs/::1713942843
+hintKey.tres::Resource/Item::5882180580071463929::1714037046::0::1::::<><>::res://chey/items/Item.gd
+RoopaKey.tres::Resource/Item::7791054643208895595::1714036701::0::1::::<><>::res://chey/items/Item.gd
+::res://chey/npcs/::1714036572
 BashDuckie.tres::Resource/Resource::809612668692803719::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://dstu6iwmf04py::::res://chey/items/MainItem.tres
 Bats.tres::Resource/Resource::7290002375791868559::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd
-Bug.tres::Resource/Resource::630601511219067085::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://c6ctrbthu7q66::::res://chey/items/BugToken.tres
-Cooper1Bug.tres::Resource/Resource::5751323847002864024::1712888060::0::1::::<><>::uid://dnbirayf2xopt::::res://chey/items/Bats.tres<>res://chey/npcs/NPC.gd
+Bug.tres::Resource/NPC::630601511219067085::1714036572::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://c6ctrbthu7q66::::res://chey/items/BugToken.tres
 Cooper2.tres::Resource/Resource::388034221959603942::1712888060::0::1::::<><>::uid://cv03pvsu1hrcq::::res://chey/items/BugItemCooper1.tres<>res://chey/npcs/NPC.gd
 Cooper.tres::Resource/Resource::1118637854442053284::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd
 Duckie.tres::Resource/Resource::5807421369049349726::1712889053::0::1::::<><>::res://chey/npcs/NPC.gd
-HintCooper.tres::Resource/Resource::2685262996467593640::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd
-Main.tres::Resource/Resource::4772579614385536418::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://c5j4ymhuhsukf::::res://chey/items/CooperItemHint.tres
+Main.tres::Resource/NPC::4772579614385536418::1714036518::0::1::::<><>::res://chey/npcs/NPC.gd
 NPC.gd::GDScript::-1::1712888060::0::1::::NPC<>Resource<>::
-Roopa.tres::Resource/Resource::8881491229845282061::1712888060::0::1::::<><>::uid://cyx0wogyaq8jf::::res://chey/items/RoopaItem3.tres<>res://chey/npcs/NPC.gd
-SHCooper.tres::Resource/Resource::3505322807037194888::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
+Roopa.tres::Resource/NPC::8881491229845282061::1714036407::0::1::::<><>::uid://djabscvntplfn::::res://chey/items/RoopaKey.tres<>res://chey/npcs/NPC.gd
+SHCooper.tres::Resource/NPC::3505322807037194888::1714036518::0::1::::<><>::res://chey/npcs/NPC.gd
 SHDuckie.tres::Resource/Resource::6831764525343969260::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd
 TextDuckie.tres::Resource/Resource::4336380013863547201::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
-::res://chey/rooms/::1714035325
+::res://chey/rooms/::1714036930
 Exit.gd::GDScript::-1::1712888060::0::1::::Exit<>Resource<>::
-GameRoom.gd::GDScript::-1::1713947422::0::1::::GameRoom<>PanelContainer<>::
+GameRoom.gd::GDScript::-1::1714036518::0::1::::GameRoom<>PanelContainer<>::
 GameRoom.tscn::PackedScene::8553431651718980662::1714035030::0::1::::<><>::res://chey/rooms/GameRoom.gd<>uid://c13xce3j37r5h::::res://chey/fonts/IBMPlexMono-Medium.ttf<>uid://b570kmbms8al8::::res://chey/fonts/IBMPlexMono-Regular.ttf
-RoomManager.gd::GDScript::-1::1714035325::0::1::::<>Node<>::
+RoomManager.gd::GDScript::-1::1714036930::0::1::::<>Node<>::
 ::res://ivan_level/::1713942791
 ::res://ivan_level/art/::1712882263
 ::res://ivan_level/art/cavesofgallet/::1712882263
@@ -321,8 +309,8 @@ hearts_container.tscn::PackedScene::6389855460293442815::1712875635::0::1::::<><
 menu.gd::GDScript::-1::1713942792::0::1::::<>Control<>::
 menu.tscn::PackedScene::6885490853751947605::1714035031::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
 title.png::CompressedTexture2D::5213824191632797593::1713942792::1713942895::1::::<><>::
-::res://science_hell/gui/Title Screen/title/::1714035326
-auto_scroller.gdshader::Shader::-1::1714035326::0::1::::<><>::
+::res://science_hell/gui/Title Screen/title/::1714036932
+auto_scroller.gdshader::Shader::-1::1714036932::0::1::::<><>::
 title_0001.png::CompressedTexture2D::7329108379982739294::1713942792::1713942895::1::::<><>::
 title_0002.png::CompressedTexture2D::7578941715862572790::1713942792::1713942895::1::::<><>::
 title_0003.png::CompressedTexture2D::3879228361960220814::1713942792::1713942895::1::::<><>::

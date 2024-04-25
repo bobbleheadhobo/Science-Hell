@@ -24,17 +24,24 @@ func _ready() -> void:
 	bug.quest_reward = exit
 	
 	# token unlocks heap room from stack room
-	exit  = $HeapRoom.connect_exit_locked("south", $TextRoom)
+	exit  = $HeapRoom.connect_exit_unlocked("south", $TextRoom)
 	
 	# add roopa to heap room
 	var roopa = load_npc("Roopa")
 	$HeapRoom.add_npc(roopa)
-	# add roopa's items to heap room
-	
+	# cooper 2 room
+	exit = $TerminalRoom.connect_exit_locked("east", $Cooper2Room)
+	$Cooper2Room.connect_exit_locked("east", $ExitRoom)
+	var duckieToken = load_item("DuckieToken")
+	var cooper2 = load_npc("Cooper2")
+	$Cooper2Room.add_item(duckieToken)
+	$Cooper2Room.add_npc(cooper2)
 	# texy room
 	$TextRoom.connect_exit_unlocked("south", $CodeRoom)
 	var text_duckie = load_npc("TextDuckie")
 	$TextRoom.add_npc(text_duckie)
+	text_duckie.quest_reward = exit
+	
 	$TextRoom.connect_exit_unlocked("west", $HintRoom)
 	
 	
@@ -43,13 +50,14 @@ func _ready() -> void:
 	var text_cooper = load_npc("Cooper")
 	$HintRoom.add_npc(text_cooper)
 	
+	
 	# code room
-	$CodeRoom.connect_exit_unlocked("east", $BashRoom)
+	exit = $CodeRoom.connect_exit_unlocked("east", $BashRoom)
 	var main = load_npc("Main")
 	$CodeRoom.add_npc(main)
 	
 	# bash room
-	$BashRoom.connect_exit_locked("east", $CodeShRoom)
+	$BashRoom.connect_exit_unlocked("east", $CodeShRoom)
 	var bash_duckie = load_npc("BashDuckie")
 	$BashRoom.add_npc(bash_duckie)
 	
@@ -58,11 +66,7 @@ func _ready() -> void:
 	var bats = load_npc("Bats")
 	$CodeShRoom.add_npc(bats)
 
-	# cooper 2 room
-	$TerminalRoom.connect_exit_locked("east", $Cooper2Room)
-	$Cooper2Room.connect_exit_locked("east", $ExitRoom)
-	var cooper2 = load_npc("Cooper2")
-	$Cooper2Room.add_npc(cooper2)
+
 	
 	# SH terminal Exit room
 	$ExitRoom.connect_exit_locked("west", $Cooper2Room)
@@ -70,6 +74,9 @@ func _ready() -> void:
 	var sh_duckie = load_npc("SHDuckie")
 	$ExitRoom.add_npc(sh_cooper)
 	$ExitRoom.add_npc(sh_duckie)
+	
+	# if quest item recieved to cooper
+	#SceneManager.change_scene('sciencehall')
 	
 	
 	
@@ -81,10 +88,4 @@ func load_item(item_name: String):
 func load_npc(npc_name: String):
 	return load("res://chey/npcs/" + npc_name + ".tres")
 
-#func _enter_tree():
-	## Override the scale for this specific scene
-	#ScaleManager.set_stretch_scale(1.0)
-#
-#func _exit_tree():
-	## Reset the scale to the global setting when leaving the scene
-	#ScaleManager.set_stretch_scale(ScaleManager.original_scale)
+
