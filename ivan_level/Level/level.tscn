@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://djquaxa4fkpdj"]
+[gd_scene load_steps=23 format=3 uid="uid://djquaxa4fkpdj"]
 
 [ext_resource type="Texture2D" uid="uid://u10xishplp7" path="res://ivan_level/art/cavesofgallet/cavesofgallet.png" id="1_whjnr"]
 [ext_resource type="Script" path="res://ivan_level/level/level.gd" id="1_x5syg"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://ryxn4owhj57x" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png" id="5_0el8t"]
 [ext_resource type="Script" path="res://ivan_level/Level/Barrier.gd" id="5_ua6qj"]
 [ext_resource type="Texture2D" uid="uid://d271derdg4mco" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png" id="6_qjvsl"]
-[ext_resource type="PackedScene" uid="uid://51i2c765snsj" path="res://science_hell/gui/Pause/pause.tscn" id="7_4j2o5"]
 [ext_resource type="PackedScene" uid="uid://c4q5nx7enfcl5" path="res://ivan_level/Enemy/enemy.tscn" id="7_d5r0g"]
 [ext_resource type="PackedScene" uid="uid://bfx2y23rer1o4" path="res://ivan_level/Character/boss.tscn" id="7_uxbyg"]
 
@@ -3806,13 +3805,6 @@ drag_vertical_enabled = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../Camera2D")
-
-[node name="Pause" parent="Player" instance=ExtResource("7_4j2o5")]
-visible = false
-offset_left = -36.0
-offset_top = -34.0
-offset_right = -36.0
-offset_bottom = -34.0
 
 [node name="Boss" parent="." instance=ExtResource("7_uxbyg")]
 top_level = true
