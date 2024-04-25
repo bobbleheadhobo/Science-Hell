@@ -1,18 +1,23 @@
 class_name Player
 extends CharacterBody2D
 
-
 @export var speed : float = 200.0
 @export var jump_velocity : float = -250.0
 @export var level_start_pos : Node2D 
-@onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
+@onready var GUN = $Excaliboard
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
+var way : bool = false
 
 var can_control : bool = true
+
+func _ready():
+	print(Characters.current_sprite)
+	$Sprite2D.texture = Characters.current_sprite
 
 func _physics_process(delta):
 	if not can_control: return
@@ -34,24 +39,40 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
 	move_and_slide()
+	shoot()
 	update_animation()
 	update_facing_direction()
 
 func update_animation():
 	if not animation_locked:
 		if direction.x != 0:
-			animated_sprite.play("run")
+			if direction.x > 0:
+				$AnimationPlayer.play("walk_right")
+				way = false
+	
+			elif direction.x < 0:
+				$AnimationPlayer.play("walk_left")
+				way = true
 		
 		else:
-			animated_sprite.play("idle")
-			
+			if way:
+				$AnimationPlayer.play("idle_left")
+			else:
+				$AnimationPlayer.play("idle_right")
+
 func update_facing_direction():
 	if direction.x > 0:
-		animated_sprite.flip_h = false
+		GUN.right()
 	
 	elif direction.x < 0:
-		animated_sprite.flip_h = true
+		GUN.left()
+
+func shoot():
+	if Input.is_action_just_pressed("jump"):
+		if GUN:
+			GUN.shoot()
 		
+
 func handle_danger() -> void:
 	print("Player died")
 	visible = false
@@ -64,4 +85,3 @@ func reset_play() -> void:
 	global_position = Vector2.ZERO
 	visible = true 
 	can_control = true
-

@@ -1,14 +1,10 @@
 extends Node
 
-
 func _ready():
 	MusicManager.play_song("sciencehall")
 	Health.set_visibility(true)
 	$NPCSpawn.spawn_unselected_players()
 	
-	
-func _process(delta):
-	pass
 
 func health_example():
 	# change health example

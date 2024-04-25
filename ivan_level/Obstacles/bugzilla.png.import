@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cct6b5oc41ayo"
-path="res://.godot/imported/icon.svg-df148ab37de8db8b3b5991da23ce8ac1.ctex"
+uid="uid://d08fval5knyf6"
+path="res://.godot/imported/bugzilla.png-34c8bf7a6ddde946353e6301ced1f04a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://chey/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-df148ab37de8db8b3b5991da23ce8ac1.ctex"]
+source_file="res://ivan_level/Obstacles/bugzilla.png"
+dest_files=["res://.godot/imported/bugzilla.png-34c8bf7a6ddde946353e6301ced1f04a.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
