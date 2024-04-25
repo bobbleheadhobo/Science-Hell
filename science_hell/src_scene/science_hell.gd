@@ -1,8 +1,5 @@
 extends Node
 
-@onready var pause_menu = $hero/Pause
-var paused = false
-
 func _ready():
 	MusicManager.play_song("sciencehall")
 	Health.set_visibility(true)

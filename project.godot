@@ -23,7 +23,6 @@ ScaleManager="*res://chey/ScaleManager.gd"
 SceneManager="*res://science_hell/scripts/scene_manager.gd"
 Characters="*res://science_hell/gui/char_select/character_select_global.gd"
 MusicManager="*res://science_hell/Music/music_manager_global.gd"
-Pause="*res://science_hell/gui/Pause/pause.gd"
 Rey="*res://Joeys level/level/reynolds_global.gd"
 UI="*res://science_hell/scripts/ui_manager.gd"
 
