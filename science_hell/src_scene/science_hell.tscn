@@ -178,9 +178,9 @@ polygon = PackedVector2Array(-2135, -704, -2304, -704, -2304, -565, -2301, -565,
 
 [connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
+[connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_entered"]
-[connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
+[connection signal="body_exited" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_exited"]
-[connection signal="body_exited" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_exited"]

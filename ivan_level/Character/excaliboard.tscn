@@ -1,37 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://jtjlr6qc0jv5"]
+[gd_scene load_steps=4 format=3 uid="uid://jtjlr6qc0jv5"]
 
 [ext_resource type="Script" path="res://ivan_level/Character/excaliboard.gd" id="1_67kvc"]
 [ext_resource type="Texture2D" uid="uid://d2vwic25vu4dw" path="res://ivan_level/Character/excaliboard.png" id="1_grpst"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhymt"]
 size = Vector2(26.5, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yfrqg"]
-atlas = ExtResource("1_grpst")
-region = Rect2(0, 12, 32, 12)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6aoux"]
-atlas = ExtResource("1_grpst")
-region = Rect2(0, 0, 32, 12)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_o27yq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yfrqg")
-}],
-"loop": true,
-"name": &"left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6aoux")
-}],
-"loop": true,
-"name": &"right",
-"speed": 5.0
-}]
 
 [node name="Excaliboard" type="Area2D"]
 script = ExtResource("1_67kvc")
@@ -40,6 +13,6 @@ script = ExtResource("1_67kvc")
 position = Vector2(-0.25, -1)
 shape = SubResource("RectangleShape2D_xhymt")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_o27yq")
-animation = &"right"
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_grpst")
+vframes = 2
