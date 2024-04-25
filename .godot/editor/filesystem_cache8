@@ -3,10 +3,10 @@ ea4bc82a6ad023ab7ee23ee620429895
 default_bus_layout.tres::AudioBusLayout::249438139147661180::1714035207::0::1::::<><>::
 icon.svg::CompressedTexture2D::2062727279551925687::1712875635::1713942791::1::::<><>::
 README.md::TextFile::-1::1713942791::0::1::::<><>::
-::res://chey/::1714035229
+::res://chey/::1714035326
 CommandProcessor.gd::GDScript::-1::1713949361::0::1::::<>Node<>::
-Game.gd::GDScript::-1::1714034765::0::1::::<>Control<>::
-Game.tscn::PackedScene::1252226412310121957::1714034920::0::1::::<><>::res://chey/Game.gd<>uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres<>res://chey/input/Input.gd<>res://chey/CommandProcessor.gd<>uid://baxq406bs2gj3::::res://chey/Roulette (with keycard).wav<>res://chey/Player.gd<>uid://dt4l1fxuxre4u::::res://chey/rooms/GameRoom.tscn<>res://chey/rooms/RoomManager.gd<>uid://tg2a3ws3eojy::::res://chey/GameInfo.tscn<>uid://b1js2hgip12fo::::res://chey/SidePanel.tscn
+Game.gd::GDScript::-1::1714035325::0::1::::<>Control<>::
+Game.tscn::PackedScene::1252226412310121957::1714035326::0::1::::<><>::res://chey/Game.gd<>uid://bdvljcad73a63::::res://chey/fonts/plex_mono_28.tres<>res://chey/input/Input.gd<>res://chey/CommandProcessor.gd<>uid://baxq406bs2gj3::::res://chey/Roulette (with keycard).wav<>res://chey/Player.gd<>uid://dt4l1fxuxre4u::::res://chey/rooms/GameRoom.tscn<>res://chey/rooms/RoomManager.gd<>uid://tg2a3ws3eojy::::res://chey/GameInfo.tscn<>uid://b1js2hgip12fo::::res://chey/SidePanel.tscn
 GameInfo.gd::GDScript::-1::1712888060::0::1::::<>PanelContainer<>::
 GameInfo.tscn::PackedScene::1347615159946598434::1714035030::0::1::::<><>::res://chey/GameInfo.gd<>uid://ddprpkgo0dl1f::::res://chey/main_panel.tres
 icon.svg::CompressedTexture2D::4954327842017481374::1712888060::1712888060::1::::<><>::
@@ -14,7 +14,7 @@ InputHistory.tscn::PackedScene::3722660984728558505::1713943651::0::1::::<><>::u
 main_panel.tres::StyleBoxFlat::7401853759261864077::1713947938::0::1::::<><>::
 Player.gd::GDScript::-1::1712888060::0::1::::<>Node<>::
 Response.tscn::PackedScene::1349348463100422661::1713943651::0::1::::<><>::uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
-Roulette (with keycard).wav::AudioStreamWAV::2434925992987229758::1714034577::1714035108::1::::<><>::
+Roulette (with keycard).wav::AudioStreamWAV::2434925992987229758::1714034577::1714035393::1::::<><>::
 ScaleManager.gd::GDScript::-1::1712888060::0::1::::<>Node<>::
 SidePanel.gd::GDScript::-1::1713945290::0::1::::<>PanelContainer<>::
 SidePanel.tscn::PackedScene::4231051517690568804::1714035030::0::1::::<><>::uid://ddprpkgo0dl1f::::res://chey/main_panel.tres<>res://chey/SidePanel.gd<>uid://dv81judasubyo::::res://chey/fonts/retro_computer_personal_use.ttf
@@ -80,11 +80,11 @@ Roopa.tres::Resource/Resource::8881491229845282061::1712888060::0::1::::<><>::ui
 SHCooper.tres::Resource/Resource::3505322807037194888::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
 SHDuckie.tres::Resource/Resource::6831764525343969260::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd
 TextDuckie.tres::Resource/Resource::4336380013863547201::1712888060::0::1::::<><>::res://chey/npcs/NPC.gd<>uid://hpsiifh5g2k4::::res://chey/items/SHItem.tres
-::res://chey/rooms/::1714035030
+::res://chey/rooms/::1714035325
 Exit.gd::GDScript::-1::1712888060::0::1::::Exit<>Resource<>::
 GameRoom.gd::GDScript::-1::1713947422::0::1::::GameRoom<>PanelContainer<>::
 GameRoom.tscn::PackedScene::8553431651718980662::1714035030::0::1::::<><>::res://chey/rooms/GameRoom.gd<>uid://c13xce3j37r5h::::res://chey/fonts/IBMPlexMono-Medium.ttf<>uid://b570kmbms8al8::::res://chey/fonts/IBMPlexMono-Regular.ttf
-RoomManager.gd::GDScript::-1::1714034765::0::1::::<>Node<>::
+RoomManager.gd::GDScript::-1::1714035325::0::1::::<>Node<>::
 ::res://ivan_level/::1713942791
 ::res://ivan_level/art/::1712882263
 ::res://ivan_level/art/cavesofgallet/::1712882263
@@ -321,8 +321,8 @@ hearts_container.tscn::PackedScene::6389855460293442815::1712875635::0::1::::<><
 menu.gd::GDScript::-1::1713942792::0::1::::<>Control<>::
 menu.tscn::PackedScene::6885490853751947605::1714035031::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
 title.png::CompressedTexture2D::5213824191632797593::1713942792::1713942895::1::::<><>::
-::res://science_hell/gui/Title Screen/title/::1714035246
-auto_scroller.gdshader::Shader::-1::1714035246::0::1::::<><>::
+::res://science_hell/gui/Title Screen/title/::1714035326
+auto_scroller.gdshader::Shader::-1::1714035326::0::1::::<><>::
 title_0001.png::CompressedTexture2D::7329108379982739294::1713942792::1713942895::1::::<><>::
 title_0002.png::CompressedTexture2D::7578941715862572790::1713942792::1713942895::1::::<><>::
 title_0003.png::CompressedTexture2D::3879228361960220814::1713942792::1713942895::1::::<><>::
