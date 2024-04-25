@@ -64,25 +64,6 @@ layer_4/tile_data = PackedInt32Array(-458875, 65538, 4, -2359433, 65538, 4, -235
 layer_5/name = "windows"
 layer_5/tile_data = PackedInt32Array(-196719, 6, 536870914, -131183, 6, 536870913, -65647, 6, 536870912, -196718, 65542, 536870914, -131182, 65542, 536870913, -65646, 65542, 536870912, -196717, 131078, 536870914, -131181, 131078, 536870913, -65645, 131078, 536870912, -196714, 6, 536870914, -131178, 6, 536870913, -65642, 6, 536870912, -196713, 65542, 536870914, -131177, 65542, 536870913, -65641, 65542, 536870912, -196712, 131078, 536870914, -131176, 131078, 536870913, -65640, 131078, 536870912, -2621446, 6, 1, -2555910, 6, 2, -2621445, 65542, 1, -2555909, 65542, 2, -2490373, 6, 3, -2424837, 6, 4, -2621444, 65542, 1, -2555908, 65542, 2, -2490372, 65542, 3, -2424836, 65542, 4, -2621443, 131078, 1, -2555907, 131078, 2, -2686982, 6, 0, -2686981, 65542, 0, -2686980, 65542, 0, -2686979, 131078, 0)
 
-[node name="entry_level" parent="." groups=["doorways"] instance=ExtResource("3_3lyxy")]
-script = ExtResource("4_biitn")
-
-[node name="Area2D2" type="Area2D" parent="entry_level"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="entry_level/Area2D2"]
-position = Vector2(-1184.5, 165)
-shape = SubResource("RectangleShape2D_cn771")
-
-[node name="Reynolds office (5)" type="Area2D" parent="." groups=["doorways"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Reynolds office (5)"]
-position = Vector2(-952, -566)
-shape = SubResource("RectangleShape2D_ml83q")
-
-[node name="NPCSpawn" parent="." instance=ExtResource("5_0iuht")]
-visible = false
-position = Vector2(-25, 55)
-
 [node name="Lab" parent="." instance=ExtResource("4_ds2d8")]
 position = Vector2(-575, -517)
 
@@ -99,6 +80,24 @@ position = Vector2(312, 13)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lab/LabArea"]
 visible = false
 polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, -152, 493, -152, 519, -137, 520, -137, 493, -4, 492)
+
+[node name="entry_level" parent="." groups=["doorways"] instance=ExtResource("3_3lyxy")]
+script = ExtResource("4_biitn")
+
+[node name="Area2D2" type="Area2D" parent="entry_level"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entry_level/Area2D2"]
+position = Vector2(-1184.5, 165)
+shape = SubResource("RectangleShape2D_cn771")
+
+[node name="Reynolds office (5)" type="Area2D" parent="." groups=["doorways"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reynolds office (5)"]
+position = Vector2(-952, -566)
+shape = SubResource("RectangleShape2D_ml83q")
+
+[node name="NPCSpawn" parent="." instance=ExtResource("5_0iuht")]
+position = Vector2(-25, 55)
 
 [node name="hero" parent="." instance=ExtResource("1_ppq3m")]
 top_level = true
@@ -168,11 +167,11 @@ polygon = PackedVector2Array(-84, -672, -16, -672, -16, -640, 112, -640, 112, -2
 [node name="wall6" type="CollisionPolygon2D" parent="collisionOuter"]
 polygon = PackedVector2Array(-2135, -704, -2304, -704, -2304, -565, -2301, -565, -2297, -565, -2206, -565, -2206, -560, -352, -560, -352, -576, -336, -576, -336, -560, -224, -560, -224, -576, -160, -576, -160, -594, -160, -612, -145, -612, -128, -612, -128, -576, -96, -576, -96, -624, -87, -624, -87, -627, -96, -627, -96, -666, -96, -668.875, -84, -669, -84, -672, -112, -672, -112, -624, -160, -624, -160, -736, -416, -736, -416, -704, -2132, -704, -2132, -698, -409, -698, -409, -730, -167, -730, -167, -624, -231, -624, -231, -608, -329, -608, -329, -624, -359, -624, -359, -608, -2297, -608, -2297, -698, -2135, -698)
 
-[connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
-[connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_entered"]
 [connection signal="body_exited" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_exited"]
+[connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
