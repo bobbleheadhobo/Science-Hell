@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=14 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
 [ext_resource type="TileSet" uid="uid://rru2hagpatg1" path="res://science_hell/assets/main_map_tile_set.tres" id="2_2ycby"]
-[ext_resource type="PackedScene" uid="uid://51i2c765snsj" path="res://science_hell/gui/Pause/pause.tscn" id="2_w05bu"]
 [ext_resource type="PackedScene" uid="uid://dq4wkwge4my22" path="res://science_hell/scenes/entry_level.tscn" id="3_3lyxy"]
 [ext_resource type="Script" path="res://science_hell/scripts/entry_level.gd" id="4_biitn"]
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
@@ -113,13 +112,6 @@ scale = Vector2(0.771856, 0.71875)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_debcs")
 script = ExtResource("7_oivax")
-
-[node name="Pause" parent="hero" instance=ExtResource("2_w05bu")]
-visible = false
-offset_left = -36.0
-offset_top = -34.0
-offset_right = -36.0
-offset_bottom = -34.0
 
 [node name="collisionInner" type="StaticBody2D" parent="."]
 

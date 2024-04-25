@@ -8,21 +8,6 @@ func _ready():
 	Health.set_visibility(true)
 	$NPCSpawn.spawn_unselected_players()
 	
-	
-func _process(delta):
-	if Input.is_action_just_pressed("Pause"):
-		pauseMenu()
-
-func pauseMenu():
-	if paused:
-		pause_menu.hide()
-		Engine.time_scale = 1
-	
-	else:
-		pause_menu.show()
-		Engine.time_scale = 0
-	
-	paused = !paused
 
 func health_example():
 	# change health example
