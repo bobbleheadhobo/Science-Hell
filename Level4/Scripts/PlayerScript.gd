@@ -25,8 +25,8 @@ var stompForce = 400
 
 # function used to set up camera properly
 func _ready():
-	camera.zoom.x = 8
-	camera.zoom.y = 8
+	camera.zoom.x = 3
+	camera.zoom.y = 3
 	
 	# add Player to colliding list
 	add_to_group("Player")
