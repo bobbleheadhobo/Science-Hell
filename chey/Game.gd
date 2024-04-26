@@ -25,7 +25,7 @@ func _ready() -> void:
 	var starting_room_response = command_processor.intialize(room_manager.get_child(0), player)
 	game_info.create_response(starting_room_response)
 	
-	#camera.zoom = Vector2(-0.25, -0.25) # Since 1/4 is the inverse of 4, if the global scale is 4
+	camera.zoom = Vector2(0.25, 0.25) # Since 1/4 is the inverse of 4, if the global scale is 4
 	
   
 # PRE param is text entered by player

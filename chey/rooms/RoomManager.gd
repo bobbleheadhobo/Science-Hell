@@ -29,21 +29,22 @@ func _ready() -> void:
 	# add roopa to heap room
 	var roopa = load_npc("Roopa")
 	$HeapRoom.add_npc(roopa)
-	# cooper 2 room
-	exit = $TerminalRoom.connect_exit_locked("east", $Cooper2Room)
-	$Cooper2Room.connect_exit_locked("east", $ExitRoom)
-	var duckieToken = load_item("DuckieToken")
-	var cooper2 = load_npc("Cooper2")
-	$Cooper2Room.add_item(duckieToken)
-	$Cooper2Room.add_npc(cooper2)
+
 	# texy room
 	$TextRoom.connect_exit_unlocked("south", $CodeRoom)
 	var text_duckie = load_npc("TextDuckie")
 	$TextRoom.add_npc(text_duckie)
-	text_duckie.quest_reward = exit
+	#text_duckie.quest_reward = exit
 	
 	$TextRoom.connect_exit_unlocked("west", $HintRoom)
 	
+	# cooper 2 room
+	exit = $TerminalRoom.connect_exit_locked("east", $Cooper2Room)
+	$Cooper2Room.connect_exit_locked("east", $ExitRoom)
+	#var duckieToken = load_item("DuckieToken")
+	var cooper2 = load_npc("Cooper2")
+	#$Cooper2Room.add_item(duckieToken)
+	$Cooper2Room.add_npc(cooper2)
 	
 	# hint room
 	$HintRoom.connect_exit_unlocked("east", $TextRoom)

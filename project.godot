@@ -29,6 +29,7 @@ MusicManager="*res://science_hell/Music/music_manager_global.gd"
 
 window/size/viewport_width=1376
 window/size/viewport_height=802
+window/stretch/scale=4.0
 
 [editor_plugins]
 
