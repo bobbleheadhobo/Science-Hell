@@ -148,8 +148,8 @@ room_description = "'01000010 01000001 01010010 01000110'"
 
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_right = 1376.0
-offset_bottom = 802.0
+offset_right = 1152.0
+offset_bottom = 648.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4dj5n")
 
 [node name="MarginContainer" type="MarginContainer" parent="Background"]
