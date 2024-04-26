@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c72s6d0ywt0l6"
-path="res://.godot/imported/hallways.png-7f0a6855ce041fa246149ad35864fc2a.ctex"
+path="res://.godot/imported/hallways.png-9628cf9d6f8bf5025b4642e006b94440.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles_main_map/hallways.png"
-dest_files=["res://.godot/imported/hallways.png-7f0a6855ce041fa246149ad35864fc2a.ctex"]
+source_file="res://science_hell/assets/tiles/tiles_main_map/hallways.png"
+dest_files=["res://.godot/imported/hallways.png-9628cf9d6f8bf5025b4642e006b94440.ctex"]
 
 [params]
 

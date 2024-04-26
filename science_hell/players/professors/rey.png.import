@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br5s0p8bwuknj"
-path="res://.godot/imported/Room_Builder_16x16.png-c93a8c5a3e06db4b778ee127186318d5.ctex"
+uid="uid://dvlpvftiv0bpu"
+path="res://.godot/imported/rey.png-dfd60fc806d375096f82c10185dc57ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png"
-dest_files=["res://.godot/imported/Room_Builder_16x16.png-c93a8c5a3e06db4b778ee127186318d5.ctex"]
+source_file="res://science_hell/players/professors/rey.png"
+dest_files=["res://.godot/imported/rey.png-dfd60fc806d375096f82c10185dc57ea.ctex"]
 
 [params]
 

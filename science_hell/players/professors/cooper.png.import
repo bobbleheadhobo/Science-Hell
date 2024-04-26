@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf52kowwh8t2h"
-path="res://.godot/imported/courtyard2.png-877a1822b07067ef1c3c94bd186bf512.ctex"
+uid="uid://dnk1u2bsy8vuq"
+path="res://.godot/imported/cooper.png-9b8a33b9aacf1f204452041517a2ae2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles_main_map/courtyard2.png"
-dest_files=["res://.godot/imported/courtyard2.png-877a1822b07067ef1c3c94bd186bf512.ctex"]
+source_file="res://science_hell/players/professors/cooper.png"
+dest_files=["res://.godot/imported/cooper.png-9b8a33b9aacf1f204452041517a2ae2c.ctex"]
 
 [params]
 

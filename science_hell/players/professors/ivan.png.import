@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqvm4sgjbdqvh"
-path="res://.godot/imported/19_Hospital_16x16.png-c60fc628d42ae6430ccf743d284cd254.ctex"
+uid="uid://blf07cw515ji1"
+path="res://.godot/imported/ivan.png-7d56c160739af9fa94718634d1dd3799.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png"
-dest_files=["res://.godot/imported/19_Hospital_16x16.png-c60fc628d42ae6430ccf743d284cd254.ctex"]
+source_file="res://science_hell/players/professors/ivan.png"
+dest_files=["res://.godot/imported/ivan.png-7d56c160739af9fa94718634d1dd3799.ctex"]
 
 [params]
 
