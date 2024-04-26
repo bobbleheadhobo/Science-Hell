@@ -1,10 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://dsbij3axtbtoo"]
+[gd_scene load_steps=33 format=3 uid="uid://dsbij3axtbtoo"]
 
 [ext_resource type="Script" path="res://science_hell/players/hamilton/hero.gd" id="1_33uym"]
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="2_b20jn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dauad"]
-size = Vector2(2.51433, 9.99975)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbckc"]
+radius = 3.0
+height = 14.0
 
 [sub_resource type="Animation" id="Animation_ebwg5"]
 length = 0.5
@@ -181,26 +182,26 @@ _data = {
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_7ispw"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vyxoi"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6xk3m"]
 animation = &"idle_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fi26b"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pluuo"]
 animation = &"idle_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pbdb2"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yk1jn"]
 animation = &"idle_down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1g518"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ce68b"]
 animation = &"idle_up"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_s5on0"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_vyxoi")
+blend_point_0/node = SubResource("AnimationNodeAnimation_6xk3m")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_fi26b")
+blend_point_1/node = SubResource("AnimationNodeAnimation_pluuo")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_pbdb2")
+blend_point_2/node = SubResource("AnimationNodeAnimation_yk1jn")
 blend_point_2/pos = Vector2(0, 1)
-blend_point_3/node = SubResource("AnimationNodeAnimation_1g518")
+blend_point_3/node = SubResource("AnimationNodeAnimation_ce68b")
 blend_point_3/pos = Vector2(0, -1)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_j50us"]
@@ -214,26 +215,26 @@ node_connections = [&"TimeScale", 0, &"idle_bsd2", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_hy0yx"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i1yn3"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cxana"]
 animation = &"walk_left"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kblcu"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uww5q"]
 animation = &"walk_right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_r23ic"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ip7ef"]
 animation = &"walk_up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l35u6"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e4ubp"]
 animation = &"walk_down"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_tyoa3"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_i1yn3")
+blend_point_0/node = SubResource("AnimationNodeAnimation_cxana")
 blend_point_0/pos = Vector2(-1, 0)
-blend_point_1/node = SubResource("AnimationNodeAnimation_kblcu")
+blend_point_1/node = SubResource("AnimationNodeAnimation_uww5q")
 blend_point_1/pos = Vector2(1, 0)
-blend_point_2/node = SubResource("AnimationNodeAnimation_r23ic")
+blend_point_2/node = SubResource("AnimationNodeAnimation_ip7ef")
 blend_point_2/pos = Vector2(0, -0.9)
-blend_point_3/node = SubResource("AnimationNodeAnimation_l35u6")
+blend_point_3/node = SubResource("AnimationNodeAnimation_e4ubp")
 blend_point_3/pos = Vector2(0, 1)
 blend_mode = 1
 
@@ -261,6 +262,9 @@ states/walk/position = Vector2(403, 154)
 transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_0ende"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_i73g2"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_gxllx")]
 graph_offset = Vector2(133.11, -15.0076)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrf2r"]
+size = Vector2(22, 12)
+
 [node name="hero" type="CharacterBody2D"]
 script = ExtResource("1_33uym")
 
@@ -271,9 +275,9 @@ vframes = 6
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.0589238, 14.2568)
-rotation = -1.56366
-shape = SubResource("RectangleShape2D_dauad")
+position = Vector2(0, 13)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hbckc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -298,3 +302,10 @@ parameters/idle/TimeScale/scale = 1.0
 parameters/idle/idle_bsd2/blend_position = Vector2(0.00569797, -0.978836)
 parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
+
+[node name="DoorwayDetector" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorwayDetector"]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_xrf2r")

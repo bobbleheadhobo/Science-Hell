@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dcydhj6xvvlhr"]
+[gd_scene load_steps=16 format=3 uid="uid://dcydhj6xvvlhr"]
 
 [ext_resource type="Script" path="res://science_hell/gui/char_select/character_select_ui.gd" id="1_a2qq0"]
 [ext_resource type="Texture2D" uid="uid://b6nfnnf1p6j64" path="res://science_hell/gui/char_select/character_corkboard.png" id="2_ulecy"]
@@ -10,6 +10,21 @@
 [ext_resource type="Texture2D" uid="uid://br3b6jujhhvwh" path="res://science_hell/gui/char_select/pat.png" id="8_b2eue"]
 [ext_resource type="Texture2D" uid="uid://d1jt152p86vxq" path="res://science_hell/gui/char_select/joey.png" id="9_i2ctw"]
 [ext_resource type="PackedScene" uid="uid://gncj06nn4srt" path="res://science_hell/gui/char_select/cursor.tscn" id="10_75qk3"]
+[ext_resource type="Texture2D" uid="uid://dvypmr06yvyxx" path="res://science_hell/gui/char_select/cursor/cursor_frames_0001.png" id="11_m1ye1"]
+[ext_resource type="Texture2D" uid="uid://qui7kc4t7gwl" path="res://science_hell/gui/char_select/cursor/cursor_frames_0002.png" id="12_gg0i8"]
+[ext_resource type="Texture2D" uid="uid://dl4vw1nmsu5es" path="res://science_hell/gui/char_select/cursor/cursor_frames_0003.png" id="13_8r7fp"]
+[ext_resource type="Texture2D" uid="uid://brtrup05bistx" path="res://science_hell/gui/char_select/cursor/cursor_frames_0004.png" id="14_eoppy"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_y3ejv"]
+frames = 4
+speed_scale = 6.0
+frame_0/texture = ExtResource("11_m1ye1")
+frame_1/texture = ExtResource("12_gg0i8")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("13_8r7fp")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("14_eoppy")
+frame_3/duration = 1.0
 
 [node name="CharacterSelectUI" type="Control"]
 layout_mode = 3
@@ -50,6 +65,23 @@ offset_bottom = 0.247986
 texture = ExtResource("9_i2ctw")
 expand_mode = 3
 
+[node name="Label" type="Label" parent="Control1/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -9.0
+offset_top = -10.0
+offset_right = 9.0
+offset_bottom = 2.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 5
+text = "Joey"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="Control2" type="Control" parent="."]
 layout_mode = 1
 anchor_right = 1.0
@@ -72,6 +104,23 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_03wug")
 
+[node name="Label" type="Label" parent="Control2/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -14.3549
+offset_top = -9.0
+offset_right = 15.6451
+offset_bottom = 3.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 5
+text = "Bianka"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="Control3" type="Control" parent="."]
 layout_mode = 1
 anchor_right = 1.0
@@ -82,17 +131,34 @@ offset_bottom = 0.959858
 [node name="TextureRect" type="TextureRect" parent="Control3"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.546
-anchor_top = 0.229
+anchor_left = 0.547
+anchor_top = 0.23
 anchor_right = 0.672
-anchor_bottom = 0.421
-offset_left = 1.45398
-offset_top = 1.53659
-offset_right = -0.67218
-offset_bottom = 1.40857
+anchor_bottom = 0.426
+offset_left = 0.30896
+offset_top = -0.111725
+offset_right = 0.18396
+offset_bottom = -0.180847
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_vrdbw")
+
+[node name="Label" type="Label" parent="Control3/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 2.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 5
+text = "Chey"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Control4" type="Control" parent="."]
 layout_mode = 1
@@ -104,17 +170,34 @@ offset_bottom = 0.959839
 [node name="TextureRect" type="TextureRect" parent="Control4"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.749
-anchor_top = 0.221
-anchor_right = 0.874
-anchor_bottom = 0.412
-offset_left = 0.250977
-offset_top = -0.939026
-offset_right = 1.12598
-offset_bottom = 0.891937
+anchor_left = 0.747
+anchor_top = 0.23
+anchor_right = 0.873
+anchor_bottom = 0.424
+offset_left = -0.291016
+offset_top = -0.111725
+offset_right = -0.569031
+offset_bottom = -0.225708
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("8_b2eue")
+
+[node name="Label" type="Label" parent="Control4/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 2.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 5
+text = "Pat"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Control5" type="Control" parent="."]
 layout_mode = 1
@@ -126,10 +209,10 @@ offset_bottom = 0.959839
 [node name="TextureRect" type="TextureRect" parent="Control5"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.227
-anchor_top = 0.6
-anchor_right = 0.352
-anchor_bottom = 0.792
+anchor_left = 0.22743
+anchor_top = 0.586755
+anchor_right = 0.35243
+anchor_bottom = 0.778755
 offset_left = -1.22705
 offset_top = 0.599945
 offset_right = -0.352081
@@ -138,6 +221,23 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("6_bn3f5")
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control5/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 2.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 5
+text = "Jason"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Control6" type="Control" parent="."]
 layout_mode = 1
@@ -149,39 +249,74 @@ offset_bottom = 0.959858
 [node name="TextureRect" type="TextureRect" parent="Control6"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.437
-anchor_top = 0.596
+anchor_left = 0.436
+anchor_top = 0.588
 anchor_right = 0.562
-anchor_bottom = 0.788
-offset_left = 0.562988
-offset_top = 0.435974
-offset_right = 1.43787
-offset_bottom = 0.307892
+anchor_bottom = 0.78
+offset_left = 0.291992
+offset_top = -0.207367
+offset_right = 0.013855
+offset_bottom = -0.33548
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("7_8o0s3")
+
+[node name="Label" type="Label" parent="Control6/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 2.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 5
+text = "Jonathan"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Control7" type="Control" parent="."]
 layout_mode = 1
 anchor_right = 1.0
 anchor_bottom = 0.999
-offset_right = 1.0
-offset_bottom = 0.959839
+offset_left = -1.0
+offset_top = -2.0
+offset_bottom = -1.04016
 
 [node name="TextureRect" type="TextureRect" parent="Control7"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.656
-anchor_top = 0.592
-anchor_right = 0.781
-anchor_bottom = 0.784
-offset_left = -0.656067
-offset_top = 0.271973
-offset_right = 0.218933
-offset_bottom = 0.14389
+anchor_left = 0.657
+anchor_top = 0.589
+anchor_right = 0.782
+anchor_bottom = 0.781
+offset_left = 0.479004
+offset_top = 2.14432
+offset_right = 0.353943
+offset_bottom = 4.66846
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_0f3yq")
+
+[node name="Label" type="Label" parent="Control7/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 2.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 5
+text = "Chris"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Cursor" parent="." instance=ExtResource("10_75qk3")]
 layout_mode = 1
@@ -193,3 +328,4 @@ offset_left = -0.544006
 offset_top = 0.199997
 offset_right = -0.456024
 offset_bottom = 0.247986
+texture = SubResource("AnimatedTexture_y3ejv")

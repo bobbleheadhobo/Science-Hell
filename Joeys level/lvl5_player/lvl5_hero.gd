@@ -3,6 +3,8 @@ extends CharacterBody2D
 signal health_empty
 
 const SPEED = 600
+const INVINCIBILITY_DURATION = 1.0
+var knockback_force = 3000
 
 
 var mobs_killed = 0
@@ -30,14 +32,19 @@ var knockback_duration = 0.2  # Duration of the knockback effect in seconds
 var knockback_timer = 0.0
 var knockback_direction = Vector2.ZERO
 var last_mob_id = null
+var invincibility_timer = 0.0
 
-
+func _ready():
+	$Sprite2D.texture = Characters.current_sprite
+	if Rey.game_over:
+		$ExitArrow.show()
 
 func _physics_process(delta):
 	move(delta)
 	shoot()
 	handle_mob_collision(delta)
 	move_and_slide()
+	update_invincibility(delta)
 
 
 func shoot():
@@ -48,8 +55,7 @@ func shoot():
 
 func move(delta):
 	# get input from keyboard (WASD)
-	var direction = Input.get_vector("move_left", "move_right", "move_up" , "move_down")
-	
+	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if direction == Vector2.ZERO:
 		state = IDLE
 	else:
@@ -58,6 +64,11 @@ func move(delta):
 	
 	# calculate the velocity to move the player at
 	velocity = direction * SPEED
+	
+	if knockback_timer > 0:
+		var interpolation_factor = knockback_timer / knockback_duration
+		velocity = velocity.lerp(knockback_direction * knockback_force, 1 - interpolation_factor)
+		knockback_timer -= delta
 	
 	animate()
 	move_and_slide()
@@ -68,28 +79,50 @@ func animate() -> void:
 	animationTree.set(blend_pos_paths[state], blend_position)
 
 
+var last_hit_time = 0
+
 func handle_mob_collision(delta):
 	var overlapping_mobs = %hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		for mob in overlapping_mobs:
-			if mob.get_mob_id() == last_mob_id:
-				mob.queue_free()
-				print("Killed buggy mob")
-			knockback_direction = (global_position - mob.global_position).normalized()
-			knockback_timer = knockback_duration
-			last_mob_id = mob.get_mob_id()
-		update_health()
-	
-	if knockback_timer > 0:
-		var knockback_force = 5000 # Adjust this value to control the knockback strength
-		var knockback_velocity = knockback_direction * knockback_force
-		var interpolation_factor = knockback_timer / knockback_duration
-		velocity += knockback_velocity * interpolation_factor
-		knockback_timer -= delta
+			if mob.has_method("get_mob_id"):
+				var mob_id = mob.get_mob_id()
+				var current_time = Time.get_ticks_msec() / 1000.0 # Get current time in seconds
+				
+				if mob_id == last_mob_id and current_time - last_hit_time <= 0.3:
+					mob.queue_free()
+					print("Killed buggy mob")
+				else:
+					last_mob_id = mob_id
+					last_hit_time = current_time
+					
+					var mob_direction = (global_position - mob.global_position).normalized()
+					take_damage(mob_direction)
 		
-func update_health():
-	Health.update_health(Health.current_health - 0.1)
-	print(Health.current_health)
+func take_damage(damage_direction):
+	if invincibility_timer > 0:
+		return  # Player is invincible, ignore damage
+
+	Health.update_health(Health.current_health - 1)
+	knockback_direction = damage_direction
+	knockback_timer = knockback_duration
+	var knockback_velocity = knockback_direction * knockback_force
+	velocity += knockback_velocity
+
 	if Health.current_health <= 0:
 		print("DEAD!")
-		health_empty.emit()
+	else:
+		invincibility_timer = INVINCIBILITY_DURATION
+		
+func update_invincibility(delta):
+	if invincibility_timer > 0:
+		invincibility_timer -= delta
+		if invincibility_timer <= 0:
+			invincibility_timer = 0.0
+
+func player():
+	pass
+	
+func show_arrow():
+	$ExitArrow.show()
+	$ExitArrow/AnimationPlayer.play("point")
