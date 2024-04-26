@@ -16,6 +16,7 @@ extends Control
 # PRE: nada
 # POST: main
 func _ready() -> void:
+	Health.set_chey_location()
 	var side_panel = $Background/MarginContainer/Columns/SidePanel
 	command_processor.room_changed.connect(Callable(side_panel, "handle_room_changed"))
 	command_processor.room_updated.connect(Callable(side_panel, "handle_room_updated"))

@@ -3,6 +3,7 @@ extends Node
 func _ready():
 	MusicManager.play_song("sciencehall")
 	Health.set_visibility(true)
+	Health.set_main_location()
 	$NPCSpawn.spawn_unselected_players()
 	
 

@@ -3,7 +3,6 @@ extends PanelContainer
 # Response scene
 #const Response = preload("res://chey/input/Response.tscn")
 
-@onready var heart = $Sprite2D
 # script class not instance of game => save data
 const INPUT_RESPONSE = preload("res://chey/input/InputResponse.tscn")
 
