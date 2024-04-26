@@ -1,4 +1,4 @@
-class_name Level
-extends Node
+extends Node2D
 
-@export var level_start_pos: Node2D
+func _ready():
+	MusicManager.play_song("ivan")

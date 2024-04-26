@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1nsgbqct6gl1"]
+
+[ext_resource type="FontFile" uid="uid://4qak0sy5hr0h" path="res://chey/fonts/plex_mono_24.tres" id="1_yjxk1"]
+
+[node name="InputHistory" type="Label"]
+custom_minimum_size = Vector2(1000, 0)
+theme_override_colors/font_color = Color(0.631373, 0.631373, 0.631373, 1)
+theme_override_fonts/font = ExtResource("1_yjxk1")
+theme_override_font_sizes/font_size = 24
+text = " > This is what the user typed"
+autowrap_mode = 3

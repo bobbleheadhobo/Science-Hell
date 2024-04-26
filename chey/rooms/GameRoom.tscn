@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt4l1fxuxre4u"]
+
+[ext_resource type="Script" path="res://chey/rooms/GameRoom.gd" id="1_5o1sk"]
+[ext_resource type="FontFile" uid="uid://c13xce3j37r5h" path="res://chey/fonts/IBMPlexMono-Medium.ttf" id="1_y2tpg"]
+[ext_resource type="FontFile" uid="uid://b570kmbms8al8" path="res://chey/fonts/IBMPlexMono-Regular.ttf" id="2_3bj8g"]
+
+[node name="GameRoom" type="PanelContainer"]
+custom_minimum_size = Vector2(250, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -902.0
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5o1sk")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RoomName" type="Label" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_y2tpg")
+theme_override_font_sizes/font_size = 28
+text = "Room Name"
+horizontal_alignment = 1
+
+[node name="RoomDescription" type="Label" parent="MarginContainer/Rows"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_3bj8g")
+theme_override_font_sizes/font_size = 18
+text = "This is the description of the room. "
+autowrap_mode = 3

@@ -1,6 +1,8 @@
+class_name Hero
 extends CharacterBody2D
 
 const SPEED = 200
+var initial_position = null
 
 enum {IDLE, WALK}
 var state = IDLE
@@ -19,8 +21,20 @@ var animTree_state_keys = [
 	'walk'
 ]
 
+func _ready():
+	$Sprite2D.texture = Characters.current_sprite
+	if SceneManager.player_position != null:
+		position = SceneManager.player_position
+	
+	SceneManager.player_position = position
+
 func _physics_process(delta):
 	move_and_animate(delta)
+	
+	# log position if player is not in doorway
+	if SceneManager.player_position != null and not is_inside_doorway():
+		SceneManager.player_position = position
+		
 	
 
 func move_and_animate(delta):
@@ -43,11 +57,12 @@ func move_and_animate(delta):
 func animate() -> void:
 	state_machine.travel(animTree_state_keys[state])
 	animationTree.set(blend_pos_paths[state], blend_position)
-
-
-func _process(delta):
-	pass
 	
 func player():
 	pass
 
+func is_inside_doorway():
+	for area in $DoorwayDetector.get_overlapping_areas():
+		if area.is_in_group("doorways"):
+			return true
+	return false

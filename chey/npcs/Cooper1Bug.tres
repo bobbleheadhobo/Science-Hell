@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://cn68p01wvfl6w"]
+
+[ext_resource type="Resource" uid="uid://dnbirayf2xopt" path="res://chey/items/Bats.tres" id="1_ict6c"]
+[ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_k2lj8"]
+
+[resource]
+script = ExtResource("1_k2lj8")
+npc_name = "bug"
+initial_dialog = "cooper 1 room"
+post_quest_dialog = "give item from code.sh to get hint
+"
+quest_item = ExtResource("1_ict6c")

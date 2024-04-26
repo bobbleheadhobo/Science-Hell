@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cfgdkd5t2y6oa"]
+[gd_scene load_steps=2 format=3 uid="uid://cfgdkd5t2y6oa"]
+
+[ext_resource type="Texture2D" uid="uid://cr3n02ee0tkvr" path="res://Joeys level/level/stein.jpeg" id="1_8yrau"]
 
 [node name="GameOver" type="CanvasLayer"]
 
@@ -12,16 +14,27 @@ color = Color(0.286275, 0.286275, 0.286275, 0.258824)
 
 [node name="Label" type="Label" parent="ColorRect"]
 layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -378.0
+offset_right = 378.0
+offset_bottom = 172.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 126
+text = "GAME OVER!"
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -48.5
-offset_top = -11.5
-offset_right = 48.5
-offset_bottom = 11.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 126
-text = "GAME OVER!"
+texture = ExtResource("1_8yrau")
