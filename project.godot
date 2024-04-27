@@ -36,7 +36,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "Hamgiving": "res://science_hell/players/hamilton/Hamgiving.dtl"
 }
-layout/style_list=["res://styleTest.tres"]
+layout/style_list=["res://styleTest.tres", "res://testStyle2.tres"]
 layout/default_style="res://styleTest.tres"
 glossary/default_case_sensitive=true
 text/letter_speed=0.01

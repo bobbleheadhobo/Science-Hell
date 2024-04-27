@@ -19,10 +19,10 @@
 "export_overrides": {
 "image": "\"res://science_hell/players/hamilton/hampfp.png\""
 },
-"ignore_char_scale": false,
+"ignore_char_scale": true,
 "mirror": true,
 "offset": Vector2(-225, -52),
-"scale": 0.75,
+"scale": 0.5,
 "scene": ""
 }
 },

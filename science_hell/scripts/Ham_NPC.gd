@@ -50,7 +50,7 @@ func choose(array):
 	
 func move(delta):
 	if !is_chatting:
-		position == dir * speed * delta
+		position = dir * speed * delta
 		
 func _on_timer_timeout():
 	$Timer.wait_time = choose([0.5,1,1.5])
