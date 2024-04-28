@@ -4,7 +4,7 @@ extends Node
 func _ready() -> void:
 
 	# unlock stack room only from terminal room
-	var exit = $TerminalRoom.connect_exit_unlocked("south", $StackRoom) # , "inside"
+	var exit = $TerminalRoom.connect_exit_locked("south", $StackRoom) # , "inside"
 	var key = load_item("DuckieKey")
 	var duckie = load_npc("Duckie")
 	var tb = load_item("TBUsless")
@@ -14,22 +14,20 @@ func _ready() -> void:
 	$TerminalRoom.add_item(key)
 	key.use_value = exit # key item unlocks Stack room
 	# exit stack room takes player to heap
-	exit = $StackRoom.connect_exit_unlocked("south", $HeapRoom)
+	exit = $StackRoom.connect_exit_locked("south", $HeapRoom)
 	
 	
 	var dead = load_item("Dead")
-	var nuu = load_item("NotNil")
 	var token = load_item("BugToken")
 	var bug = load_npc("Bug")
 	$StackRoom.add_item(token)
 	$StackRoom.add_item(dead)
-	$StackRoom.add_item(nuu)
 	$StackRoom.add_npc(bug)
 	# use the NPC as the object not the item
 	bug.quest_reward = exit
 	
 	# token unlocks heap room from stack room
-	exit  = $HeapRoom.connect_exit_unlocked("south", $TextRoom)
+	$HeapRoom.connect_exit_unlocked("south", $TextRoom)
 	var roopa = load_npc("Roopa") # add roopa to heap room
 	var r = load_item("RPassword")
 	var mal = load_item("Mal")

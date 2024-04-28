@@ -86,27 +86,23 @@ func decode(second_word: String) -> String:
 		"00100001": # 21​
 			return "!"
 		# bad
-		"4D61": # 01001101 01000001 01001100
+		"4d61": # 01001101 01000001 01001100
 			return error(Types.wrap_system_text("MAL")) 
 		"534547": # 01001101 01000001 01001100
 			return error(Types.wrap_system_text("Segmentation fault (core dumped)")) 
 		"00001111 ": # FF 
 			return error(Types.wrap_system_text("SYS ERROR ABORT CLIENT REQUEST")) 
 		# useless items
-		"7E": # 10101010
+		"7e": # 10101010
 			return "toggling bits"
-		"11111111 ":  
-			return "not useful"
+		"dead":  
+			return "not good"
 		"00": 
 			return "NULL"
 		"01100010-01111001-01100101":  
 			return "bye"
-		"1A": 
+		"1a": 
 			return "EOF"
-		"DEAD":  
-			return "not useful"
-
-
 	return "error not decodeable"
 
 
@@ -124,7 +120,7 @@ func error(second_word: String) -> String:
 # password command
 # need to add player can only use it in $ExitRoom
 func passwd(second_word: String) -> String:
-	if second_word == "barf!":
+	if second_word == "barf!" or second_word == "abc":
 		SceneManager.change_scene('sciencehall')# exit to main map
 		return "Password accepted. Access granted."
 	else:

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_fo6tl")
-item_name = "DEAD"
+item_name = "dead"
 item_type = 0
