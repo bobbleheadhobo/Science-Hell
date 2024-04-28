@@ -99,15 +99,14 @@ func decode(second_word: String) -> String:
 			return "not useful"
 		"00": 
 			return "NULL"
-		"01100010 01111001 01100101":  
+		"01100010-01111001-01100101":  
 			return "bye"
 		"1A": 
 			return "EOF"
 		"DEAD":  
 			return "not useful"
-		"FF": 
-			return "error"
-		
+
+
 	return "error not decodeable"
 
 

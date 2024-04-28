@@ -2,11 +2,12 @@ extends Node
 
 
 func _ready() -> void:
-	
+
 	# unlock stack room only from terminal room
 	var exit = $TerminalRoom.connect_exit_unlocked("south", $StackRoom) # , "inside"
 	var key = load_item("DuckieKey")
 	var duckie = load_npc("Duckie")
+	var tb = load_item("TBUsless")
 	
 	$TerminalRoom.add_npc(duckie)
 	# add key item to stack room only
@@ -25,24 +26,27 @@ func _ready() -> void:
 	
 	# token unlocks heap room from stack room
 	exit  = $HeapRoom.connect_exit_unlocked("south", $TextRoom)
-	
-	# add roopa to heap room
-	var roopa = load_npc("Roopa")
+	var roopa = load_npc("Roopa") # add roopa to heap room
+	var r = load_item("RPassword")
+	var mal = load_item("Mal")
 	$HeapRoom.add_npc(roopa)
 
 	# texy room
 	$TextRoom.connect_exit_unlocked("south", $CodeRoom)
 	var text_duckie = load_npc("TextDuckie")
 	$TextRoom.add_npc(text_duckie)
-	#text_duckie.quest_reward = exit
-	
+	var ff = load_item("FF")
+	var nu = load_item("Nil")
 	$TextRoom.connect_exit_unlocked("west", $HintRoom)
 	
-
 	
 	# hint room
 	$HintRoom.connect_exit_unlocked("east", $TextRoom)
 	var text_cooper = load_npc("Cooper")
+	var f = load_item("FPassword")
+	var EC = load_item("ECPassword")
+	
+	
 	$HintRoom.add_npc(text_cooper)
 	
 	
@@ -50,10 +54,15 @@ func _ready() -> void:
 	exit = $CodeRoom.connect_exit_unlocked("east", $BashRoom)
 	var main = load_npc("Main")
 	$CodeRoom.add_npc(main)
+	var b = load_item("BPassword")
+	var eof = load_item("EOF")
 	
 	# bash room
 	$BashRoom.connect_exit_unlocked("east", $CodeShRoom)
 	var bash_duckie = load_npc("BashDuckie")
+	var a = load_item("APassword")
+	var bye = load_item("Bye")
+	
 	var bats = load_npc("Bats")
 	$BashRoom.add_npc(bash_duckie)
 	$BashRoom.add_npc(bats)
@@ -64,18 +73,19 @@ func _ready() -> void:
 	$Cooper2Room.connect_exit_unlocked("east", $ExitRoom)
 	var sh_duckie = load_npc("SHDuckie")
 	var cooper2 = load_npc("Cooper2")
+	var seg = load_item("Seg")
+	
 	$Cooper2Room.add_npc(cooper2)
 	$Cooper2Room.add_npc(sh_duckie)
 
 	# SH terminal Exit room
 	$ExitRoom.connect_exit_unlocked("west", $Cooper2Room)
+	var nuu = load_item("NotNil")
+	var dead = load_item("Dead")
 	var sh_cooper = load_npc("SHCooper")
 	$ExitRoom.add_npc(sh_cooper)
 	
-	#sh_duckie.quest_reward = SceneManager.change_scene('sciencehall')
-	# if quest item recieved to cooper
-	#SceneManager.change_scene('sciencehall')
-	
+
 	
 	
 # helper dynamic file fider for item resources

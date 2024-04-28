@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cp2mwi5suohor"]
-
-[ext_resource type="Script" path="res://chey/items/Item.gd" id="1_5lugv"]
-
-[resource]
-script = ExtResource("1_5lugv")
-item_name = "hint-key"
-item_type = 0
