@@ -16,5 +16,5 @@ func get_inventory_list() -> String:
 		
 	var item_string = ""
 	for item in inventory:
-		item_string += item.item_name + " "
+		item_string += Types.wrap_item_text(item.item_name + " ") #item.item_name + " "
 	return "Inventory: " +  item_string

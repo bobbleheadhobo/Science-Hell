@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_74j34")
 npc_name = "duckie"
-initial_dialog = "text"
+initial_dialog = "SH duckie"
 post_quest_dialog = "1st part of puzzle"
