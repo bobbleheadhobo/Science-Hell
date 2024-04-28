@@ -29,6 +29,7 @@ var instance
 
 func _ready():
 	Health.set_visibility(false)
+	$"/root/MusicManager".music_player.stream_paused = true
 	randomize()
 	$Conductor.play_with_beat_offset(9)
 

@@ -25,16 +25,18 @@ Characters="*res://science_hell/gui/char_select/character_select_global.gd"
 MusicManager="*res://science_hell/Music/music_manager_global.gd"
 Rey="*res://Joeys level/level/reynolds_global.gd"
 UI="*res://science_hell/scripts/ui_manager.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Score="*res://level1(jason)/Scenes/Score.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"HamNPC": "res://science_hell/players/HamNPC.dch"
+"HamNPC": "res://science_hell/players/HamNPC.dch",
+"SongNPC": "res://addons/professors/SongNPC.dch"
 }
 directories/dtl_directory={
-"Hamgiving": "res://science_hell/players/hamilton/Hamgiving.dtl"
+"Hamgiving": "res://science_hell/players/hamilton/Hamgiving.dtl",
+"Songgiving": "res://addons/professors/Songgiving.dtl"
 }
 layout/style_list=["res://addons/Style2.tres"]
 layout/default_style="res://addons/Style2.tres"
