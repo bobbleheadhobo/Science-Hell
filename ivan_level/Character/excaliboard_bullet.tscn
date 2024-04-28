@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfv1rxqufb33r"]
+[gd_scene load_steps=8 format=3 uid="uid://eq2c44qsd5dt"]
 
-[ext_resource type="Script" path="res://Joeys level/weapons/ar/ar_bullet.gd" id="1_6g4as"]
-[ext_resource type="Texture2D" uid="uid://bwkwy3foqbp3r" path="res://Joeys level/weapons/ar/red_bullets.png" id="2_nuorl"]
+[ext_resource type="Texture2D" uid="uid://bwkwy3foqbp3r" path="res://Joeys level/weapons/ar/red_bullets.png" id="1_dr6go"]
+[ext_resource type="Script" path="res://ivan_level/Character/excaliboard_bullet.gd" id="1_su8yo"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wndl"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qdrv"]
 radius = 13.0035
 height = 42.0069
 
@@ -59,22 +59,26 @@ _data = {
 "pew_pew": SubResource("Animation_jf1v6")
 }
 
-[node name="ar_bullet" type="Area2D"]
+[node name="excaliboard_bullet" type="Area2D"]
 top_level = true
-z_index = 1
+position = Vector2(0, -1)
+rotation = -1.99491
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_6g4as")
+script = ExtResource("1_su8yo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-7.25001, -6.375)
-texture = ExtResource("2_nuorl")
+position = Vector2(-20, -7)
+scale = Vector2(1.67372, 0.277083)
+texture = ExtResource("1_dr6go")
+flip_h = true
+flip_v = true
 hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-20, -8)
 rotation = -1.57437
-shape = SubResource("CapsuleShape2D_5wndl")
+shape = SubResource("CapsuleShape2D_0qdrv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

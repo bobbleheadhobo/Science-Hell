@@ -23,4 +23,4 @@ texture = ExtResource("2_k46aj")
 
 [node name="shooting_point" type="Marker2D" parent="ar"]
 unique_name_in_owner = true
-position = Vector2(21.8182, -2.22222)
+position = Vector2(83.3939, 2.98023e-08)

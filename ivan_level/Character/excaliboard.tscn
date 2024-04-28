@@ -3,16 +3,22 @@
 [ext_resource type="Script" path="res://ivan_level/Character/excaliboard.gd" id="1_67kvc"]
 [ext_resource type="Texture2D" uid="uid://d2vwic25vu4dw" path="res://ivan_level/Character/excaliboard.png" id="1_grpst"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhymt"]
-size = Vector2(26.5, 9)
+[sub_resource type="CircleShape2D" id="CircleShape2D_mkqsy"]
 
 [node name="Excaliboard" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_67kvc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.25, -1)
-shape = SubResource("RectangleShape2D_xhymt")
+position = Vector2(0, -1)
+scale = Vector2(-29.4176, -7.51449)
+shape = SubResource("CircleShape2D_mkqsy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_grpst")
 vframes = 2
+
+[node name="shooting_point" type="Marker2D" parent="Sprite2D"]
+unique_name_in_owner = true
+position = Vector2(55, 0)

@@ -1,11 +1,17 @@
 class_name Player
 extends CharacterBody2D
 
+var enemy_in_range = false
+var enemy_cooldown = true
+var health = 100
+var alive = true
+
+var attack = false
+
 @export var speed : float = 200.0
 @export var jump_velocity : float = -250.0
 @export var level_start_pos : Node2D 
 @onready var GUN = $Excaliboard
-
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -39,6 +45,14 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
 	move_and_slide()
+	enemy_attack()
+	
+	if health <= 0:
+		alive = false
+		health = 0
+		print("Player died")
+		self.queue_free()
+		
 	shoot()
 	update_animation()
 	update_facing_direction()
@@ -85,3 +99,25 @@ func reset_play() -> void:
 	global_position = Vector2.ZERO
 	visible = true 
 	can_control = true
+
+func player():
+	pass
+
+func _on_player_hitbox_body_entered(body):
+	if body.has_method("enemy"):
+		enemy_in_range = true
+
+
+func _on_player_hitbox_body_exited(body):
+	if body.has_method("enemy"):
+		enemy_in_range = false
+
+func enemy_attack():
+	if enemy_in_range and enemy_cooldown:
+		health = health - 20
+		enemy_cooldown = false
+		$attack_cooldown.start()
+		print(health)
+
+func _on_attack_cooldown_timeout():
+	enemy_cooldown = true
