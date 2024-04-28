@@ -14,13 +14,14 @@ signal healthChanged
 # @onready var hurttimer = something
 @onready var camera = $PlayerView
 @onready var sprite = $PlayerSprite
+@onready var ActiveHitbox = $PowerField
 
 var isHurt: bool = false
 var prevDir = 0
 var horizontalDirection = 1
 var wallJumpPushBack = 100
 var gravity = 10
-var jumpForce = 185
+var jumpForce = 200
 var stompForce = 400
 
 # function used to set up camera properly
@@ -28,8 +29,12 @@ func _ready():
 	camera.zoom.x = 3
 	camera.zoom.y = 3
 	
+	# begin with any active hitboxes disabled
+	ActiveHitbox.get_node("PowerBox").disabled = true
+	
 	# add Player to colliding list
 	add_to_group("Player")
+	
 
 func _physics_process(delta):
 	
