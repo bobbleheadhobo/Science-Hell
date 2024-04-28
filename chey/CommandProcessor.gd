@@ -283,10 +283,11 @@ func help() -> String:
 		" use " + Types.wrap_item_text("[item]"),
 		" talk " + Types.wrap_npc_text("[npc]"),
 		" give " + Types.wrap_item_text("[item]"),
+		" quit " + Types.wrap_system_text("[option]"),
+		" decode " + Types.wrap_item_text("[item]"),
+		" passwd " + Types.wrap_item_text("[item]"),
 		" inventory",
-		" password ",
-		" quit " + Types.wrap_system_text("(yes or no)"),
-		" help"]))
+		Types.wrap_system_text(" help ")]))
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:
