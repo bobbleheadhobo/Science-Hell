@@ -4,7 +4,7 @@ extends Node
 func _ready() -> void:
 	
 	# unlock stack room only from terminal room
-	var exit = $TerminalRoom.connect_exit_locked("south", $StackRoom) # , "inside"
+	var exit = $TerminalRoom.connect_exit_unlocked("south", $StackRoom) # , "inside"
 	var key = load_item("DuckieKey")
 	var duckie = load_npc("Duckie")
 	
@@ -13,7 +13,7 @@ func _ready() -> void:
 	$TerminalRoom.add_item(key)
 	key.use_value = exit # key item unlocks Stack room
 	# exit stack room takes player to heap
-	exit = $StackRoom.connect_exit_locked("south", $HeapRoom)
+	exit = $StackRoom.connect_exit_unlocked("south", $HeapRoom)
 	
 	
 	var token = load_item("BugToken")
@@ -62,6 +62,9 @@ func _ready() -> void:
 	var bash_duckie = load_npc("BashDuckie")
 	$BashRoom.add_npc(bash_duckie)
 	
+	
+	
+	
 	# code.sh room
 	$CodeShRoom.connect_exit_unlocked("east", $CooperRoom)
 	var bats = load_npc("Bats")
@@ -70,12 +73,15 @@ func _ready() -> void:
 
 	
 	# SH terminal Exit room
-	$ExitRoom.connect_exit_locked("west", $Cooper2Room)
+	$ExitRoom.connect_exit_unlocked("west", $Cooper2Room)
+	var exitToken = load_item("DuckieToken")
 	var sh_cooper = load_npc("SHCooper")
 	var sh_duckie = load_npc("SHDuckie")
+	$ExitRoom.add_item(exitToken)
 	$ExitRoom.add_npc(sh_cooper)
 	$ExitRoom.add_npc(sh_duckie)
 	
+	#sh_duckie.quest_reward = SceneManager.change_scene('sciencehall')
 	# if quest item recieved to cooper
 	#SceneManager.change_scene('sciencehall')
 	

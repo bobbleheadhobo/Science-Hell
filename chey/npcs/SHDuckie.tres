@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://c4lmftednw5au"]
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://c4lmftednw5au"]
 
+[ext_resource type="Resource" uid="uid://fbs1r1eknrtl" path="res://chey/items/DuckieToken.tres" id="1_8b6ea"]
 [ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_74j34"]
 
 [resource]
@@ -7,3 +8,4 @@ script = ExtResource("1_74j34")
 npc_name = "duckie"
 initial_dialog = "SH duckie"
 post_quest_dialog = "1st part of puzzle"
+quest_item = ExtResource("1_8b6ea")
