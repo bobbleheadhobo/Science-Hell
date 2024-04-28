@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=31 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dssb1g8pnln1n" path="res://science_hell/scenes/npc_spawn.tscn" id="5_0iuht"]
 [ext_resource type="Script" path="res://science_hell/scripts/Background.gd" id="7_j3ftm"]
 [ext_resource type="Script" path="res://science_hell/scripts/PointLight2D.gd" id="7_oivax"]
+[ext_resource type="Script" path="res://science_hell/scripts/Ham_NPC.gd" id="10_sr57x"]
+[ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="11_8m3m7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
 size = Vector2(61, 20)
@@ -40,6 +42,90 @@ size = Vector2(16, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6eug"]
 size = Vector2(16, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fblo"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qwa2"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsxav"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2rnc"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajul2"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7w7l"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhj0i"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(0, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdenm"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(32, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78ha3"]
+atlas = ExtResource("11_8m3m7")
+region = Rect2(48, 160, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8imc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fblo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qwa2")
+}],
+"loop": true,
+"name": &"front_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsxav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2rnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajul2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7w7l")
+}],
+"loop": true,
+"name": &"left_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhj0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdenm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78ha3")
+}],
+"loop": true,
+"name": &"right_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ckuxb"]
+radius = 27.074
 
 [node name="ScienceHell" type="Node2D"]
 script = ExtResource("1_4n0go")
@@ -94,6 +180,7 @@ visible = false
 polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, -152, 493, -152, 519, -137, 520, -137, 493, -4, 492)
 
 [node name="entry_level" parent="." groups=["doorways"] instance=ExtResource("3_3lyxy")]
+position = Vector2(-73, 49)
 script = ExtResource("4_biitn")
 
 [node name="Area2D2" type="Area2D" parent="entry_level"]
@@ -210,6 +297,22 @@ polygon = PackedVector2Array(-46, 1791, 256, 1791, 256, 1712, 112, 1712, 112, 17
 [node name="wall9" type="CollisionPolygon2D" parent="collisionOuter"]
 polygon = PackedVector2Array(-2216, 139, -1229, 139, -1229, 181, -1168, 182, -1168, 176, -1216, 176, -1216, 144, -1200, 144, -1200, 96, -1216, 96, -1216, 80, -2208, 80, -2208, -512, -2311, -512, -2311, -477, -2239, -477, -2238, 137, -2219, 139, -2214, 134)
 
+[node name="HamBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("10_sr57x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HamBody2D"]
+position = Vector2(-68, 97)
+sprite_frames = SubResource("SpriteFrames_t8imc")
+animation = &"front_idle"
+
+[node name="Timer" type="Timer" parent="HamBody2D"]
+
+[node name="ChatDet" type="Area2D" parent="HamBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HamBody2D/ChatDet"]
+position = Vector2(-70, 98)
+shape = SubResource("CircleShape2D_ckuxb")
+
 [connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_entered"]
@@ -218,3 +321,5 @@ polygon = PackedVector2Array(-2216, 139, -1229, 139, -1229, 181, -1168, 182, -11
 [connection signal="body_exited" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_exited"]
 [connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
+[connection signal="body_entered" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_entered"]
+[connection signal="body_exited" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_exited"]
