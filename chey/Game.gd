@@ -13,6 +13,7 @@ extends Control
 
 @onready var camera = $Camera2D
 
+
 # PRE: nada
 # POST: main
 func _ready() -> void:
@@ -26,10 +27,9 @@ func _ready() -> void:
 
 	var starting_room_response = command_processor.intialize(room_manager.get_child(0), player)
 	game_info.create_response(starting_room_response)
-	
 	var global_scale = 2.4
 	camera.zoom = Vector2(1.0 / global_scale, 1.0 / global_scale)
-  
+
 # PRE param is text entered by player
 # POST so much stuff
 func _on_input_text_submitted(new_text: String) -> void:
@@ -42,12 +42,4 @@ func _on_input_text_submitted(new_text: String) -> void:
 	game_info.create_response_with_input(response, new_text)
 
 
-
-	
-
-
-
-	
-	
-	
 

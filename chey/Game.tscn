@@ -207,6 +207,7 @@ layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_p133k")
+autoplay = true
 
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
