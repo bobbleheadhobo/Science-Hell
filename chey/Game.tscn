@@ -70,8 +70,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 881.0
 offset_top = -2641.0
-offset_right = 1473.0
-offset_bottom = -2295.0
+offset_right = 1326.0
+offset_bottom = -2380.0
 grow_horizontal = 1
 grow_vertical = 1
 room_name = "heap"
@@ -94,6 +94,7 @@ room_name = "code"
 room_description = "code room"
 
 [node name="CooperRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
+visible = false
 offset_left = 2916.0
 offset_top = -1816.0
 offset_right = 2153.0
@@ -129,16 +130,17 @@ room_description = "bash room"
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 2214.0
-offset_top = -3420.0
-offset_right = 2782.0
-offset_bottom = -3061.0
+offset_left = 2158.0
+offset_top = -3447.0
+offset_right = 2606.0
+offset_bottom = -3195.0
 grow_horizontal = 1
 grow_vertical = 1
 room_name = "sh terminal"
 room_description = "sh terminal exit room"
 
 [node name="CodeShRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
+visible = false
 offset_left = 2197.0
 offset_top = -1826.0
 offset_right = 1434.0
