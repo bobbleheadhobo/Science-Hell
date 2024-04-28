@@ -1,6 +1,7 @@
 extends Node
 
 var current_scene = null
+var player_position = null
 
 # TO use in other scripts
 #Global.change_scene("res://ivan_level/Level/level.tscn")
@@ -16,6 +17,8 @@ var scene_file_paths = {
 	"ivanlevel" : "res://ivan_level/level/level.tscn",
 	"char_select": "res://science_hell/gui/char_select/character_select.tscn",
 	"reynoldslevel": "res://Joeys level/level/debug_or_die.tscn",
+	"pause": "res://science_hell/gui/Pause/pause.tscn",
+	"copperslevel": "res://chey/Game.tscn"
 }
 
 func _ready():
@@ -51,7 +54,7 @@ func reveal_scene(scene_name: String, show_scene: bool, fade_duration: float = 0
 		
 func change_scene(scene_name: String):
 	scene_name = scene_name.to_lower()
-
+	
 	if scene_file_paths.has(scene_name):
 		var new_scene_path = scene_file_paths[scene_name]
 		call_deferred("_deferred_change_scene", new_scene_path)

@@ -14,6 +14,9 @@ var player = null
 # State to track quitting process
 var is_quitting = false
 
+# keep track of error decodes
+var is_error = false
+
 # function gets called when room node needs to run
 @warning_ignore("shadowed_variable")
 func intialize(starting_room, player) -> String:
@@ -24,7 +27,7 @@ func process_command(input: String) -> String:
 	 # Handle quitting process
 	if is_quitting:
 		if input.to_lower() == "yes":
-			get_tree().quit()  # This command stops the game engine.
+			SceneManager.change_scene('sciencehall')# exit to main map
 			return "Quitting game... See you next time!"
 		elif input.to_lower() == "no":
 			is_quitting = false
@@ -59,13 +62,72 @@ func process_command(input: String) -> String:
 			return give(second_word)
 		"quit":
 			return quit()
+		"passwd":
+			return passwd(second_word)
+		"decode":
+			return decode(second_word)
 		"help":
 			return help()
 		# defualt case for invalid input
 		_:
 			return Types.wrap_system_text("Unrecognized command - please try again.")
-			
-			
+
+
+func decode(second_word: String) -> String:
+	match second_word:
+		"01100010": # 62
+			return "b"
+		"61": # 01100001
+			return "a"
+		"01110010": # 72
+			return "r"
+		"66": # 01100110
+			return "f"
+		"00100001": # 21​
+			return "!"
+		# bad
+		"4d61": # 01001101 01000001 01001100
+			return error(Types.wrap_system_text("MAL")) 
+		"534547": # 01001101 01000001 01001100
+			return error(Types.wrap_system_text("Segmentation fault (core dumped)")) 
+		"00001111 ": # FF 
+			return error(Types.wrap_system_text("SYS ERROR ABORT CLIENT REQUEST")) 
+		# useless items
+		"7e": # 10101010
+			return "toggling bits"
+		"dead":  
+			return "not good"
+		"00": 
+			return "NULL"
+		"01100010-01111001-01100101":  
+			return "bye"
+		"1a": 
+			return "EOF"
+	return "error not decodeable"
+
+
+# error fun for decode command
+func error(second_word: String) -> String:
+	is_error = true
+	
+	if !is_error:
+		return second_word
+	else:
+		Health.update_health(Health.current_health - 1)
+		return second_word
+
+
+# password command
+# need to add player can only use it in $ExitRoom
+func passwd(second_word: String) -> String:
+	if second_word == "barf!" or second_word == "abc":
+		SceneManager.change_scene('sciencehall')# exit to main map
+		return "Password accepted. Access granted."
+	else:
+		Health.update_health(Health.current_health - 1)
+		return "Invalid password. Access denied."
+
+
 # PRE function call
 # POST returns command action for go
 func cd(second_word: String) -> String:
@@ -108,7 +170,7 @@ func drop(second_word: String) -> String:
 			player.drop_item(item)
 			current_room.add_item(item)
 			emit_signal("room_updated", current_room)
-			return "You drop the " + Types.wrap_item_text(item.item_name) + "."
+			return  "You drop the " + Types.wrap_item_text(item.item_name) + "."
 	return "You don't have anything called " + Types.wrap_item_text(second_word) + "."
 	
 
@@ -207,6 +269,7 @@ func give(second_word: String) -> String:
 
 func quit():
 	is_quitting = true
+	Health.update_health(Health.current_health - 1)
 	return Types.wrap_system_text("Are you sure you want to quit this level? Type 'yes' to quit or 'no' to continue playing.")
 	
 # PRE: input help by user
@@ -220,8 +283,11 @@ func help() -> String:
 		" use " + Types.wrap_item_text("[item]"),
 		" talk " + Types.wrap_npc_text("[npc]"),
 		" give " + Types.wrap_item_text("[item]"),
+		" quit " + Types.wrap_system_text("[option]"),
+		" decode " + Types.wrap_item_text("[item]"),
+		" passwd " + Types.wrap_item_text("[item]"),
 		" inventory",
-		" help"]))
+		Types.wrap_system_text(" help ")]))
 
 # helper function to change rooms for us
 func change_room(new_room: GameRoom) -> String:

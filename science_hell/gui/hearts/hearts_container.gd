@@ -14,12 +14,8 @@ var is_game_over = false
 func _ready():
 	canvas_layer = CanvasLayer.new()
 	add_child(canvas_layer)
-
 	hearts_container = HBoxContainer.new()
-	hearts_container.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
-	hearts_container.offset_left = 5
-	hearts_container.offset_top = 12
-	hearts_container.set("theme_override_constants/separation", 15)
+	set_main_location()
 	canvas_layer.add_child(hearts_container)
 
 	set_max_hearts(MAX_HEALTH)
@@ -72,16 +68,41 @@ func update_health(new_health : int):
 
 func game_over():
 	is_game_over = true
+	
+	# Pause the current scene
+	get_tree().paused = true
+
+	
 	var dead = dead_scene.instantiate()
+	# Set the process_mode of the game over screen to PROCESS_MODE_ALWAYS
+	dead.process_mode = Node.PROCESS_MODE_ALWAYS
 	canvas_layer.add_child(dead)
 	
 	# Connect the button signals using call_deferred
 	dead.call_deferred("connect_buttons")
-	
-	get_tree().paused = true
+
 
 func set_visibility(visible: bool):
 	if visible:
 		hearts_container.show()
 	else:
 		hearts_container.hide()
+		
+func reset():
+	current_health = MAX_HEALTH
+	update_health(current_health)
+	is_game_over = false
+
+
+func set_main_location():
+	hearts_container.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
+	hearts_container.offset_left = 5
+	hearts_container.offset_top = 12
+	hearts_container.set("theme_override_constants/separation", 15)
+	
+func set_chey_location():
+	print("hearts", hearts_container.get_children())
+	hearts_container.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+	hearts_container.offset_left = 130
+	hearts_container.offset_top = -15
+	hearts_container.set("theme_override_constants/separation", 15)
