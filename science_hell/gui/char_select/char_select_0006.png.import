@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8wxya8slxicu"
-path="res://.godot/imported/19_Hospital_Black_Shadow_16x16.png-54fe6c4d04b9e61efda68d496961379a.ctex"
+uid="uid://bq4ahibvots5"
+path="res://.godot/imported/char_select_0006.png-4aaafe848884abc1d2fc128af925ab44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/19_Hospital_Black_Shadow_16x16.png"
-dest_files=["res://.godot/imported/19_Hospital_Black_Shadow_16x16.png-54fe6c4d04b9e61efda68d496961379a.ctex"]
+source_file="res://science_hell/gui/char_select/char_select_0006.png"
+dest_files=["res://.godot/imported/char_select_0006.png-4aaafe848884abc1d2fc128af925ab44.ctex"]
 
 [params]
 

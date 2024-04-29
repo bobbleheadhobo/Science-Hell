@@ -51,10 +51,6 @@ window/stretch/scale=2.4
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
-[gui]
-
-theme/custom_font="res://science_hell/assets/retro_computer_personal_use.ttf"
-
 [input]
 
 move_up={

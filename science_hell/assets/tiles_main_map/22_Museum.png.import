@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c72s6d0ywt0l6"
-path="res://.godot/imported/hallways.png-9628cf9d6f8bf5025b4642e006b94440.ctex"
+uid="uid://bjlmqcpjy6sn0"
+path="res://.godot/imported/22_Museum.png-56f549c5a29385b0cc87420149e4ea26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/tiles_main_map/hallways.png"
-dest_files=["res://.godot/imported/hallways.png-9628cf9d6f8bf5025b4642e006b94440.ctex"]
+source_file="res://science_hell/assets/tiles_main_map/22_Museum.png"
+dest_files=["res://.godot/imported/22_Museum.png-56f549c5a29385b0cc87420149e4ea26.ctex"]
 
 [params]
 

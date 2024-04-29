@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dayde18drya0n"
-path="res://.godot/imported/4_Bedroom_Shadowless.png-954ef9161d5ede5883da65546664726d.ctex"
+uid="uid://dvlpvftiv0bpu"
+path="res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/4_Bedroom_Shadowless.png"
-dest_files=["res://.godot/imported/4_Bedroom_Shadowless.png-954ef9161d5ede5883da65546664726d.ctex"]
+source_file="res://science_hell/players/rey.png"
+dest_files=["res://.godot/imported/rey.png-18b16e6f894225ad9005554409cbed02.ctex"]
 
 [params]
 
