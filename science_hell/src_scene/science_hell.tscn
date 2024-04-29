@@ -261,6 +261,7 @@ visible = false
 polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, -152, 493, -152, 519, -137, 520, -137, 493, -4, 492)
 
 [node name="NPCSpawn" parent="." instance=ExtResource("5_0iuht")]
+visible = false
 position = Vector2(-1, 1)
 
 [node name="Ivans office (2)" type="Area2D" parent="." groups=["doorways"]]
@@ -390,6 +391,8 @@ animation = &"front_idle"
 position = Vector2(-70, 98)
 shape = SubResource("CircleShape2D_ckuxb")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HamBody2D"]
+
 [node name="SongBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("12_ajlhw")
 
@@ -405,6 +408,8 @@ animation = &"right_walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SongBody2D/Area2D"]
 position = Vector2(-1028, 36)
 shape = SubResource("CircleShape2D_kiqwa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SongBody2D"]
 
 [connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
