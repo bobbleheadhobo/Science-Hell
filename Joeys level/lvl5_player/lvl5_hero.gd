@@ -110,7 +110,7 @@ func take_damage(damage_direction):
 	velocity += knockback_velocity
 
 	if Health.current_health <= 0:
-		print("DEAD!")
+		Rey.reset()
 	else:
 		invincibility_timer = INVINCIBILITY_DURATION
 		

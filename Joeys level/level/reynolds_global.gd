@@ -11,3 +11,5 @@ func next_wave():
 		
 	return current_wave
 
+func reset():
+	current_wave = 1

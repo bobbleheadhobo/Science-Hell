@@ -1,10 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=41 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
 [ext_resource type="TileSet" uid="uid://rru2hagpatg1" path="res://science_hell/assets/main_map_tile_set.tres" id="2_2ycby"]
-[ext_resource type="PackedScene" uid="uid://dq4wkwge4my22" path="res://science_hell/scenes/entry_level.tscn" id="3_3lyxy"]
-[ext_resource type="Script" path="res://science_hell/scripts/entry_level.gd" id="4_biitn"]
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
 [ext_resource type="PackedScene" uid="uid://dssb1g8pnln1n" path="res://science_hell/scenes/npc_spawn.tscn" id="5_0iuht"]
 [ext_resource type="Script" path="res://science_hell/scripts/Background.gd" id="7_j3ftm"]
@@ -14,11 +12,8 @@
 [ext_resource type="Script" path="res://science_hell/scripts/Song_NPC.gd" id="12_ajlhw"]
 [ext_resource type="Texture2D" uid="uid://bdbwt277qvj7i" path="res://science_hell/players/professors/songRock.png" id="13_480yp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
-size = Vector2(61, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml83q"]
-size = Vector2(14, 21)
+size = Vector2(39, 21)
 
 [sub_resource type="Gradient" id="Gradient_jd2w3"]
 offsets = PackedFloat32Array(0, 0.63)
@@ -268,17 +263,11 @@ polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, 
 [node name="NPCSpawn" parent="." instance=ExtResource("5_0iuht")]
 position = Vector2(-1, 1)
 
-[node name="entry_level" parent="." groups=["doorways"] instance=ExtResource("3_3lyxy")]
-visible = false
-position = Vector2(-1037, 1032)
-script = ExtResource("4_biitn")
+[node name="Ivans office (2)" type="Area2D" parent="." groups=["doorways"]]
 
-[node name="Area2D2" type="Area2D" parent="entry_level"]
-position = Vector2(963, -975)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="entry_level/Area2D2"]
-position = Vector2(-1109, 106)
-shape = SubResource("RectangleShape2D_cn771")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ivans office (2)"]
+position = Vector2(-1184.5, 159)
+shape = SubResource("RectangleShape2D_ml83q")
 
 [node name="Reynolds office (5)" type="Area2D" parent="." groups=["doorways"]]
 visible = false
@@ -423,7 +412,7 @@ shape = SubResource("CircleShape2D_kiqwa")
 [connection signal="body_exited" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_exited"]
-[connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Ivans office (2)" to="." method="_on_ivans_office_2_body_entered"]
 [connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
 [connection signal="body_entered" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_entered"]
 [connection signal="body_exited" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_exited"]
