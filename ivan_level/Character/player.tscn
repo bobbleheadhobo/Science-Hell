@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://c12br51lomy63"]
+[gd_scene load_steps=13 format=3 uid="uid://c12br51lomy63"]
 
 [ext_resource type="Script" path="res://ivan_level/Character/player.gd" id="1_0pnel"]
-[ext_resource type="PackedScene" uid="uid://jtjlr6qc0jv5" path="res://ivan_level/Character/excaliboard.tscn" id="8_0eakr"]
+[ext_resource type="Texture2D" uid="uid://d2vwic25vu4dw" path="res://ivan_level/Character/excaliboard.png" id="4_cjgdy"]
+[ext_resource type="Script" path="res://ivan_level/Character/weapon.gd" id="5_tox1e"]
 [ext_resource type="Texture2D" uid="uid://b4tmwxa8tq3bl" path="res://science_hell/players/joey.png" id="8_vx4kj"]
 
 [sub_resource type="Animation" id="Animation_jugbe"]
@@ -113,9 +114,6 @@ hframes = 4
 vframes = 6
 frame = 20
 
-[node name="Excaliboard" parent="." instance=ExtResource("8_0eakr")]
-position = Vector2(0, 4)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_2ymds")
@@ -132,6 +130,15 @@ scale = Vector2(0.68, 1)
 shape = SubResource("CapsuleShape2D_ny0ot")
 
 [node name="attack_cooldown" type="Timer" parent="."]
+
+[node name="weapon" type="Sprite2D" parent="."]
+position = Vector2(8, 5)
+texture = ExtResource("4_cjgdy")
+vframes = 2
+script = ExtResource("5_tox1e")
+
+[node name="Marker2D" type="Marker2D" parent="weapon"]
+position = Vector2(26, -2)
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
