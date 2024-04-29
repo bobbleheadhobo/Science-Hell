@@ -35,7 +35,6 @@ func _physics_process(delta):
 	if SceneManager.player_position != null and not is_inside_doorway():
 		SceneManager.player_position = position
 		
-	
 
 func move_and_animate(delta):
 	# get input from keyboard (WASD)

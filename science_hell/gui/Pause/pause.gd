@@ -9,5 +9,5 @@ func _on_quit_pressed():
 	var canvas = get_parent()
 	canvas.queue_free()
 	get_tree().paused = false
-	get_tree().quit()
-	#SceneManager.change_scene("titlescreen")
+	SceneManager.player_position = Vector2(-25, 55)
+	SceneManager.change_scene("titlescreen")
