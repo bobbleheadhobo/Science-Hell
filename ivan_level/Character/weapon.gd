@@ -14,7 +14,6 @@ func _physics_process(delta):
 	look_at(mouse_pos)
 	
 	if Input.is_action_just_pressed("fire") and can_fire:
-		print("shoot")
 		var bullet_instance = bullet.instantiate()
 		bullet_instance.rotation = rotation
 		bullet_instance.global_position = $Marker2D.global_position
