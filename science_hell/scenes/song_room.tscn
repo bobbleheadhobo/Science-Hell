@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://byo83x2tlr5ll" path="res://science_hell/assets/tilemap.tres" id="1_lt1nt"]
 
-[node name="Node2D" type="Node2D"]
+[node name="song_room" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_lt1nt")
