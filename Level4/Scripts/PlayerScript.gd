@@ -31,6 +31,7 @@ func _ready():
 	
 	# begin with any active hitboxes disabled
 	ActiveHitbox.get_node("PowerBox").disabled = true
+	ActiveHitbox.get_node("ForceRush1").visible = false
 	
 	# add Player to colliding list
 	add_to_group("Player")
@@ -67,17 +68,25 @@ func _physics_process(delta):
 		
 	# if statement used to increase velocity if player
 	# holds the same direction for a while
-	if(prevDir == horizontalDirection && horizontalDirection != 0):
+	if(prevDir == horizontalDirection && horizontalDirection != 0 && Input.is_action_pressed("sprint")):
 		
+		# MADE PLAYER SPEED UP FASTER FOR DEMO PURPOSES
+		# FIXME, AND ALSO VIRUS RUSH SIGNAl
 		theAcc += 1
-		if(theAcc < 50):
+		if(theAcc < 25):
 			speed = 100
 		elif(theAcc < 150):
+			ActiveHitbox.get_node("ForceRush1").visible = true
+			ActiveHitbox.get_node("PowerBox").disabled = false
 			speed = 200
 		else:
+			ActiveHitbox.get_node("ForceRush1").visible = true
+			ActiveHitbox.get_node("PowerBox").disabled = false
 			speed = 350
 		velocity.x = speed * horizontalDirection
 	else:
+		ActiveHitbox.get_node("ForceRush1").visible = false
+		ActiveHitbox.get_node("PowerBox").disabled = true
 		theAcc = 1
 		speed = 100
 		velocity.x = speed * horizontalDirection
@@ -93,9 +102,9 @@ func _physics_process(delta):
 	set_velocity(velocity)
 	move_and_slide()
 	
-	print("Direction: ", horizontalDirection)
-	print("Acceleration: ", theAcc)
-	print("Speed: ", speed)
+	#print("Direction: ", horizontalDirection)
+	#print("Acceleration: ", theAcc)
+	#print("Speed: ", speed)
 
 func handleSprite(currDirection):
 	
@@ -104,8 +113,14 @@ func handleSprite(currDirection):
 	
 	if(currDirection == -1):
 		sprite.set_texture(textureLeft)
-	else:
+		ActiveHitbox.get_node("ForceRush1").position.x = -5
+		ActiveHitbox.get_node("ForceRush1").flip_h = true
+	elif(currDirection == 1):
 		sprite.set_texture(textureRight)
+		ActiveHitbox.get_node("ForceRush1").position.x = 5
+		ActiveHitbox.get_node("ForceRush1").flip_h = false
+	else:
+		pass
 
 # tried to implement bouncing off of enemies
 func _on_signal_hurt_box_body_entered(body):
