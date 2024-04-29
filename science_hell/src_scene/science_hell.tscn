@@ -342,9 +342,10 @@ layer_0/tile_data = PackedInt32Array(1, 983040, 7, 2, 983040, 7, 3, 983040, 7, 4
 position = Vector2(144.5, 325.5)
 shape = SubResource("RectangleShape2D_pos8w")
 
-[node name="cooper_level" type="Area2D" parent="."]
+[node name="cooper_level" type="Area2D" parent="Auditorium"]
+position = Vector2(128, -160)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cooper_level"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Auditorium/cooper_level"]
 position = Vector2(-66, 752)
 shape = SubResource("RectangleShape2D_jd5yk")
 
@@ -400,7 +401,6 @@ texture = SubResource("GradientTexture2D_debcs")
 script = ExtResource("7_oivax")
 
 [node name="collisionInner" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="plant" type="CollisionPolygon2D" parent="collisionInner"]
 polygon = PackedVector2Array(-400, 159, -305, 159, -305, 240, -400, 240, -400, 160, -392, 171, -386, 165, -395, 160, -400, 160)
@@ -457,7 +457,6 @@ polygon = PackedVector2Array(-1521, -336, -2111, -336, -2111, -191, -1521, -190,
 polygon = PackedVector2Array(-76, -617, -76, -606, -82, -606, -82, -601, -80, -599, -48, -599, -46, -601, -46, -606, -52, -606, -52, -617)
 
 [node name="collisionOuter" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="wall1" type="CollisionPolygon2D" parent="collisionOuter"]
 polygon = PackedVector2Array(-128, 160, 0, 160, 0, 128, 16, 128, 16, 160, 144, 160, 144, 128, 160, 128, 160, 208, -112, 208, -112, 224, -128, 224, -128, 161, -122, 167, -120, 162, -127, 161, -128, 161)
@@ -541,7 +540,7 @@ shape = SubResource("CircleShape2D_kiqwa")
 [connection signal="body_exited" from="Auditorium/AudArea" to="lighting" method="_on_aud_area_body_exited"]
 [connection signal="body_exited" from="Auditorium/AudArea" to="Auditorium" method="_on_aud_area_body_exited"]
 [connection signal="body_exited" from="Auditorium/AudArea" to="hero/PointLight2D" method="_on_aud_area_body_exited"]
-[connection signal="body_entered" from="cooper_level" to="." method="_on_cooper_level_body_entered"]
+[connection signal="body_entered" from="Auditorium/cooper_level" to="." method="_on_cooper_level_body_entered"]
 [connection signal="body_entered" from="Ivans office (2)" to="." method="_on_ivans_office_2_body_entered"]
 [connection signal="body_entered" from="rey_office/Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
 [connection signal="body_entered" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_entered"]
