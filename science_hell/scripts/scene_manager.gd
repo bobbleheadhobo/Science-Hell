@@ -28,7 +28,8 @@ var scene_file_paths = {
 	"pause": "res://science_hell/gui/Pause/pause.tscn",
 	"copperslevel": "res://chey/Game.tscn",
 	"jasonslevel": "res://level1(jason)//Scenes/Game.tscn",
-	"parthlevel": "res://Level4/Scenes/FinalVirusWorld.tscn"
+	"parthlevel": "res://Level4/Scenes/FinalVirusWorld.tscn",
+	"cooperlevel": "res://chey/Game.tscn"
 }
 
 func _ready():
