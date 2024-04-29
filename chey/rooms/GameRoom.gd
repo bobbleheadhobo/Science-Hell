@@ -64,7 +64,7 @@ func get_full_description() -> String:
 
 # room description
 func get_room_description() -> String:
-	return  "You are now in: " + Types.wrap_location_text(room_name) + ". It is " + room_description
+	return "\n" + "[color=#008080]Location: [/color]" + Types.wrap_location_text(room_name) + "\n" +"[color=#008080]Objective: [/color]" + Types.wrap_main_description(room_description) 
 	
 
 # npc dialog
@@ -74,7 +74,7 @@ func get_npc_description() -> String:
 	var npc_string = ""
 	for npc in npcs:
 		npc_string += Types.wrap_npc_text(npc.npc_name) + " "
-	return "\nNPCs: " +  npc_string 
+	return "\n[color=#008080]NPC:[/color] " +  npc_string 
 
 # item description
 func get_item_description() -> String:
@@ -85,12 +85,12 @@ func get_item_description() -> String:
 	var item_string = ""
 	for item in items:
 		item_string += Types.wrap_item_text(item.item_name) + " "
-	return "Items: " +  item_string
+	return "\n[color=#008080]Items:[/color] " +  item_string
 
 
 # exit description
 func get_exit_description() -> String:
-	return  "Exits: " + Types.wrap_location_text(" ".join(PackedStringArray(exits.keys())))
+	return  "\n[color=#008080]Exits:[/color] " + Types.wrap_location_text(" ".join(PackedStringArray(exits.keys())))
 
 
 # handles telling player exit is unlocked

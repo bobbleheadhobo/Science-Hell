@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://gncj06nn4srt"]
+[gd_scene load_steps=2 format=3 uid="uid://gncj06nn4srt"]
 
-[ext_resource type="Texture2D" uid="uid://dqw6653wfheyt" path="res://science_hell/gui/char_select/cursor_0001.png" id="1_i620r"]
-[ext_resource type="Texture2D" uid="uid://dtr1wu25xegmp" path="res://science_hell/gui/char_select/cursor_frames.png" id="2_tpt4g"]
+[ext_resource type="Texture2D" uid="uid://dvypmr06yvyxx" path="res://science_hell/gui/char_select/cursor/cursor_frames_0001.png" id="1_i620r"]
 
 [node name="Cursor" type="TextureRect"]
 anchors_preset = -1
@@ -19,9 +18,3 @@ size_flags_vertical = 4
 texture = ExtResource("1_i620r")
 expand_mode = 3
 stretch_mode = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(18, 17)
-texture = ExtResource("2_tpt4g")
-hframes = 4

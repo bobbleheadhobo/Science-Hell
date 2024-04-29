@@ -1,7 +1,6 @@
 extends Node2D
 
 signal boss_spawned(boss_node)
-var max_waves = 4
 var current_wave = Rey.current_wave
 var reynolds_scene = preload("res://Joeys level/mobs/reynolds_boss/reynolds.tscn")
 var exit_scene = preload("res://Joeys level/level/exit.tscn")
@@ -9,7 +8,10 @@ var exit_scene = preload("res://Joeys level/level/exit.tscn")
 
 func _ready():
 	MusicManager.play_song("reynolds")
+	Rey.reset()
 	start_mob_timer()
+	
+	
 
 func _on_progress_bar_progress_bar_full():
 	current_wave = 	Rey.next_wave()
@@ -27,8 +29,8 @@ func _on_progress_bar_progress_bar_full():
 		wave " + str(current_wave)
 	elif current_wave == 4:
 		$ui/Label.text = "
-		FINAL WAVE"
-		$SpawnMobTimer.wait_time = 1
+		BOSS BATTLE"
+		$SpawnMobTimer.wait_time = 2
 		call_deferred("spawn_reynolds")
 		
 		
@@ -56,5 +58,4 @@ func kill_all(group_name):
 
 
 func start_mob_timer():
-	await get_tree().create_timer(8.0).timeout
 	$SpawnMobTimer.start()
