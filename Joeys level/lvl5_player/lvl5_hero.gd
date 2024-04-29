@@ -44,6 +44,7 @@ func _physics_process(delta):
 	shoot()
 	handle_mob_collision(delta)
 	move_and_slide()
+	flip_gun()
 	update_invincibility(delta)
 
 
@@ -126,3 +127,10 @@ func player():
 func show_arrow():
 	$ExitArrow.show()
 	$ExitArrow/AnimationPlayer.play("point")
+
+
+func flip_gun():
+	if blend_position.x < 0:
+		GUN.flip_sprite(true)
+	elif blend_position.x > 0:
+		GUN.flip_sprite(false)
