@@ -6,7 +6,7 @@ extends Control
 	"chey": $Control3/TextureRect,
 	"pat": $Control4/TextureRect,
 	"jason": $Control5/TextureRect,
-	"jonathan": $Control6/TextureRect,
+	"johnathan": $Control6/TextureRect,
 	"chris": $Control7/TextureRect
 }
 
