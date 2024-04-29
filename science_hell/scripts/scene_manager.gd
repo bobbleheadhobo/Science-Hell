@@ -61,7 +61,8 @@ func change_scene(scene_name: String):
 		push_error("Scene not found in the dictionary: " + scene_name)
 
 func _deferred_change_scene(new_scene_path):
-	current_scene.free()
+	#current_scene.free()
+	current_scene.queue_free()
 	var new_scene = ResourceLoader.load(new_scene_path)
 	current_scene = new_scene.instantiate()
 	get_tree().root.add_child(current_scene)

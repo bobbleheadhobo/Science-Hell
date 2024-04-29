@@ -3788,7 +3788,7 @@ shape = SubResource("RectangleShape2D_wtslr")
 top_level = true
 light_mask = 15
 visibility_layer = 15
-position = Vector2(4410, 983)
+position = Vector2(60, 88)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_callback = 0
