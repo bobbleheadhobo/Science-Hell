@@ -18,7 +18,6 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 func _on_detection_area_body_entered(body):
-	print("404 detection area entered")
 	player = body
 	player_chase = true
 

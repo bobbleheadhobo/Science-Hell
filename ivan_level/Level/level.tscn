@@ -3800,7 +3800,7 @@ drag_vertical_enabled = true
 remote_path = NodePath("../Camera2D")
 
 [node name="Boss" parent="." instance=ExtResource("7_uxbyg")]
-position = Vector2(5400, 927)
+position = Vector2(5497, 928)
 
 [node name="enemy2" parent="." instance=ExtResource("7_d5r0g")]
 top_level = true

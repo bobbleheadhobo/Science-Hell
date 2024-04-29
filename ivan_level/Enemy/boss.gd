@@ -16,13 +16,16 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 func _on_detection_area_body_entered(body):
-	print("Boss Detection entered")
-	player = body
-	player_chase = true
+	if body.has_method("player"):
+		print("Boss Detection entered")
+		player = body
+		player_chase = true
 
 func _on_detection_area_body_exited(body):
-	player = null
-	player_chase = false
+	if body.has_method("player"):
+		print("Boss Detection exited")
+		player = null
+		player_chase = false
 
 func enemy():
 	pass
