@@ -13,8 +13,8 @@ extends Node
 
 # ScaleManager.gd
 
-func set_stretch_scale_one():
-	var original_scale = ProjectSettings.get_setting("display/window/stretch/scale")
-	var base_window_size = DisplayServer.window_get_size() / original_scale
-	DisplayServer.window_set_size(base_window_size)
+#func set_stretch_scale_one():
+	#var original_scale = ProjectSettings.get_setting("display/window/stretch/scale")
+	#var base_window_size = DisplayServer.window_get_size() / original_scale
+	#DisplayServer.window_set_size(base_window_size)
 

@@ -4,9 +4,10 @@ extends Node
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().paused = true
-		var canvas_layer = CanvasLayer.new()
-		canvas_layer.layer = 999
-		add_child(canvas_layer)
-		var pause = pause_scene.instantiate()
-		canvas_layer.add_child(pause)
+		if SceneManager.current_scene_name != "titlescreen":
+			get_tree().paused = true
+			var canvas_layer = CanvasLayer.new()
+			canvas_layer.layer = 999
+			add_child(canvas_layer)
+			var pause = pause_scene.instantiate()
+			canvas_layer.add_child(pause)
