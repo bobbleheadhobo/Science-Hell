@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://lsgg4637htrb"]
+
+[ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_ckfcs"]
+
+[resource]
+script = ExtResource("1_ckfcs")
+npc_name = "duckie"
+initial_dialog = "text"
+post_quest_dialog = "text"

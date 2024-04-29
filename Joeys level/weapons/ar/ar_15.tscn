@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs3lld32j5874"]
+
+[ext_resource type="Script" path="res://Joeys level/weapons/ar/ar_15.gd" id="1_3wlwo"]
+[ext_resource type="Texture2D" uid="uid://766ait1xgi25" path="res://Joeys level/weapons/ar/Wands-x2.png" id="2_ky4eh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_htgvb"]
+radius = 561.602
+
+[node name="AR-15" type="Area2D"]
+position = Vector2(0, -1)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_3wlwo")
+
+[node name="gun_range" type="CollisionShape2D" parent="."]
+position = Vector2(9, -4)
+shape = SubResource("CircleShape2D_htgvb")
+
+[node name="ar" type="Sprite2D" parent="."]
+position = Vector2(8, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ky4eh")
+
+[node name="shooting_point" type="Marker2D" parent="ar"]
+unique_name_in_owner = true
+position = Vector2(-1.5, -13)
