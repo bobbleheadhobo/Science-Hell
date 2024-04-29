@@ -4,7 +4,8 @@ var songs = {
 	"menu": "res://science_hell/Music/Heaven or Hell (Menu DEMO).wav",
 	"ivan": "res://science_hell/Music/Battle at Chuga Jung castle.wav",
 	"reynolds": "res://science_hell/Music/Input Output.wav",
-	"sciencehall": "res://science_hell/Music/Ambiance_Loop.wav"
+	"spooky": "res://science_hell/Music/Ambiance_Loop.wav",
+	"sciencehall": "res://science_hell/Music/Ambiance.Loop (updated).wav"
 }
 
 var current_song = ""

@@ -3,8 +3,6 @@
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
 [ext_resource type="TileSet" uid="uid://rru2hagpatg1" path="res://science_hell/assets/main_map_tile_set.tres" id="2_2ycby"]
-[ext_resource type="PackedScene" uid="uid://dq4wkwge4my22" path="res://science_hell/scenes/entry_level.tscn" id="3_3lyxy"]
-[ext_resource type="Script" path="res://science_hell/scripts/entry_level.gd" id="4_biitn"]
 [ext_resource type="PackedScene" uid="uid://ckjh1yr7odfop" path="res://science_hell/scenes/lab.tscn" id="4_ds2d8"]
 [ext_resource type="PackedScene" uid="uid://dssb1g8pnln1n" path="res://science_hell/scenes/npc_spawn.tscn" id="5_0iuht"]
 [ext_resource type="Script" path="res://science_hell/scripts/Background.gd" id="7_j3ftm"]
@@ -14,11 +12,17 @@
 [ext_resource type="Script" path="res://science_hell/scripts/Song_NPC.gd" id="12_ajlhw"]
 [ext_resource type="Texture2D" uid="uid://bdbwt277qvj7i" path="res://science_hell/players/professors/songRock.png" id="13_480yp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn771"]
-size = Vector2(61, 20)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5kqb1"]
+polygon = PackedVector2Array(-88, -504, -88, -16, -1328, -16, -1328, -504, -1256, -504, -1256, -488, -1200, -488, -1200, -504, -1048, -504, -1048, -488, -992, -488, -992, -504, -96, -504, -80, -512, -999, -512, -999, -496, -1040, -496, -1040, -512, -1207, -512, -1207, -496, -1248, -496, -1248, -512, -1335, -512, -1335, -10, -80, -10, -80, -512)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bpxbl"]
+polygon = PackedVector2Array(-1392, -512, -1392, -10, -1639, -10, -1639, -58, -1776, -58, -1776, -10, -1943, -10, -1943, -138, -1984, -138, -1984, -10, -2151, -10, -2151, -512, -2016, -512, -2016, -384, -1975, -384, -1975, -512, -1776, -512, -1776, -464, -1655, -464, -1655, -512, -1392, -512, -1395, -506, -1648, -506, -1648, -459, -1783, -459, -1783, -507, -1968, -507, -1968, -379, -2023, -379, -2023, -507, -2145, -507, -2144, -15, -1991, -15, -1991, -144, -1937, -144, -1936, -15, -1784, -15, -1784, -64, -1632, -64, -1632, -15, -1399, -15, -1399, -506)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0xnr6"]
+polygon = PackedVector2Array(9, -10, -32, -10, -32, -16, 9, -16, 9, -170, -23, -170, -23, -666, -105, -666, -105, -618, -224, -618, -224, -603, -335, -602, -336, -618, -352, -618, -352, -602, -2224, -602, -2224, -512, -2208, -512, -2208, 80, -1216, 80, -1216, 96, -618, 96, -618, 160, -583, 160, -583, 96, -464, 96, -464, 496, -391, 496, -391, 433, -295, 432, -295, 352, -215, 352, -215, 272, -193, 272, -193, 278, -208, 278, -209, 358, -289, 358, -289, 437, -384, 437, -384, 501, -471, 501, -470, 101, -577, 101, -577, 165, -623, 165, -623, 101, -1222, 101, -1222, 85, -2215, 86, -2215, -507, -2231, -507, -2231, -608, -359, -607, -359, -624, -329, -624, -329, -607, -231, -607, -231, -624, -112, -623, -112, -672, -16, -672, -16, -175, 16, -175, 16, -16, 17, 166, -112, 166, -112, 198, -128, 198, -128, 160, 9, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml83q"]
-size = Vector2(14, 21)
+size = Vector2(39, 21)
 
 [sub_resource type="Gradient" id="Gradient_jd2w3"]
 offsets = PackedFloat32Array(0, 0.63)
@@ -266,19 +270,27 @@ visible = false
 polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, -152, 493, -152, 519, -137, 520, -137, 493, -4, 492)
 
 [node name="NPCSpawn" parent="." instance=ExtResource("5_0iuht")]
+visible = false
 position = Vector2(-1, 1)
 
-[node name="entry_level" parent="." groups=["doorways"] instance=ExtResource("3_3lyxy")]
-visible = false
-position = Vector2(-1037, 1032)
-script = ExtResource("4_biitn")
+[node name="LightCollisions" type="StaticBody2D" parent="."]
 
-[node name="Area2D2" type="Area2D" parent="entry_level"]
-position = Vector2(963, -975)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightCollisions"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="entry_level/Area2D2"]
-position = Vector2(-1109, 106)
-shape = SubResource("RectangleShape2D_cn771")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="LightCollisions"]
+occluder = SubResource("OccluderPolygon2D_5kqb1")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="LightCollisions"]
+occluder = SubResource("OccluderPolygon2D_bpxbl")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="LightCollisions"]
+occluder = SubResource("OccluderPolygon2D_0xnr6")
+
+[node name="Ivans office (2)" type="Area2D" parent="." groups=["doorways"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ivans office (2)"]
+position = Vector2(-1184.5, 159)
+shape = SubResource("RectangleShape2D_ml83q")
 
 [node name="Reynolds office (5)" type="Area2D" parent="." groups=["doorways"]]
 visible = false
@@ -297,6 +309,8 @@ position = Vector2(-25, 55)
 position = Vector2(2.38419e-07, -1)
 scale = Vector2(0.771856, 0.71875)
 shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 4.0
 texture = SubResource("GradientTexture2D_debcs")
 script = ExtResource("7_oivax")
 
@@ -401,6 +415,8 @@ animation = &"front_idle"
 position = Vector2(-70, 98)
 shape = SubResource("CircleShape2D_ckuxb")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HamBody2D"]
+
 [node name="SongBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("12_ajlhw")
 
@@ -417,13 +433,15 @@ animation = &"right_walk"
 position = Vector2(-1028, 36)
 shape = SubResource("CircleShape2D_kiqwa")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SongBody2D"]
+
 [connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_entered"]
 [connection signal="body_exited" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_exited"]
 [connection signal="body_exited" from="Lab/LabArea" to="hero/PointLight2D" method="_on_lab_area_body_exited"]
-[connection signal="body_entered" from="entry_level/Area2D2" to="entry_level" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Ivans office (2)" to="." method="_on_ivans_office_2_body_entered"]
 [connection signal="body_entered" from="Reynolds office (5)" to="." method="_on_reynolds_office_body_entered"]
 [connection signal="body_entered" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_entered"]
 [connection signal="body_exited" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_exited"]
