@@ -1,7 +1,0 @@
-join SongNPC 1
-Welcome to your first trial, to pass this course you will need to to score a C or higher in a battle of music!
-- How do I play?
-	You need to use the A, S, and D buttons to interact with the notes at the bottom of the screen. try to properly time the notes falling perfectly in the center of the note to get a higher score.
-	do SceneManager.change_scene("jasonslevel")
-- I don't want to play right now.
-	Okay, come back whenever you're looking for a challange!

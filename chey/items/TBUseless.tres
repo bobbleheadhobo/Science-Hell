@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dftp80ub88qi6"]
-
-[ext_resource type="Script" path="res://chey/items/Item.gd" id="1_qf3ia"]
-
-[resource]
-script = ExtResource("1_qf3ia")
-item_name = "7E"
-item_type = 0

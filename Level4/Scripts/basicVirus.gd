@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@export var speed = 50
+@export var speed = 100
 @export var gravity = 10
 # @export var jumpForce = 450
 var prevDir = 0
-var horizontalDirection = -1
+var horizontalDirection = 1
 
 func _physics_process(delta):
 	
@@ -19,8 +19,3 @@ func _physics_process(delta):
 			
 	set_velocity(velocity)
 	move_and_slide()
-
-
-func _on_hitbox_body_entered(body):
-	if(body.is_in_group("Player")):
-		queue_free()

@@ -323,7 +323,7 @@ rotation = -3.12913
 shape = SubResource("CapsuleShape2D_gxiua")
 
 [node name="AR_15" parent="." instance=ExtResource("2_l4st2")]
-position = Vector2(32, 9)
+position = Vector2(30, 33)
 
 [node name="hurtbox" type="Area2D" parent="."]
 unique_name_in_owner = true

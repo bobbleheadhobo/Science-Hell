@@ -3,6 +3,7 @@ extends PanelContainer
 # Response scene
 #const Response = preload("res://chey/input/Response.tscn")
 
+
 # script class not instance of game => save data
 const INPUT_RESPONSE = preload("res://chey/input/InputResponse.tscn")
 
@@ -18,13 +19,11 @@ var should_zebra := false
 
 @onready var history_rows = $Scroll/HistoryRows
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# connect scroll bar changed signal to Game.gd
 	scrollbar.connect("changed",_handle_scrollbar_changed)
 	#max_scroll_length = scrollbar.max_value # new
-	#Health.set_visibility(false)
 	
 	
 

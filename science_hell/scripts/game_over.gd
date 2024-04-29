@@ -4,17 +4,15 @@ func _ready():
 	Health.set_visibility(false)
 
 func _on_drop_out_pressed():
-	Health.reset_hearts()
-	MusicManager.stop_music()	
 	get_tree().paused = false
+	Health.reset()
 	SceneManager.change_scene("titlescreen")
 	$".".queue_free()
 	
 
 func _on_retry_pressed():
-	Health.reset_hearts()
-	MusicManager.stop_music()
 	get_tree().paused = false
+	Health.reset()
 	SceneManager.change_scene("sciencehall")
 	$".".queue_free()
 

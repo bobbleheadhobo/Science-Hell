@@ -1,21 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://r3t8r5bbpxof"]
+[gd_scene load_steps=14 format=3 uid="uid://r3t8r5bbpxof"]
 
 [ext_resource type="Script" path="res://chey/Game.gd" id="1_e0p6v"]
-[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
+[ext_resource type="FontFile" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
 [ext_resource type="Script" path="res://chey/input/Input.gd" id="1_yo6lk"]
 [ext_resource type="Script" path="res://chey/CommandProcessor.gd" id="2_3lrur"]
-[ext_resource type="AudioStream" uid="uid://baxq406bs2gj3" path="res://chey/Roulette (with keycard).wav" id="2_p133k"]
 [ext_resource type="Script" path="res://chey/Player.gd" id="2_rqjkp"]
 [ext_resource type="PackedScene" uid="uid://dt4l1fxuxre4u" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
-[ext_resource type="PackedScene" uid="uid://tg2a3ws3eojy" path="res://chey/GameInfo.tscn" id="6_4qxhm"]
-[ext_resource type="PackedScene" uid="uid://b1js2hgip12fo" path="res://chey/SidePanel.tscn" id="9_ymbxp"]
+[ext_resource type="PackedScene" path="res://chey/GameInfo.tscn" id="6_4qxhm"]
+[ext_resource type="PackedScene" path="res://chey/SidePanel.tscn" id="9_ymbxp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dj5n"]
-bg_color = Color(0, 0.501961, 0.501961, 1)
+bg_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugmq6"]
-bg_color = Color(0.752941, 0.752941, 0.752941, 1)
+bg_color = Color(0.25098, 0.25098, 0.25098, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3srrx"]
 
@@ -23,10 +22,11 @@ bg_color = Color(0.752941, 0.752941, 0.752941, 1)
 
 [node name="Game" type="Control"]
 layout_mode = 3
-anchor_right = 1.195
-anchor_bottom = 1.229
-offset_right = -1376.64
-offset_bottom = -796.392
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -34,8 +34,6 @@ size_flags_vertical = 3
 script = ExtResource("1_e0p6v")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
-position = Vector2(0, 3)
 anchor_mode = 0
 
 [node name="Player" type="Node" parent="."]
@@ -48,81 +46,79 @@ script = ExtResource("2_3lrur")
 script = ExtResource("3_vy8n6")
 
 [node name="TerminalRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 887.0
-offset_top = -3410.0
-offset_right = 124.0
-offset_bottom = -3858.0
+offset_left = 587.0
+offset_top = -3273.0
+offset_right = -176.0
+offset_bottom = -3721.0
 room_name = "terminal"
-room_description = "[color=#333333]Find the item to unlock the stack memory segment.[/color] 
-[color=#8B0000]Hint: [/color] Try to talk to Duckie."
+room_description = "You are in a Terminal. Terminal puzzle. "
 
 [node name="StackRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 890.0
-offset_top = -3030.0
-offset_right = 127.0
-offset_bottom = -3478.0
+offset_left = 589.0
+offset_top = -3045.0
+offset_right = -174.0
+offset_bottom = -3493.0
 room_name = "stack"
-room_description = "keep walking down."
+room_description = "stack room"
 
 [node name="HeapRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 881.0
-offset_top = -2641.0
-offset_right = 1326.0
-offset_bottom = -2380.0
+offset_left = 596.0
+offset_top = -2795.0
+offset_right = 985.0
+offset_bottom = -2595.0
 grow_horizontal = 1
 grow_vertical = 1
 room_name = "heap"
 room_description = "Heap room."
 
 [node name="TextRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 887.0
-offset_top = -2256.0
-offset_right = 124.0
-offset_bottom = -2704.0
+offset_left = 606.0
+offset_top = -2547.0
+offset_right = -157.0
+offset_bottom = -2995.0
 room_name = "text"
 room_description = "text room"
 
 [node name="CodeRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 866.0
-offset_top = -1828.0
-offset_right = 103.0
-offset_bottom = -2276.0
+offset_left = 619.0
+offset_top = -2303.0
+offset_right = -144.0
+offset_bottom = -2751.0
 room_name = "code"
 room_description = "code room"
 
 [node name="CooperRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-visible = false
-offset_left = 2916.0
-offset_top = -1816.0
-offset_right = 2153.0
-offset_bottom = -2264.0
+offset_left = 1983.0
+offset_top = -2309.0
+offset_right = 1220.0
+offset_bottom = -2757.0
 room_name = "cooper 1"
 room_description = "cooper 1 room"
 
 [node name="Cooper2Room" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 1547.0
-offset_top = -3423.0
-offset_right = 784.0
-offset_bottom = -3871.0
+offset_left = 1052.0
+offset_top = -3280.0
+offset_right = 289.0
+offset_bottom = -3728.0
 room_name = "cooper 2"
 room_description = "cooper 2 room with duckie"
 
 [node name="HintRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 232.0
-offset_top = -2258.0
-offset_right = -531.0
-offset_bottom = -2706.0
+offset_left = 144.0
+offset_top = -2546.0
+offset_right = -619.0
+offset_bottom = -2994.0
 room_name = "hint.txt"
 room_description = "hint room"
 
 [node name="BashRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-offset_left = 1515.0
-offset_top = -1840.0
-offset_right = 752.0
-offset_bottom = -2288.0
+offset_left = 1059.0
+offset_top = -2300.0
+offset_right = 296.0
+offset_bottom = -2748.0
 room_name = "bash_profile"
 room_description = "bash room"
 
@@ -130,21 +126,20 @@ room_description = "bash room"
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 2158.0
-offset_top = -3447.0
-offset_right = 2606.0
-offset_bottom = -3195.0
+offset_left = 1488.0
+offset_top = -3278.0
+offset_right = 1877.0
+offset_bottom = -3078.0
 grow_horizontal = 1
 grow_vertical = 1
 room_name = "sh terminal"
 room_description = "sh terminal exit room"
 
 [node name="CodeShRoom" parent="RoomManager" instance=ExtResource("3_4cv05")]
-visible = false
-offset_left = 2197.0
-offset_top = -1826.0
-offset_right = 1434.0
-offset_bottom = -2274.0
+offset_left = 1519.0
+offset_top = -2303.0
+offset_right = 756.0
+offset_bottom = -2751.0
 room_name = "code.sh"
 room_description = "'01000010 01000001 01010010 01000110'"
 
@@ -184,8 +179,6 @@ layout_mode = 2
 
 [node name="Caret" type="Label" parent="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.501961, 0.501961, 1)
-theme_override_colors/font_shadow_color = Color(0.301961, 0.301961, 0.301961, 1)
 theme_override_fonts/font = ExtResource("1_q34yp")
 theme_override_font_sizes/font_size = 28
 text = " > "
@@ -193,8 +186,6 @@ text = " > "
 [node name="Input" type="LineEdit" parent="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
-theme_override_colors/selection_color = Color(0.2, 0.2, 0.2, 1)
 theme_override_fonts/font = ExtResource("1_q34yp")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3srrx")
@@ -204,10 +195,6 @@ script = ExtResource("1_yo6lk")
 
 [node name="SidePanel" parent="Background/MarginContainer/Columns" instance=ExtResource("9_ymbxp")]
 layout_mode = 2
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_p133k")
-autoplay = true
 
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
