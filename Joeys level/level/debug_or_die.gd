@@ -29,8 +29,8 @@ func _on_progress_bar_progress_bar_full():
 		wave " + str(current_wave)
 	elif current_wave == 4:
 		$ui/Label.text = "
-		FINAL WAVE"
-		$SpawnMobTimer.wait_time = 1
+		BOSS BATTLE"
+		$SpawnMobTimer.wait_time = 2
 		call_deferred("spawn_reynolds")
 		
 		
