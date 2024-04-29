@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://d02pbn08lcvxe"]
 
 [ext_resource type="Script" path="res://Joeys level/mobs/reynolds_boss/reynolds.gd" id="1_8r87l"]
-[ext_resource type="Texture2D" uid="uid://dvlpvftiv0bpu" path="res://science_hell/players/rey.png" id="2_wx7xm"]
+[ext_resource type="Texture2D" uid="uid://dvlpvftiv0bpu" path="res://science_hell/players/professors/rey.png" id="2_wx7xm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7b1ow"]
 size = Vector2(9, 20)
