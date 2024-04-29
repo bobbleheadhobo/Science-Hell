@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=44 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -11,6 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="11_8m3m7"]
 [ext_resource type="Script" path="res://science_hell/scripts/Song_NPC.gd" id="12_ajlhw"]
 [ext_resource type="Texture2D" uid="uid://bdbwt277qvj7i" path="res://science_hell/players/professors/songRock.png" id="13_480yp"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5kqb1"]
+polygon = PackedVector2Array(-88, -504, -88, -16, -1328, -16, -1328, -504, -1256, -504, -1256, -488, -1200, -488, -1200, -504, -1048, -504, -1048, -488, -992, -488, -992, -504, -96, -504, -80, -512, -999, -512, -999, -496, -1040, -496, -1040, -512, -1207, -512, -1207, -496, -1248, -496, -1248, -512, -1335, -512, -1335, -10, -80, -10, -80, -512)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bpxbl"]
+polygon = PackedVector2Array(-1392, -512, -1392, -10, -1639, -10, -1639, -58, -1776, -58, -1776, -10, -1943, -10, -1943, -138, -1984, -138, -1984, -10, -2151, -10, -2151, -512, -2016, -512, -2016, -384, -1975, -384, -1975, -512, -1776, -512, -1776, -464, -1655, -464, -1655, -512, -1392, -512, -1395, -506, -1648, -506, -1648, -459, -1783, -459, -1783, -507, -1968, -507, -1968, -379, -2023, -379, -2023, -507, -2145, -507, -2144, -15, -1991, -15, -1991, -144, -1937, -144, -1936, -15, -1784, -15, -1784, -64, -1632, -64, -1632, -15, -1399, -15, -1399, -506)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0xnr6"]
+polygon = PackedVector2Array(9, -10, -32, -10, -32, -16, 9, -16, 9, -170, -23, -170, -23, -666, -105, -666, -105, -618, -224, -618, -224, -603, -335, -602, -336, -618, -352, -618, -352, -602, -2224, -602, -2224, -512, -2208, -512, -2208, 80, -1216, 80, -1216, 96, -618, 96, -618, 160, -583, 160, -583, 96, -464, 96, -464, 496, -391, 496, -391, 433, -295, 432, -295, 352, -215, 352, -215, 272, -193, 272, -193, 278, -208, 278, -209, 358, -289, 358, -289, 437, -384, 437, -384, 501, -471, 501, -470, 101, -577, 101, -577, 165, -623, 165, -623, 101, -1222, 101, -1222, 85, -2215, 86, -2215, -507, -2231, -507, -2231, -608, -359, -607, -359, -624, -329, -624, -329, -607, -231, -607, -231, -624, -112, -623, -112, -672, -16, -672, -16, -175, 16, -175, 16, -16, 17, 166, -112, 166, -112, 198, -128, 198, -128, 160, 9, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml83q"]
 size = Vector2(39, 21)
@@ -264,6 +273,19 @@ polygon = PackedVector2Array(-3, -3, -709, -3, -710, 218, -497, 218, -502, 492, 
 visible = false
 position = Vector2(-1, 1)
 
+[node name="LightCollisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LightCollisions"]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="LightCollisions"]
+occluder = SubResource("OccluderPolygon2D_5kqb1")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="LightCollisions"]
+occluder = SubResource("OccluderPolygon2D_bpxbl")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="LightCollisions"]
+occluder = SubResource("OccluderPolygon2D_0xnr6")
+
 [node name="Ivans office (2)" type="Area2D" parent="." groups=["doorways"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ivans office (2)"]
@@ -287,6 +309,8 @@ position = Vector2(-25, 55)
 position = Vector2(2.38419e-07, -1)
 scale = Vector2(0.771856, 0.71875)
 shadow_enabled = true
+shadow_filter = 1
+shadow_filter_smooth = 4.0
 texture = SubResource("GradientTexture2D_debcs")
 script = ExtResource("7_oivax")
 
