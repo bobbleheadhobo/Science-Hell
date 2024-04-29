@@ -1,11 +1,16 @@
 class_name Player
 extends CharacterBody2D
 
+var enemy_in_range = false
+var enemy_cooldown = true
+var health = 100
+var alive = true
+
+var attack = false
+
 @export var speed : float = 200.0
 @export var jump_velocity : float = -250.0
 @export var level_start_pos : Node2D 
-@onready var GUN = $Excaliboard
-
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -39,9 +44,15 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
 	move_and_slide()
-	shoot()
+	enemy_attack()
+	
+	if health <= 0:
+		alive = false
+		health = 0
+		print("Player died")
+		self.queue_free()
+		
 	update_animation()
-	update_facing_direction()
 
 func update_animation():
 	if not animation_locked:
@@ -60,19 +71,6 @@ func update_animation():
 			else:
 				$AnimationPlayer.play("idle_right")
 
-func update_facing_direction():
-	if direction.x > 0:
-		GUN.right()
-	
-	elif direction.x < 0:
-		GUN.left()
-
-func shoot():
-	if Input.is_action_just_pressed("jump"):
-		if GUN:
-			GUN.shoot()
-		
-
 func handle_danger() -> void:
 	print("Player died")
 	visible = false
@@ -85,3 +83,32 @@ func reset_play() -> void:
 	global_position = Vector2.ZERO
 	visible = true 
 	can_control = true
+
+func player():
+	pass
+
+func bullet():
+	pass
+
+func _on_player_hitbox_body_entered(body):
+	if body.has_method("enemy"):
+		print("player hitbox entered")
+		enemy_in_range = true
+
+
+func _on_player_hitbox_body_exited(body):
+	if body.has_method("enemy"):
+		enemy_in_range = false
+
+func enemy_attack():
+	if enemy_in_range and enemy_cooldown:
+		Health.update_health(Health.current_health - 1)
+	
+		if Health.current_health <= 0:
+			print("DEAD!")
+			
+		enemy_cooldown = false
+		$attack_cooldown.start()
+
+func _on_attack_cooldown_timeout():
+	enemy_cooldown = true

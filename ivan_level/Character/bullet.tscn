@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ppv33tecsbcy"]
+[gd_scene load_steps=4 format=3 uid="uid://dy67sfx6tjvn1"]
 
 [ext_resource type="Script" path="res://ivan_level/Character/bullet.gd" id="1_gf87u"]
 [ext_resource type="Texture2D" uid="uid://ulrxd0q6nkdc" path="res://icon.svg" id="2_lw5py"]
