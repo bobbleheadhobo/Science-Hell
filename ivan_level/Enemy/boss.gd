@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 10
+var speed = 50
 var player_chase = false
 var player = null
 
@@ -13,10 +13,10 @@ func _physics_process(delta):
 	if player_chase:
 		position += (player.position - position) / speed
 		# Add the gravity.
-		#velocity.y += gravity * delta
+		velocity.y += gravity * delta
 
 func _on_detection_area_body_entered(body):
-	print("Detection entered")
+	print("Boss Detection entered")
 	player = body
 	player_chase = true
 

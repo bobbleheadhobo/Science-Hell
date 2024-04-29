@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714410756
+::res://::1714414117
 icon.svg::CompressedTexture2D::1427558487151224360::1713995014::1714003658::1::::<><>::
 README.md::TextFile::-1::1713152307::0::1::::<><>::
 ::res://chey/::1714345981
@@ -83,7 +83,7 @@ Exit.gd::GDScript::-1::1712944698::0::1::::Exit<>Resource<>::
 GameRoom.gd::GDScript::-1::1712944698::0::1::::GameRoom<>PanelContainer<>::
 GameRoom.tscn::PackedScene::8553431651718980662::1713152307::0::1::::<><>::res://chey/rooms/GameRoom.gd<>uid://c13xce3j37r5h::::res://chey/fonts/IBMPlexMono-Medium.ttf<>uid://b570kmbms8al8::::res://chey/fonts/IBMPlexMono-Regular.ttf
 RoomManager.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-::res://ivan_level/::1714410713
+::res://ivan_level/::1714414066
 ::res://ivan_level/art/::1712615174
 ::res://ivan_level/art/cavesofgallet/::1713996079
 cavesofgallet.png::CompressedTexture2D::42912062964029426::1712615148::1713996079::1::::<><>::
@@ -164,24 +164,24 @@ parth.png::CompressedTexture2D::868378413971246145::1712615148::1713996079::1:::
 rey.png::CompressedTexture2D::5177161850384314910::1712615148::1713996079::1::::<><>::
 roopa.png::CompressedTexture2D::6547604496132604300::1712615148::1713996079::1::::<><>::
 song.png::CompressedTexture2D::4609287494415822809::1712615148::1713996079::1::::<><>::
-::res://ivan_level/Character/::1714410707
+::res://ivan_level/Character/::1714414058
 All_Fire_Bullet_Pixel_16x16.png::CompressedTexture2D::4641069574247166502::1714347843::1714347880::1::::<><>::
-boss.tscn::PackedScene::2786529270248473673::1714410707::0::1::::<><>::uid://d08fval5knyf6::::res://ivan_level/Obstacles/bugzilla.png<>res://ivan_level/Enemy/boss.gd
+boss.tscn::PackedScene::2786529270248473673::1714414058::0::1::::<><>::uid://d08fval5knyf6::::res://ivan_level/Obstacles/bugzilla.png<>res://ivan_level/Enemy/boss.gd
 bullet.gd::GDScript::-1::1714350606::0::1::::Bullet<>Area2D<>::
-bullet.tscn::PackedScene::8909765396408267712::1714410707::0::1::::<><>::res://ivan_level/Character/bullet.gd<>uid://ulrxd0q6nkdc::::res://icon.svg
+bullet.tscn::PackedScene::8909765396408267712::1714414058::0::1::::<><>::res://ivan_level/Character/bullet.gd<>uid://ulrxd0q6nkdc::::res://icon.svg
 excaliboard.png::CompressedTexture2D::9099062970481899232::1713821621::1713996079::1::::<><>::
-player.gd::GDScript::-1::1714351142::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::6653582193208225722::1714410706::0::1::::<><>::res://ivan_level/Character/player.gd<>uid://d2vwic25vu4dw::::res://ivan_level/Character/excaliboard.png<>res://ivan_level/Character/weapon.gd<>uid://b4tmwxa8tq3bl::::res://science_hell/players/joey.png
+player.gd::GDScript::-1::1714413349::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::6653582193208225722::1714414057::0::1::::<><>::res://ivan_level/Character/player.gd<>uid://d2vwic25vu4dw::::res://ivan_level/Character/excaliboard.png<>res://ivan_level/Character/weapon.gd<>uid://b4tmwxa8tq3bl::::res://science_hell/players/joey.png
 weapon.gd::GDScript::-1::1714410560::0::1::::<>Sprite2D<>::
-::res://ivan_level/Enemy/::1714410707
-boss.gd::GDScript::-1::1714410545::0::1::::<>CharacterBody2D<>::
-enemy.gd::GDScript::-1::1714351276::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::6843193859727963156::1714410707::0::1::::<><>::res://ivan_level/Enemy/enemy.gd<>uid://bo2qpr8ywog6m::::res://ivan_level/Enemy/error_404_enemy_sprite.png
+::res://ivan_level/Enemy/::1714414057
+boss.gd::GDScript::-1::1714413742::0::1::::<>CharacterBody2D<>::
+enemy.gd::GDScript::-1::1714413736::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::6843193859727963156::1714414057::0::1::::<><>::res://ivan_level/Enemy/enemy.gd<>uid://bo2qpr8ywog6m::::res://ivan_level/Enemy/error_404_enemy_sprite.png
 error_404_enemy_sprite.png::CompressedTexture2D::3425801897773911250::1712615147::1713996079::1::::<><>::
-::res://ivan_level/Level/::1714410713
+::res://ivan_level/Level/::1714414066
 Barrier.gd::GDScript::-1::1713818432::0::1::::<>StaticBody2D<>::
-level.gd::GDScript::-1::1714351233::0::1::::<>Node2D<>::
-level.tscn::PackedScene::7825207237103653099::1714410707::0::1::::<><>::uid://u10xishplp7::::res://ivan_level/art/cavesofgallet/cavesofgallet.png<>res://ivan_level/level/level.gd<>uid://b30akjv8jdvv1::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/18_Jail_16x16.png<>uid://c12br51lomy63::::res://ivan_level/Character/player.tscn<>uid://dpxg68wfwq0vn::::res://ivan_level/art/v.1 sprites/ivan.png<>uid://cmv5r1ldorwn2::::res://ivan_level/Obstacles/danger.tscn<>uid://ryxn4owhj57x::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png<>res://ivan_level/Level/Barrier.gd<>uid://d271derdg4mco::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png<>uid://c4q5nx7enfcl5::::res://ivan_level/Enemy/enemy.tscn<>uid://bfx2y23rer1o4::::res://ivan_level/Character/boss.tscn
+level.gd::GDScript::-1::1714412702::0::1::::<>Node2D<>::
+level.tscn::PackedScene::7825207237103653099::1714414058::0::1::::<><>::uid://u10xishplp7::::res://ivan_level/art/cavesofgallet/cavesofgallet.png<>res://ivan_level/level/level.gd<>uid://b30akjv8jdvv1::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/18_Jail_16x16.png<>uid://c12br51lomy63::::res://ivan_level/Character/player.tscn<>uid://dpxg68wfwq0vn::::res://ivan_level/art/v.1 sprites/ivan.png<>uid://cmv5r1ldorwn2::::res://ivan_level/Obstacles/danger.tscn<>uid://ryxn4owhj57x::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png<>res://ivan_level/Level/Barrier.gd<>uid://d271derdg4mco::::res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png<>uid://c4q5nx7enfcl5::::res://ivan_level/Enemy/enemy.tscn<>uid://bfx2y23rer1o4::::res://ivan_level/Character/boss.tscn
 ::res://ivan_level/Obstacles/::1713996079
 bugzilla.png::CompressedTexture2D::8982448712919734065::1713820729::1713996079::1::::<><>::
 danger.gd::GDScript::-1::1712777435::0::1::::<>Area2D<>::
@@ -371,10 +371,10 @@ VirusWorld.tscn::PackedScene::5254560126704224018::1713152307::0::1::::<><>::res
 ::res://Level4/Scripts/::1712943495
 basicVirus.gd::GDScript::-1::1712943474::0::1::::<>CharacterBody2D<>::
 PlayerScript.gd::GDScript::-1::1712943474::0::1::::<>CharacterBody2D<>::
-::res://science_hell/::1714347902
-::res://science_hell/assets/::1714347902
-lvl5_tile_set.tres::TileSet::1566125473283678596::1714347896::0::1::::<><>::uid://bkvsghtv5mguc::::res://science_hell/assets/tiles/Room_Builder_16x16.png<>uid://bdjnxm48ar3eq::::res://science_hell/assets/tiles/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bucd4tkcnlr1::::res://science_hell/assets/tiles/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bb58t50144sr1::::res://science_hell/assets/tiles/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://c6vg1er6oaf24::::res://science_hell/assets/tiles/tiles.png
-main_map_tile_set.tres::TileSet::1229567687912458978::1714347893::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://qvl24ma6x4hk::::res://science_hell/assets/tiles/courtyard3.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png<>uid://br5qxtqv3ohd4::::res://science_hell/assets/tiles/main_map_extras.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png
+::res://science_hell/::1714410794
+::res://science_hell/assets/::1714410794
+lvl5_tile_set.tres::TileSet::1566125473283678596::1714410788::0::1::::<><>::uid://bkvsghtv5mguc::::res://science_hell/assets/tiles/Room_Builder_16x16.png<>uid://bdjnxm48ar3eq::::res://science_hell/assets/tiles/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bucd4tkcnlr1::::res://science_hell/assets/tiles/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bb58t50144sr1::::res://science_hell/assets/tiles/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://c6vg1er6oaf24::::res://science_hell/assets/tiles/tiles.png
+main_map_tile_set.tres::TileSet::1229567687912458978::1714410785::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://qvl24ma6x4hk::::res://science_hell/assets/tiles/courtyard3.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png<>uid://br5qxtqv3ohd4::::res://science_hell/assets/tiles/main_map_extras.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png
 science_hell.tres::TileSet::3995618656373907210::1712943474::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://c72s6d0ywt0l6::::res://science_hell/assets/tiles_main_map/hallways.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://cf52kowwh8t2h::::res://science_hell/assets/tiles_main_map/courtyard2.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
 tilemap.tres::TileSet::4101909133178794065::1712943474::0::1::::<><>::uid://br5s0p8bwuknj::::res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png<>uid://bqvm4sgjbdqvh::::res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png<>uid://cjavnpibcpl0f::::res://science_hell/assets/tiles/14_Basement_16x16.png<>uid://s41tkxlckd7j::::res://science_hell/assets/tiles/16_Grocery_store_16x16.png<>uid://bdpeppx3f5a2r::::res://science_hell/assets/tiles/18_Jail_16x16.png<>uid://bjlmqcpjy6sn0::::res://science_hell/assets/tiles_main_map/22_Museum.png<>uid://brutq7j1c3hc7::::res://science_hell/assets/tiles/26_Condominium.png<>uid://bf3eyco4jwh72::::res://science_hell/assets/tiles/courtyard.png<>uid://t2li5xqvpjq4::::res://science_hell/assets/tiles/lab.png<>uid://dv2onbrf38ktq::::res://science_hell/assets/tiles/hallways.png<>uid://bvqmwt4qlqqrh::::res://science_hell/assets/tiles/1_Generic_16x16.png<>uid://dlxysdqkynn3v::::res://science_hell/assets/tiles_main_map/2_LivingRoom_16x16.png<>uid://hnfavqg8tuwx::::res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png<>uid://beu4kqr2x0gf7::::res://science_hell/assets/tiles/12_Kitchen_16x16.png<>uid://cuijqsulv6x66::::res://science_hell/assets/tiles/11_Halloween_16x16.png<>uid://bc0s3pbiyyjro::::res://science_hell/assets/tiles_main_map/tiles.png
 white-circle.png::CompressedTexture2D::2246595180332642300::1713379860::1713996078::1::::<><>::
@@ -455,9 +455,9 @@ LoadManager.gd::GDScript::-1::1713828337::0::1::::<>Node<>::
 pause.gd::GDScript::-1::1714012676::0::1::::<>Control<>::
 pause.gdshader::Shader::-1::1713828310::0::1::::<><>::
 pause.tscn::PackedScene::2159873239053842545::1714011813::0::1::::<><>::res://science_hell/gui/Pause/pause.gd<>res://science_hell/gui/Pause/pause.gdshader
-::res://science_hell/gui/Title Screen/::1714410707
+::res://science_hell/gui/Title Screen/::1714414058
 menu.gd::GDScript::-1::1714003862::0::1::::<>Control<>::
-menu.tscn::PackedScene::6885490853751947605::1714410707::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
+menu.tscn::PackedScene::6885490853751947605::1714414058::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
 title.png::CompressedTexture2D::5213824191632797593::1713152307::1713996077::1::::<><>::
 ::res://science_hell/gui/Title Screen/title/::1713996077
 auto_scroller.gdshader::Shader::-1::1713152307::0::1::::<><>::
@@ -509,6 +509,6 @@ scene_manager.gd::GDScript::-1::1714010014::0::1::::<>Node<>::
 ui_manager.gd::GDScript::-1::1714012676::0::1::::<>Node<>::
 ::res://science_hell/singleton/::1712944707
 player_stats.gd::GDScript::-1::1712944698::0::1::::<>Node<>::
-::res://science_hell/src_scene/::1714410706
+::res://science_hell/src_scene/::1714414057
 science_hell.gd::GDScript::-1::1714012676::0::1::::<>Node<>::
-science_hell.tscn::PackedScene::2410502229619207928::1714410706::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn<>uid://dssb1g8pnln1n::::res://science_hell/scenes/npc_spawn.tscn<>res://science_hell/scripts/Background.gd<>res://science_hell/scripts/PointLight2D.gd
+science_hell.tscn::PackedScene::2410502229619207928::1714414057::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://dq4wkwge4my22::::res://science_hell/scenes/entry_level.tscn<>res://science_hell/scripts/entry_level.gd<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn<>uid://dssb1g8pnln1n::::res://science_hell/scenes/npc_spawn.tscn<>res://science_hell/scripts/Background.gd<>res://science_hell/scripts/PointLight2D.gd

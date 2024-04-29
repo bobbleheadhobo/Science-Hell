@@ -40,7 +40,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b456w"]
-size = Vector2(502.5, 189.5)
+size = Vector2(835, 189.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iwmuw"]
 radius = 53.0
@@ -65,7 +65,9 @@ light_mask = 2
 visibility_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-position = Vector2(-5, 3)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-1.5, -33)
 shape = SubResource("RectangleShape2D_b456w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

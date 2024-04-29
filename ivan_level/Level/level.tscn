@@ -3784,11 +3784,6 @@ script = ExtResource("5_ua6qj")
 position = Vector2(14, 6)
 shape = SubResource("RectangleShape2D_wtslr")
 
-[node name="Boss" parent="." instance=ExtResource("7_uxbyg")]
-position = Vector2(5426, 891)
-collision_layer = 8
-collision_mask = 8
-
 [node name="Player" parent="." instance=ExtResource("2_pd7pn")]
 top_level = true
 light_mask = 15
@@ -3803,6 +3798,9 @@ drag_vertical_enabled = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../Camera2D")
+
+[node name="Boss" parent="." instance=ExtResource("7_uxbyg")]
+position = Vector2(5400, 927)
 
 [node name="enemy2" parent="." instance=ExtResource("7_d5r0g")]
 top_level = true
@@ -3858,7 +3856,7 @@ position = Vector2(3272, 772)
 
 [node name="enemy14" parent="enemy2" instance=ExtResource("7_d5r0g")]
 top_level = true
-position = Vector2(4195, 981)
+position = Vector2(4190, 981)
 
 [node name="Ivan" type="Sprite2D" parent="."]
 top_level = true
