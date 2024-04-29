@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf52kowwh8t2h"
-path="res://.godot/imported/courtyard2.png-877a1822b07067ef1c3c94bd186bf512.ctex"
+uid="uid://c4bb4a4yj5d8l"
+path="res://.godot/imported/rey_scene.png-9eb8496fdf76b7fc065cb5479187943c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles_main_map/courtyard2.png"
-dest_files=["res://.godot/imported/courtyard2.png-877a1822b07067ef1c3c94bd186bf512.ctex"]
+source_file="res://science_hell/assets/cutscenes/rey_scene.png"
+dest_files=["res://.godot/imported/rey_scene.png-9eb8496fdf76b7fc065cb5479187943c.ctex"]
 
 [params]
 

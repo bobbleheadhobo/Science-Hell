@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc0s3pbiyyjro"
-path="res://.godot/imported/tiles.png-ef43719f923bde98642ea3f3e9fddb80.ctex"
+uid="uid://sokiflpia7al"
+path="res://.godot/imported/3_Bathroom_Shadowless.png-a476cbc4c48bfe1bc37917a96a82e6aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles_main_map/tiles.png"
-dest_files=["res://.godot/imported/tiles.png-ef43719f923bde98642ea3f3e9fddb80.ctex"]
+source_file="res://science_hell/assets/tiles/3_Bathroom_Shadowless.png"
+dest_files=["res://.godot/imported/3_Bathroom_Shadowless.png-a476cbc4c48bfe1bc37917a96a82e6aa.ctex"]
 
 [params]
 

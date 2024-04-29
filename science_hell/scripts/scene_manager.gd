@@ -11,11 +11,16 @@ var player_start_position = Vector2(-25, 55)
 
 var scene_node_paths = {
 	"labroof": "Lab/Roof",
+	"audroof": "Auditorium/Roof",
+	"bathroof":"Bathroom1/Roof", 
+	"parthroof": "ParthOffice/Roof"
 }
 
 var scene_file_paths = {
 	"titlescreen": "res://science_hell/gui/Title Screen/menu.tscn",
 	"lab": "res://science_hell/scenes/lab.tscn",
+	"auditorium": "res://science_hell/scenes/auditorium.tscn", 
+	"bathroom1": "res://science_hell/scenes/bathroom1.tscn",
 	"sciencehall": "res://science_hell/src_scene/science_hell.tscn",
 	"ivanlevel" : "res://ivan_level/level/level.tscn",
 	"char_select": "res://science_hell/gui/char_select/character_select.tscn",
@@ -23,6 +28,7 @@ var scene_file_paths = {
 	"pause": "res://science_hell/gui/Pause/pause.tscn",
 	"copperslevel": "res://chey/Game.tscn",
 	"jasonslevel": "res://level1(jason)//Scenes/Game.tscn",
+	"parthlevel": "res://Level4/Scenes/FinalVirusWorld.tscn"
 }
 
 func _ready():

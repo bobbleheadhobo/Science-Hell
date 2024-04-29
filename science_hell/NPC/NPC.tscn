@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=3 uid="uid://7v6h4gxmfm50"]
 
 [ext_resource type="Script" path="res://science_hell/NPC/NPC.gd" id="1_wwuop"]
-[ext_resource type="Texture2D" uid="uid://dvlpvftiv0bpu" path="res://science_hell/players/rey.png" id="2_7h5xj"]
+[ext_resource type="Texture2D" uid="uid://dvlpvftiv0bpu" path="res://science_hell/players/professors/rey.png" id="2_7h5xj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2f5p"]
 radius = 3.5
