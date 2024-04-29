@@ -67,13 +67,12 @@ expand_mode = 3
 
 [node name="Label" type="Label" parent="Control1/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -24.0
-offset_top = -20.0
-offset_right = 27.0
-offset_bottom = 1.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = -16.0
+offset_right = 1.0
+offset_bottom = -6.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 7
@@ -106,13 +105,12 @@ texture = ExtResource("3_03wug")
 
 [node name="Label" type="Label" parent="Control2/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -37.9989
-offset_top = -20.0
-offset_right = 39.0011
-offset_bottom = 1.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 0.144012
+offset_top = -16.0
+offset_right = 0.144012
+offset_bottom = -6.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 7
@@ -145,13 +143,10 @@ texture = ExtResource("4_vrdbw")
 
 [node name="Label" type="Label" parent="Control3/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -25.5
-offset_top = -20.0
-offset_right = 25.5
-offset_bottom = 1.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -16.0
+offset_bottom = -6.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 7
@@ -184,12 +179,10 @@ texture = ExtResource("8_b2eue")
 
 [node name="Label" type="Label" parent="Control4/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -21.5
-offset_top = -21.0
-offset_right = 17.5
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -16.0
+offset_bottom = -6.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 7
@@ -223,13 +216,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Control5/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -13.4997
-offset_top = -21.0002
-offset_right = 16.5003
-offset_bottom = -9.00015
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 0.000244141
+offset_top = -16.0002
+offset_right = 0.000244141
+offset_bottom = -6.00015
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 7
@@ -262,17 +254,16 @@ texture = ExtResource("7_8o0s3")
 
 [node name="Label" type="Label" parent="Control6/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -47.4999
-offset_top = -20.0
-offset_right = 54.5001
-offset_bottom = 1.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 3.05176e-05
+offset_top = -16.0
+offset_right = 3.05176e-05
+offset_bottom = -8.00003
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 5
-text = "Johnathan"
+theme_override_font_sizes/font_size = 6
+text = "Jonathan"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
@@ -302,13 +293,10 @@ texture = ExtResource("5_0f3yq")
 
 [node name="Label" type="Label" parent="Control7/TextureRect"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -15.0
-offset_top = -20.0
-offset_right = 15.0
-offset_bottom = -8.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -16.0
+offset_bottom = -5.99997
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 7
@@ -318,7 +306,6 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="Cursor" parent="." instance=ExtResource("10_75qk3")]
-visible = false
 layout_mode = 1
 anchor_left = 0.122
 anchor_top = 0.225
