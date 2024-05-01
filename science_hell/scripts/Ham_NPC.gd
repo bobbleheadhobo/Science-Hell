@@ -42,7 +42,7 @@ func _process(delta):
 func run_dialogue(dialogue_string):
 	is_chatting = true
 	is_roaming = false
-	Dialogic.start(dialogue_string)
+	#Dialogic.start(dialogue_string)
 				
 func choose(array):
 	array.shuffle()

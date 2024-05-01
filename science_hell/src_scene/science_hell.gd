@@ -22,3 +22,8 @@ func _on_parth_office_body_entered(body):
 func _on_cooper_6_body_entered(body):
 	if(body.has_method("player")):
 		SceneManager.change_scene("cooperlevel")
+
+
+func _on_reynolds_cutscene_body_entered(body):
+	if(body.has_method("player")):
+		SceneManager.change_scene("reynoldscutscene")
