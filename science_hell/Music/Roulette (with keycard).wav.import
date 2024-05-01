@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://baxq406bs2gj3"
-path="res://.godot/imported/Roulette (with keycard).wav-bbf40798fec4828315449fd5ce205e12.sample"
+path="res://.godot/imported/Roulette (with keycard).wav-b12ea1e310dee1006abdd9aff34bfb6d.sample"
 
 [deps]
 
-source_file="res://chey/Roulette (with keycard).wav"
-dest_files=["res://.godot/imported/Roulette (with keycard).wav-bbf40798fec4828315449fd5ce205e12.sample"]
+source_file="res://science_hell/Music/Roulette (with keycard).wav"
+dest_files=["res://.godot/imported/Roulette (with keycard).wav-b12ea1e310dee1006abdd9aff34bfb6d.sample"]
 
 [params]
 

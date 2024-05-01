@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://r3t8r5bbpxof"]
+[gd_scene load_steps=14 format=3 uid="uid://r3t8r5bbpxof"]
 
 [ext_resource type="Script" path="res://chey/Game.gd" id="1_e0p6v"]
 [ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
 [ext_resource type="Script" path="res://chey/input/Input.gd" id="1_yo6lk"]
 [ext_resource type="Script" path="res://chey/CommandProcessor.gd" id="2_3lrur"]
-[ext_resource type="AudioStream" uid="uid://baxq406bs2gj3" path="res://chey/Roulette (with keycard).wav" id="2_p133k"]
 [ext_resource type="Script" path="res://chey/Player.gd" id="2_rqjkp"]
 [ext_resource type="PackedScene" uid="uid://dt4l1fxuxre4u" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
@@ -204,10 +203,6 @@ script = ExtResource("1_yo6lk")
 
 [node name="SidePanel" parent="Background/MarginContainer/Columns" instance=ExtResource("9_ymbxp")]
 layout_mode = 2
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_p133k")
-autoplay = true
 
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="." method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" to="Background/MarginContainer/Columns/Rows/InputArea/HBoxContainer/Input" method="_on_text_submitted"]
