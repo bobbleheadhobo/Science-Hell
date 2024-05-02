@@ -148,5 +148,11 @@ offset_bottom = 118.0
 theme_override_colors/font_color = Color(0.964706, 0.839216, 0.741176, 1)
 theme_override_fonts/font = ExtResource("6_doqii")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 385.0
+offset_bottom = 247.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="PlayAgain" to="." method="_on_PlayAgain_pressed"]
 [connection signal="pressed" from="BackToMenu" to="." method="_on_BackToMenu_pressed"]
