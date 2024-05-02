@@ -272,7 +272,7 @@ script = ExtResource("4_biitn")
 [node name="Area2D2" type="Area2D" parent="entry_level"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entry_level/Area2D2"]
-position = Vector2(-1184.5, 165)
+position = Vector2(-1108, 114)
 shape = SubResource("RectangleShape2D_cn771")
 
 [node name="Reynolds office (5)" type="Area2D" parent="." groups=["doorways"]]
