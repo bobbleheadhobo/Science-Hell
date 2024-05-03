@@ -5,7 +5,8 @@ var current_sprite = preload("res://science_hell/players/hamilton/ham.png")
 var current_sprite_key = "ham"
 
 var professor_sprites = {
-	"reynolds": "res://science_hell/players/rey.png"
+	"reynolds": "res://science_hell/players/professors/rey.png",
+	"ham": "res://science_hell/players/hamilton/ham.png"
 }
 
 var character_sprites = {
