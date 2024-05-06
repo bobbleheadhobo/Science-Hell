@@ -26,6 +26,7 @@ MusicManager="*res://science_hell/Music/music_manager_global.gd"
 Rey="*res://Joeys level/level/reynolds_global.gd"
 UI="*res://science_hell/scripts/ui_manager.gd"
 Score="*res://level1(jason)/Scenes/Score.tscn"
+PlayerStats="*res://science_hell/singleton/player_stats.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]

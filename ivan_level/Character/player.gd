@@ -21,7 +21,6 @@ var way : bool = false
 var can_control : bool = true
 
 func _ready():
-	print(Characters.current_sprite)
 	$Sprite2D.texture = Characters.current_sprite
 
 func _physics_process(delta):

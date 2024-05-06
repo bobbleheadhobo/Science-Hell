@@ -1,3 +1,4 @@
+class_name Boss
 extends CharacterBody2D
 
 var speed = 50
@@ -8,12 +9,24 @@ var health = 1000
 var player_inattack_zone = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var keyboard = $"../Keyboard"
 
 func _physics_process(delta):
 	if player_chase:
 		position += (player.position - position) / speed
+
 		# Add the gravity.
-		velocity.y += gravity * delta
+		#velocity.y += delta
+		
+		update_direction(player.direction.x)
+
+func update_direction(dir):
+	if dir != 0:
+		if dir > 0:
+			$AnimatedSprite2D.flip_h = false
+	
+		elif dir < 0:
+			$AnimatedSprite2D.flip_h = true
 
 func _on_detection_area_body_entered(body):
 	if body.has_method("player"):
@@ -31,10 +44,13 @@ func enemy():
 	pass
 
 func deal_with_damage():
-		health = health - 20
+		health = health - 100
 		
 		if health <= 0:
-			self.queue_free()
+			print("BOSS defeated")
+			self.queue_free() 
+			keyboard.game_over = true
+			
 
 func _on_hitbox_area_entered(area):
 	if area is Bullet:

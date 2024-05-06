@@ -10,8 +10,6 @@ func _ready():
 	MusicManager.play_song("reynolds")
 	Rey.reset()
 	start_mob_timer()
-	
-	
 
 func _on_progress_bar_progress_bar_full():
 	current_wave = 	Rey.next_wave()
@@ -49,6 +47,7 @@ func level_over():
 	Rey.game_over = true
 	kill_all("mobs")
 	$lvl5_Player.show_arrow()
+	PlayerStats.computer_parts += 1
 	
 
 func kill_all(group_name):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://djquaxa4fkpdj"]
+[gd_scene load_steps=25 format=3 uid="uid://djquaxa4fkpdj"]
 
 [ext_resource type="Texture2D" uid="uid://u10xishplp7" path="res://ivan_level/art/cavesofgallet/cavesofgallet.png" id="1_whjnr"]
 [ext_resource type="Script" path="res://ivan_level/level/level.gd" id="1_x5syg"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://d271derdg4mco" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png" id="6_qjvsl"]
 [ext_resource type="PackedScene" uid="uid://c4q5nx7enfcl5" path="res://ivan_level/Enemy/enemy.tscn" id="7_d5r0g"]
 [ext_resource type="PackedScene" uid="uid://bfx2y23rer1o4" path="res://ivan_level/Character/boss.tscn" id="7_uxbyg"]
+[ext_resource type="Script" path="res://ivan_level/Level/Keyboard.gd" id="12_j1jrp"]
+[ext_resource type="Texture2D" uid="uid://cixi6v4p6mypw" path="res://science_hell/assets/computer_parts/keyboard.png" id="12_s4mbn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_moets"]
 texture = ExtResource("1_whjnr")
@@ -3731,6 +3733,9 @@ size = Vector2(1068.5, 354)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wtslr"]
 size = Vector2(20, 90)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sybsk"]
+size = Vector2(56.1797, 24.5511)
+
 [node name="level" type="Node2D"]
 position = Vector2(-1, 1)
 scale = Vector2(1.00476, 0.88)
@@ -3784,11 +3789,30 @@ script = ExtResource("5_ua6qj")
 position = Vector2(14, 6)
 shape = SubResource("RectangleShape2D_wtslr")
 
+[node name="Boss Room2" type="StaticBody2D" parent="TileMap"]
+position = Vector2(5196, 832)
+collision_layer = 11
+collision_mask = 7
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TileMap/Boss Room2"]
+polygon = PackedVector2Array(-548, 56, -594, 56, -591, -195, -543, -195)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="TileMap/Boss Room2"]
+position = Vector2(-7, 7)
+polygon = PackedVector2Array(-539, -206, 528, -200, 529, -241, -548, -240)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="TileMap/Boss Room2"]
+position = Vector2(4, 3)
+polygon = PackedVector2Array(527, 159, 531, 226, 629, 226, 628, -233, 523, -232)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="TileMap/Boss Room2"]
+polygon = PackedVector2Array(-541, 163, 528, 163, 534, 227, -541, 226)
+
 [node name="Player" parent="." instance=ExtResource("2_pd7pn")]
 top_level = true
 light_mask = 15
 visibility_layer = 15
-position = Vector2(60, 88)
+position = Vector2(4412, 972)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_callback = 0
@@ -3800,9 +3824,12 @@ drag_vertical_enabled = true
 remote_path = NodePath("../Camera2D")
 
 [node name="Boss" parent="." instance=ExtResource("7_uxbyg")]
-position = Vector2(5497, 928)
+position = Vector2(5536, 908)
+collision_layer = 11
+collision_mask = 7
 
 [node name="enemy2" parent="." instance=ExtResource("7_d5r0g")]
+visible = false
 top_level = true
 position = Vector2(393, 91)
 
@@ -3875,4 +3902,32 @@ top_level = true
 position = Vector2(180, 62)
 texture = ExtResource("6_qjvsl")
 
+[node name="Keyboard" type="Area2D" parent="."]
+top_level = true
+position = Vector2(5691, 988)
+scale = Vector2(0.33821, 0.407315)
+script = ExtResource("12_j1jrp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Keyboard"]
+texture = ExtResource("12_s4mbn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Keyboard"]
+position = Vector2(1.47852, 0.000488281)
+shape = SubResource("RectangleShape2D_sybsk")
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="ui"]
+anchors_preset = -1
+anchor_left = 0.486
+anchor_right = 0.535
+anchor_bottom = 0.048
+offset_left = 0.127991
+offset_right = -0.320007
+offset_bottom = -0.104
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="TileMap/Boss Room" to="TileMap/Barrier" method="_on_boss_room_body_entered"]
+[connection signal="body_entered" from="Keyboard" to="Keyboard" method="_on_body_entered"]
