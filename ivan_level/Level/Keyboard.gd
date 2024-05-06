@@ -21,7 +21,6 @@ func set_collision_setting(tag):
 			entered += 1
 		
 		else:
-			print("HERE")
 			self.hide()
 			self.set_deferred("monitoring", false)
 			$CollisionShape2D.set_deferred("disabled", true)
