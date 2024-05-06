@@ -7,4 +7,4 @@ func _ready():
 	$AnimationPlayer.play(animation_name)
 	print(animation_length)
 	await get_tree().create_timer(animation_length+1).timeout
-	SceneManager.change_scene("sciencehall")
+	SceneManager.change_scene("reynoldslevel")

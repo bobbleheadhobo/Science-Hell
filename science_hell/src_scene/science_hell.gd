@@ -8,7 +8,7 @@ func _ready():
 
 func _on_reynolds_office_body_entered(body):
 	if(body.has_method("player")):
-		SceneManager.change_scene("reynoldslevel")
+		SceneManager.change_scene("reynoldscutscene")
 
 func _on_ivans_office_2_body_entered(body):
 	if(body.has_method("player")):
