@@ -1,13 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddmeidckstisk"]
 
 [ext_resource type="Texture2D" uid="uid://deistk54tfrve" path="res://level1(jason)/Sprites/ui/play_again_button/play_again1.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://d2vlvnb4f4dvr" path="res://level1(jason)/Sprites/ui/back_to_menu_button/back_to_menu2.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://biafvjygh3rwo" path="res://level1(jason)/Sprites/ui/back_to_menu_button/back_to_menu1.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://b5rxv7khjt87b" path="res://level1(jason)/Sprites/ui/play_again_button/play_again2.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://brdw4sumexo34" path="res://level1(jason)/Sprites/ui/back_to_menu_button/back_to_SH.png" id="4_acw4p"]
+[ext_resource type="Texture2D" uid="uid://dgk0tamat57c7" path="res://level1(jason)/Sprites/ui/back_to_menu_button/back_to_SH2.png" id="5_26dg7"]
 [ext_resource type="Script" path="res://level1(jason)/Scripts/End.gd" id="6"]
 [ext_resource type="FontFile" uid="uid://cot35aaxy6oy7" path="res://level1(jason)/Fonts/HeartbitXX2Px.ttf" id="6_doqii"]
 
 [node name="End" type="Node2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("6")
 
 [node name="PlayAgain" type="TextureButton" parent="."]
@@ -24,9 +25,9 @@ offset_left = 176.0
 offset_top = 128.0
 offset_right = 272.0
 offset_bottom = 168.0
-texture_normal = ExtResource("3")
-texture_pressed = ExtResource("3")
-texture_hover = ExtResource("2")
+texture_normal = ExtResource("4_acw4p")
+texture_pressed = ExtResource("4_acw4p")
+texture_hover = ExtResource("5_26dg7")
 
 [node name="GradeLabel" type="Label" parent="."]
 offset_left = 84.0

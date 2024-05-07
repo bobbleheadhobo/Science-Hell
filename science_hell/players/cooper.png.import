@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0fyure5ui5sj"
-path="res://.godot/imported/cooper.png-c859e945f1ff68ab6f379e5301faeda6.ctex"
+uid="uid://dnk1u2bsy8vuq"
+path="res://.godot/imported/cooper.png-9b8a33b9aacf1f204452041517a2ae2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/players/cooper.png"
-dest_files=["res://.godot/imported/cooper.png-c859e945f1ff68ab6f379e5301faeda6.ctex"]
+source_file="res://science_hell/players/professors/cooper.png"
+dest_files=["res://.godot/imported/cooper.png-9b8a33b9aacf1f204452041517a2ae2c.ctex"]
 
 [params]
 

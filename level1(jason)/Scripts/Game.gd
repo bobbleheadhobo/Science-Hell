@@ -29,13 +29,14 @@ var instance
 
 func _ready():
 	Health.set_visibility(false)
+	$"/root/MusicManager".music_player.stream_paused = true
 	randomize()
 	$Conductor.play_with_beat_offset(9)
 
 
 func _input(event):
-	if event.is_action("escape"):
-		if get_tree().change_scene_to_file("res://level1(jason)/Scenes/Menu.tscn") != OK:
+	if event.is_action("Pause"):
+		if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
 			print ("Error changing scene to Menu")
 
 

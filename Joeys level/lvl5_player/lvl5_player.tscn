@@ -285,7 +285,7 @@ shape = SubResource("RectangleShape2D_fdvq7")
 zoom = Vector2(0.3, 0.3)
 
 [node name="AR_15" parent="." instance=ExtResource("2_l4st2")]
-position = Vector2(30, 33)
+position = Vector2(32, 9)
 
 [node name="player" type="Node2D" parent="."]
 

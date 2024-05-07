@@ -6,23 +6,22 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "Style1"
 },
-"default_portrait": "New portrait",
+"default_portrait": "hampfp",
 "description": "",
 "display_name": "HamNPC",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"New portrait": {
+"hampfp": {
 "export_overrides": {
-"image": "\"res://science_hell/players/hamilton/hampfp.png\""
+"image": "\"res://addons/professors/professors_0001.png\""
 },
-"ignore_char_scale": true,
-"mirror": true,
-"offset": Vector2(-225, -52),
-"scale": 0.5,
+"mirror": false,
+"offset": Vector2(-30, -60),
+"scale": 0.3,
 "scene": ""
 }
 },

@@ -18,5 +18,5 @@ func _on_PlayAgain_pressed():
 
 
 func _on_BackToMenu_pressed():
-	if get_tree().change_scene_to_file("res://level1(jason)/Scenes/Menu.tscn") != OK:
+	if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
 			print ("Error changing scene to Menu")

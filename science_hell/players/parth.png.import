@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b65wd8rjlhtbo"
-path="res://.godot/imported/parth.png-52ec0662d1f2cbae611e60ce7bd9c6cf.ctex"
+uid="uid://cc82412iuvgbi"
+path="res://.godot/imported/parth.png-46f7b40496b3ae06f9882b83ac2bd399.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/players/parth.png"
-dest_files=["res://.godot/imported/parth.png-52ec0662d1f2cbae611e60ce7bd9c6cf.ctex"]
+source_file="res://science_hell/players/professors/parth.png"
+dest_files=["res://.godot/imported/parth.png-46f7b40496b3ae06f9882b83ac2bd399.ctex"]
 
 [params]
 

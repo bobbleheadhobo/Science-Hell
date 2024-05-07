@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://heju11u4s4kk" path="res://level1(jason)/Scenes/Conductor.tscn" id="8"]
 
 [node name="Game" type="Node2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("6")
 
 [node name="road" type="Sprite2D" parent="."]
