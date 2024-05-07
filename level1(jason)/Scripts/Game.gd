@@ -36,8 +36,9 @@ func _ready():
 
 func _input(event):
 	if event.is_action("Pause"):
-		if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
-			print ("Error changing scene to Menu")
+		SceneManager.change_scene('sciencehall')
+		#if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
+			#print ("Error changing scene to Menu")
 
 
 func _on_Conductor_measure(current_position):
