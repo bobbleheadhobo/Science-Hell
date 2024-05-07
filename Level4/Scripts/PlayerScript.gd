@@ -32,6 +32,7 @@ func _ready():
 	# begin with any active hitboxes disabled
 	ActiveHitbox.get_node("PowerBox").disabled = true
 	ActiveHitbox.get_node("ForceRush1").visible = false
+	ActiveHitbox.get_node("ForceRush2").visible = false
 	
 	# add Player to colliding list
 	add_to_group("Player")
@@ -80,12 +81,14 @@ func _physics_process(delta):
 			ActiveHitbox.get_node("PowerBox").disabled = false
 			speed = 200
 		else:
-			ActiveHitbox.get_node("ForceRush1").visible = true
+			ActiveHitbox.get_node("ForceRush1").visible = false
+			ActiveHitbox.get_node("ForceRush2").visible = true
 			ActiveHitbox.get_node("PowerBox").disabled = false
 			speed = 350
 		velocity.x = speed * horizontalDirection
 	else:
 		ActiveHitbox.get_node("ForceRush1").visible = false
+		ActiveHitbox.get_node("ForceRush2").visible = false
 		ActiveHitbox.get_node("PowerBox").disabled = true
 		theAcc = 1
 		speed = 100
@@ -113,12 +116,17 @@ func handleSprite(currDirection):
 	
 	if(currDirection == -1):
 		sprite.set_texture(textureLeft)
-		ActiveHitbox.get_node("ForceRush1").position.x = -5
+		ActiveHitbox.get_node("ForceRush1").position.x = -4
+		ActiveHitbox.get_node("ForceRush2").position.x = -4
 		ActiveHitbox.get_node("ForceRush1").flip_h = true
+		ActiveHitbox.get_node("ForceRush2").flip_h = true
+		
 	elif(currDirection == 1):
 		sprite.set_texture(textureRight)
-		ActiveHitbox.get_node("ForceRush1").position.x = 5
+		ActiveHitbox.get_node("ForceRush1").position.x = 4
+		ActiveHitbox.get_node("ForceRush2").position.x = 4
 		ActiveHitbox.get_node("ForceRush1").flip_h = false
+		ActiveHitbox.get_node("ForceRush2").flip_h = false
 	else:
 		pass
 
