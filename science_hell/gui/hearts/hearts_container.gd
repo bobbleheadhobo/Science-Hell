@@ -12,13 +12,22 @@ var hearts_container = null
 var is_game_over = false
 
 func _ready():
+	reset_hearts()
+	
+func reset_hearts():
+	if canvas_layer != null:
+		canvas_layer.queue_free()
+		
 	canvas_layer = CanvasLayer.new()
 	add_child(canvas_layer)
 	hearts_container = HBoxContainer.new()
 	set_main_location()
 	canvas_layer.add_child(hearts_container)
 
+	current_health = MAX_HEALTH
 	set_max_hearts(MAX_HEALTH)
+	
+	is_game_over = false
 
 func set_max_hearts(max_hearts : int):
 	for i in range(max_hearts/2):
@@ -87,12 +96,6 @@ func set_visibility(visible: bool):
 		hearts_container.show()
 	else:
 		hearts_container.hide()
-		
-func reset():
-	current_health = MAX_HEALTH
-	update_health(current_health)
-	is_game_over = false
-
 
 func set_main_location():
 	hearts_container.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
