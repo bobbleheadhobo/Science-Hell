@@ -3,7 +3,7 @@ extends ProgressBar
 signal progress_bar_full
 
 func _ready():
-	max_value = 10
+	max_value = 50
 	value = 0  
 
 func _on_spawners_container_update_progress_mob_killed():
@@ -13,6 +13,7 @@ func _on_spawners_container_update_progress_mob_killed():
 	if value >= max_value and Rey.current_wave < Rey.MAX_WAVES:
 		#increment to next wave
 		emit_signal("progress_bar_full")
+		max_value += 20
 		
 		if Rey.current_wave == Rey.MAX_WAVES:
 			value = max_value 

@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dnbirayf2xopt"]
-
-[ext_resource type="Script" path="res://chey/items/Item.gd" id="1_e6ilc"]
-
-[resource]
-script = ExtResource("1_e6ilc")
-item_name = "bats item"
-item_type = 1
