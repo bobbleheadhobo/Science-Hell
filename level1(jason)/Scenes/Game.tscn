@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dagto1d00gt1f"]
 
-[ext_resource type="PackedScene" uid="uid://6ueumlgnt5eq" path="res://level1(jason)/Scenes/ArrowButton.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://6ueumlgnt5eq" path="res://level1(jason)/Scenes/BottomNotes.tscn" id="1"]
 [ext_resource type="SpriteFrames" uid="uid://bnq530scow18l" path="res://level1(jason)/Frames/red_button.tres" id="2"]
 [ext_resource type="SpriteFrames" uid="uid://dn14iopqgj3u5" path="res://level1(jason)/Frames/blue_button.tres" id="3"]
 [ext_resource type="Texture2D" uid="uid://cxh0qgfgyj3m7" path="res://level1(jason)/Sprites/game/road/road.png" id="4"]
