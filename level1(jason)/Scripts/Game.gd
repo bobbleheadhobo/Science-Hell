@@ -34,12 +34,6 @@ func _ready():
 	$Conductor.play_with_beat_offset(9)
 
 
-#func _input(event):
-	#if event.is_action("Pause"):
-		#SceneManager.change_scene('sciencehall')
-		#if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
-			#print ("Error changing scene to Menu")
-
 
 func _on_Conductor_measure(current_position):
 	if current_position == 1:
@@ -88,12 +82,12 @@ func _on_Conductor_beat(current_position):
 		spawn_2_beat = 2
 		spawn_3_beat = 1
 		spawn_4_beat = 2
-	if song_position_in_beats > 304:
+	if song_position_in_beats > 302:
 		spawn_1_beat = 0
 		spawn_2_beat = 0
 		spawn_3_beat = 0
 		spawn_4_beat = 0
-	if song_position_in_beats > 312:
+	if song_position_in_beats > 310:
 		Score.set_score(score)
 		Score.combo = max_combo
 		Score.great = great
