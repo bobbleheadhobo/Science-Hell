@@ -13,11 +13,8 @@ func _ready():
 
 
 func _on_PlayAgain_pressed():
-	if get_tree().change_scene_to_file("res://level1(jason)/Scenes/Game.tscn") != OK:
-			print ("Error changing scene to Game")
+	SceneManager.change_scene('jasonslevel')
 
 
 func _on_BackToMenu_pressed():
-	#if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
-			#print ("Error changing scene to Menu")
 	SceneManager.change_scene('sciencehall')

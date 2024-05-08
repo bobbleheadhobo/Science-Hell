@@ -94,8 +94,7 @@ func _on_Conductor_beat(current_position):
 		Score.good = good
 		Score.okay = okay
 		Score.missed = missed
-		if get_tree().change_scene_to_file("res://level1(jason)/Scenes/End.tscn") != OK:
-			print ("Error changing scene to End")
+		SceneManager.change_scene('jasonend')
 
 
 

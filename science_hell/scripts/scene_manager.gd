@@ -29,7 +29,8 @@ var scene_file_paths = {
 	"copperslevel": "res://chey/Game.tscn",
 	"jasonslevel": "res://level1(jason)//Scenes/Game.tscn",
 	"parthlevel": "res://Level4/Scenes/FinalVirusWorld.tscn",
-	"cooperlevel": "res://chey/Game.tscn"
+	"cooperlevel": "res://chey/Game.tscn",
+	"jasonend": "res://level1(jason)/Scenes/End.tscn",
 }
 
 func _ready():
