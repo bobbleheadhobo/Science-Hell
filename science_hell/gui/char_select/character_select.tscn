@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ch73b5nnt3uqw" path="res://science_hell/gui/char_select/chey.png" id="4_vrdbw"]
 [ext_resource type="Texture2D" uid="uid://b6l573p2x5evu" path="res://science_hell/gui/char_select/chris.png" id="5_0f3yq"]
 [ext_resource type="Texture2D" uid="uid://w0jcf4s6ablf" path="res://science_hell/gui/char_select/jason.png" id="6_bn3f5"]
-[ext_resource type="Texture2D" uid="uid://bmrlqbk7a3gyl" path="res://science_hell/gui/char_select/johnathan.png" id="7_8o0s3"]
+[ext_resource type="Texture2D" uid="uid://bmrlqbk7a3gyl" path="res://science_hell/gui/char_select/jonathan.png" id="7_8o0s3"]
 [ext_resource type="Texture2D" uid="uid://br3b6jujhhvwh" path="res://science_hell/gui/char_select/pat.png" id="8_b2eue"]
 [ext_resource type="Texture2D" uid="uid://d1jt152p86vxq" path="res://science_hell/gui/char_select/joey.png" id="9_i2ctw"]
 [ext_resource type="PackedScene" uid="uid://gncj06nn4srt" path="res://science_hell/gui/char_select/cursor.tscn" id="10_75qk3"]
