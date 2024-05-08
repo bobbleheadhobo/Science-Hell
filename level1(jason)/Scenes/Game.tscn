@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dagto1d00gt1f"]
+[gd_scene load_steps=19 format=3 uid="uid://dagto1d00gt1f"]
 
 [ext_resource type="PackedScene" uid="uid://6ueumlgnt5eq" path="res://level1(jason)/Scenes/BottomNotes.tscn" id="1"]
 [ext_resource type="SpriteFrames" uid="uid://bnq530scow18l" path="res://level1(jason)/Frames/red_button.tres" id="2"]
@@ -8,6 +8,36 @@
 [ext_resource type="Script" path="res://level1(jason)/Scripts/Game.gd" id="6"]
 [ext_resource type="FontFile" uid="uid://cot35aaxy6oy7" path="res://level1(jason)/Fonts/HeartbitXX2Px.ttf" id="6_filwe"]
 [ext_resource type="PackedScene" uid="uid://heju11u4s4kk" path="res://level1(jason)/Scenes/Conductor.tscn" id="8"]
+[ext_resource type="Texture2D" uid="uid://bfgx1iwfxcird" path="res://level1(jason)/Sprites/game/songrock/songRock_0001.png" id="9_h5neb"]
+[ext_resource type="Texture2D" uid="uid://b0dnih0140piy" path="res://level1(jason)/Sprites/game/songrock/songRock_0002.png" id="10_tny8r"]
+[ext_resource type="Texture2D" uid="uid://c6lc0o27vxgxp" path="res://level1(jason)/Sprites/game/songrock/songRock_0003.png" id="11_eqroc"]
+[ext_resource type="Texture2D" uid="uid://cfue2gcjo7h22" path="res://level1(jason)/Sprites/game/songrock/songRock_0004.png" id="12_2lfh1"]
+[ext_resource type="Texture2D" uid="uid://bpkcj1sgc1866" path="res://level1(jason)/Sprites/game/songrock/songRock_0005.png" id="13_pt13u"]
+[ext_resource type="Texture2D" uid="uid://b4ij848kx2io3" path="res://level1(jason)/Sprites/game/songrock/amp_0001.png" id="14_4du37"]
+[ext_resource type="Texture2D" uid="uid://kllc1sr1fqyp" path="res://level1(jason)/Sprites/game/songrock/amp_0002.png" id="15_fw0cw"]
+[ext_resource type="Texture2D" uid="uid://bt4o6v2aw0w4e" path="res://level1(jason)/Sprites/game/songrock/amp_0003.png" id="16_y3wq4"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_gkfas"]
+frames = 5
+speed_scale = 3.5
+frame_0/texture = ExtResource("9_h5neb")
+frame_1/texture = ExtResource("10_tny8r")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("11_eqroc")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("12_2lfh1")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("13_pt13u")
+frame_4/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_3qw0o"]
+frames = 3
+speed_scale = 5.0
+frame_0/texture = ExtResource("14_4du37")
+frame_1/texture = ExtResource("15_fw0cw")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("16_y3wq4")
+frame_2/duration = 1.0
 
 [node name="Game" type="Node2D"]
 scale = Vector2(1.5, 1.5)
@@ -58,9 +88,54 @@ volume_db = -15.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true
+offset_left = -0.666667
+offset_top = -1.33333
+offset_right = 374.333
+offset_bottom = 263.667
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 375.0
+offset_bottom = 264.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 88.6667
+offset_right = 298.0
+offset_bottom = 162.667
+texture = SubResource("AnimatedTexture_gkfas")
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 offset_right = 375.0
 offset_bottom = 265.0
-color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Control2"]
+layout_mode = 0
+offset_left = 6.66667
+offset_top = 113.333
+offset_right = 34.6667
+offset_bottom = 175.333
+texture = SubResource("AnimatedTexture_3qw0o")
+
+[node name="Control3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 0.666667
+offset_right = 375.0
+offset_bottom = 265.667
+
+[node name="TextureRect" type="TextureRect" parent="Control3"]
+layout_mode = 0
+offset_left = 60.6667
+offset_top = 89.3333
+offset_right = 88.6667
+offset_bottom = 151.333
+texture = SubResource("AnimatedTexture_3qw0o")
 
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="temp" from="Conductor" to="." method="_on_Conductor_measure"]
