@@ -1,3 +1,5 @@
+# Sets global score at the end of the game and allows the user to leave or 
+# play again 
 extends Node2D
 
 

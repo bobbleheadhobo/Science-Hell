@@ -1,3 +1,5 @@
+# conductor code to take care of audio input and measure the amount of 
+# beats in the song 
 extends AudioStreamPlayer
 
 @export var bpm := 165

@@ -1,3 +1,4 @@
+# Code to randomly spawn notes based on the position in beats 
 extends Node2D
 
 var score = 0
@@ -34,7 +35,7 @@ func _ready():
 	$Conductor.play_with_beat_offset(9)
 
 
-
+# spawn certain notes based on measure 
 func _on_Conductor_measure(current_position):
 	if current_position == 1:
 		_spawn_notes(spawn_1_beat)
@@ -45,6 +46,7 @@ func _on_Conductor_measure(current_position):
 	elif current_position == 4:
 		_spawn_notes(spawn_4_beat)
 
+# adjusts the quantity of notes being spawned based on position in beats
 func _on_Conductor_beat(current_position):
 	song_position_in_beats = current_position
 	if song_position_in_beats > 36:
@@ -97,7 +99,7 @@ func _on_Conductor_beat(current_position):
 		SceneManager.change_scene('jasonend')
 
 
-
+# spawn notes randomly 
 func _spawn_notes(to_spawn):
 	rand = 0
 	if to_spawn > 0:
@@ -105,7 +107,7 @@ func _spawn_notes(to_spawn):
 		instance = note.instantiate()
 		instance.initialize(lane)
 		add_child(instance)
-	if to_spawn > 1:
+	if to_spawn > 1: # spawn double notes
 		while rand == lane:
 			rand = randi() % 3
 		lane = rand
@@ -115,7 +117,7 @@ func _spawn_notes(to_spawn):
 		
 		
 
-
+# increments score and keeps track of combos
 func increment_score(by):
 	if by > 0:
 		combo += 1

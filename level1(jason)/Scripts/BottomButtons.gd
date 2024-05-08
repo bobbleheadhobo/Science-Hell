@@ -1,3 +1,5 @@
+# Code to determine the appropriate score multiplier when the note is pressed inside of the buttons
+# on the bottom
 extends AnimatedSprite2D
 
 var perfect = false
@@ -7,7 +9,7 @@ var current_note = null
 
 @export var input = ""
 
-
+# increments the score based on how accurate the player hits the note
 func _unhandled_input(event):
 	if event.is_action(input):
 		if event.is_action_pressed(input, false):
