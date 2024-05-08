@@ -61,6 +61,7 @@ func _on_timer_timeout():
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
 		player_in_area = true
+		print("here")
 
 
 func _on_area_2d_body_exited(body):
