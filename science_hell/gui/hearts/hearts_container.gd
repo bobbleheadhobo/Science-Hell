@@ -10,6 +10,7 @@ var shake = false
 var canvas_layer = null
 var hearts_container = null
 var is_game_over = false
+var visible = null
 
 func _ready():
 	reset_hearts()
@@ -91,7 +92,8 @@ func game_over():
 	dead.call_deferred("connect_buttons")
 
 
-func set_visibility(visible: bool):
+func set_visibility(show: bool):
+	visible = show
 	if visible:
 		hearts_container.show()
 	else:

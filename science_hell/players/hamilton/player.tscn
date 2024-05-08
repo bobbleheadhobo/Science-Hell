@@ -263,7 +263,7 @@ transitions = ["idle", "walk", SubResource("AnimationNodeStateMachineTransition_
 graph_offset = Vector2(133.11, -15.0076)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrf2r"]
-size = Vector2(22, 12)
+size = Vector2(29, 24)
 
 [node name="hero" type="CharacterBody2D"]
 script = ExtResource("1_33uym")
@@ -304,8 +304,7 @@ parameters/walk/TimeScale/scale = 1.2
 parameters/walk/walk_bsd2/blend_position = Vector2(0, 0)
 
 [node name="DoorwayDetector" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorwayDetector"]
-position = Vector2(0, 15)
+position = Vector2(0.5, 14)
 shape = SubResource("RectangleShape2D_xrf2r")

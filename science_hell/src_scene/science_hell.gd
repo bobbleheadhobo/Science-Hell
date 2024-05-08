@@ -8,7 +8,7 @@ func _ready():
 
 func _on_reynolds_office_body_entered(body):
 	if(body.has_method("player")):
-		SceneManager.change_scene("reynoldslevel")
+		SceneManager.change_scene("reynoldscutscene")
 
 func _on_ivans_office_2_body_entered(body):
 	if(body.has_method("player")):
@@ -16,9 +16,14 @@ func _on_ivans_office_2_body_entered(body):
 		
 func _on_parth_office_body_entered(body):
 	if(body.has_method("player")):
-		SceneManager.change_scene("parthlevel")
+		SceneManager.change_scene("parthcutscene")
 
 
 func _on_cooper_6_body_entered(body):
 	if(body.has_method("player")):
 		SceneManager.change_scene("cooperlevel")
+
+
+func _on_reynolds_cutscene_body_entered(body):
+	if(body.has_method("player")):
+		SceneManager.change_scene("reynoldscutscene")
