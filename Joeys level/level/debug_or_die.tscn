@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://djdq6pyatghw6" path="res://Joeys level/lvl5_player/lvl5_player.tscn" id="3_xqqv7"]
 [ext_resource type="Script" path="res://Joeys level/level/ProgressBar.gd" id="6_ocmks"]
 [ext_resource type="PackedScene" uid="uid://ck460lkuai80n" path="res://Joeys level/mobs/mob_spawners/spawners_container.tscn" id="7_lrcur"]
-[ext_resource type="PackedScene" path="res://Joeys level/level/exit.tscn" id="7_lrlfm"]
+[ext_resource type="PackedScene" uid="uid://dqlgm8k0tnc4o" path="res://Joeys level/level/exit.tscn" id="7_lrlfm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f578t"]
 bg_color = Color(0.313726, 0.694118, 0.368627, 1)

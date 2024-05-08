@@ -56,5 +56,11 @@ theme_override_fonts/font = ExtResource("6_filwe")
 stream = ExtResource("5")
 volume_db = -15.0
 
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 375.0
+offset_bottom = 265.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="beat" from="Conductor" to="." method="_on_Conductor_beat"]
 [connection signal="temp" from="Conductor" to="." method="_on_Conductor_measure"]

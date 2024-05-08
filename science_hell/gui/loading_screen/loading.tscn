@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cr7bfy7s4juto" path="res://science_hell/gui/loading_screen/ducky_0006.png" id="8_qoqr7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6300f"]
-bg_color = Color(0.627451, 0.580392, 0.658824, 1)
+bg_color = Color(0, 0.72549, 0.243137, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5

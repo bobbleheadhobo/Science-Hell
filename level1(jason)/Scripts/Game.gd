@@ -36,8 +36,9 @@ func _ready():
 
 func _input(event):
 	if event.is_action("Pause"):
-		if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
-			print ("Error changing scene to Menu")
+		SceneManager.change_scene('sciencehall')
+		#if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
+			#print ("Error changing scene to Menu")
 
 
 func _on_Conductor_measure(current_position):
@@ -58,15 +59,15 @@ func _on_Conductor_beat(current_position):
 		spawn_3_beat = 1
 		spawn_4_beat = 1
 	if song_position_in_beats > 98:
-		spawn_1_beat = 2
-		spawn_2_beat = 0
+		spawn_1_beat = 1
+		spawn_2_beat = 1
 		spawn_3_beat = 1
-		spawn_4_beat = 0
+		spawn_4_beat = 1
 	if song_position_in_beats > 132:
-		spawn_1_beat = 0
-		spawn_2_beat = 2
-		spawn_3_beat = 0
-		spawn_4_beat = 2
+		spawn_1_beat = 1
+		spawn_2_beat = 1
+		spawn_3_beat = 1
+		spawn_4_beat = 1
 	if song_position_in_beats > 162:
 		spawn_1_beat = 2
 		spawn_2_beat = 2
