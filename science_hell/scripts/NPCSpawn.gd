@@ -31,3 +31,32 @@ func spawn_unselected_players():
 		
 	for key in characters.keys():
 		spawn_npc(key)
+
+func spawn_professors():
+	if PlayerStats.chey_level_complete:	
+		spawn_professor_at_location("cooper", -32, 714)
+	
+	if PlayerStats.inventory.has("psu"):
+		spawn_professor_at_location("reynolds", -938, -554)
+		
+	if PlayerStats.inventory.has("keyboard"):
+		spawn_professor_at_location("ivan", -1175, 76)
+		
+		
+		
+	
+func spawn_professor_at_location(character_sprite: String, x: float, y: float):
+	# Instance the NPC scene
+	var npc = npc_scene.instantiate()
+	
+	# Set the NPC's position to the specified coordinates
+	npc.global_position = Vector2(x, y)
+	
+	# Change the NPC's sprite
+	var sprite_node = npc.get_node("Sprite2D") # Adjust the node path if necessary
+	sprite_node.texture = Characters.set_professor(character_sprite)
+	
+	# Add the NPC as a child of the current node or any other desired parent node
+	add_child(npc)
+	print("s[awned]", character_sprite)
+	

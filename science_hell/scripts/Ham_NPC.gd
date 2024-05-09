@@ -61,8 +61,6 @@ func _on_timer_timeout():
 
 
 func _on_chat_det_body_entered(body):
-	print(body)
-	print(body.has_method("player"))
 	if body.has_method("player"):
 		player_in_area = true
 		

@@ -5,6 +5,10 @@ func _ready():
 	Health.set_visibility(true)
 	Health.set_main_location()
 	$NPCSpawn.spawn_unselected_players()
+	$NPCSpawn.spawn_professors()
+	
+	print(PlayerStats.inventory)
+	
 
 func _on_reynolds_office_body_entered(body):
 	if(body.has_method("player")):
@@ -27,3 +31,7 @@ func _on_cooper_6_body_entered(body):
 func _on_reynolds_cutscene_body_entered(body):
 	if(body.has_method("player")):
 		SceneManager.change_scene("reynoldscutscene")
+
+
+		
+		

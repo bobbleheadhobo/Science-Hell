@@ -10,7 +10,6 @@ func _ready():
 	MusicManager.play_song("reynolds")
 	Rey.reset()
 	start_mob_timer()
-	#Health.set_visibility(true)
 	
 	
 
