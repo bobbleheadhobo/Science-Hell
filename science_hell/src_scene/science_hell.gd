@@ -1,3 +1,4 @@
+# controls visual elements on the screen and handle scene changes when entering new rooms
 extends Node
 
 func _ready():

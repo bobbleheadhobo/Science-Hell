@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715295434
-Hamwon.dtl::Resource::-1::1715295432::0::1::::<><>::
+::res://::1715296040
+Hamwon.dtl::Resource::-1::1715296040::0::1::::<><>::
 icon.svg::CompressedTexture2D::1427558487151224360::1711938858::1714450278::1::::<><>::
 README.md::TextFile::-1::1713389763::0::1::::<><>::
 ::res://addons/::1715286319
@@ -1178,9 +1178,9 @@ LoadManager.gd::GDScript::-1::1715220713::0::1::::<>Node<>::
 pause.gd::GDScript::-1::1715220713::0::1::::<>Control<>::
 pause.gdshader::Shader::-1::1714450299::0::1::::<><>::
 pause.tscn::PackedScene::2159873239053842545::1714450238::0::1::::<><>::res://science_hell/gui/Pause/pause.gd<>res://science_hell/gui/Pause/pause.gdshader
-::res://science_hell/gui/Title Screen/::1715295575
+::res://science_hell/gui/Title Screen/::1715298057
 menu.gd::GDScript::-1::1715295574::0::1::::<>Control<>::
-menu.tscn::PackedScene::6885490853751947605::1715295575::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
+menu.tscn::PackedScene::6885490853751947605::1715298057::0::1::::<><>::res://science_hell/gui/Title Screen/menu.gd<>uid://dcojlx6kqylso::::res://science_hell/gui/Title Screen/title/title_0001.png<>res://science_hell/gui/Title Screen/title/auto_scroller.gdshader<>uid://cb7at3tbn5jv7::::res://science_hell/gui/Title Screen/title/title_0004.png<>uid://bvjela7u1rqxy::::res://science_hell/gui/Title Screen/title/title_0003.png<>uid://df8kces3qfjms::::res://science_hell/gui/Title Screen/title/title_0002.png<>uid://nawsvntvxg13::::res://science_hell/gui/Title Screen/title/title_0005.png
 title.png::CompressedTexture2D::5213824191632797593::1713827456::1714353067::1::::<><>::
 ::res://science_hell/gui/Title Screen/title/::1714353067
 auto_scroller.gdshader::Shader::-1::1714109049::0::1::::<><>::
@@ -1189,10 +1189,10 @@ title_0002.png::CompressedTexture2D::7578941715862572790::1713827456::1714353067
 title_0003.png::CompressedTexture2D::3879228361960220814::1713827456::1714353067::1::::<><>::
 title_0004.png::CompressedTexture2D::4909125729307426350::1713827456::1714353067::1::::<><>::
 title_0005.png::CompressedTexture2D::913824009390629712::1713827456::1714353067::1::::<><>::
-::res://science_hell/Music/::1715295877
+::res://science_hell/Music/::1715295965
 Ambiance.Loop (updated).wav::AudioStreamWAV::8210489234445921714::1715122961::1715122961::1::::<><>::
 Chorale for a Graduate.wav::AudioStreamWAV::644990859706941814::1715295878::1715295887::1::::<><>::
-music_manager_global.gd::GDScript::-1::1715231531::0::1::::<>Node<>::
+music_manager_global.gd::GDScript::-1::1715295965::0::1::::<>Node<>::
 Roulette (with keycard).wav::AudioStreamWAV::2434925992987229758::1715231531::1715231531::1::::<><>::
 ::res://science_hell/NPC/::1715122961
 NPC.gd::GDScript::-1::1714450237::0::1::::<>CharacterBody2D<>::
@@ -1222,7 +1222,7 @@ rey 2.png::CompressedTexture2D::2819338941920521618::1715231531::1715231531::1::
 rey.png::CompressedTexture2D::8656884471696705902::1715122961::1715122961::1::::<><>::
 song.png::CompressedTexture2D::1350624981433130907::1715122961::1715122961::1::::<><>::
 songRock.png::CompressedTexture2D::2600422765326660244::1714324596::1714449102::1::::<><>::
-::res://science_hell/scenes/::1715295575
+::res://science_hell/scenes/::1715298047
 auditorium.tscn::PackedScene::5579108264146436953::1715122961::0::1::::<><>::uid://byo83x2tlr5ll::::res://science_hell/assets/tilemap.tres
 bathroom1.tscn::PackedScene::7152412917591885856::1715198989::0::1::::<><>::uid://byo83x2tlr5ll::::res://science_hell/assets/tilemap.tres
 bathroom2.tscn::PackedScene::6313852623396482475::1715198989::0::1::::<><>::uid://byo83x2tlr5ll::::res://science_hell/assets/tilemap.tres
@@ -1234,22 +1234,22 @@ parth_cutscene.tscn::PackedScene::6957969176764471399::1715292854::0::1::::<><>:
 parth_office.tscn::PackedScene::1068920517807618367::1715122961::0::1::::<><>::uid://byo83x2tlr5ll::::res://science_hell/assets/tilemap.tres
 cooper_cutscene.tscn::PackedScene::158337625436207734::1715292854::0::1::::<><>::res://science_hell/scripts/cooper_cutscene.gd<>uid://dfrsp1o4p7h5b::::res://science_hell/assets/cutscenes/cooper_scene.png
 ivan_cutscene.tscn::PackedScene::6206750286153869367::1715292854::0::1::::<><>::uid://c13xhvtfjmt6q::::res://science_hell/assets/cutscenes/ivan_scene.png<>res://science_hell/scripts/ivan_cutscene.gd
-win.gd::GDScript::-1::1715295575::0::1::::<>Control<>::
-win.tscn::PackedScene::6241843148804115556::1715295575::0::1::::<><>::res://science_hell/scenes/win.gd<>uid://dj83170nknklt::::res://science_hell/assets/PhotoFunia-1714162875.png
+win.gd::GDScript::-1::1715297908::0::1::::<>Control<>::
+win.tscn::PackedScene::6241843148804115556::1715298047::0::1::::<><>::res://science_hell/scenes/win.gd<>uid://dj83170nknklt::::res://science_hell/assets/PhotoFunia-1714162875.png
 song_cutscene.tscn::PackedScene::4569493251550458409::1715292854::0::1::::<><>::res://science_hell/scripts/song_cutscene.gd<>uid://drrh7h5s5yqpt::::res://science_hell/assets/cutscenes/song_scene.png
 reynolds_cutscene.tscn::PackedScene::5526514099263525969::1715292855::0::1::::<><>::res://science_hell/scripts/reynolds_cutscene.gd<>uid://c4bb4a4yj5d8l::::res://science_hell/assets/cutscenes/rey_scene.png
 rey_room.tscn::PackedScene::5735716851169236276::1715198989::0::1::::<><>::uid://byo83x2tlr5ll::::res://science_hell/assets/tilemap.tres
 song_room.tscn::PackedScene::8002682242064104359::1715122961::0::1::::<><>::uid://byo83x2tlr5ll::::res://science_hell/assets/tilemap.tres
-::res://science_hell/scripts/::1715295574
+::res://science_hell/scripts/::1715297146
 auditorium.gd::GDScript::-1::1715122961::0::1::::<>Node2D<>::
-Background.gd::GDScript::-1::1715291959::0::1::::Background<>CanvasModulate<>::
+Background.gd::GDScript::-1::1715297146::0::1::::Background<>CanvasModulate<>::
 bathroom1.gd::GDScript::-1::1715122961::0::1::::<>Node2D<>::
 entry_level.gd::GDScript::-1::1715122961::0::1::::<>Node2D<>::
 game_over.gd::GDScript::-1::1715122961::0::1::::<>Control<>::
 Ham_NPC.gd::GDScript::-1::1715288040::0::1::::<>CharacterBody2D<>::
 lab.gd::GDScript::-1::1714450239::0::1::::<>Node2D<>::
 NPCSpawn.gd::GDScript::-1::1715295574::0::1::::<>Path2D<>::
-PointLight2D.gd::GDScript::-1::1715122961::0::1::::<>PointLight2D<>::
+PointLight2D.gd::GDScript::-1::1715296955::0::1::::<>PointLight2D<>::
 cooper_cutscene.gd::GDScript::-1::1715290895::0::1::::<>Control<>::
 ivan_cutscene.gd::GDScript::-1::1715291206::0::1::::<>Control<>::
 song_cutscene.gd::GDScript::-1::1715291207::0::1::::<>Control<>::
@@ -1259,6 +1259,6 @@ Song_NPC.gd::GDScript::-1::1715203547::0::1::::<>CharacterBody2D<>::
 ui_manager.gd::GDScript::-1::1715122961::0::1::::<>Node<>::
 ::res://science_hell/singleton/::1715286586
 player_stats.gd::GDScript::-1::1715286586::0::1::::<>Node<>::
-::res://science_hell/src_scene/::1715295574
-science_hell.gd::GDScript::-1::1715289772::0::1::::<>Node<>::
-science_hell.tscn::PackedScene::2410502229619207928::1715295574::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://ph172i2tuglb::::res://science_hell/scenes/parth_office.tscn<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn<>uid://dssb1g8pnln1n::::res://science_hell/scenes/npc_spawn.tscn<>uid://clqtdljrad306::::res://science_hell/scenes/auditorium.tscn<>res://science_hell/scripts/auditorium.gd<>uid://c85xgwkvl43su::::res://science_hell/scenes/bathroom1.tscn<>res://science_hell/scripts/Background.gd<>res://science_hell/scripts/bathroom1.gd<>res://science_hell/scripts/PointLight2D.gd<>res://science_hell/scripts/Ham_NPC.gd<>uid://bpjprwldrjsi3::::res://science_hell/players/hamilton/ham.png<>res://science_hell/scripts/Song_NPC.gd<>uid://bdbwt277qvj7i::::res://science_hell/players/professors/songRock.png<>uid://cnyooh3kecxce::::res://science_hell/scenes/rey_room.tscn<>uid://c0l7hde1qxiwv::::res://science_hell/assets/computer_parts/cpu.png<>res://science_hell/assets/computer_parts/CPU.gd<>uid://b8nh1x03pijff::::res://science_hell/assets/computer_parts/ram.png<>res://science_hell/assets/computer_parts/RAM.gd
+::res://science_hell/src_scene/::1715298047
+science_hell.gd::GDScript::-1::1715295965::0::1::::<>Node<>::
+science_hell.tscn::PackedScene::2410502229619207928::1715298047::0::1::::<><>::res://science_hell/src_scene/science_hell.gd<>uid://dsbij3axtbtoo::::res://science_hell/players/hamilton/player.tscn<>uid://rru2hagpatg1::::res://science_hell/assets/main_map_tile_set.tres<>uid://ph172i2tuglb::::res://science_hell/scenes/parth_office.tscn<>uid://ckjh1yr7odfop::::res://science_hell/scenes/lab.tscn<>uid://dssb1g8pnln1n::::res://science_hell/scenes/npc_spawn.tscn<>uid://clqtdljrad306::::res://science_hell/scenes/auditorium.tscn<>res://science_hell/scripts/auditorium.gd<>uid://c85xgwkvl43su::::res://science_hell/scenes/bathroom1.tscn<>res://science_hell/scripts/Background.gd<>res://science_hell/scripts/bathroom1.gd<>res://science_hell/scripts/PointLight2D.gd<>res://science_hell/scripts/Ham_NPC.gd<>uid://bpjprwldrjsi3::::res://science_hell/players/hamilton/ham.png<>res://science_hell/scripts/Song_NPC.gd<>uid://bdbwt277qvj7i::::res://science_hell/players/professors/songRock.png<>uid://cnyooh3kecxce::::res://science_hell/scenes/rey_room.tscn<>uid://c0l7hde1qxiwv::::res://science_hell/assets/computer_parts/cpu.png<>res://science_hell/assets/computer_parts/CPU.gd<>uid://b8nh1x03pijff::::res://science_hell/assets/computer_parts/ram.png<>res://science_hell/assets/computer_parts/RAM.gd

@@ -1,3 +1,4 @@
+# this file implemtents the pause funcitonality of the game when you press escape
 extends Node
 
 @onready var pause_scene = preload("res://science_hell/gui/Pause/pause.tscn")

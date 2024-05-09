@@ -1,3 +1,5 @@
+#plays cutscene then switches to coresponding level
+
 extends Control
 
 var animation_name = "reynolds_cutscene"

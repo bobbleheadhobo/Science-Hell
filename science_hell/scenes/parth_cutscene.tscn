@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c6eq0asw8y87t"]
 
-[ext_resource type="Script" path="res://science_hell/parth_cutscene.gd" id="1_efi0h"]
+[ext_resource type="Script" path="res://science_hell/scripts/parth_cutscene.gd" id="1_efi0h"]
 [ext_resource type="Texture2D" uid="uid://dd600espmmv8x" path="res://science_hell/assets/cutscenes/parth_scene.png" id="2_w8h7c"]
 
 [sub_resource type="Animation" id="Animation_udy6h"]

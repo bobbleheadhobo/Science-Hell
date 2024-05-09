@@ -1,3 +1,5 @@
+# this code shoot fire balls from the top of the staff
+
 extends Area2D
 
 var travelled_distance = 0

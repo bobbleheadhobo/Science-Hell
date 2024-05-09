@@ -1,3 +1,5 @@
+#wave progress indicatior
+
 extends ProgressBar
 
 signal progress_bar_full

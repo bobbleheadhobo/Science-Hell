@@ -1,3 +1,4 @@
+#plays cutscene then switches to coresponding level
 extends Control
 
 var animation_name = "song_cutscene"

@@ -1,3 +1,5 @@
+# global script to control the music in each scene for the entire game
+
 extends Node
 
 var songs = {
