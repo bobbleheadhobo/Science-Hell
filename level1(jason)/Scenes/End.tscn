@@ -11,6 +11,12 @@
 scale = Vector2(1.5, 1.5)
 script = ExtResource("6")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 344.0
+offset_bottom = 252.0
+color = Color(0, 0, 0, 1)
+
 [node name="PlayAgain" type="TextureButton" parent="."]
 offset_left = 48.0
 offset_top = 128.0

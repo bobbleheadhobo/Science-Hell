@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_2yg7d")
 npc_name = "Duckie"
-initial_dialog = "text duckie"
-post_quest_dialog = "you did it! go back to where you came from. And make sure you know the right password.. * * * *"
+initial_dialog = "You've made it pretty far, i'm proud of you. Each direction has something you may need but choose wisely..."
+post_quest_dialog = ""

@@ -29,6 +29,9 @@ func _ready() -> void:
 	game_info.create_response(starting_room_response)
 	var global_scale = 2.4
 	camera.zoom = Vector2(1.0 / global_scale, 1.0 / global_scale)
+	MusicManager.play_song("chey")
+
+
 
 # PRE param is text entered by player
 # POST so much stuff

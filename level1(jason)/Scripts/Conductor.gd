@@ -1,3 +1,5 @@
+# conductor code to take care of audio input and measure the amount of 
+# beats in the song 
 extends AudioStreamPlayer
 
 @export var bpm := 165
@@ -37,8 +39,6 @@ func _report_beat():
 			measure = 1
 		beat.emit(song_position_in_beats)
 		temp.emit(measure)
-		#emit_signal("beat", song_position_in_beats)
-		#emit_signal("temp", measure)
 		last_reported_beat = song_position_in_beats
 		measure += 1
 

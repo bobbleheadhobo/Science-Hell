@@ -10,6 +10,9 @@ func _ready():
 	MusicManager.play_song("reynolds")
 	Rey.reset()
 	start_mob_timer()
+	#Health.set_visibility(true)
+	
+	
 
 func _on_progress_bar_progress_bar_full():
 	current_wave = 	Rey.next_wave()

@@ -1,3 +1,4 @@
+# Code to spawn falling notes and get rid of them when they are hit 
 extends Node2D
 
 const TARGET_Y = 164
@@ -7,7 +8,6 @@ const DIST_TO_TARGET = TARGET_Y - SPAWN_Y
 const LEFT_LANE_SPAWN = Vector2(120, SPAWN_Y)
 const CENTRE_LANE_SPAWN = Vector2(160, SPAWN_Y)
 const RIGHT_LANE_SPAWN = Vector2(200, SPAWN_Y)
-#const FAR_RIGHT_LANE = Vector2(240, SPAWN_Y)
 
 var speed = 0
 var hit = false
@@ -15,7 +15,7 @@ var hit = false
 func _ready():
 	pass
 
-
+# how fast notes will fall
 func _physics_process(delta):
 	if !hit:
 		position.y += speed * delta
@@ -25,7 +25,7 @@ func _physics_process(delta):
 	else:
 		$Node2D.position.y -= speed * delta
 
-
+# creates 1 note per lane 
 func initialize(lane):
 	if lane == 0:
 		$AnimatedSprite2D.frame = 1
@@ -36,9 +36,6 @@ func initialize(lane):
 	elif lane == 2:
 		$AnimatedSprite2D.frame = 2
 		position = RIGHT_LANE_SPAWN
-	#elif lane == 3:
-		#$AnimatedSprite2D.frame = 3
-		#position = FAR_RIGHT_LANE
 		
 	else:
 		printerr("Invalid lane set for note: " + str(lane))
@@ -46,7 +43,7 @@ func initialize(lane):
 	
 	speed = DIST_TO_TARGET / 2.0
 
-
+# note dissapears and shows what accuracy the user hit it at 
 func destroy(score):
 	$CPUParticles2D.emitting = true
 	$AnimatedSprite2D.visible = false

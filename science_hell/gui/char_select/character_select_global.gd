@@ -15,7 +15,7 @@ var character_sprites = {
 	"chey": "res://science_hell/players/chey.png",
 	"jason": "res://science_hell/players/jason.png",
 	"pat": "res://science_hell/players/pat.png",
-	"johnathan": "res://science_hell/players/johnathan.png",
+	"jonathan": "res://science_hell/players/jonathan.png",
 	"chris": "res://science_hell/players/chris.png",
 }
 

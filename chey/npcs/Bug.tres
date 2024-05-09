@@ -1,14 +1,9 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://i8p6dpvx73h6"]
+[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://i8p6dpvx73h6"]
 
 [ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_ens7v"]
-[ext_resource type="Resource" uid="uid://c6ctrbthu7q66" path="res://chey/items/BugToken.tres" id="1_v6rks"]
 
 [resource]
 script = ExtResource("1_ens7v")
 npc_name = "bug"
-initial_dialog = "I'm your friend in this game. As you can see we are stuck in the stack. Solve my puzzle and you'll get out of here. If you give me something I might have a hint for you. Don't forget to talk to me before you leave to the next room."
-post_quest_dialog = "Hey, no one usually talks to me before they leave. This is good, maybe you'll get out of here with Cooper. Your hint:
-What's after the stack? 
-Talk to every NPC you encounter. Trust me. 
-Remeber, duckie is always giving you the answers..."
-quest_item = ExtResource("1_v6rks")
+initial_dialog = "im just a dead bug.  "
+post_quest_dialog = ""
