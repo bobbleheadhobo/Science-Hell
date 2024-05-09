@@ -12,9 +12,10 @@ func _on_quit_pressed():
 	MusicManager.stop_music()
 	var canvas = get_parent()
 	canvas.queue_free()
-	get_tree().paused = false
 	
 	if base_scenes.has(SceneManager.current_scene_name):
 		SceneManager.change_scene("titlescreen")
 	else:
 		SceneManager.change_scene("sciencehall")
+		
+	get_tree().paused = false
