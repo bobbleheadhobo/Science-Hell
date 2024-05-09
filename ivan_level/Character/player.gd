@@ -8,8 +8,8 @@ var alive = true
 
 var attack = false
 
-@export var speed : float = 200.0
-@export var jump_velocity : float = -250.0
+@export var speed : float = 175.0
+@export var jump_velocity : float = -300.0
 @export var level_start_pos : Node2D 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

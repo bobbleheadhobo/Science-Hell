@@ -11,5 +11,6 @@ func _process(delta):
 
 func level_over():
 	Health.reset_hearts()
-	await get_tree().create_timer(0.8).timeout
-	SceneManager.change_scene("Sciencehall")
+	await get_tree().create_timer(0.1).timeout
+	get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn")
+	#SceneManager.change_scene("Sciencehall")

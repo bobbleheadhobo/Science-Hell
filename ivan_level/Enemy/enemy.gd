@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 50
+var speed = 25
 var player_chase = false
 var player = null
 
@@ -29,7 +29,7 @@ func enemy():
 	pass
 
 func deal_with_damage():
-		health = health - 20
+		health = health - 25
 		print("Slime health = ", health)
 		
 		if health <= 0:

@@ -31,4 +31,4 @@ func _on_body_entered(body):
 		$"../ui/Label".text = "
 		Keyboard acquired."
 		set_collision_setting(false)
-		level.acquired = true
+		$"..".acquired = true

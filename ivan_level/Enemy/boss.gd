@@ -1,23 +1,24 @@
 class_name Boss
 extends CharacterBody2D
 
-var speed = 50
+var speed = 40
 var player_chase = false
 var player = null
 
-var health = 1000
+var health = 10
 var player_inattack_zone = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var keyboard = $"../Keyboard"
 
 func _physics_process(delta):
+	#if $"../TileMap/Barrier".player_entered:
+	#	$ui/Label.text = "Bugzilla: " + str(health)
+	
 	if player_chase:
 		position += (player.position - position) / speed
 
-		# Add the gravity.
-		#velocity.y += delta
-		
+		move_and_slide()
 		update_direction(player.direction.x)
 
 func update_direction(dir):
@@ -44,7 +45,7 @@ func enemy():
 	pass
 
 func deal_with_damage():
-		health = health - 100
+		health = health - 35
 		
 		if health <= 0:
 			print("BOSS defeated")
