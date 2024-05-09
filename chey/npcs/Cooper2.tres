@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_xdeh2")
 npc_name = "cooper"
-initial_dialog = "text"
-post_quest_dialog = "cooper1 item from bug unlocks room cooper2"
+initial_dialog = "these are the last items you need for the password... i promise...."
+post_quest_dialog = ""

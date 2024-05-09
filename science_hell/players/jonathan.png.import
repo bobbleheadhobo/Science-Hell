@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmrlqbk7a3gyl"
-path="res://.godot/imported/johnathan.png-8a51e5ef7dafe8489fd62faaf789e4e4.ctex"
+uid="uid://cn8cipg7hfh0y"
+path="res://.godot/imported/jonathan.png-a2b6e0aeccc21d126e6856114c688b9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/gui/char_select/johnathan.png"
-dest_files=["res://.godot/imported/johnathan.png-8a51e5ef7dafe8489fd62faaf789e4e4.ctex"]
+source_file="res://science_hell/players/jonathan.png"
+dest_files=["res://.godot/imported/jonathan.png-a2b6e0aeccc21d126e6856114c688b9b.ctex"]
 
 [params]
 
