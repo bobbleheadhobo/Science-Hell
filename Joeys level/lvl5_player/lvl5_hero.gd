@@ -44,7 +44,6 @@ func _physics_process(delta):
 	shoot()
 	handle_mob_collision(delta)
 	move_and_slide()
-	flip_gun()
 	update_invincibility(delta)
 
 
@@ -111,7 +110,7 @@ func take_damage(damage_direction):
 	velocity += knockback_velocity
 
 	if Health.current_health <= 0:
-		Rey.reset()
+		print("DEAD!")
 	else:
 		invincibility_timer = INVINCIBILITY_DURATION
 		
@@ -127,10 +126,3 @@ func player():
 func show_arrow():
 	$ExitArrow.show()
 	$ExitArrow/AnimationPlayer.play("point")
-
-
-func flip_gun():
-	if blend_position.x < 0:
-		GUN.flip_sprite(true)
-	elif blend_position.x > 0:
-		GUN.flip_sprite(false)

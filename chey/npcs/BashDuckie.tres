@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://lsgg4637htrb"]
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://lsgg4637htrb"]
 
 [ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_ckfcs"]
+[ext_resource type="Resource" uid="uid://dstu6iwmf04py" path="res://chey/items/MainItem.tres" id="1_kuhv5"]
 
 [resource]
 script = ExtResource("1_ckfcs")
 npc_name = "duckie"
 initial_dialog = "text"
 post_quest_dialog = "text"
+quest_item = ExtResource("1_kuhv5")

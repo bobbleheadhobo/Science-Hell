@@ -1,13 +1,13 @@
 [gd_resource type="TileSet" load_steps=24 format=3 uid="uid://rru2hagpatg1"]
 
-[ext_resource type="Texture2D" uid="uid://bkvsghtv5mguc" path="res://science_hell/assets/tiles/Room_Builder_16x16.png" id="1_hs44s"]
-[ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles/tiles_main_map/19_Hospital_16x16.png" id="2_w4mk6"]
-[ext_resource type="Texture2D" uid="uid://c72s6d0ywt0l6" path="res://science_hell/assets/tiles/tiles_main_map/hallways.png" id="3_8t16x"]
+[ext_resource type="Texture2D" uid="uid://br5s0p8bwuknj" path="res://science_hell/assets/tiles_main_map/Room_Builder_16x16.png" id="1_r2k7e"]
+[ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles_main_map/19_Hospital_16x16.png" id="2_w4mk6"]
+[ext_resource type="Texture2D" uid="uid://c72s6d0ywt0l6" path="res://science_hell/assets/tiles_main_map/hallways.png" id="3_8t16x"]
 [ext_resource type="Texture2D" uid="uid://bvqmwt4qlqqrh" path="res://science_hell/assets/tiles/1_Generic_16x16.png" id="3_xex78"]
-[ext_resource type="Texture2D" uid="uid://bjlmqcpjy6sn0" path="res://science_hell/assets/tiles/tiles_main_map/22_Museum.png" id="4_xulns"]
-[ext_resource type="Texture2D" uid="uid://cf52kowwh8t2h" path="res://science_hell/assets/tiles/tiles_main_map/courtyard2.png" id="5_lg4gy"]
+[ext_resource type="Texture2D" uid="uid://bjlmqcpjy6sn0" path="res://science_hell/assets/tiles_main_map/22_Museum.png" id="4_xulns"]
+[ext_resource type="Texture2D" uid="uid://cf52kowwh8t2h" path="res://science_hell/assets/tiles_main_map/courtyard2.png" id="5_lg4gy"]
 [ext_resource type="Texture2D" uid="uid://qvl24ma6x4hk" path="res://science_hell/assets/tiles/courtyard3.png" id="5_qac3x"]
-[ext_resource type="Texture2D" uid="uid://bc0s3pbiyyjro" path="res://science_hell/assets/tiles/tiles_main_map/tiles.png" id="6_43rrx"]
+[ext_resource type="Texture2D" uid="uid://bc0s3pbiyyjro" path="res://science_hell/assets/tiles_main_map/tiles.png" id="6_43rrx"]
 [ext_resource type="Texture2D" uid="uid://br5qxtqv3ohd4" path="res://science_hell/assets/tiles/main_map_extras.png" id="6_64ydy"]
 [ext_resource type="Texture2D" uid="uid://t2li5xqvpjq4" path="res://science_hell/assets/tiles/lab.png" id="9_18nx4"]
 
@@ -21,7 +21,7 @@ tile_data = PackedInt32Array(0, 2621440, 1342177321, 65536, 2621440, 41, 131072,
 tile_data = PackedInt32Array(0, 2621440, 1342177321, 65536, 2621440, 41, 131072, 2621440, 41, 1, 2621440, 1610612777, 65537, 2621440, 805306409, 131073, 2621440, 805306409)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_grpxu"]
-texture = ExtResource("1_hs44s")
+texture = ExtResource("1_r2k7e")
 5:0/0 = 0
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
@@ -11332,24 +11332,9 @@ texture = ExtResource("1_hs44s")
 67:108/0 = 0
 67:108/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 67:108/0/physics_layer_0/angular_velocity = 0.0
-46:47/0 = 0
-46:47/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-46:47/0/physics_layer_0/angular_velocity = 0.0
-47:47/0 = 0
-47:47/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-47:47/0/physics_layer_0/angular_velocity = 0.0
-48:47/0 = 0
-48:47/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-48:47/0/physics_layer_0/angular_velocity = 0.0
-46:48/0 = 0
-46:48/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-46:48/0/physics_layer_0/angular_velocity = 0.0
-47:48/0 = 0
-47:48/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-47:48/0/physics_layer_0/angular_velocity = 0.0
-48:48/0 = 0
-48:48/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-48:48/0/physics_layer_0/angular_velocity = 0.0
+38:50/0 = 0
+38:50/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+38:50/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxogi"]
 texture = ExtResource("2_w4mk6")

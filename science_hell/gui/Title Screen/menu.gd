@@ -3,7 +3,6 @@ extends Control
 func _ready():
 	Health.set_visibility(false)
 	MusicManager.play_song("menu")
-	SceneManager.current_scene_name = "titlescreen"
 
 func _on_play_pressed():	
 	SceneManager.change_scene("char_select")

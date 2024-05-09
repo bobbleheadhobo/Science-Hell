@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dstu6iwmf04py"]
+
+[ext_resource type="Script" path="res://chey/items/Item.gd" id="1_oeg52"]
+
+[resource]
+script = ExtResource("1_oeg52")
+item_name = "Item Name"
+item_type = 1
