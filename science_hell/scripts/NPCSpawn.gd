@@ -33,7 +33,7 @@ func spawn_unselected_players():
 		spawn_npc(key)
 
 func spawn_professors():
-	if PlayerStats.chey_level_complete:	
+	if PlayerStats.chey_level_complete:
 		spawn_professor_at_location("cooper", -32, 714)
 	
 	if PlayerStats.inventory.has("psu"):
@@ -42,6 +42,14 @@ func spawn_professors():
 	if PlayerStats.inventory.has("keyboard"):
 		spawn_professor_at_location("ivan", -1175, 76)
 		
+	if ((PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete) and (PlayerStats.computer_parts < PlayerStats.num_winning_parts)):
+		print(PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete and PlayerStats.computer_parts < PlayerStats.num_winning_parts)
+		print(PlayerStats.computer_parts < PlayerStats.num_winning_parts)
+		spawn_professor_at_location("ham", -128, 123)
+		await get_tree().create_timer(10).timeout
+		PlayerStats.computer_parts = 5
+		print(PlayerStats.computer_parts)
+		despawn_npc("ham")
 		
 		
 	
@@ -58,5 +66,18 @@ func spawn_professor_at_location(character_sprite: String, x: float, y: float):
 	
 	# Add the NPC as a child of the current node or any other desired parent node
 	add_child(npc)
-	print("s[awned]", character_sprite)
 	
+
+
+func despawn_npc(character_sprite: String):
+	# Find all NPC instances that are children of the current node
+	for child in get_children():
+		if child.has_node("Sprite2D"):  # Check if the child node has a Sprite2D node
+			var sprite_node = child.get_node("Sprite2D")
+			if sprite_node.texture == Characters.set_character(character_sprite) or sprite_node.texture == Characters.set_professor(character_sprite):
+				# Remove the NPC instance from the scene
+				child.queue_free()
+				print("Despawned", character_sprite)
+				return
+	
+	print("NPC with sprite", character_sprite, "not found")
