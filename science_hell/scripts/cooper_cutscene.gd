@@ -1,6 +1,6 @@
 extends Control
 
-var animation_name = "reynolds_cutscene"
+var animation_name = "cooper_cutscene"
 
 func _ready():
 	Health.set_visibility(false)
@@ -8,5 +8,6 @@ func _ready():
 	$AnimationPlayer.play(animation_name)
 	print(animation_length)
 	await get_tree().create_timer(animation_length+1).timeout
-	SceneManager.change_scene("reynoldslevel")
+	SceneManager.change_scene("cooperlevel")
 	Health.set_visibility(true)
+	

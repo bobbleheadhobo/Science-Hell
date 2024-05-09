@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6eq0asw8y87t"]
+[gd_scene load_steps=9 format=3 uid="uid://cuoujgtvdemrv"]
 
-[ext_resource type="Script" path="res://science_hell/parth_cutscene.gd" id="1_efi0h"]
-[ext_resource type="Texture2D" uid="uid://dd600espmmv8x" path="res://science_hell/assets/cutscenes/parth_scene.png" id="2_w8h7c"]
+[ext_resource type="Texture2D" uid="uid://c13xhvtfjmt6q" path="res://science_hell/assets/cutscenes/ivan_scene.png" id="1_3jvlk"]
+[ext_resource type="Script" path="res://science_hell/scripts/ivan_cutscene.gd" id="1_3ogj1"]
 
 [sub_resource type="Animation" id="Animation_udy6h"]
 length = 0.001
@@ -95,14 +95,14 @@ _data = {
 "song_cutscene": SubResource("Animation_t1alb")
 }
 
-[node name="ParthCutscene" type="Control"]
+[node name="IvanCutscene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_efi0h")
+script = ExtResource("1_3ogj1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -130,7 +130,7 @@ grow_vertical = 2
 [node name="Sprite2D" type="Sprite2D" parent="NinePatchRect"]
 position = Vector2(21, 21)
 scale = Vector2(3, 3)
-texture = ExtResource("2_w8h7c")
+texture = ExtResource("1_3jvlk")
 hframes = 4
 vframes = 4
 

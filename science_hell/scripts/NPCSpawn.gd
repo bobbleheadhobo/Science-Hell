@@ -43,8 +43,6 @@ func spawn_professors():
 		spawn_professor_at_location("ivan", -1175, 76)
 		
 	if ((PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete) and (PlayerStats.computer_parts < PlayerStats.num_winning_parts)):
-		print(PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete and PlayerStats.computer_parts < PlayerStats.num_winning_parts)
-		print(PlayerStats.computer_parts < PlayerStats.num_winning_parts)
 		spawn_professor_at_location("ham", -128, 123)
 		await get_tree().create_timer(10).timeout
 		PlayerStats.computer_parts = 5
