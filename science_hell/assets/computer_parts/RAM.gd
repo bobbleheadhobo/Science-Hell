@@ -7,7 +7,7 @@ func _ready():
 	set_collision_setting(false)
 
 func _process(delta):
-	if PlayerStats.chey_level_complete and entered < 1:
+	if PlayerStats.jason_level_complete and entered < 1:
 		set_collision_setting(true)
 		
 
@@ -24,7 +24,7 @@ func set_collision_setting(tag):
 			$CollisionShape2D.set_deferred("disabled", true)
 
 func _on_body_entered(body):
-	if body is Player and PlayerStats.jason_level_complete:
+	if body is Hero and PlayerStats.jason_level_complete:
 		PlayerStats.computer_parts += 1
 		$"../ui/Label".text = "
 		RAM acquired."
