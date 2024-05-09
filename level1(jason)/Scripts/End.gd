@@ -19,4 +19,7 @@ func _on_PlayAgain_pressed():
 
 
 func _on_BackToMenu_pressed():
+	if Score.grade == "C+" or Score.grade == "B-" or Score.grade == "B" or Score.grade == "B+" or Score.grade == "A-" or Score.grade == "A" or Score.grade == "A+":
+		PlayerStats.jason_level_complete = true
+
 	SceneManager.change_scene('sciencehall')

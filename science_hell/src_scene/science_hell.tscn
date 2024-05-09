@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=59 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -17,6 +17,10 @@
 [ext_resource type="Script" path="res://science_hell/scripts/Song_NPC.gd" id="12_ajlhw"]
 [ext_resource type="Texture2D" uid="uid://bdbwt277qvj7i" path="res://science_hell/players/professors/songRock.png" id="13_480yp"]
 [ext_resource type="PackedScene" uid="uid://cnyooh3kecxce" path="res://science_hell/scenes/rey_room.tscn" id="13_510w3"]
+[ext_resource type="Texture2D" uid="uid://c0l7hde1qxiwv" path="res://science_hell/assets/computer_parts/cpu.png" id="20_6dl83"]
+[ext_resource type="Script" path="res://science_hell/assets/computer_parts/CPU.gd" id="20_ahmyf"]
+[ext_resource type="Texture2D" uid="uid://b8nh1x03pijff" path="res://science_hell/assets/computer_parts/ram.png" id="21_xwwna"]
+[ext_resource type="Script" path="res://science_hell/assets/computer_parts/RAM.gd" id="22_ei12v"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_5kqb1"]
 polygon = PackedVector2Array(-88, -504, -88, -16, -1328, -16, -1328, -504, -1256, -504, -1256, -488, -1200, -488, -1200, -504, -1048, -504, -1048, -488, -992, -488, -992, -504, -96, -504, -80, -512, -999, -512, -999, -496, -1040, -496, -1040, -512, -1207, -512, -1207, -496, -1248, -496, -1248, -512, -1335, -512, -1335, -10, -80, -10, -80, -512)
@@ -232,6 +236,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kiqwa"]
 radius = 33.2415
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwhap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0h3k"]
+size = Vector2(41, 20)
+
 [node name="ScienceHell" type="Node2D"]
 script = ExtResource("1_4n0go")
 
@@ -293,7 +302,6 @@ occluder = SubResource("OccluderPolygon2D_0xnr6")
 position = Vector2(-1888, -704)
 
 [node name="Roof" type="TileMap" parent="parth_office"]
-visible = false
 tile_set = ExtResource("2_2ycby")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 983040, 8, 1, 983040, 8, 2, 983040, 8, 3, 983040, 8, 4, 983040, 8, 5, 983040, 8, 6, 983040, 8, 7, 983040, 8, 8, 983040, 8, 9, 983040, 8, 10, 983040, 8, 65546, 983040, 8, 131082, 983040, 8, 196618, 983040, 8, 262154, 983040, 8, 327690, 983040, 8, 327689, 983040, 8, 327688, 983040, 8, 327687, 983040, 8, 327686, 983040, 8, 327685, 983040, 8, 327684, 983040, 8, 327683, 983040, 8, 327682, 983040, 8, 327681, 983040, 8, 327680, 983040, 8, 262144, 983040, 8, 196608, 983040, 8, 131072, 983040, 8, 65536, 983040, 8, 65537, 983040, 8, 131073, 983040, 8, 196609, 983040, 8, 262145, 983040, 8, 262146, 983040, 8, 196610, 983040, 8, 131074, 983040, 8, 65538, 983040, 8, 65539, 983040, 8, 65540, 983040, 8, 131076, 983040, 8, 131075, 983040, 8, 196611, 983040, 8, 262147, 983040, 8, 262148, 983040, 8, 196612, 983040, 8, 65541, 983040, 8, 131077, 983040, 8, 196613, 983040, 8, 262149, 983040, 8, 262150, 983040, 8, 196614, 983040, 8, 131078, 983040, 8, 65542, 983040, 8, 65543, 983040, 8, 131079, 983040, 8, 196615, 983040, 8, 262151, 983040, 8, 262152, 983040, 8, 196616, 983040, 8, 131080, 983040, 8, 65544, 983040, 8, 262153, 983040, 8, 196617, 983040, 8, 131081, 983040, 8, 65545, 983040, 8)
@@ -527,6 +535,42 @@ shape = SubResource("CircleShape2D_kiqwa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SongBody2D"]
 
+[node name="CPU" type="Area2D" parent="."]
+position = Vector2(-48, 713)
+script = ExtResource("20_ahmyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CPU"]
+shape = SubResource("RectangleShape2D_kwhap")
+
+[node name="Sprite2D" type="Sprite2D" parent="CPU"]
+texture = ExtResource("20_6dl83")
+
+[node name="RAM" type="Area2D" parent="."]
+position = Vector2(3, -1)
+script = ExtResource("22_ei12v")
+
+[node name="Sprite2D" type="Sprite2D" parent="RAM"]
+position = Vector2(-966, 43)
+texture = ExtResource("21_xwwna")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RAM"]
+position = Vector2(-965.5, 43)
+shape = SubResource("RectangleShape2D_v0h3k")
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="ui"]
+anchors_preset = -1
+anchor_left = 0.486
+anchor_right = 0.535
+anchor_bottom = 0.048
+offset_left = 0.127991
+offset_right = -0.320007
+offset_bottom = -0.104
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="parth_office/ParthOffice" to="." method="_on_parth_office_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
@@ -553,3 +597,5 @@ shape = SubResource("CircleShape2D_kiqwa")
 [connection signal="body_exited" from="HamBody2D/ChatDet" to="HamBody2D" method="_on_chat_det_body_exited"]
 [connection signal="body_entered" from="SongBody2D/Area2D" to="SongBody2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="SongBody2D/Area2D" to="SongBody2D" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="CPU" to="CPU" method="_on_body_entered"]
+[connection signal="body_entered" from="RAM" to="RAM" method="_on_body_entered"]

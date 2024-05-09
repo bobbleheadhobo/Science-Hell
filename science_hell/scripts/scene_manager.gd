@@ -31,6 +31,7 @@ var scene_file_paths = {
 	"jasonslevel": "res://level1(jason)//Scenes/Game.tscn",
 	"parthlevel": "res://Level4/Scenes/FinalVirusWorld.tscn",
 	"cooperlevel": "res://chey/Game.tscn",
+	"jasonend": "res://level1(jason)/Scenes/End.tscn",
 	
 	#cut scenes
 	"reynoldscutscene": "res://science_hell/scenes/reynolds_cutscene.tscn",
