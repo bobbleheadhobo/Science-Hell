@@ -14,7 +14,6 @@ var scene_node_paths = {
 	"labroof": "Lab/Roof",
 	"audroof": "Auditorium/Roof",
 	"bathroof":"Bathroom1/Roof", 
-	"parthroof": "ParthOffice/Roof"
 }
 
 var scene_file_paths = {
