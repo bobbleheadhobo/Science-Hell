@@ -1,3 +1,4 @@
+# Code to randomly spawn notes based on the position in beats 
 extends Node2D
 
 var score = 0
@@ -34,13 +35,7 @@ func _ready():
 	$Conductor.play_with_beat_offset(9)
 
 
-func _input(event):
-	if event.is_action("Pause"):
-		SceneManager.change_scene('sciencehall')
-		#if get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn") != OK:
-			#print ("Error changing scene to Menu")
-
-
+# spawn certain notes based on measure 
 func _on_Conductor_measure(current_position):
 	if current_position == 1:
 		_spawn_notes(spawn_1_beat)
@@ -51,6 +46,7 @@ func _on_Conductor_measure(current_position):
 	elif current_position == 4:
 		_spawn_notes(spawn_4_beat)
 
+# adjusts the quantity of notes being spawned based on position in beats
 func _on_Conductor_beat(current_position):
 	song_position_in_beats = current_position
 	if song_position_in_beats > 36:
@@ -88,38 +84,22 @@ func _on_Conductor_beat(current_position):
 		spawn_2_beat = 2
 		spawn_3_beat = 1
 		spawn_4_beat = 2
-	if song_position_in_beats > 304:
+	if song_position_in_beats > 302:
 		spawn_1_beat = 0
 		spawn_2_beat = 0
 		spawn_3_beat = 0
 		spawn_4_beat = 0
-	#if song_position_in_beats > 316:
-		#spawn_1_beat = 0
-		#spawn_2_beat = 0
-		#spawn_3_beat = 0
-		#spawn_4_beat = 0
-	#if song_position_in_beats > 388:
-		#spawn_1_beat = 1
-		#spawn_2_beat = 0
-		#spawn_3_beat = 0
-		#spawn_4_beat = 0
-	#if song_position_in_beats > 396:
-		#spawn_1_beat = 0
-		#spawn_2_beat = 0
-		#spawn_3_beat = 0
-		#spawn_4_beat = 0
-	if song_position_in_beats > 312:
+	if song_position_in_beats > 310:
 		Score.set_score(score)
 		Score.combo = max_combo
 		Score.great = great
 		Score.good = good
 		Score.okay = okay
 		Score.missed = missed
-		if get_tree().change_scene_to_file("res://level1(jason)/Scenes/End.tscn") != OK:
-			print ("Error changing scene to End")
+		SceneManager.change_scene('jasonend')
 
 
-
+# spawn notes randomly 
 func _spawn_notes(to_spawn):
 	rand = 0
 	if to_spawn > 0:
@@ -127,7 +107,7 @@ func _spawn_notes(to_spawn):
 		instance = note.instantiate()
 		instance.initialize(lane)
 		add_child(instance)
-	if to_spawn > 1:
+	if to_spawn > 1: # spawn double notes
 		while rand == lane:
 			rand = randi() % 3
 		lane = rand
@@ -137,7 +117,7 @@ func _spawn_notes(to_spawn):
 		
 		
 
-
+# increments score and keeps track of combos
 func increment_score(by):
 	if by > 0:
 		combo += 1
