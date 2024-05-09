@@ -3,6 +3,9 @@ extends Control
 # scenes that will not return to science hall when you quit in pause menu
 var base_scenes = ["sciencehall", "char_select", "titlescreen"]
 
+func _process(delta):
+	$ui/Label.text = str(PlayerStats.computer_parts) + "/5 Computer Parts"
+
 func _on_resume_pressed():
 	var canvas = get_parent()
 	canvas.queue_free()
