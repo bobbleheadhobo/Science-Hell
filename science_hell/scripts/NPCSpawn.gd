@@ -46,8 +46,6 @@ func spawn_professors():
 		spawn_professor_at_location("ham", -128, 123)
 		await get_tree().create_timer(10).timeout
 		PlayerStats.computer_parts = 5
-		print(PlayerStats.computer_parts)
-		despawn_npc("ham")
 		
 		
 	

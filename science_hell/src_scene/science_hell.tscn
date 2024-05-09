@@ -322,7 +322,6 @@ shape = SubResource("RectangleShape2D_jhrng")
 position = Vector2(-568, -517)
 
 [node name="Roof" type="TileMap" parent="Lab"]
-visible = false
 z_index = 3
 position = Vector2(-2, 10)
 tile_set = ExtResource("2_2ycby")

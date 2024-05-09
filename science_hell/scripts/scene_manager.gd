@@ -38,7 +38,8 @@ var scene_file_paths = {
 	"parthcutscene": "res://science_hell/scenes/parth_cutscene.tscn",
 	"coopercutscene": "res://science_hell/scenes/cooper_cutscene.tscn",
 	"songcutscene": "res://science_hell/scenes/song_cutscene.tscn",
-	"ivancutscene": "res://science_hell/scenes/ivan_cutscene.tscn"
+	"ivancutscene": "res://science_hell/scenes/ivan_cutscene.tscn",
+	"win": "res://science_hell/scenes/win.tscn"
 }
 
 func _ready():

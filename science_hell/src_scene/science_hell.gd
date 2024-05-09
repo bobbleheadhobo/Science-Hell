@@ -7,7 +7,7 @@ func _ready():
 	$NPCSpawn.spawn_unselected_players()
 	$NPCSpawn.spawn_professors()
 	
-	if ((PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete) and (PlayerStats.computer_parts < PlayerStats.num_winning_parts)):
+	if (PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete):
 		$HamBody2DStart.queue_free()
 	
 	if PlayerStats.computer_parts >= PlayerStats.num_winning_parts:
