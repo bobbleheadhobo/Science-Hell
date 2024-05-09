@@ -121,6 +121,7 @@ func error(second_word: String) -> String:
 # need to add player can only use it in $ExitRoom
 func passwd(second_word: String) -> String:
 	if second_word == "barf!" or second_word == "abc":
+		PlayerStats.chey_level_complete = true
 		SceneManager.change_scene('sciencehall')# exit to main map
 		return "Password accepted. Access granted."
 	else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://djquaxa4fkpdj"]
+[gd_scene load_steps=26 format=3 uid="uid://djquaxa4fkpdj"]
 
 [ext_resource type="Texture2D" uid="uid://u10xishplp7" path="res://ivan_level/art/cavesofgallet/cavesofgallet.png" id="1_whjnr"]
 [ext_resource type="Script" path="res://ivan_level/level/level.gd" id="1_x5syg"]
@@ -3713,7 +3713,7 @@ sources/0 = SubResource("TileSetAtlasSource_moets")
 sources/1 = SubResource("TileSetAtlasSource_0kf07")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akqal"]
-size = Vector2(435, 229)
+size = Vector2(455.625, 235.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0g7j"]
 size = Vector2(122.5, 34)
@@ -3726,6 +3726,9 @@ size = Vector2(325, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ukjd"]
 size = Vector2(32.5722, 173)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfuny"]
+size = Vector2(6535, 771)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqtx4"]
 size = Vector2(1068.5, 354)
@@ -3765,12 +3768,16 @@ position = Vector2(1882.25, 455.75)
 shape = SubResource("RectangleShape2D_61tpk")
 
 [node name="ob_4" type="CollisionShape2D" parent="TileMap/danger"]
-position = Vector2(961.5, 167.5)
+position = Vector2(959, 172)
 shape = SubResource("RectangleShape2D_n204h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/danger"]
 position = Vector2(467.25, 185.5)
 shape = SubResource("RectangleShape2D_8ukjd")
+
+[node name="ob_5" type="CollisionShape2D" parent="TileMap/danger"]
+position = Vector2(2987.5, 2002.5)
+shape = SubResource("RectangleShape2D_sfuny")
 
 [node name="Boss Room" type="Area2D" parent="TileMap"]
 position = Vector2(5179, 833)
@@ -3812,7 +3819,7 @@ polygon = PackedVector2Array(-541, 163, 528, 163, 534, 227, -541, 226)
 top_level = true
 light_mask = 15
 visibility_layer = 15
-position = Vector2(4412, 972)
+position = Vector2(4413, 980)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 process_callback = 0
@@ -3824,7 +3831,7 @@ drag_vertical_enabled = true
 remote_path = NodePath("../Camera2D")
 
 [node name="Boss" parent="." instance=ExtResource("7_uxbyg")]
-position = Vector2(5536, 908)
+position = Vector2(5276, 863)
 collision_layer = 11
 collision_mask = 7
 
