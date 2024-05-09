@@ -50,7 +50,6 @@ func level_over():
 	Rey.game_over = true
 	kill_all("mobs")
 	$lvl5_Player.show_arrow()
-	PlayerStats.computer_parts += 1
 	
 
 func kill_all(group_name):
