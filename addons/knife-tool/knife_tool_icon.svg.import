@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmrlqbk7a3gyl"
-path="res://.godot/imported/johnathan.png-8a51e5ef7dafe8489fd62faaf789e4e4.ctex"
+uid="uid://cr3w6pn684lws"
+path="res://.godot/imported/knife_tool_icon.svg-36584df1b6839a1eee8204f140da606c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/gui/char_select/johnathan.png"
-dest_files=["res://.godot/imported/johnathan.png-8a51e5ef7dafe8489fd62faaf789e4e4.ctex"]
+source_file="res://addons/knife-tool/knife_tool_icon.svg"
+dest_files=["res://.godot/imported/knife_tool_icon.svg-36584df1b6839a1eee8204f140da606c.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

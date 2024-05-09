@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=35 format=3 uid="uid://wkv4fsjcfk1a"]
 
 [ext_resource type="Texture2D" uid="uid://bkvsghtv5mguc" path="res://science_hell/assets/tiles/Room_Builder_16x16.png" id="1_xl53b"]
-[ext_resource type="Texture2D" uid="uid://bdjnxm48ar3eq" path="res://science_hell/assets/tiles/19_Hospital_16x16.png" id="2_6hy56"]
+[ext_resource type="Texture2D" uid="uid://bqvm4sgjbdqvh" path="res://science_hell/assets/tiles/tiles_main_map/19_Hospital_16x16.png" id="2_6hy56"]
 [ext_resource type="Texture2D" uid="uid://cjavnpibcpl0f" path="res://science_hell/assets/tiles/14_Basement_16x16.png" id="3_icurd"]
 [ext_resource type="Texture2D" uid="uid://s41tkxlckd7j" path="res://science_hell/assets/tiles/16_Grocery_store_16x16.png" id="4_sl81g"]
 [ext_resource type="Texture2D" uid="uid://bdpeppx3f5a2r" path="res://science_hell/assets/tiles/18_Jail_16x16.png" id="5_2gafx"]
@@ -11,11 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://dv2onbrf38ktq" path="res://science_hell/assets/tiles/hallways.png" id="9_jvx1q"]
 [ext_resource type="Texture2D" uid="uid://t2li5xqvpjq4" path="res://science_hell/assets/tiles/lab.png" id="10_a44w2"]
 [ext_resource type="Texture2D" uid="uid://bvqmwt4qlqqrh" path="res://science_hell/assets/tiles/1_Generic_16x16.png" id="11_ex3ol"]
-[ext_resource type="Texture2D" uid="uid://bb58t50144sr1" path="res://science_hell/assets/tiles/2_LivingRoom_16x16.png" id="12_860r7"]
+[ext_resource type="Texture2D" uid="uid://dlxysdqkynn3v" path="res://science_hell/assets/tiles/tiles_main_map/2_LivingRoom_16x16.png" id="12_860r7"]
 [ext_resource type="Texture2D" uid="uid://hnfavqg8tuwx" path="res://science_hell/assets/tiles/5_Classroom_and_library_16x16.png" id="13_4g1g0"]
 [ext_resource type="Texture2D" uid="uid://cuijqsulv6x66" path="res://science_hell/assets/tiles/11_Halloween_16x16.png" id="14_nclef"]
 [ext_resource type="Texture2D" uid="uid://beu4kqr2x0gf7" path="res://science_hell/assets/tiles/12_Kitchen_16x16.png" id="15_fwi30"]
-[ext_resource type="Texture2D" uid="uid://c6vg1er6oaf24" path="res://science_hell/assets/tiles/tiles.png" id="16_uirkd"]
+[ext_resource type="Texture2D" uid="uid://bc0s3pbiyyjro" path="res://science_hell/assets/tiles/tiles_main_map/tiles.png" id="16_uirkd"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vwptk"]
 tile_data = PackedInt32Array(0, 2621440, 41, 65536, 2621440, 1342177321, 1, 2621440, 805306409, 65537, 2621440, 1610612777)
