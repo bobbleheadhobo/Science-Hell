@@ -1,3 +1,5 @@
+# Purpose: control the waves and progress bar to indicat if won
+
 extends Node2D
 
 signal boss_spawned(boss_node)
@@ -10,7 +12,6 @@ func _ready():
 	MusicManager.play_song("reynolds")
 	Rey.reset()
 	start_mob_timer()
-	#Health.set_visibility(true)
 	
 	
 
@@ -50,7 +51,6 @@ func level_over():
 	Rey.game_over = true
 	kill_all("mobs")
 	$lvl5_Player.show_arrow()
-	PlayerStats.computer_parts += 1
 	
 
 func kill_all(group_name):

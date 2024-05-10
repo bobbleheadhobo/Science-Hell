@@ -1,3 +1,5 @@
+# this is the code that control npc movement and behavior
+
 extends CharacterBody2D
 
 const SPEED = 50

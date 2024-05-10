@@ -1,3 +1,4 @@
+# controls visual elements on the screen and handle scene changes when entering new rooms
 extends Node
 
 func _ready():
@@ -5,6 +6,17 @@ func _ready():
 	Health.set_visibility(true)
 	Health.set_main_location()
 	$NPCSpawn.spawn_unselected_players()
+	$NPCSpawn.spawn_professors()
+	
+	if (PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete):
+		$HamBody2DStart.queue_free()
+	
+	if PlayerStats.computer_parts >= PlayerStats.num_winning_parts:
+		$HamBody2DFinish.show()
+	
+	
+	print(PlayerStats.inventory)
+	
 
 func _on_reynolds_office_body_entered(body):
 	if(body.has_method("player")):
@@ -21,9 +33,5 @@ func _on_parth_office_body_entered(body):
 
 func _on_cooper_6_body_entered(body):
 	if(body.has_method("player")):
-		SceneManager.change_scene("cooperlevel")
+		SceneManager.change_scene("coopercutscene")
 
-
-func _on_reynolds_cutscene_body_entered(body):
-	if(body.has_method("player")):
-		SceneManager.change_scene("reynoldscutscene")

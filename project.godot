@@ -37,6 +37,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Hamgiving": "res://science_hell/players/hamilton/Hamgiving.dtl",
+"Hamwon": "res://Hamwon.dtl",
 "Songgiving": "res://addons/professors/Songgiving.dtl"
 }
 layout/style_list=["res://addons/Style2.tres"]

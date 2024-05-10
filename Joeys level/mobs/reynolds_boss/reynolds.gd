@@ -83,8 +83,11 @@ func take_damage(damage_location):
 	$ProgressBar.value = health
 	
 	if health <= 0:
+		var psu = load("res://Joeys level/level/powersupply.tscn").instantiate()
+		psu.global_position = global_position  # Set the position of the power supply
+		get_parent().add_child(psu)  # Add the power supply to the parent node
 		emit_signal("level_over")
-		queue_free()
+		call_deferred("queue_free")
 		return # Exit function after queue_free
 	
 	var direction = damage_location.direction_to(global_position)
