@@ -498,6 +498,9 @@ shape = SubResource("RectangleShape2D_v6eug")
 [node name="innerWall12" type="CollisionPolygon2D" parent="collisionInner"]
 polygon = PackedVector2Array(-1521, -336, -2111, -336, -2111, -191, -1521, -190, -1521, -264, -1444, -238, -1392, -285, -1392, 32, -1648, 32, -1648, 22, -1650, 22, -1653, 25, -1659, 25, -1662, 22, -1663, 11, -1659, 8, -1653, 8, -1648, 12, -1648, -16, -1776, -16, -1776, 32, -1906, 32, -1905, 36, -1905, 40, -1907, 45, -1917, 45, -1919, 40, -1921, 40, -1923, 45, -1933, 45, -1935, 40, -1935, 32, -1952, 32, -1952, -96, -1984, -96, -1984, 32, -2160, 32, -2160, -496, -2152, -512, -2016, -512, -2016, -384, -1984, -384, -1984, -496, -1976, -512, -1776, -512, -1776, -464, -1664, -464, -1664, -496, -1656, -512, -1392, -512, -1392, -285, -1399, -288, -1399, -319, -1439, -325, -1454, -298, -1521, -311, -1521, -326)
 
+[node name="innerWall13" type="CollisionPolygon2D" parent="collisionInner"]
+polygon = PackedVector2Array(-624, 151, -631, 151, -631, 208, -816, 208, -816, 310, -663, 310, -663, 326, -544, 326, -544, 176, -576, 176, -576, 117, -592, 118, -592, 226, -578, 226, -578, 235, -561, 235, -561, 254, -578, 254, -578, 320, -640, 320, -640, 304, -799, 304, -799, 288, -760, 288, -624, 288, -624, 154)
+
 [node name="table" type="CollisionPolygon2D" parent="collisionInner"]
 polygon = PackedVector2Array(-76, -617, -76, -606, -82, -606, -82, -601, -80, -599, -48, -599, -46, -601, -46, -606, -52, -606, -52, -617)
 
@@ -638,7 +641,6 @@ script = ExtResource("21_56od4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cheatcode"]
 position = Vector2(-0.119209, -0.227093)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_eu14r")
 
 [connection signal="body_entered" from="parth_office/ParthOffice" to="." method="_on_parth_office_body_entered"]
