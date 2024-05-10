@@ -11,7 +11,8 @@ var songs = {
 	"chey": "res://science_hell/Music/Roulette (with keycard).wav",
 	"spooky": "res://science_hell/Music/Ambiance_Loop.wav",
 	"sciencehall": "res://science_hell/Music/Ambiance.Loop (updated).wav",
-	"credits": "res://science_hell/Music/Chorale for a Graduate.wav"
+	"credits": "res://science_hell/Music/Chorale for a Graduate.wav",
+	"parth": "res://science_hell/Music/Heating Up.wav"
 }
 
 var current_song = ""
