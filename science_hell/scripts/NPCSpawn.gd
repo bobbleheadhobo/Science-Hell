@@ -42,7 +42,7 @@ func spawn_professors():
 		spawn_professor_at_location("reynolds", -938, -554)
 		
 	if PlayerStats.inventory.has("keyboard"):
-		spawn_professor_at_location("ivan", -1175, 76)
+		spawn_professor_at_location("ivan", -1674, 62)
 		
 	if ((PlayerStats.computer_parts > 0 or PlayerStats.chey_level_complete or PlayerStats.jason_level_complete) and (PlayerStats.computer_parts < PlayerStats.num_winning_parts)):
 		spawn_professor_at_location("ham", -128, 123)

@@ -26,8 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://bc0s3pbiyyjro" path="res://science_hell/assets/tiles/tiles_main_map/tiles.png" id="17_ug417"]
 [ext_resource type="Texture2D" uid="uid://0wq7alcspaeq" path="res://science_hell/assets/animated_objects/animated_elevator_door_entrance_1.png" id="18_uxpk4"]
 [ext_resource type="Texture2D" uid="uid://c72s6d0ywt0l6" path="res://science_hell/assets/tiles/tiles_main_map/hallways.png" id="19_1q3mf"]
-[ext_resource type="Texture2D" path="res://science_hell/assets/tiles/6_Music_and_sport_Shadowless.png" id="20_sdv22"]
-[ext_resource type="Texture2D" path="res://science_hell/assets/tiles/21_Clothing_Store_Shadowless.png" id="21_k2aca"]
+[ext_resource type="Texture2D" uid="uid://bdu3x7iojiyy2" path="res://science_hell/assets/tiles/6_Music_and_sport_Shadowless.png" id="20_sdv22"]
+[ext_resource type="Texture2D" uid="uid://wbssjc5wsko5" path="res://science_hell/assets/tiles/21_Clothing_Store_Shadowless.png" id="21_k2aca"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vwptk"]
 tile_data = PackedInt32Array(0, 2621440, 41, 65536, 2621440, 1342177321, 1, 2621440, 805306409, 65537, 2621440, 1610612777)
