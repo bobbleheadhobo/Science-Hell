@@ -11,9 +11,7 @@ var player_start_position = Vector2(-25, 55)
 
 var scene_node_paths = {
 	"labroof": "Lab/Roof",
-	"audroof": "Auditorium/Roof",
-	"bathroof":"Bathroom1/Roof", 
-	"parthroof": "ParthOffice/Roof"
+	"audroof": "Auditorium/Roof"
 }
 
 # Different scenes to access
