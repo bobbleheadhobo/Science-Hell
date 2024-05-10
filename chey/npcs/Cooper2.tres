@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=2 format=3 uid="uid://fr74qglmkigk"]
+
+[ext_resource type="Script" path="res://chey/npcs/NPC.gd" id="1_xdeh2"]
+
+[resource]
+script = ExtResource("1_xdeh2")
+npc_name = "cooper"
+initial_dialog = "these are the last items you need for the password... i promise...."
+post_quest_dialog = ""
