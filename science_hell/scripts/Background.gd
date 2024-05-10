@@ -1,3 +1,6 @@
+"""
+background.gd - Controls the background color of the main map for different events
+"""
 class_name Background
 extends CanvasModulate
 

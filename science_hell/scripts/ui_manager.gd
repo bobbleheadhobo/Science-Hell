@@ -1,4 +1,6 @@
-# this file implemtents the pause funcitonality of the game when you press escape
+"""
+ui_manager.gd - Handles the pause input (You click Cancel the pause menu comes up)
+"""
 extends Node
 
 @onready var pause_scene = preload("res://science_hell/gui/Pause/pause.tscn")
