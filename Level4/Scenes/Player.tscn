@@ -1,0 +1,91 @@
+[gd_scene load_steps=14 format=3 uid="uid://b0f51aq0q53k8"]
+
+[ext_resource type="Script" path="res://Level4/Scripts/PlayerScript.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bwv7ybb4l6314" path="res://Level4/Assets/characterSprites/jonathan/jonathanIdleRight.png" id="2_4ex4u"]
+[ext_resource type="Texture2D" uid="uid://qd6uacay50d7" path="res://Level4/Assets/CharacterHitboxes/newRedTEST.png" id="3_b4cjh"]
+[ext_resource type="Texture2D" uid="uid://d3dnng5s4s2xx" path="res://Level4/Assets/CharacterHitboxes/level1ForceRush.png" id="4_smddb"]
+[ext_resource type="Texture2D" uid="uid://bmceiso05ts5d" path="res://Level4/Assets/CharacterHitboxes/level2ForceRush.png" id="5_2s5qu"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(6, 12)
+
+[sub_resource type="Animation" id="Animation_r8rrs"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_3dgkd"]
+resource_name = "jab1"
+length = 0.2
+
+[sub_resource type="Animation" id="Animation_n1wh7"]
+resource_name = "jabLeft"
+length = 0.2
+
+[sub_resource type="Animation" id="Animation_7q4oa"]
+resource_name = "jabRight"
+length = 0.2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a5tqr"]
+_data = {
+"RESET": SubResource("Animation_r8rrs"),
+"jab1": SubResource("Animation_3dgkd"),
+"jabLeft": SubResource("Animation_n1wh7"),
+"jabRight": SubResource("Animation_7q4oa")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opksw"]
+size = Vector2(6, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18rkg"]
+size = Vector2(16, 13.5)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("2")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+position = Vector2(-1.43051e-06, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_4ex4u")
+
+[node name="HurtBox" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[node name="PlayerView" type="Camera2D" parent="."]
+position = Vector2(-1, 210)
+offset = Vector2(0, -200)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a5tqr")
+}
+
+[node name="SignalHurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SignalHurtBox"]
+shape = SubResource("RectangleShape2D_opksw")
+
+[node name="PowerField" type="Area2D" parent="."]
+collision_layer = 65535
+
+[node name="PowerShield" type="Sprite2D" parent="PowerField"]
+visibility_layer = 4
+position = Vector2(2.98023e-08, -0.5)
+scale = Vector2(0.5, 0.53125)
+texture = ExtResource("3_b4cjh")
+
+[node name="PowerBox" type="CollisionShape2D" parent="PowerField"]
+position = Vector2(0, -0.75)
+shape = SubResource("RectangleShape2D_18rkg")
+
+[node name="ForceRush1" type="Sprite2D" parent="PowerField"]
+position = Vector2(4, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_smddb")
+
+[node name="ForceRush2" type="Sprite2D" parent="PowerField"]
+position = Vector2(4, 0)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_2s5qu")
+
+[connection signal="body_entered" from="SignalHurtBox" to="." method="_on_signal_hurt_box_body_entered"]

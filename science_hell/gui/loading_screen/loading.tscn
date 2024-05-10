@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://1txtpbqqkufb"]
+
+[ext_resource type="Script" path="res://science_hell/gui/loading_screen/LoadManager.gd" id="1_q7226"]
+[ext_resource type="Texture2D" uid="uid://b6aws0mh4x583" path="res://science_hell/gui/loading_screen/ducky_0001.png" id="3_sy1h7"]
+[ext_resource type="Texture2D" uid="uid://bm3vtob6bsw5" path="res://science_hell/gui/loading_screen/ducky_0002.png" id="4_xga1u"]
+[ext_resource type="Texture2D" uid="uid://dxwxdeeour1kn" path="res://science_hell/gui/loading_screen/ducky_0003.png" id="5_2fi0p"]
+[ext_resource type="Texture2D" uid="uid://d3xsinx7lswqm" path="res://science_hell/gui/loading_screen/ducky_0004.png" id="6_tryxq"]
+[ext_resource type="Texture2D" uid="uid://dp6iu22wmuj87" path="res://science_hell/gui/loading_screen/ducky_0005.png" id="7_m8vv6"]
+[ext_resource type="Texture2D" uid="uid://cr7bfy7s4juto" path="res://science_hell/gui/loading_screen/ducky_0006.png" id="8_qoqr7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6300f"]
+bg_color = Color(0, 0.72549, 0.243137, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_hjbce"]
+frames = 6
+speed_scale = 12.2
+frame_0/texture = ExtResource("3_sy1h7")
+frame_1/texture = ExtResource("4_xga1u")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("5_2fi0p")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("6_tryxq")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("7_m8vv6")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("8_qoqr7")
+frame_5/duration = 1.0
+
+[node name="Loading" type="Node2D"]
+z_index = 999
+script = ExtResource("1_q7226")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.403922, 0.67451, 0.94902, 1)
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.289
+anchor_top = 0.691
+anchor_right = 0.727
+anchor_bottom = 0.765
+offset_left = 0.071991
+offset_top = 0.231964
+offset_right = -0.504089
+offset_bottom = 0.279968
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_6300f")
+value = 50.0
+rounded = true
+show_percentage = false
+
+[node name="Control" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="duck" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("AnimatedTexture_hjbce")
+stretch_mode = 3
