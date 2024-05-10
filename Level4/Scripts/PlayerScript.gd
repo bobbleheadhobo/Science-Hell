@@ -141,3 +141,6 @@ func _on_signal_hurt_box_body_entered(body):
 		velocity.y = -stompForce
 	else:
 		pass
+
+func player():
+	pass
