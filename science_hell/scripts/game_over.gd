@@ -1,16 +1,20 @@
+"""
+game_over.gd - Handles the game over UI
+"""
 extends Control
 
 func _ready():
 	Health.set_visibility(false)
 
+# When drop out is pressed, the player goes back to the title screen
 func _on_drop_out_pressed():
 	Health.reset_hearts()
 	MusicManager.stop_music()	
 	get_tree().paused = false
 	SceneManager.change_scene("titlescreen")
 	$".".queue_free()
-	
 
+# When retry is pressed, the player starts back in science hall
 func _on_retry_pressed():
 	Health.reset_hearts()
 	MusicManager.stop_music()
@@ -18,8 +22,7 @@ func _on_retry_pressed():
 	SceneManager.change_scene("sciencehall")
 	$".".queue_free()
 
+# Connect the buttons to their function
 func connect_buttons():
 	$drop_out.pressed.connect(self._on_drop_out_pressed)
 	$retry.pressed.connect(self._on_retry_pressed)
-	
-

@@ -1,12 +1,18 @@
+"""
+player_stats.gd - Keeps track of how many computer parts the player has collected
+"""
 extends Node
 
+var num_winning_parts = 5
+@onready var computer_parts = 0
+@onready var chey_level_complete = false
+@onready var jason_level_complete = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+# Game is won when player collects them all
+# "keyboard", "cpu", "psu", "ram", 
+var inventory = []
 
-
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if computer_parts >= 5:
+		#Game won
+		pass

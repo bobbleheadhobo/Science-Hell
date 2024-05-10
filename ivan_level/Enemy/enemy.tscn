@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4q5nx7enfcl5"]
+[gd_scene load_steps=7 format=3 uid="uid://c4q5nx7enfcl5"]
 
 [ext_resource type="Script" path="res://ivan_level/Enemy/enemy.gd" id="1_fnenx"]
 [ext_resource type="Texture2D" uid="uid://bo2qpr8ywog6m" path="res://ivan_level/Enemy/error_404_enemy_sprite.png" id="1_qwp1d"]
@@ -15,13 +15,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soimo"]
-size = Vector2(195, 20)
+size = Vector2(195, 38)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m5ng8"]
-radius = 4.0
+radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yxegn"]
 
 [node name="enemy" type="CharacterBody2D"]
+collision_layer = 11
+collision_mask = 7
 script = ExtResource("1_fnenx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -9.0
+offset_top = -12.0
+offset_right = 31.0
+offset_bottom = 28.0
+scale = Vector2(0.438458, 0.403686)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dp8wk")
@@ -34,11 +45,19 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(5.5, 0)
+position = Vector2(1, -4)
 shape = SubResource("RectangleShape2D_soimo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
 shape = SubResource("CircleShape2D_m5ng8")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_yxegn")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="area_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]

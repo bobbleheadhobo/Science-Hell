@@ -1,3 +1,5 @@
+# this code control how the STAFF works it is not longer a gun
+
 extends Area2D
 const BULLET = preload("res://Joeys level/weapons/AR/ar_bullet.tscn")
 var enemy_position = null

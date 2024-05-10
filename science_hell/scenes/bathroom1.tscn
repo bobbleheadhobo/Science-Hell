@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://c85xgwkvl43su"]
+[gd_scene load_steps=4 format=3 uid="uid://c85xgwkvl43su"]
 
 [ext_resource type="TileSet" uid="uid://byo83x2tlr5ll" path="res://science_hell/assets/tilemap.tres" id="1_q41fx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fo11w"]
+size = Vector2(41, 66)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxhwm"]
+size = Vector2(29, 64)
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,3 +21,17 @@ layer_2/name = "iItems"
 layer_2/tile_data = PackedInt32Array(327669, 327702, 46, 393205, 327702, 47, 458741, 327702, 48, 327672, 327702, 46, 393208, 327702, 47, 458744, 327702, 48, 327674, 327702, 46, 393210, 327702, 47, 458746, 327702, 48, 327676, 327702, 46, 393212, 327702, 47, 458748, 327702, 48, 327678, 327702, 46, 393214, 327702, 47, 458750, 327702, 48, 131075, 720918, 12, 196611, 720918, 13, 589822, 720918, 12, 327683, 327702, 1342177304, 393219, 458774, 1342177304, 458755, 327702, 1342177304, 524291, 393238, 1342177304, 327684, 327702, 1342177303, 393220, 393238, 1342177303, 458756, 327702, 1342177303, 524292, 393238, 1342177303)
 layer_3/name = "Stalls"
 layer_3/tile_data = PackedInt32Array(393208, 393238, 38, 458744, 393238, 39, 327673, 458774, 37, 393209, 458774, 38, 458745, 458774, 39, 327675, 458774, 37, 393211, 458774, 38, 458747, 458774, 39, 393212, 65558, 38, 458748, 65558, 39, 327677, 131094, 37, 393213, 131094, 38, 458749, 131094, 39, 393214, 196630, 38, 458750, 196630, 39, 393215, 262166, 38, 458751, 262166, 39, 262144, 327702, 37, 327680, 327702, 38, 393216, 327702, 39, 393210, 393238, 38, 458746, 393238, 39, 393206, 393238, 38, 458742, 393238, 39, 327671, 458774, 37, 393207, 458774, 38, 458743, 458774, 39, 393205, 196630, 38, 458741, 196630, 39, 131071, 327680, 5, 196607, 327680, 6)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 0, 0, 112, -176, 112, -176, 128, -16, 128, -16, 144, 72, 144, 72, 8, 40, 8, 40, -8, 40, -16, 48, -16, 48, 0, 80, 0, 80, 152, -40, 152, -40, 136, -192, 136, -192, 32, -8, 32, -8, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(52.5, 24)
+shape = SubResource("RectangleShape2D_fo11w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(62.5, 112)
+shape = SubResource("RectangleShape2D_kxhwm")

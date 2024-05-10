@@ -1,3 +1,5 @@
+# Purpose: control the waves and progress bar to indicat if won
+
 extends Node2D
 
 signal boss_spawned(boss_node)
@@ -10,7 +12,6 @@ func _ready():
 	MusicManager.play_song("reynolds")
 	Rey.reset()
 	start_mob_timer()
-	#Health.set_visibility(true)
 	
 	
 
