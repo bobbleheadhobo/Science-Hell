@@ -517,6 +517,7 @@ shape = SubResource("CircleShape2D_ckuxb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HamBody2D"]
 
 [node name="SongBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(968, 1640)
 script = ExtResource("12_ajlhw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SongBody2D"]
@@ -545,7 +546,7 @@ shape = SubResource("RectangleShape2D_kwhap")
 texture = ExtResource("20_6dl83")
 
 [node name="RAM" type="Area2D" parent="."]
-position = Vector2(3, -1)
+position = Vector2(840, 1640)
 script = ExtResource("22_ei12v")
 
 [node name="Sprite2D" type="Sprite2D" parent="RAM"]
