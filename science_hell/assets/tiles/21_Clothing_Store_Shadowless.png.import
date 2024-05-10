@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8f1a4ucykdub"
-path="res://.godot/imported/main_map_extras.png-0e5766c146e3caaf1a22dcd9d48282da.ctex"
+uid="uid://wbssjc5wsko5"
+path="res://.godot/imported/21_Clothing_Store_Shadowless.png-002997a7d5ef991eea1a8698a6b5de1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/main_map_extras.png"
-dest_files=["res://.godot/imported/main_map_extras.png-0e5766c146e3caaf1a22dcd9d48282da.ctex"]
+source_file="res://science_hell/assets/tiles/21_Clothing_Store_Shadowless.png"
+dest_files=["res://.godot/imported/21_Clothing_Store_Shadowless.png-002997a7d5ef991eea1a8698a6b5de1f.ctex"]
 
 [params]
 

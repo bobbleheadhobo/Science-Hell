@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8f1a4ucykdub"
-path="res://.godot/imported/main_map_extras.png-0e5766c146e3caaf1a22dcd9d48282da.ctex"
+uid="uid://bdu3x7iojiyy2"
+path="res://.godot/imported/6_Music_and_sport_Shadowless.png-159b3659fec4a8c43e315cbfef2a68a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/main_map_extras.png"
-dest_files=["res://.godot/imported/main_map_extras.png-0e5766c146e3caaf1a22dcd9d48282da.ctex"]
+source_file="res://science_hell/assets/tiles/6_Music_and_sport_Shadowless.png"
+dest_files=["res://.godot/imported/6_Music_and_sport_Shadowless.png-159b3659fec4a8c43e315cbfef2a68a7.ctex"]
 
 [params]
 

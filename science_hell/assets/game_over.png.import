@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8f1a4ucykdub"
-path="res://.godot/imported/main_map_extras.png-0e5766c146e3caaf1a22dcd9d48282da.ctex"
+uid="uid://cri2pno0psvp7"
+path="res://.godot/imported/game_over.png-96fe4cc10a05fb634e6a1d577a99ba93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://science_hell/assets/tiles/main_map_extras.png"
-dest_files=["res://.godot/imported/main_map_extras.png-0e5766c146e3caaf1a22dcd9d48282da.ctex"]
+source_file="res://science_hell/assets/game_over.png"
+dest_files=["res://.godot/imported/game_over.png-96fe4cc10a05fb634e6a1d577a99ba93.ctex"]
 
 [params]
 
