@@ -1,3 +1,6 @@
+"""
+reynolds_cutscene.gd - Handles Reynolds cutscene
+"""
 extends Control
 
 var animation_name = "reynolds_cutscene"

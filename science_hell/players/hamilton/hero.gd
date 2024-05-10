@@ -1,3 +1,6 @@
+"""
+hero.gd - Handles the player in the main SH map
+"""
 class_name Hero
 extends CharacterBody2D
 
@@ -21,6 +24,7 @@ var animTree_state_keys = [
 	'walk'
 ]
 
+# Dictates which character was selected and where the player spawns in the main map
 func _ready():
 	$Sprite2D.texture = Characters.current_sprite
 	if SceneManager.player_position != null:
@@ -28,15 +32,15 @@ func _ready():
 	
 	SceneManager.player_position = position
 
+# Processes the movements and animations of the player
 func _physics_process(delta):
 	move_and_animate(delta)
 	
 	# log position if player is not in doorway
 	if SceneManager.player_position != null and not is_inside_doorway():
 		SceneManager.player_position = position
-		
-	
 
+# Handles the input from keyboard to control the player
 func move_and_animate(delta):
 	# get input from keyboard (WASD)
 	var direction = Input.get_vector("move_left", "move_right", "move_up" , "move_down")
@@ -54,6 +58,7 @@ func move_and_animate(delta):
 	move_and_slide()
 		
 
+# Animates the sprite
 func animate() -> void:
 	state_machine.travel(animTree_state_keys[state])
 	animationTree.set(blend_pos_paths[state], blend_position)
@@ -61,8 +66,10 @@ func animate() -> void:
 func player():
 	pass
 
+# Doorway function
 func is_inside_doorway():
 	for area in $DoorwayDetector.get_overlapping_areas():
 		if area.is_in_group("doorways"):
 			return true
+			
 	return false

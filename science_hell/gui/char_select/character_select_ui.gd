@@ -1,3 +1,6 @@
+"""
+character_select_ui.gd - Handles the UI of the character select screen
+"""
 extends Control
 
 @onready var CharacterSelect: Dictionary = {
@@ -16,6 +19,7 @@ func _ready():
 	Health.set_visibility(false)
 	$Cursor.global_position = CharacterSelect[current_character].global_position
 
+# Processes the movement of the cursor
 func _process(delta):
 	if Input.is_action_just_pressed("move_left"):
 		var keys = CharacterSelect.keys()
