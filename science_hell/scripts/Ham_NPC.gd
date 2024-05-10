@@ -26,8 +26,10 @@ func _ready():
 func _process(delta):
 	if player_in_area:
 		if Input.is_action_just_pressed("e"):
-			run_dialogue("Hamgiving")
-			
+			if PlayerStats.computer_parts < PlayerStats.num_winning_parts:
+				run_dialogue("Hamgiving")
+			else:
+				run_dialogue("Hamwon")
 	if current_state == 0 or current_state == 1:
 		$AnimatedSprite2D.play("front_idle")
 		
@@ -68,7 +70,6 @@ func _on_timer_timeout():
 
 # Chat area entered, so player can chat
 func _on_chat_det_body_entered(body):
-	print(body.has_method("player"))
 	if body.has_method("player"):
 		player_in_area = true
 

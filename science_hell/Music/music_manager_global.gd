@@ -10,7 +10,8 @@ var songs = {
 	"reynolds": "res://science_hell/Music/Input Output.wav",
 	"chey": "res://science_hell/Music/Roulette (with keycard).wav",
 	"spooky": "res://science_hell/Music/Ambiance_Loop.wav",
-	"sciencehall": "res://science_hell/Music/Ambiance.Loop (updated).wav"
+	"sciencehall": "res://science_hell/Music/Ambiance.Loop (updated).wav",
+	"credits": "res://science_hell/Music/Chorale for a Graduate.wav"
 }
 
 var current_song = ""

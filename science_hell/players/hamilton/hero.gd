@@ -1,6 +1,5 @@
-"""
-hero.gd - Handles the player in the main SH map
-"""
+# code that allows you to control the player in the sciecne hall map
+
 class_name Hero
 extends CharacterBody2D
 

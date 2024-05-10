@@ -1,3 +1,5 @@
+# this code will chose a random mob to spawn based on the wave your on
+
 extends Node2D
 
 signal update_progress_mob_killed

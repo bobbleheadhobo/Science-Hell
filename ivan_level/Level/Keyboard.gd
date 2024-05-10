@@ -34,6 +34,7 @@ func set_collision_setting(tag):
 func _on_body_entered(body):
 	if body is Player and game_over:
 		PlayerStats.computer_parts += 1
+		PlayerStats.inventory.append("keyboard")
 		$"../ui/Label".text = "
 		Keyboard acquired."
 		set_collision_setting(false)

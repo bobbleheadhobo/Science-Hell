@@ -4,7 +4,7 @@ signal health_empty
 
 const SPEED = 600
 const INVINCIBILITY_DURATION = 1.0
-var knockback_force = 3000
+var knockback_force = 1000
 
 
 var mobs_killed = 0
@@ -125,6 +125,7 @@ func player():
 	pass
 	
 func show_arrow():
+	$ExitArrow.get_psu()
 	$ExitArrow.show()
 	$ExitArrow/AnimationPlayer.play("point")
 

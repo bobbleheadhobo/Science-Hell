@@ -8,7 +8,10 @@ var current_sprite_key = "ham"
 
 var professor_sprites = {
 	"reynolds": "res://science_hell/players/professors/rey.png",
-	"ham": "res://science_hell/players/hamilton/ham.png"
+	"ham": "res://science_hell/players/hamilton/ham.png",
+	"cooper": "res://science_hell/players/professors/cooper.png",
+	"parth": "res://science_hell/players/professors/parth.png",
+	"ivan": "res://science_hell/players/professors/ivan.png"
 }
 
 # Dictionary of different characters to select from
