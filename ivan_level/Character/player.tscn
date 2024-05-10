@@ -98,8 +98,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y8kns"]
-radius = 4.0
-height = 23.0
+radius = 5.76309
+height = 23.863
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ny0ot"]
 
@@ -139,6 +139,20 @@ script = ExtResource("5_tox1e")
 
 [node name="Marker2D" type="Marker2D" parent="weapon"]
 position = Vector2(26, -2)
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="ui"]
+anchors_preset = -1
+anchor_left = 0.486
+anchor_right = 0.535
+anchor_bottom = 0.048
+offset_left = 0.127991
+offset_right = -0.320007
+offset_bottom = -0.104
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

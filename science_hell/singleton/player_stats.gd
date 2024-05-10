@@ -1,3 +1,6 @@
+"""
+player_stats.gd - Keeps track of how many computer parts the player has collected
+"""
 extends Node
 
 var num_winning_parts = 5
@@ -5,6 +8,7 @@ var num_winning_parts = 5
 @onready var chey_level_complete = false
 @onready var jason_level_complete = false
 
+# Game is won when player collects them all
 # "keyboard", "cpu", "psu", "ram", 
 var inventory = []
 

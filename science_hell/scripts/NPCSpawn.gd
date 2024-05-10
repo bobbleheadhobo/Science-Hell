@@ -1,3 +1,6 @@
+"""
+NPCSpawn.gd - Controls the spawning of the NPCs in the main SH map
+"""
 extends Path2D
 
 var npc_scene = preload("res://science_hell/NPC/NPC.tscn")
@@ -27,8 +30,7 @@ func spawn_unselected_players():
 	var characters = Characters.character_sprites
 	if characters.has(Characters.current_sprite_key):
 		characters.erase(Characters.current_sprite_key)
-	
-		
+
 	for key in characters.keys():
 		spawn_npc(key)
 

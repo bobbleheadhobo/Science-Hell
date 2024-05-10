@@ -1,3 +1,6 @@
+"""
+scenc_manager.gd - Handles the ability to change between levels
+"""
 extends Node
 
 var current_scene = null
@@ -6,10 +9,6 @@ var player_position = null
 var was_health_visible = null
 var player_start_position = Vector2(-25, 55)
 
-
-# TO use in other scripts
-#Global.change_scene("res://ivan_level/Level/level.tscn")
-
 var scene_node_paths = {
 	"labroof": "Lab/Roof",
 	"audroof": "Auditorium/Roof",
@@ -17,6 +16,7 @@ var scene_node_paths = {
 	"parthroof": "ParthOffice/Roof"
 }
 
+# Different scenes to access
 var scene_file_paths = {
 	"loading": "res://science_hell/gui/loading_screen/loading.tscn",
 	"titlescreen": "res://science_hell/gui/Title Screen/menu.tscn",
@@ -47,7 +47,7 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 	print(current_scene)
 
-
+# Reveals the current scene
 func reveal_scene(scene_name: String, show_scene: bool, fade_duration: float = 0.5):
 	scene_name = scene_name.to_lower()
 	if scene_node_paths.has(scene_name):
@@ -71,7 +71,8 @@ func reveal_scene(scene_name: String, show_scene: bool, fade_duration: float = 0
 			push_error("node not found: " + roof_path)
 	else:
 		push_error("node path not defined for scene: " + scene_name)
-		
+
+# Changes scene to a valid one
 func change_scene(scene_name: String):
 	scene_name = scene_name.to_lower()
 	
@@ -139,5 +140,3 @@ func _deferred_change_scene(new_scene):
 	current_scene = new_scene.instantiate()
 	get_tree().root.add_child(current_scene)
 	get_tree().current_scene = current_scene
-	
-	

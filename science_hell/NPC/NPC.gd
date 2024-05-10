@@ -1,5 +1,6 @@
-# this is the code that control npc movement and behavior
-
+"""
+NPC.gd - Handles the NPCS that are found on the main SH map
+"""
 extends CharacterBody2D
 
 const SPEED = 50
@@ -28,20 +29,24 @@ var animTree_state_keys = [
 var pause_timer = null
 var walk_timer = null
 
+# Initialization function
 func _ready():
 	pause_timer = get_tree().create_timer(randf_range(PAUSE_TIME_MIN, PAUSE_TIME_MAX))
 	pause_timer.connect("timeout", _on_pause_timer_timeout)
 	walk_timer = get_tree().create_timer(randf_range(1.0, 3.0))
 	walk_timer.connect("timeout", _on_walk_timer_timeout)
 
+# Processes the movements/animations of the NPCS
 func _physics_process(delta):
 	move_and_slide()
 	animate()
 
+# Move function
 func move(direction):
 	velocity = direction * SPEED
 	blend_position = direction.normalized()
 
+# Pause timer
 func _on_pause_timer_timeout():
 	state = IDLE
 	velocity = Vector2.ZERO
@@ -49,6 +54,7 @@ func _on_pause_timer_timeout():
 	pause_timer = get_tree().create_timer(randf_range(PAUSE_TIME_MIN, PAUSE_TIME_MAX))
 	pause_timer.connect("timeout", _on_pause_timer_timeout)
 
+# Walk timer
 func _on_walk_timer_timeout():
 	state = WALK
 	var random_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
@@ -56,6 +62,7 @@ func _on_walk_timer_timeout():
 	walk_timer = get_tree().create_timer(randf_range(1.0, 3.0))
 	walk_timer.connect("timeout", _on_walk_timer_timeout)
 
+# Animates the NPCs
 func animate() -> void:
 	state_machine.travel(animTree_state_keys[state])
 	animationTree.set(blend_pos_paths[state], blend_position)

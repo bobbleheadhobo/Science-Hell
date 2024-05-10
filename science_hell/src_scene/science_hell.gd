@@ -1,4 +1,6 @@
-# controls visual elements on the screen and handle scene changes when entering new rooms
+"""
+science_hell.gd - Handles the main SH map
+"""
 extends Node
 
 func _ready():
@@ -18,19 +20,22 @@ func _ready():
 	print(PlayerStats.inventory)
 	
 
+# When player enters Reynolds' office, the player goes to his level
 func _on_reynolds_office_body_entered(body):
 	if(body.has_method("player")):
 		SceneManager.change_scene("reynoldscutscene")
 
+# When player enters Ivan's office, the player goes to his level
 func _on_ivans_office_2_body_entered(body):
 	if(body.has_method("player")):
 		SceneManager.change_scene("ivanlevel")
-		
+
+# When player enters Parth's office, the player goes to his level
 func _on_parth_office_body_entered(body):
 	if(body.has_method("player")):
 		SceneManager.change_scene("parthcutscene")
 
-
+# When player enters the terminal area, the player goes to Cooper's level
 func _on_cooper_6_body_entered(body):
 	if(body.has_method("player")):
 		SceneManager.change_scene("coopercutscene")

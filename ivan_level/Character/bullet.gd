@@ -1,3 +1,6 @@
+"""
+bullet.gd - Handles the mechanics and animations of the bullet from Excaliboard
+"""
 class_name Bullet
 extends Area2D
 

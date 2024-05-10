@@ -52,5 +52,19 @@ text = "Resume
 layout_mode = 2
 text = "Quit"
 
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="ui"]
+anchors_preset = -1
+anchor_left = 0.486
+anchor_right = 0.535
+anchor_bottom = 0.048
+offset_left = 0.127991
+offset_right = -0.320007
+offset_bottom = -0.104
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

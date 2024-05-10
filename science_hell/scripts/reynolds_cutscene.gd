@@ -1,5 +1,6 @@
-#plays cutscene then switches to coresponding level
-
+"""
+reynolds_cutscene.gd - Handles Reynolds cutscene
+"""
 extends Control
 
 var animation_name = "reynolds_cutscene"

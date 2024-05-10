@@ -1,3 +1,6 @@
+"""
+heart.gd - Handles the heart sprite and its state/animations
+"""
 extends Panel
 
 @onready var heart = $Sprite2D
@@ -5,20 +8,11 @@ extends Panel
 enum Heart_State {FULL, HALF, EMPTY}
 var current_state = Heart_State.FULL
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
-	
+# Returns state of the heart
 func get_state():
 	return current_state
 
-
+# Updates the state of the heart
 func update_state(state : Heart_State):
 	if state == Heart_State.FULL:
 		heart.frame = 0
@@ -30,8 +24,8 @@ func update_state(state : Heart_State):
 		print("UHHH this is awkward")
 		
 	current_state = state
-	
-	
+
+#ANIMATIONS
 func play_animation(name: String, speed = 1):
 	if $AnimationPlayer.current_animation != name:
 		$AnimationPlayer.play(name, 1, speed)
