@@ -1,3 +1,6 @@
+"""
+hearts_container.gd - Handles the health bar of the player
+"""
 extends Node
 
 @onready var HeartGUI = preload("res://science_hell/gui/hearts/heart.tscn")
@@ -14,7 +17,8 @@ var visible = null
 
 func _ready():
 	reset_hearts()
-	
+
+# Function that resets the health bar to full health
 func reset_hearts():
 	if canvas_layer != null:
 		canvas_layer.queue_free()
@@ -30,11 +34,13 @@ func reset_hearts():
 	
 	is_game_over = false
 
+# Max hearts a player can have
 func set_max_hearts(max_hearts : int):
 	for i in range(max_hearts/2):
 		var heart = HeartGUI.instantiate()
 		hearts_container.add_child(heart)
 
+# Updates the health bar
 func update_health(new_health : int):
 	var heart_points = clamp(new_health, 0, MAX_HEALTH)
 	current_health = heart_points
@@ -76,13 +82,13 @@ func update_health(new_health : int):
 	if current_health <= 0 and not is_game_over:
 		game_over()
 
+# Game over - when player dies
 func game_over():
 	is_game_over = true
 	
 	# Pause the current scene
 	get_tree().paused = true
 
-	
 	var dead = dead_scene.instantiate()
 	# Set the process_mode of the game over screen to PROCESS_MODE_ALWAYS
 	dead.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -91,7 +97,7 @@ func game_over():
 	# Connect the button signals using call_deferred
 	dead.call_deferred("connect_buttons")
 
-
+# Function that dictates whether the health bar is visible or not
 func set_visibility(show: bool):
 	visible = show
 	if visible:
@@ -99,12 +105,14 @@ func set_visibility(show: bool):
 	else:
 		hearts_container.hide()
 
+# Function that places the health bar in the main location on the screen
 func set_main_location():
 	hearts_container.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
 	hearts_container.offset_left = 5
 	hearts_container.offset_top = 12
 	hearts_container.set("theme_override_constants/separation", 15)
-	
+
+# Function that places the health bar in a specific location for Chey's level
 func set_chey_location():
 	print("hearts", hearts_container.get_children())
 	hearts_container.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)

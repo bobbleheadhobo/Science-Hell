@@ -15,7 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_soimo"]
-size = Vector2(195, 20)
+size = Vector2(195, 38)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m5ng8"]
 radius = 9.0
@@ -23,6 +23,8 @@ radius = 9.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_yxegn"]
 
 [node name="enemy" type="CharacterBody2D"]
+collision_layer = 11
+collision_mask = 7
 script = ExtResource("1_fnenx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -43,7 +45,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(5.5, 0)
+position = Vector2(1, -4)
 shape = SubResource("RectangleShape2D_soimo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -53,7 +55,7 @@ shape = SubResource("CircleShape2D_m5ng8")
 [node name="enemy_hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
-position = Vector2(0, -4)
+position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_yxegn")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
