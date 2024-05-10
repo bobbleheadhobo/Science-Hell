@@ -1,16 +1,14 @@
+"""
+level.gd - Script that handles Ivan's level
+"""
 extends Node2D
 
-@onready var acquired = null
-
+# On player entry, the music queues
 func _ready():
 	MusicManager.play_song("ivan")
 
-func _process(delta):
-	if acquired:
-		level_over()
-
+# When level is beat, player goes back to main map
 func level_over():
 	Health.reset_hearts()
 	await get_tree().create_timer(0.1).timeout
-	get_tree().change_scene_to_file("res://science_hell/src_scene/science_hell.tscn")
-	#SceneManager.change_scene("Sciencehall")
+	SceneManager.change_scene("Sciencehall")
