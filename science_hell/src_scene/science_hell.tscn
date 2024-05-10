@@ -421,7 +421,7 @@ shape = SubResource("RectangleShape2D_ml83q")
 [node name="Ivans office (2)" type="Area2D" parent="." groups=["doorways"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ivans office (2)"]
-position = Vector2(-1184.5, 159)
+position = Vector2(-1672, 136)
 shape = SubResource("RectangleShape2D_ml83q")
 
 [node name="rey_office" parent="." instance=ExtResource("13_510w3")]
@@ -528,9 +528,6 @@ polygon = PackedVector2Array(-54, 842, -54, 774, -128, 774, -128, 848, -112, 848
 [node name="wall8" type="CollisionPolygon2D" parent="collisionOuter"]
 polygon = PackedVector2Array(-46, 1791, 256, 1791, 256, 1712, 112, 1712, 112, 1728, 64, 1728, 64, 1712, -80, 1712, -80, 1728, -128, 1728, -128, 1712, -320, 1712, -320, 1664, -327, 1664, -327, 1796, -57, 1796, -34, 1765, -50, 1791)
 
-[node name="wall9" type="CollisionPolygon2D" parent="collisionOuter"]
-polygon = PackedVector2Array(-2216, 139, -1229, 139, -1229, 181, -1168, 182, -1168, 176, -1216, 176, -1216, 144, -1200, 144, -1200, 96, -1216, 96, -1216, 80, -2208, 80, -2208, -512, -2311, -512, -2311, -477, -2239, -477, -2238, 137, -2219, 139, -2214, 134)
-
 [node name="@CollisionPolygon2D@24126" type="CollisionPolygon2D" parent="collisionOuter"]
 position = Vector2(-343, -632)
 polygon = PackedVector2Array(-600, 25, -16.0053, 23.6555, -16.0053, 7.65552, 13.9947, 7.65552, 13.9947, 23.6555, 111.995, 23.6555, 111.995, 7.65552, 175.995, 7.65552, 175.995, -98.3445, -66.0053, -98.3445, -66.0053, -66.3445, -1789.01, -66.3445, -1789.01, -72.3445, -73.0053, -72.3445, -73.0053, -104.344, 182.995, -104.344, 182.995, 7.65552, 230.995, 7.65552, 230.995, -40.3445, 258.995, -40.3445, 258.995, -37.3445, 246.995, -37.2195, 246.995, -34.3445, 246.995, 4.65552, 255.995, 4.65552, 255.995, 7.65552, 246.995, 7.65552, 246.995, 55.6555, 214.995, 55.6555, 214.995, 19.6555, 197.995, 19.6555, 182.995, 19.6555, 182.995, 37.6555, 182.995, 55.6555, 118.995, 55.6555, 118.995, 69.6555, 6.99469, 69.6555, 6.99469, 55.6555, -9.00531, 55.6555, -9.00531, 68.6555, -600, 71)
@@ -542,6 +539,14 @@ polygon = PackedVector2Array(310.346, 9.40472, -113.654, 8.40471, -113.654, -81.
 [node name="@CollisionPolygon2D@36900" type="CollisionPolygon2D" parent="collisionOuter"]
 position = Vector2(-1411.54, -584.214)
 polygon = PackedVector2Array(-444.461, -23.7859, 450.539, -22.7859, 449.813, 11.3245, 449.539, 24.2141, -442.461, 23.2141)
+
+[node name="@CollisionPolygon2D@44011" type="CollisionPolygon2D" parent="collisionOuter"]
+position = Vector2(-2137.04, -102.727)
+polygon = PackedVector2Array(449.037, 182.727, -70.9634, 182.727, -70.9634, -409.273, -173.963, -409.273, -173.963, -374.273, -101.963, -374.273, -100.963, 239.727, -81.9634, 241.727, -76.9634, 236.727, -78.9634, 241.727, 457.037, 238.727)
+
+[node name="@CollisionPolygon2D@44012" type="CollisionPolygon2D" parent="collisionOuter"]
+position = Vector2(-1274.12, 136.083)
+polygon = PackedVector2Array(-381.883, -56.0833, 58.1168, -56.0833, 58.1168, -40.0833, 130.117, -40.0833, 130.117, 7.91667, 58.1168, 7.91667, 58.1168, 39.9167, 106.117, 39.9167, 106.117, 45.9167, 45.1168, 44.9167, 45.1168, 2.91667, -389.883, -0.0833282)
 
 [node name="HamBody2DFinish" type="CharacterBody2D" parent="."]
 visible = false
