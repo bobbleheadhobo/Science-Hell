@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwv7ybb4l6314"
-path="res://.godot/imported/jonathanIdleRight.png-1e473736ace797fcedced805b665a611.ctex"
+uid="uid://cvyfvrupudwhm"
+path="res://.godot/imported/nightSky.png-df48d5c7941c4a1a7e3c622f2541f132.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level4/Assets/characterSprites/jonathan/jonathanIdleRight.png"
-dest_files=["res://.godot/imported/jonathanIdleRight.png-1e473736ace797fcedced805b665a611.ctex"]
+source_file="res://Level4/Assets/TileSheets/nightSky.png"
+dest_files=["res://.godot/imported/nightSky.png-df48d5c7941c4a1a7e3c622f2541f132.ctex"]
 
 [params]
 

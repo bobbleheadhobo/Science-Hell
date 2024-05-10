@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwv7ybb4l6314"
-path="res://.godot/imported/jonathanIdleRight.png-1e473736ace797fcedced805b665a611.ctex"
+uid="uid://bmceiso05ts5d"
+path="res://.godot/imported/level2ForceRush.png-8354b0228ac5c95efd00bb46a1827e1d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Level4/Assets/characterSprites/jonathan/jonathanIdleRight.png"
-dest_files=["res://.godot/imported/jonathanIdleRight.png-1e473736ace797fcedced805b665a611.ctex"]
+source_file="res://Level4/Assets/CharacterHitboxes/level2ForceRush.png"
+dest_files=["res://.godot/imported/level2ForceRush.png-8354b0228ac5c95efd00bb46a1827e1d.ctex"]
 
 [params]
 
