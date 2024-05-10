@@ -85,6 +85,10 @@ func update_health(new_health : int):
 # Game over - when player dies
 func game_over():
 	is_game_over = true
+	PlayerStats.computer_parts = 0
+	PlayerStats.inventory.clear()
+	PlayerStats.chey_level_complete = false
+	PlayerStats.jason_level_complete = false
 	
 	# Pause the current scene
 	get_tree().paused = true

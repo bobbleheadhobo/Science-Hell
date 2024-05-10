@@ -8,7 +8,7 @@ var speed = 40
 var player_chase = false
 var player = null
 
-var health = 10
+var health = 1000
 var player_inattack_zone = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
