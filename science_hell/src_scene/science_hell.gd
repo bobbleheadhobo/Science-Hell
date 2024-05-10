@@ -28,7 +28,7 @@ func _on_reynolds_office_body_entered(body):
 # When player enters Ivan's office, the player goes to his level
 func _on_ivans_office_2_body_entered(body):
 	if(body.has_method("player")):
-		SceneManager.change_scene("ivanlevel")
+		SceneManager.change_scene("ivancutscene")
 
 # When player enters Parth's office, the player goes to his level
 func _on_parth_office_body_entered(body):

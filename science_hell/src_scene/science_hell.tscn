@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://balwvcgrw67pc"]
+[gd_scene load_steps=61 format=3 uid="uid://balwvcgrw67pc"]
 
 [ext_resource type="Script" path="res://science_hell/src_scene/science_hell.gd" id="1_4n0go"]
 [ext_resource type="PackedScene" uid="uid://dsbij3axtbtoo" path="res://science_hell/players/hamilton/player.tscn" id="1_ppq3m"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cnyooh3kecxce" path="res://science_hell/scenes/rey_room.tscn" id="13_510w3"]
 [ext_resource type="Texture2D" uid="uid://c0l7hde1qxiwv" path="res://science_hell/assets/computer_parts/cpu.png" id="20_6dl83"]
 [ext_resource type="Script" path="res://science_hell/assets/computer_parts/CPU.gd" id="20_ahmyf"]
+[ext_resource type="Script" path="res://science_hell/scripts/cheatcode.gd" id="21_56od4"]
 [ext_resource type="Texture2D" uid="uid://b8nh1x03pijff" path="res://science_hell/assets/computer_parts/ram.png" id="21_xwwna"]
 [ext_resource type="Script" path="res://science_hell/assets/computer_parts/RAM.gd" id="22_ei12v"]
 
@@ -273,6 +274,9 @@ radius = 33.2415
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0h3k"]
 size = Vector2(41, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eu14r"]
+size = Vector2(0.596474, 0.236719)
 
 [node name="ScienceHell" type="Node2D"]
 script = ExtResource("1_4n0go")
@@ -627,6 +631,16 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 
+[node name="cheatcode" type="Area2D" parent="."]
+position = Vector2(272.5, 1640.5)
+scale = Vector2(29.36, 50.64)
+script = ExtResource("21_56od4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cheatcode"]
+position = Vector2(-0.119209, -0.227093)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_eu14r")
+
 [connection signal="body_entered" from="parth_office/ParthOffice" to="." method="_on_parth_office_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="lighting" method="_on_lab_area_body_entered"]
 [connection signal="body_entered" from="Lab/LabArea" to="Lab" method="_on_lab_area_body_entered"]
@@ -657,3 +671,4 @@ horizontal_alignment = 1
 [connection signal="body_exited" from="SongBody2D/Area2D" to="SongBody2D" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="CPU" to="CPU" method="_on_body_entered"]
 [connection signal="body_entered" from="RAM" to="RAM" method="_on_body_entered"]
+[connection signal="body_entered" from="cheatcode" to="cheatcode" method="_on_body_entered"]

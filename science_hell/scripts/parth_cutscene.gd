@@ -1,6 +1,6 @@
 extends Control
 
-var animation_name = "ivan_cutscene"
+var animation_name = "parth_cutscene"
 
 func _ready():
 	Health.set_visibility(false)
