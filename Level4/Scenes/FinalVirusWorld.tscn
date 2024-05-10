@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://bne1vdspuvsrw"]
+[gd_scene load_steps=21 format=3 uid="uid://bne1vdspuvsrw"]
 
+[ext_resource type="Script" path="res://Level4/Scenes/FinalVirusWorld.gd" id="1_8aiuc"]
 [ext_resource type="Texture2D" uid="uid://d0fpl3x5hmqys" path="res://Level4/Assets/TileSheets/Tiles.png" id="1_cwvbg"]
 [ext_resource type="PackedScene" uid="uid://b0f51aq0q53k8" path="res://Level4/Scenes/Player.tscn" id="2_gjije"]
 [ext_resource type="Texture2D" uid="uid://bpy1dm3bqc5r3" path="res://Level4/Assets/TileSheets/Buildings.png" id="2_pg8yn"]
@@ -757,10 +758,11 @@ size = Vector2(48, 128)
 size = Vector2(176, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xg7v"]
-size = Vector2(5336, 811)
+size = Vector2(14797, 429)
 
 [node name="FinalVirusWorld" type="Node2D"]
 position = Vector2(0, 500)
+script = ExtResource("1_8aiuc")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_n3jb0")
@@ -875,7 +877,7 @@ position = Vector2(712, -708)
 script = ExtResource("7_357u0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dead"]
-position = Vector2(784, 750.5)
+position = Vector2(1268, 6670)
 shape = SubResource("RectangleShape2D_5xg7v")
 
 [connection signal="body_entered" from="dead" to="dead" method="_on_body_entered"]
