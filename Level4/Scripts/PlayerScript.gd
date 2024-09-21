@@ -135,9 +135,9 @@ func handleSprite(currDirection):
 # tried to implement bouncing off of enemies
 func _on_signal_hurt_box_body_entered(body):
 	
-	if(body == $basicVirus && Input.is_action_just_pressed("shoot")):
+	if(body == $"../EnemyMobs/basicVirus" && Input.is_action_just_pressed("shoot")):
 		velocity.y = -jumpForce
-	elif(body == $basicVirus):
+	elif(body == $"../EnemyMobs/basicVirus"):
 		velocity.y = -stompForce
 	else:
 		pass

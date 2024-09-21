@@ -295,10 +295,10 @@ offset_bottom = 181.0
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -2522.0
-offset_top = -752.0
-offset_right = -2414.0
-offset_bottom = -696.0
+offset_left = -2829.0
+offset_top = -780.0
+offset_right = -2721.0
+offset_bottom = -724.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(29.36, 50.64)
@@ -450,6 +450,7 @@ texture = SubResource("GradientTexture2D_debcs")
 script = SubResource("GDScript_7dnbf")
 
 [node name="collisionInner" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="plant" type="CollisionPolygon2D" parent="collisionInner"]
 polygon = PackedVector2Array(-400, 159, -305, 159, -305, 240, -400, 240, -400, 160, -392, 171, -386, 165, -395, 160, -400, 160)

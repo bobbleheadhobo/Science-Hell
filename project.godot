@@ -13,7 +13,7 @@ config_version=5
 config/name="science-hell"
 run/main_scene="res://science_hell/gui/Title Screen/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://science_hell/players/hamilton/hammy head.png"
 
 [autoload]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfv1rxqufb33r"]
 
-[ext_resource type="Script" path="res://Joeys level/weapons/ar/ar_bullet.gd" id="1_6g4as"]
-[ext_resource type="Texture2D" uid="uid://bwkwy3foqbp3r" path="res://Joeys level/weapons/ar/red_bullets.png" id="2_nuorl"]
+[ext_resource type="Script" path="res://Joeys level/weapons/ar/ar_bullet.gd" id="1_clg3h"]
+[ext_resource type="Texture2D" uid="uid://bwkwy3foqbp3r" path="res://Joeys level/weapons/ar/red_bullets.png" id="2_1csxv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wndl"]
 radius = 13.0035
@@ -48,11 +48,11 @@ top_level = true
 z_index = 1
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_6g4as")
+script = ExtResource("1_clg3h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7.25001, -6.375)
-texture = ExtResource("2_nuorl")
+texture = ExtResource("2_1csxv")
 hframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

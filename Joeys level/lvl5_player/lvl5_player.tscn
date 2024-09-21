@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Joeys level/lvl5_player/lvl5_hero.gd" id="1_bgup8"]
 [ext_resource type="Texture2D" uid="uid://bpjprwldrjsi3" path="res://science_hell/players/hamilton/ham.png" id="1_o3wty"]
-[ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="2_l4st2"]
+[ext_resource type="PackedScene" uid="uid://cs3lld32j5874" path="res://Joeys level/weapons/ar/ar_15.tscn" id="3_gm8sh"]
 [ext_resource type="Script" path="res://Joeys level/lvl5_player/ExitArrow.gd" id="4_g2850"]
 [ext_resource type="Texture2D" uid="uid://rjq72cjpf47u" path="res://science_hell/assets/animated_objects/arrow.png" id="5_b5p61"]
 
@@ -322,7 +322,7 @@ position = Vector2(0, 13)
 rotation = -3.12913
 shape = SubResource("CapsuleShape2D_gxiua")
 
-[node name="AR_15" parent="." instance=ExtResource("2_l4st2")]
+[node name="AR_15" parent="." instance=ExtResource("3_gm8sh")]
 position = Vector2(32, 9)
 
 [node name="hurtbox" type="Area2D" parent="."]

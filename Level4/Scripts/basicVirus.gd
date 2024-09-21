@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed = 25
 @export var gravity = 10
 
-@onready var PlayerNode = get_node("Player")
+@onready var PlayerNode = get_node("../../Player")
 # @export var jumpForce = 450
 var prevDir = 0
 var horizontalDirection = -1

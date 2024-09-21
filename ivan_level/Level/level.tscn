@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://djquaxa4fkpdj"]
+[gd_scene load_steps=36 format=3 uid="uid://bvxx5rh4ou48j"]
 
 [ext_resource type="Texture2D" uid="uid://u10xishplp7" path="res://ivan_level/art/cavesofgallet/cavesofgallet.png" id="1_whjnr"]
 [ext_resource type="Script" path="res://ivan_level/level/level.gd" id="1_x5syg"]
@@ -7,12 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://dpxg68wfwq0vn" path="res://ivan_level/art/v.1 sprites/ivan.png" id="3_eh1al"]
 [ext_resource type="PackedScene" uid="uid://cmv5r1ldorwn2" path="res://ivan_level/Obstacles/danger.tscn" id="4_4l314"]
 [ext_resource type="Texture2D" uid="uid://ryxn4owhj57x" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_129.png" id="5_0el8t"]
-[ext_resource type="Script" path="res://ivan_level/Level/Barrier.gd" id="5_ua6qj"]
+[ext_resource type="Script" path="res://ivan_level/level/Barrier.gd" id="5_oewst"]
 [ext_resource type="Texture2D" uid="uid://d271derdg4mco" path="res://ivan_level/art/Legacy-Fantasy - High Forest 2.3/Jail_Singles_130.png" id="6_qjvsl"]
 [ext_resource type="PackedScene" uid="uid://c4q5nx7enfcl5" path="res://ivan_level/Enemy/enemy.tscn" id="7_d5r0g"]
 [ext_resource type="PackedScene" uid="uid://bfx2y23rer1o4" path="res://ivan_level/Character/boss.tscn" id="7_uxbyg"]
-[ext_resource type="Script" path="res://ivan_level/Level/Keyboard.gd" id="12_j1jrp"]
 [ext_resource type="Texture2D" uid="uid://cixi6v4p6mypw" path="res://science_hell/assets/computer_parts/keyboard.png" id="12_s4mbn"]
+[ext_resource type="Script" path="res://ivan_level/level/Keyboard.gd" id="12_sk80i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_moets"]
 texture = ExtResource("1_whjnr")
@@ -3822,7 +3822,7 @@ shape = SubResource("RectangleShape2D_iqtx4")
 position = Vector2(4628, 945)
 collision_layer = 11
 collision_mask = 7
-script = ExtResource("5_ua6qj")
+script = ExtResource("5_oewst")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Barrier"]
 position = Vector2(14, 6)
@@ -3993,7 +3993,7 @@ texture = ExtResource("6_qjvsl")
 top_level = true
 position = Vector2(5691, 988)
 scale = Vector2(0.33821, 0.407315)
-script = ExtResource("12_j1jrp")
+script = ExtResource("12_sk80i")
 
 [node name="Sprite2D" type="Sprite2D" parent="Keyboard"]
 texture = ExtResource("12_s4mbn")
