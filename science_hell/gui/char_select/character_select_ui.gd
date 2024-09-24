@@ -21,7 +21,7 @@ func _ready():
 
 # Processes the movement of the cursor
 func _process(delta):
-	if Input.is_action_just_pressed("move_left"):
+	if Input.is_action_just_pressed("ui_left"):
 		var keys = CharacterSelect.keys()
 		var current_index = keys.find(current_character)
 		
@@ -30,7 +30,7 @@ func _process(delta):
 		current_character = keys[current_index]
 		$Cursor.global_position = CharacterSelect[current_character].global_position
 
-	if Input.is_action_just_pressed("move_right"):
+	if Input.is_action_just_pressed("ui_right"):
 		var keys = CharacterSelect.keys()
 		var current_index = keys.find(current_character)
 		

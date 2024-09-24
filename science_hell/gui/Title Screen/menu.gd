@@ -19,3 +19,11 @@ func _on_options_pressed():
 # When exit is pressed, the game closes
 func _on_exit_pressed():
 	get_tree().quit()
+	
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		_on_play_pressed()
+		
+	if Input.is_action_just_pressed("ui_cancel"):
+		_on_exit_pressed()

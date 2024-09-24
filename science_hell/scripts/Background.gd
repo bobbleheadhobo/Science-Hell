@@ -5,6 +5,7 @@ class_name Background
 extends CanvasModulate
 
 @onready var bg = self
+@onready var flashlight = $"../hero/PointLight2D"
 
 var current_color = "282828"
 var dark_shade = "282828"
@@ -35,7 +36,8 @@ func _ready():
 func _on_lab_area_body_entered(body):
 	if body.has_method("player"):
 		bg.set_color(clear_white)
-		$"../hero/PointLight2D".hide()
+		if flashlight:
+			flashlight.hide()
 		
 
 func _on_lab_area_body_exited(body):
@@ -47,7 +49,8 @@ func _on_lab_area_body_exited(body):
 func _on_aud_area_body_entered(body):
 	if body.has_method("player"):
 		bg.set_color(clear_white)
-		$"../hero/PointLight2D".hide()
+		if flashlight:
+			flashlight.hide()
 		
 		
 
@@ -60,7 +63,8 @@ func _on_aud_area_body_exited(body):
 func _on_bathroom_1_area_body_entered(body):
 	if body.has_method("player"):
 		bg.set_color(clear_white)
-		$"../hero/PointLight2D".hide()
+		if flashlight:
+			flashlight.hide()
 		
 
 func _on_bathroom_1_area_body_exited(body):
@@ -70,9 +74,14 @@ func _on_bathroom_1_area_body_exited(body):
 		
 
 func check_disable_flashlight():
-	if current_color == clear_white:
-		$"../hero/PointLight2D".hide()
-	else:
-		$"../hero/PointLight2D".show()
+	if flashlight:
+		if PlayerStats.computer_parts >= 5:
+			if flashlight:
+				flashlight.queue_free()
+				flashlight = null
+				print("Flashlight removed")
+		else:
+			flashlight.show()
+			print("showing")
 		
 		

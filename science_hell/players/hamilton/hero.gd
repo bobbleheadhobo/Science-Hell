@@ -42,7 +42,7 @@ func _physics_process(delta):
 # Handles the input from keyboard to control the player
 func move_and_animate(delta):
 	# get input from keyboard (WASD)
-	var direction = Input.get_vector("move_left", "move_right", "move_up" , "move_down")
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_up" , "ui_down")
 	
 	if direction == Vector2.ZERO:
 		state = IDLE

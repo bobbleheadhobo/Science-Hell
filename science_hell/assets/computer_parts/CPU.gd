@@ -31,7 +31,7 @@ func _on_body_entered(body):
 		PlayerStats.computer_parts += 1
 		PlayerStats.inventory.append("cpu")
 		$"../ui/Label".text = "
-		CPU acquired."
+		CPU acquired"
 		
 		set_collision_setting(false)
 		await get_tree().create_timer(5.0).timeout

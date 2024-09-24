@@ -9,6 +9,9 @@ var base_scenes = ["sciencehall", "char_select", "titlescreen"]
 # Tells how much computer parts the player has
 func _process(delta):
 	$ui/Label.text = str(PlayerStats.computer_parts) + "/5 Computer Parts"
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		_on_resume_pressed()
 
 # Resume button
 func _on_resume_pressed():

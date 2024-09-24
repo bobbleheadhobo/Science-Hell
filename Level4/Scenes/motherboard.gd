@@ -8,5 +8,6 @@ func _on_area_2d_body_entered(body):
 		PlayerStats.computer_parts += 1
 		PlayerStats.inventory.append("motherboard")
 		queue_free()
+		$"../CanvasLayer/Label".text = "Motherboard acquired"
 		SceneManager.change_scene("sciencehall")
 		

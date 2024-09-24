@@ -23,13 +23,17 @@ var wallJumpPushBack = 100
 var gravity = 10
 var jumpForce = 200
 var stompForce = 400
+var facing_right = true
 
 # function used to set up camera properly
 func _ready():
 	camera.zoom.x = 3
 	camera.zoom.y = 3
 	
-	# $PlayerSprite.texture = Characters.current_sprite
+	$PlayerSprite.texture = Characters.current_sprite
+	
+	# Set initial frame (assuming 0 is idle)
+	$PlayerSprite.frame = 0
 	
 	# begin with any active hitboxes disabled
 	ActiveHitbox.get_node("PowerBox").disabled = true
@@ -112,26 +116,25 @@ func _physics_process(delta):
 	#print("Speed: ", speed)
 
 func handleSprite(currDirection):
-	
-	var textureRight = preload("res://Level4/Assets/characterSprites/jonathan/jonathanIdleRight.png")
-	var textureLeft = preload("res://Level4/Assets/characterSprites/jonathan/jonathanIdleLeft.png")
-	
-	if(currDirection == -1):
-		sprite.set_texture(textureLeft)
+	if currDirection == -1:
+		facing_right = false
+		$PlayerSprite.frame = 8  # Frame 1 (left)
 		ActiveHitbox.get_node("ForceRush1").position.x = -4
 		ActiveHitbox.get_node("ForceRush2").position.x = -4
 		ActiveHitbox.get_node("ForceRush1").flip_h = true
 		ActiveHitbox.get_node("ForceRush2").flip_h = true
-		
-	elif(currDirection == 1):
-		sprite.set_texture(textureRight)
+	elif currDirection == 1:
+		facing_right = true
+		$PlayerSprite.frame = 6  # Frame 7 (right)
 		ActiveHitbox.get_node("ForceRush1").position.x = 4
 		ActiveHitbox.get_node("ForceRush2").position.x = 4
 		ActiveHitbox.get_node("ForceRush1").flip_h = false
 		ActiveHitbox.get_node("ForceRush2").flip_h = false
 	else:
-		pass
-
+		# Idle frame (assuming it's different from left and right frames)
+		# You may need to adjust this if you have a specific idle frame
+		$PlayerSprite.frame = 2  # Using frame 3 as idle
+		
 # tried to implement bouncing off of enemies
 func _on_signal_hurt_box_body_entered(body):
 	
