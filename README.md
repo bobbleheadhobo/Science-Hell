@@ -14,10 +14,16 @@ Enter "Science Hell," a game that aims to unite and encapsulate the essence of t
     <td style="border: none; text-align: center;">PARTH<br><img src="https://github.com/bobbleheadhobo/Science-Hell/assets/40050987/5ec697ec-eee9-4d3a-b738-b7d7a067b67d" alt="Parth" width="160"></td>
     <td style="border: none; text-align: center;">REYNOLDS<br><img src="https://github.com/bobbleheadhobo/Science-Hell/assets/40050987/66ab2714-e13c-4c46-a012-54c973a0e4ec" alt="Reynolds" width="160"></td>
     <td style="border: none; text-align: center;">COOPER<br><img src="https://github.com/bobbleheadhobo/Science-Hell/assets/40050987/a172d4c5-4c74-4a2e-bdff-77e644d99a54" alt="Cooper" width="160"></td>
-    <td style="border: none; text-align: center;">HAMILTON<br><img src="https://github.com/bobbleheadhobo/Science-Hell/assets/40050987/0f55b91f-d9c3-4ed4-8312-07e117d11cce" alt="Hamilton" width="160"></td>
+    <td style="border: none; text-align: center;">HAMILTON<br><img src="https://github.com/user-attachments/assets/dd48b431-8719-46a8-8700-f6201dadf3b5" alt="Hamilton" width="160"></td>
   </tr>
 </table>
 
+# Download the game
+[Science Hell.exe](https://drive.google.com/file/d/1quPI1HALtQy4I6U1lvDZ_jVLS7DW8cz4/view?usp=sharing)
 
-# Watch the game trailer here
-[![Science Hell Trailer](https://img.youtube.com/vi/WL_lHbVfhMg/0.jpg)](https://www.youtube.com/watch?v=WL_lHbVfhMg)
+# Listen to the official soundtrack
+[Science Hell Soundtrack](https://open.spotify.com/album/0XhXtxcCsic3ILvxpNGqd2?si=6gCn6hfQSSOS7xD9-xi1Ag)
+
+
+# Watch the game trailer
+[Science Hell Trailer](https://youtu.be/miJk7rcxdTs?si=Br7yENTGgnVx_iwc)
