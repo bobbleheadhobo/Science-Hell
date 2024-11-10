@@ -19,7 +19,7 @@ Enter "Science Hell," a game that aims to unite and encapsulate the essence of t
 </table>
 
 # Download the game
-[Science Hell.exe](https://drive.google.com/file/d/1quPI1HALtQy4I6U1lvDZ_jVLS7DW8cz4/view?usp=sharing)
+[Science Hell.exe](https://github.com/bobbleheadhobo/Science-Hell/releases/latest/download/Science.Hell.exe)
 
 # Listen to the official soundtrack
 [Science Hell Soundtrack](https://open.spotify.com/album/0XhXtxcCsic3ILvxpNGqd2?si=6gCn6hfQSSOS7xD9-xi1Ag)
