@@ -29,8 +29,7 @@ func _on_body_entered(body):
 	if body is Hero and PlayerStats.jason_level_complete:
 		PlayerStats.computer_parts += 1
 		PlayerStats.inventory.append("ram")
-		$"../ui/Label".text = "
-		RAM acquired"
+		$"../ui/Label".text = "RAM acquired"
 		
 		set_collision_setting(false)
 		

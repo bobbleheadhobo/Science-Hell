@@ -70,8 +70,10 @@ func _on_timer_timeout():
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
 		player_in_area = true
+		$"../ui/Label".text = "Press 'E' to talk"
 
 # Chat area exited, so player cannot chat
 func _on_area_2d_body_exited(body):
 	if body.has_method("player"):
 		player_in_area = false
+		$"../ui/Label".text = ""

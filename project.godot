@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="science-hell"
+config/name="Science Hell"
 config/description="Do you dare to gradute college?"
 run/main_scene="res://science_hell/gui/Title Screen/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
@@ -174,3 +174,4 @@ sprint={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+render/rendering_method="gl_compatibility"

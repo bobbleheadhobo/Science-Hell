@@ -70,10 +70,13 @@ func _on_timer_timeout():
 
 # Chat area entered, so player can chat
 func _on_chat_det_body_entered(body):
-	if body.has_method("player"):
+	if body.has_method("player") and self.visible:
 		player_in_area = true
+		$"../ui/Label".text = "Press 'E' to talk"
 
 # Chat area exited, so player cannot chat
 func _on_chat_det_body_exited(body):
-	if body.has_method("player"):
+	if body.has_method("player") and self.visible:
 		player_in_area = false 
+		$"../ui/Label".text = ""
+		

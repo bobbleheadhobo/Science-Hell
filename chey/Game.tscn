@@ -1,13 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://r3t8r5bbpxof"]
+[gd_scene load_steps=15 format=3 uid="uid://r3t8r5bbpxof"]
 
 [ext_resource type="Script" path="res://chey/Game.gd" id="1_e0p6v"]
-[ext_resource type="FontFile" uid="uid://bdvljcad73a63" path="res://chey/fonts/plex_mono_28.tres" id="1_q34yp"]
+[ext_resource type="FontFile" uid="uid://c13xce3j37r5h" path="res://chey/fonts/IBMPlexMono-Medium.ttf" id="1_q34yp"]
 [ext_resource type="Script" path="res://chey/input/Input.gd" id="1_yo6lk"]
 [ext_resource type="Script" path="res://chey/CommandProcessor.gd" id="2_3lrur"]
 [ext_resource type="Script" path="res://chey/Player.gd" id="2_rqjkp"]
 [ext_resource type="PackedScene" uid="uid://dt4l1fxuxre4u" path="res://chey/rooms/GameRoom.tscn" id="3_4cv05"]
 [ext_resource type="Script" path="res://chey/rooms/RoomManager.gd" id="3_vy8n6"]
 [ext_resource type="PackedScene" uid="uid://tg2a3ws3eojy" path="res://chey/GameInfo.tscn" id="6_4qxhm"]
+[ext_resource type="FontFile" uid="uid://ixukrk76iaog" path="res://science_hell/assets/retro_computer_personal_use.ttf" id="8_btvqe"]
 [ext_resource type="PackedScene" uid="uid://b1js2hgip12fo" path="res://chey/SidePanel.tscn" id="9_ymbxp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dj5n"]
@@ -184,7 +185,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
 theme_override_colors/selection_color = Color(0.2, 0.2, 0.2, 1)
-theme_override_fonts/font = ExtResource("1_q34yp")
+theme_override_fonts/font = ExtResource("8_btvqe")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3srrx")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_2sefp")

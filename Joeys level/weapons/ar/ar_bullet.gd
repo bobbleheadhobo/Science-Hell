@@ -11,6 +11,8 @@ func _physics_process(delta):
 	
 	position += direction * SPEED * delta
 	
+	rotation = direction.angle()
+	
 	travelled_distance += SPEED * delta
 	if travelled_distance > RANGE:
 		queue_free()

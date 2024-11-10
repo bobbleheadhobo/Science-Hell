@@ -12,7 +12,10 @@ func _process(delta):
 	
 	if Input.is_action_just_pressed("ui_cancel"):
 		_on_resume_pressed()
-
+		
+	if base_scenes.has(SceneManager.current_scene_name):
+		$MarginContainer/VBoxContainer/Quit.text = "Drop Out"
+		
 # Resume button
 func _on_resume_pressed():
 	var canvas = get_parent()
@@ -27,6 +30,11 @@ func _on_quit_pressed():
 	
 	if base_scenes.has(SceneManager.current_scene_name):
 		SceneManager.change_scene("titlescreen")
+		Health.reset_hearts()
+		PlayerStats.computer_parts = 0
+		PlayerStats.inventory.clear()
+		PlayerStats.chey_level_complete = false
+		PlayerStats.jason_level_complete = false
 	
 	else:
 		SceneManager.change_scene("sciencehall")

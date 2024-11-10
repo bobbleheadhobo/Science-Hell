@@ -83,6 +83,7 @@ func handle_danger() -> void:
 	can_control = false
 	
 	await get_tree().create_timer(1).timeout
+	Health.update_health(Health.current_health - 1)
 	reset_play()
 
 # Resets player global position

@@ -10,7 +10,7 @@ func _process(delta):
 		if SceneManager.current_scene_name != "titlescreen":
 			get_tree().paused = true
 			var canvas_layer = CanvasLayer.new()
-			canvas_layer.layer = 999
+			canvas_layer.layer = 100
 			add_child(canvas_layer)
 			var pause = pause_scene.instantiate()
 			canvas_layer.add_child(pause)
